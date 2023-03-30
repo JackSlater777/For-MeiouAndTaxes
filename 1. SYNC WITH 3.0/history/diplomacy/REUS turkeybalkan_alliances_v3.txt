@@ -1,0 +1,28 @@
+dependency = {
+	subject_type = "decentralized_vassal"
+	first = ERE
+	second = ERZ
+	start_date = 1356.1.1
+	end_date = 1380.1.1
+}
+dependency = {
+	subject_type = "tributary_state"
+	first = ERE
+	second = AKK
+	start_date = 1356.1.1
+	end_date = 1380.1.1
+}
+#dependency = {
+#	subject_type = "nominal_subject"
+#	first = QAR
+#	second = HSN
+#	start_date = 1356.1.1
+#	end_date = 1380.1.1
+#}
+#dependency = {
+#	subject_type = "nominal_subject"
+#	first = QAR
+#	second = ATQ
+#	start_date = 1356.1.1
+#	end_date = 1380.1.1
+#}

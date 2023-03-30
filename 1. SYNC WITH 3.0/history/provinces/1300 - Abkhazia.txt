@@ -1,0 +1,43 @@
+owner = GEO
+controller = GEO
+add_core = GEO
+
+capital = "Tskhumi"
+trade_goods = wine
+#culture = georgian
+culture = mingrelian # west old georgian
+religion = orthodox
+
+hre = no
+
+base_tax = 3
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+temple = yes
+local_fortification_1 = yes
+town_hall = yes
+harbour_infrastructure_1 = yes
+
+discovered_by = muslim
+discovered_by = eastern
+discovered_by = western
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 3.000 }
+	#set_variable = { which = pop_level value = 3.5 }
+	set_variable = { which = pop_level value = 4 }
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_small_natural_harbour
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = sukhum_natural_harbour
+		duration = -1
+	}
+}
+1356.1.1 = {
+	add_core = ABK
+}

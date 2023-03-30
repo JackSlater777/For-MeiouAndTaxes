@@ -1,0 +1,1742 @@
+country_decisions = {
+	rename_provinces_polish_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = west_slavic
+			any_owned_province = {
+				OR = {
+					area = basarabia_area
+					area = moldavia_area
+					area = wielkopolska_area
+					area = kujawy_area
+					area = central_poland_area
+					area = mazovia_area
+					area = sandomierskie_area
+					area = malopolska_area
+					area = lusatia_area
+					area = lower_silesia_area
+					area = upper_silesia_area
+					area = east_prussia_area
+
+                        		#brandenburg_area
+					province_id = 2835
+
+					area = west_prussia_area
+					area = hinterpommern_area
+
+                        		#vorpommern_area
+					province_id = 47
+
+					area = white_ruthenia_area
+					area = black_ruthenia_area
+					area = east_dniepr_area
+					area = west_dniepr_area
+					area = podolia_volhynia_area
+					area = polesie_area
+					area = red_ruthenia_area
+					area = lithuania_area
+					area = podlasie_area
+					area = east_slovakia_area
+					area = west_slovakia_area
+				}
+				culture = polish
+				NOT = { has_province_flag = polish_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture = polish
+				NOT = { has_province_flag = polish_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #basarabia_area
+			if = {
+				limit = { 
+					owns = 160
+					160 = { is_core = ROOT }
+					160 = { culture = polish }
+					160 = { NOT = { has_province_flag = polish_name } }
+				}
+				160 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Kilia" #ROM - Chilia
+					rename_capital = "Kilia" #ROM - Chilia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1400
+					1400 = { is_core = ROOT }
+					1400 = { culture = polish }
+					1400 = { NOT = { has_province_flag = polish_name } }
+				}
+				1400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Orgiejow" #ROM - Orhei
+					rename_capital = "Orgiejow" #ROM - Orhei
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2626
+					2626 = { is_core = ROOT }
+					2626 = { culture = polish }
+					2626 = { NOT = { has_province_flag = polish_name } }
+				}
+				2626 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Soroki" #ROM - Soroca
+					rename_capital = "Soroki" #ROM - Soroca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { culture = polish }
+					3794 = { NOT = { has_province_flag = polish_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Bialogrod nad Dniestrem" #ROM - Cetatea Alba
+					rename_capital = "Bialogrod nad Dniestrem" #ROM - Cetatea Alba
+				}
+			}
+
+                        #moldavia_area
+			if = {
+				limit = { 
+					owns = 1269
+					1269 = { is_core = ROOT }
+					1269 = { culture = polish }
+					1269 = { NOT = { has_province_flag = polish_name } }
+				}
+				1269 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Jassy" #ROM - Carligatura
+					rename_capital = "Jassy" #ROM - Iasi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2236
+					2236 = { is_core = ROOT }
+					2236 = { culture = polish }
+					2236 = { NOT = { has_province_flag = polish_name } }
+				}
+				2236 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Bucovina" #ROM - Bucovina
+					rename_capital = "Seret" #ROM - Siret
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2379
+					2379 = { is_core = ROOT }
+					2379 = { culture = polish }
+					2379 = { NOT = { has_province_flag = polish_name } }
+				}
+				2379 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Barlad" #ROM - Barlad
+					rename_capital = "Galacz" #ROM - Galati
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3791
+					3791 = { is_core = ROOT }
+					3791 = { culture = polish }
+					3791 = { NOT = { has_province_flag = polish_name } }
+				}
+				3791 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Bakow" #ROM - Bacau
+					rename_capital = "Bakow" #ROM - Bacau
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3793
+					3793 = { is_core = ROOT }
+					3793 = { culture = polish }
+					3793 = { NOT = { has_province_flag = polish_name } }
+				}
+				3793 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Chocim" #ROM - Hotin
+					rename_capital = "Chocim" #ROM - Hotin
+				}
+			}
+
+                        #wielkopolska_area
+			if = {
+				limit = { 
+					owns = 254
+					254 = { is_core = ROOT }
+					254 = { culture = polish }
+					254 = { NOT = { has_province_flag = polish_name } }
+				}
+				254 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Naklo"
+					rename_capital = "Naklo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2401
+					2401 = { is_core = ROOT }
+					2401 = { culture = polish }
+					2401 = { NOT = { has_province_flag = polish_name } }
+				}
+				2401 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Poznan"
+					rename_capital = "Poznan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2834
+					2834 = { is_core = ROOT }
+					2834 = { culture = polish }
+					2834 = { NOT = { has_province_flag = polish_name } }
+				}
+				2834 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Walcz"
+					rename_capital = "Walcz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3756
+					3756 = { is_core = ROOT }
+					3756 = { culture = polish }
+					3756 = { NOT = { has_province_flag = polish_name } }
+				}
+				3756 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Gniezno"
+					rename_capital = "Gniezno"
+				}
+			}
+
+                        #kujawy_area
+			if = {
+				limit = { 
+					owns = 255 
+					255 = { is_core = ROOT }
+					255 = { culture = polish }
+					255 = { NOT = { has_province_flag = polish_name } }
+				}
+				255 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Inowroclaw"
+					rename_capital = "Inowroclaw"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2398
+					2398 = { is_core = ROOT }
+					2398 = { culture = polish }
+					2398 = { NOT = { has_province_flag = polish_name } }
+				}
+				2398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Chelmno"
+					rename_capital = "Chelmno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2814
+					2814 = { is_core = ROOT }
+					2814 = { culture = polish }
+					2814 = { NOT = { has_province_flag = polish_name } }
+				}
+				2814 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Bydgoszcz"
+					rename_capital = "Bydgoszcz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2815
+					2815 = { is_core = ROOT }
+					2815 = { culture = polish }
+					2815 = { NOT = { has_province_flag = polish_name } }
+				}
+				2815 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Dobrzyn"
+					rename_capital = "Dobrzyn"
+				}
+			}
+
+                        #central_poland_area
+			if = {
+				limit = { 
+					owns = 263
+					263 = { is_core = ROOT }
+					263 = { culture = polish }
+					263 = { NOT = { has_province_flag = polish_name } }
+				}
+				263 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Sieradz"
+					rename_capital = "Sieradz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1531
+					1531 = { is_core = ROOT }
+					1531 = { culture = polish }
+					1531 = { NOT = { has_province_flag = polish_name } }
+				}
+				1531 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Wielun"
+					rename_capital = "Wielun"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2399
+					2399 = { is_core = ROOT }
+					2399 = { culture = polish }
+					2399 = { NOT = { has_province_flag = polish_name } }
+				}
+				2399 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Kalisz"
+					rename_capital = "Kalisz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2400
+					2400 = { is_core = ROOT }
+					2400 = { culture = polish }
+					2400 = { NOT = { has_province_flag = polish_name } }
+				}
+				2400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Leczyca"
+					rename_capital = "Leczycka"
+				}
+			}
+
+                        #mazovia_area
+			if = {
+				limit = { 
+					owns = 256
+					256 = { is_core = ROOT }
+					256 = { culture = polish }
+					256 = { NOT = { has_province_flag = polish_name } }
+				}
+				256 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Warszawa"
+					rename_capital = "Warszawa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 257
+					257 = { is_core = ROOT }
+					257 = { culture = polish }
+					257 = { NOT = { has_province_flag = polish_name } }
+				}
+				257 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Plock"
+					rename_capital = "Plock"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2816
+					2816 = { is_core = ROOT }
+					2816 = { culture = polish }
+					2816 = { NOT = { has_province_flag = polish_name } }
+				}
+				2816 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Liw"
+					rename_capital = "Liw"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3758
+					3758 = { is_core = ROOT }
+					3758 = { culture = polish }
+					3758 = { NOT = { has_province_flag = polish_name } }
+				}
+				3758 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Rawa"
+					rename_capital = "Rawa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4026
+					4026 = { is_core = ROOT }
+					4026 = { culture = polish }
+					4026 = { NOT = { has_province_flag = polish_name } }
+				}
+				4026 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Ciechanow"
+					rename_capital = "Ciechanow"
+				}
+			}
+
+                        #sandomierskie_area
+			if = {
+				limit = { 
+					owns = 259
+					259 = { is_core = ROOT }
+					259 = { culture = polish }
+					259 = { NOT = { has_province_flag = polish_name } }
+				}
+				259 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Lublin"
+					rename_capital = "Lublin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1279
+					1279 = { is_core = ROOT }
+					1279 = { culture = polish }
+					1279 = { NOT = { has_province_flag = polish_name } }
+				}
+				1279 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Sandomierz"
+					rename_capital = "Sandomierz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2833
+					2833 = { is_core = ROOT }
+					2833 = { culture = polish }
+					2833 = { NOT = { has_province_flag = polish_name } }
+				}
+				2833 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Tarnow"
+					rename_capital = "Tarnow"
+				}
+			}
+
+                        #malopolska_area
+			if = {
+				limit = { 
+					owns = 262
+					262 = { is_core = ROOT }
+					262 = { culture = polish }
+					262 = { NOT = { has_province_flag = polish_name } }
+				}
+				262 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Krakow"
+					rename_capital = "Krakow"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2536
+					2536 = { is_core = ROOT }
+					2536 = { culture = polish }
+					2536 = { NOT = { has_province_flag = polish_name } }
+				}
+				2536 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Nowy Sacz"
+					rename_capital = "Nowy Sacz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2832
+					2832 = { is_core = ROOT }
+					2832 = { culture = polish }
+					2832 = { NOT = { has_province_flag = polish_name } }
+				}
+				2832 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Czestochowa"
+					rename_capital = "Czestochowa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3757
+					3757 = { is_core = ROOT }
+					3757 = { culture = polish }
+					3757 = { NOT = { has_province_flag = polish_name } }
+				}
+				3757 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Proszowice"
+					rename_capital = "Proszowice"
+				}
+			}
+
+                        #lusatia_area
+			if = {
+				limit = { 
+					owns = 60
+					60 = { is_core = ROOT }
+					60 = { culture = polish }
+					60 = { NOT = { has_province_flag = polish_name } }
+				}
+				60 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Gorne Luzyce" #Oberlausitz
+					rename_capital = "Budziszyn" #Goerlitz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2620
+					2620 = { is_core = ROOT }
+					2620 = { culture = polish }
+					2620 = { NOT = { has_province_flag = polish_name } }
+				}
+				2620 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Dolne Luzyce" #Niederlausitz
+					rename_capital = "Lubin" #Luebben
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3742
+					3742 = { is_core = ROOT }
+					3742 = { culture = polish }
+					3742 = { NOT = { has_province_flag = polish_name } }
+				}
+				3742 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Chociebuz" #Cottbus
+					rename_capital = "Chociebuz" #Cottbus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4002
+					4002 = { is_core = ROOT }
+					4002 = { culture = polish }
+					4002 = { NOT = { has_province_flag = polish_name } }
+				}
+				4002 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Jawor" #Jauer
+					rename_capital = "Jawor" #Jauer
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4003
+					4003 = { is_core = ROOT }
+					4003 = { culture = polish }
+					4003 = { NOT = { has_province_flag = polish_name } }
+				}
+				4003 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Glogow" #Glogau
+					rename_capital = "Glogow" #Glogau
+				}
+			}
+
+                        #lower_silesia_area
+			if = {
+				limit = { 
+					owns = 1359
+					1359 = { is_core = ROOT }
+					1359 = { culture = polish }
+					1359 = { NOT = { has_province_flag = polish_name } }
+				}
+				1359 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Wroclaw" #Breslau
+					rename_capital = "Wroclaw" #Breslau
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2561
+					2561 = { is_core = ROOT }
+					2561 = { culture = polish }
+					2561 = { NOT = { has_province_flag = polish_name } }
+				}
+				2561 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Legnica" #Liegnitz
+					rename_capital = "Legnica" #Liegnitz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2633
+					2633 = { is_core = ROOT }
+					2633 = { culture = polish }
+					2633 = { NOT = { has_province_flag = polish_name } }
+				}
+				2633 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Swidnica" #Schweidnitz
+					rename_capital = "Swidnica" #Schweidnitz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4001
+					4001 = { is_core = ROOT }
+					4001 = { culture = polish }
+					4001 = { NOT = { has_province_flag = polish_name } }
+				}
+				4001 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Olesnica" #Oels
+					rename_capital = "Olesnica" #Oels
+				}
+			}
+
+                        #upper_silesia_area
+			if = {
+				limit = { 
+					owns = 269
+					269 = { is_core = ROOT }
+					269 = { culture = polish }
+					269 = { NOT = { has_province_flag = polish_name } }
+				}
+				269 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Cieszyn" #Teschen
+					rename_capital = "Cieszyn" #Teschen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1278
+					1278 = { is_core = ROOT }
+					1278 = { culture = polish }
+					1278 = { NOT = { has_province_flag = polish_name } }
+				}
+				1278 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Opole" #Oppeln
+					rename_capital = "Opole" #Oppeln
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3999
+					3999 = { is_core = ROOT }
+					3999 = { culture = polish }
+					3999 = { NOT = { has_province_flag = polish_name } }
+				}
+				3999 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Raciborz" #Ratibor
+					rename_capital = "Raciborz" #Ratibor
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4000
+					4000 = { is_core = ROOT }
+					4000 = { culture = polish }
+					4000 = { NOT = { has_province_flag = polish_name } }
+				}
+				4000 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Opawa" #Troppau
+					rename_capital = "Opawa" #Troppau
+				}
+			}
+
+
+                        #east_prussia_area
+			if = {
+				limit = { 
+					owns = 40
+					40 = { is_core = ROOT }
+					40 = { culture = polish }
+					40 = { NOT = { has_province_flag = polish_name } }
+				}
+				40 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Okreg Klajpedy" #Memelland
+					rename_capital = "Klajpeda" #Memel
+				}
+			}
+			if = {
+				limit = { 
+					owns = 41
+					41 = { is_core = ROOT }
+					41 = { culture = polish }
+					41 = { NOT = { has_province_flag = polish_name } }
+				}
+				41 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Polwysep Sambijski" #Samland
+					rename_capital = "Krolewiec" #Koenigsberg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 42
+					42 = { is_core = ROOT }
+					42 = { culture = polish }
+					42 = { NOT = { has_province_flag = polish_name } }
+				}
+				42 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Mazury" #Masuren
+					rename_capital = "Ostroda" #Osterode
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4024
+					4024 = { is_core = ROOT }
+					4024 = { culture = polish }
+					4024 = { NOT = { has_province_flag = polish_name } }
+				}
+				4024 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Szczytno" #Galindien
+					rename_capital = "Szczytno" #Ortelsburg
+				}
+			}
+
+                        #brandenburg_area
+                        #50 2621 3745 4015
+			if = {
+				limit = { 
+					owns = 2835
+					2835 = { is_core = ROOT }
+					2835 = { culture = polish }
+					2835 = { NOT = { has_province_flag = polish_name } }
+				}
+				2835 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Lubusz" #Lebus
+					rename_capital = "Gorzow Wielkopolski" #Landsberg an der Warthe
+				}
+			}
+
+                        #west_prussia_area
+			if = {
+				limit = { 
+					owns = 43
+					43 = { is_core = ROOT }
+					43 = { culture = polish }
+					43 = { NOT = { has_province_flag = polish_name } }
+				}
+				43 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Pomerelia" #Pommerellen
+					rename_capital = "Tczew" #Dirschau
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1391
+					1391 = { is_core = ROOT }
+					1391 = { culture = polish }
+					1391 = { NOT = { has_province_flag = polish_name } }
+				}
+				1391 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Warmia" #Ermland
+					rename_capital = "Olsztyn" #Allenstein
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1844
+					1844 = { is_core = ROOT }
+					1844 = { culture = polish }
+					1844 = { NOT = { has_province_flag = polish_name } }
+				}
+				1844 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Malbork" #Marienburg
+					rename_capital = "Malbork" #Marienburg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2355
+					2355 = { is_core = ROOT }
+					2355 = { culture = polish }
+					2355 = { NOT = { has_province_flag = polish_name } }
+				}
+				2355 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Gdansk" #Danzig
+					rename_capital = "Gdansk" #Danzig
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2845
+					2845 = { is_core = ROOT }
+					2845 = { culture = polish }
+					2845 = { NOT = { has_province_flag = polish_name } }
+				}
+				2845 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Lebork-Bytow" #Lauenburg-Botow
+					rename_capital = "Lebork" #Lauenburg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4025
+					4025 = { is_core = ROOT }
+					4025 = { culture = polish }
+					4025 = { NOT = { has_province_flag = polish_name } }
+				}
+				4025 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Tuchola" #Tuchel
+					rename_capital = "Tuchola" #Tuchel
+				}
+			}
+
+                        #hinterpommern_area
+			if = {
+				limit = { 
+					owns = 48
+					48 = { is_core = ROOT }
+					48 = { culture = polish }
+					48 = { NOT = { has_province_flag = polish_name } }
+				}
+				48 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Slupsk" #Stolp
+					rename_capital = "Slupsk" #Stolp
+				}
+			}
+			if = {
+				limit = { 
+					owns = 264
+					264 = { is_core = ROOT }
+					264 = { culture = polish }
+					264 = { NOT = { has_province_flag = polish_name } }
+				}
+				264 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Nowa Marchia" #Neumark
+					rename_capital = "Drawsko Pomorskie" #Dramburg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2844
+					2844 = { is_core = ROOT }
+					2844 = { culture = polish }
+					2844 = { NOT = { has_province_flag = polish_name } }
+				}
+				2844 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Pyrzyce" #Pyritz
+					rename_capital = "Pyrzyce" #Pyritz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2847
+					2847 = { is_core = ROOT }
+					2847 = { culture = polish }
+					2847 = { NOT = { has_province_flag = polish_name } }
+				}
+				2847 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Starogrod" #Stargard
+					rename_capital = "Starogrod" #Stargard
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2849
+					2849 = { is_core = ROOT }
+					2849 = { culture = polish }
+					2849 = { NOT = { has_province_flag = polish_name } }
+				}
+				2849 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Kolobrzeg" #Colberg
+					rename_capital = "Kolobrzeg" #Colberg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2850
+					2850 = { is_core = ROOT }
+					2850 = { culture = polish }
+					2850 = { NOT = { has_province_flag = polish_name } }
+				}
+				2850 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Barwice" #Barwald
+					rename_capital = "Bialogard" #Belgard
+				}
+			}
+
+                        #vorpommern_area
+                        #72 2843 3817 3821 
+			if = {
+				limit = { 
+					owns = 47
+					47 = { is_core = ROOT }
+					47 = { culture = polish }
+					47 = { NOT = { has_province_flag = polish_name } }
+				}
+				47 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Szczecin" #Stettin
+					rename_capital = "Szczecin" #Stettin
+				}
+			}
+
+                        #white_ruthenia_area
+			if = {
+				limit = { 
+					owns = 275
+					275 = { is_core = ROOT }
+					275 = { culture = polish }
+					275 = { NOT = { has_province_flag = polish_name } }
+				}
+				275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Polock"
+					rename_capital = "Polock"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 297
+					297 = { is_core = ROOT }
+					297 = { culture = polish }
+					297 = { NOT = { has_province_flag = polish_name } }
+				}
+				297 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Witebsk"
+					rename_capital = "Witebsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1393
+					1393 = { is_core = ROOT }
+					1393 = { culture = polish }
+					1393 = { NOT = { has_province_flag = polish_name } }
+				}
+				1393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Minsk"
+					rename_capital = "Minsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2841
+					2841 = { is_core = ROOT }
+					2841 = { culture = polish }
+					2841 = { NOT = { has_province_flag = polish_name } }
+				}
+				2841 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Newel"
+					rename_capital = "Newel"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2842
+					2842 = { is_core = ROOT }
+					2842 = { culture = polish }
+					2842 = { NOT = { has_province_flag = polish_name } }
+				}
+				2842 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Siebiez"
+					rename_capital = "Siebiez"
+				}
+			}
+
+                        #black_ruthenia_area
+			if = {
+				limit = { 
+					owns = 2836
+					2836 = { is_core = ROOT }
+					2836 = { culture = polish }
+					2836 = { NOT = { has_province_flag = polish_name } }
+				}
+				2836 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Nowogrodek"
+					rename_capital = "Nowogrodek"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2837
+					2837 = { is_core = ROOT }
+					2837 = { culture = polish }
+					2837 = { NOT = { has_province_flag = polish_name } }
+				}
+				2837 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Sluck"
+					rename_capital = "Sluck"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2839
+					2839 = { is_core = ROOT }
+					2839 = { culture = polish }
+					2839 = { NOT = { has_province_flag = polish_name } }
+				}
+				2839 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Mozyrz"
+					rename_capital = "Mozyrz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3764
+					3764 = { is_core = ROOT }
+					3764 = { culture = polish }
+					3764 = { NOT = { has_province_flag = polish_name } }
+				}
+				3764 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Grodno"
+					rename_capital = "Grodno"
+				}
+			}
+
+                        #east_dniepr_area
+			if = {
+				limit = { 
+					owns = 289
+					289 = { is_core = ROOT }
+					289 = { culture = polish }
+					289 = { NOT = { has_province_flag = polish_name } }
+				}
+				289 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Czernihow"
+					rename_capital = "Czernihow"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 299
+					299 = { is_core = ROOT }
+					299 = { culture = polish }
+					299 = { NOT = { has_province_flag = polish_name } }
+				}
+				299 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Perejaslaw"
+					rename_capital = "Perejaslaw"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 311
+					311 = { is_core = ROOT }
+					311 = { culture = polish }
+					311 = { NOT = { has_province_flag = polish_name } }
+				}
+				311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Starodub"
+					rename_capital = "Starodub"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 381
+					381 = { is_core = ROOT }
+					381 = { culture = polish }
+					381 = { NOT = { has_province_flag = polish_name } }
+				}
+				381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Mscislaw"
+					rename_capital = "Mscislaw"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2840
+					2840 = { is_core = ROOT }
+					2840 = { culture = polish }
+					2840 = { NOT = { has_province_flag = polish_name } }
+				}
+				2840 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Homel"
+					rename_capital = "Homel"
+				}
+			}
+
+                        #west_dniepr_area
+			if = {
+				limit = { 
+					owns = 261
+					261 = { is_core = ROOT }
+					261 = { culture = polish }
+					261 = { NOT = { has_province_flag = polish_name } }
+				}
+				261 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Zytomierz"
+					rename_capital = "Zytomierz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 276
+					276 = { is_core = ROOT }
+					276 = { culture = polish }
+					276 = { NOT = { has_province_flag = polish_name } }
+				}
+				276 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Braclaw"
+					rename_capital = "Braclaw"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 280
+					280 = { is_core = ROOT }
+					280 = { culture = polish }
+					280 = { NOT = { has_province_flag = polish_name } }
+				}
+				280 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Kijow"
+					rename_capital = "Kijow"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2848
+					2848 = { is_core = ROOT }
+					2848 = { culture = polish }
+					2848 = { NOT = { has_province_flag = polish_name } }
+				}
+				2848 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Czerkasy"
+					rename_capital = "Czerkasy"
+				}
+			}
+
+                        #podolia_volhynia_area
+			if = {
+				limit = { 
+					owns = 1429
+					1429 = { is_core = ROOT }
+					1429 = { culture = polish }
+					1429 = { NOT = { has_province_flag = polish_name } }
+				}
+				1429 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Wolyn"
+					rename_capital = "Luck"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1433
+					1433 = { is_core = ROOT }
+					1433 = { culture = polish }
+					1433 = { NOT = { has_province_flag = polish_name } }
+				}
+				1433 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Podole"
+					rename_capital = "Kamieniec"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2537
+					2537 = { is_core = ROOT }
+					2537 = { culture = polish }
+					2537 = { NOT = { has_province_flag = polish_name } }
+				}
+				2537 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Krzemieniec"
+					rename_capital = "Krzemieniec"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2838
+					2838 = { is_core = ROOT }
+					2838 = { culture = polish }
+					2838 = { NOT = { has_province_flag = polish_name } }
+				}
+				2838 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Ostrog"
+					rename_capital = "Ostrog"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3761
+					3761 = { is_core = ROOT }
+					3761 = { culture = polish }
+					3761 = { NOT = { has_province_flag = polish_name } }
+				}
+				3761 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Wlodzimierz-Wolynski"
+					rename_capital = "Wlodzimierz-Wolynski"
+				}
+			}
+
+                        #polesie_area
+			if = {
+				limit = { 
+					owns = 283
+					283 = { is_core = ROOT }
+					283 = { culture = polish }
+					283 = { NOT = { has_province_flag = polish_name } }
+				}
+				283 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Biala"
+					rename_capital = "Biala"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1394
+					1394 = { is_core = ROOT }
+					1394 = { culture = polish }
+					1394 = { NOT = { has_province_flag = polish_name } }
+				}
+				1394 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Turow"
+					rename_capital = "Turow"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1395
+					1395 = { is_core = ROOT }
+					1395 = { culture = polish }
+					1395 = { NOT = { has_province_flag = polish_name } }
+				}
+				1395 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Pinsk"
+					rename_capital = "Pinsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3762
+					3762 = { is_core = ROOT }
+					3762 = { culture = polish }
+					3762 = { NOT = { has_province_flag = polish_name } }
+				}
+				3762 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Brzesc"
+					rename_capital = "Brzesc"
+				}
+			}
+
+                        #red_ruthenia_area
+			if = {
+				limit = { 
+					owns = 258
+					258 = { is_core = ROOT }
+					258 = { culture = polish }
+					258 = { NOT = { has_province_flag = polish_name } }
+				}
+				258 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Przemysl"
+					rename_capital = "Przemysl"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 260
+					260 = { is_core = ROOT }
+					260 = { culture = polish }
+					260 = { NOT = { has_province_flag = polish_name } }
+				}
+				260 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Lwow"
+					rename_capital = "Lwow"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1281
+					1281 = { is_core = ROOT }
+					1281 = { culture = polish }
+					1281 = { NOT = { has_province_flag = polish_name } }
+				}
+				1281 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Ratno"
+					rename_capital = "Ratno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2507
+					2507 = { is_core = ROOT }
+					2507 = { culture = polish }
+					2507 = { NOT = { has_province_flag = polish_name } }
+				}
+				2507 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Belz"
+					rename_capital = "Belz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2535
+					2535 = { is_core = ROOT }
+					2535 = { culture = polish }
+					2535 = { NOT = { has_province_flag = polish_name } }
+				}
+				2535 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Chelm"
+					rename_capital = "Chelm"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3760
+					3760 = { is_core = ROOT }
+					3760 = { culture = polish }
+					3760 = { NOT = { has_province_flag = polish_name } }
+				}
+				3760 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Grabowiec"
+					rename_capital = "Grabowiec"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3792
+					3792 = { is_core = ROOT }
+					3792 = { culture = polish }
+					3792 = { NOT = { has_province_flag = polish_name } }
+				}
+				3792 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Galicja"
+					rename_capital = "Halicz"
+				}
+			}
+
+                        #lithuania_area
+			if = {
+				limit = { 
+					owns = 272
+					272 = { is_core = ROOT }
+					272 = { culture = polish }
+					272 = { NOT = { has_province_flag = polish_name } }
+				}
+				272 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Wilno"
+					rename_capital = "Wilno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 296
+					296 = { is_core = ROOT }
+					296 = { culture = polish }
+					296 = { NOT = { has_province_flag = polish_name } }
+				}
+				296 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Troki"
+					rename_capital = "Troki"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1265
+					1265 = { is_core = ROOT }
+					1265 = { culture = polish }
+					1265 = { NOT = { has_province_flag = polish_name } }
+				}
+				1265 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Zmudz"
+					rename_capital = "Wornie"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1280
+					1280 = { is_core = ROOT }
+					1280 = { culture = polish }
+					1280 = { NOT = { has_province_flag = polish_name } }
+				}
+				1280 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Suwalki"
+					rename_capital = "Mariampol"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3397
+					3397 = { is_core = ROOT }
+					3397 = { culture = polish }
+					3397 = { NOT = { has_province_flag = polish_name } }
+				}
+				3397 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Kowno"
+					rename_capital = "Kowno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3398
+					3398 = { is_core = ROOT }
+					3398 = { culture = polish }
+					3398 = { NOT = { has_province_flag = polish_name } }
+				}
+				3398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Braslaw"
+					rename_capital = "Braslaw"
+				}
+			}
+
+                        #podlasie_area
+			if = {
+				limit = { 
+					owns = 271
+					271 = { is_core = ROOT }
+					271 = { culture = polish }
+					271 = { NOT = { has_province_flag = polish_name } }
+				}
+				271 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Drohiczyn"
+					rename_capital = "Drohiczyn"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2506
+					2506 = { is_core = ROOT }
+					2506 = { culture = polish }
+					2506 = { NOT = { has_province_flag = polish_name } }
+				}
+				2506 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Wizna"
+					rename_capital = "Wizna"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3759
+					3759 = { is_core = ROOT }
+					3759 = { culture = polish }
+					3759 = { NOT = { has_province_flag = polish_name } }
+				}
+				3759 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Sokolow"
+					rename_capital = "Sokolow"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3763
+					3763 = { is_core = ROOT }
+					3763 = { culture = polish }
+					3763 = { NOT = { has_province_flag = polish_name } }
+				}
+				3763 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Bielsk"
+					rename_capital = "Bielsk"
+				}
+			}
+
+                        #east_slovakia_area
+			if = {
+				limit = { 
+					owns = 1282
+					1282 = { is_core = ROOT }
+					1282 = { culture = polish }
+					1282 = { NOT = { has_province_flag = polish_name } }
+				}
+				1282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Uzhorod" #SLV - Uzhorod
+					rename_capital = "Uzhorod" #SLV - Uzhorod
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1406
+					1406 = { is_core = ROOT }
+					1406 = { culture = polish }
+					1406 = { NOT = { has_province_flag = polish_name } }
+				}
+				1406 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Abauj-Torna" #SLV - Abov-Turna
+					rename_capital = "Koszyce" #SLV - Kosice
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3754
+					3754 = { is_core = ROOT }
+					3754 = { culture = polish }
+					3754 = { NOT = { has_province_flag = polish_name } }
+				}
+				3754 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Spisz" #SLV - Spis
+					rename_capital = "Lewocza" #SLV - Levoca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3755
+					3755 = { is_core = ROOT }
+					3755 = { culture = polish }
+					3755 = { NOT = { has_province_flag = polish_name } }
+				}
+				3755 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Szarysz" #SLV - Saris
+					rename_capital = "Preszow" #SLV - Presov
+				}
+			}
+
+                        #west_slovakia_area
+			if = {
+				limit = { 
+					owns = 1272
+					1272 = { is_core = ROOT }
+					1272 = { culture = polish }
+					1272 = { NOT = { has_province_flag = polish_name } }
+				}
+				1272 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Nograd-Hont" #SLV - Novohrad-Hont
+					rename_capital = "Banska Szczawnica" #SLV - Banska Stiavnica
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1274
+					1274 = { is_core = ROOT }
+					1274 = { culture = polish }
+					1274 = { NOT = { has_province_flag = polish_name } }
+				}
+				1274 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Pozon" #SLV - Presporok
+					rename_capital = "Pozon" #SLV - Presporok
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1276
+					1276 = { is_core = ROOT }
+					1276 = { culture = polish }
+					1276 = { NOT = { has_province_flag = polish_name } }
+				}
+				1276 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Zwolen" #SLV - Zvolen
+					rename_capital = "Banska Bystrzyca" #SLV - Banska Bystrica
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3753
+					3753 = { is_core = ROOT }
+					3753 = { culture = polish }
+					3753 = { NOT = { has_province_flag = polish_name } }
+				}
+				3753 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = polish_name 
+					change_province_name = "Trenczyn" #SLV - Trencin
+					rename_capital = "Kremnica" #SLV - Kremnica
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

@@ -1,0 +1,559 @@
+country_decisions = {
+	rename_provinces_romanian_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = romanian
+			any_owned_province = {
+				OR = {
+                        		#zaporizhia_area
+					province_id = 284
+
+					area = dobrogea_area
+					area = basarabia_area
+					area = moldavia_area
+					area = alfold_area
+					area = kisalfold_area
+					area = transylvania_area
+
+                        		#east_slovakia_area
+					province_id = 1282
+
+                        		#north_serbia_area
+					province_id = 3776
+
+                        		#east_bulgaria_area
+					province_id = 150
+				}
+				culture_group = romanian
+				NOT = { has_province_flag = romanian_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture_group = romanian
+				NOT = { has_province_flag = romanian_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #zaporizhia_area
+                        #285 300 1431 4018 4019 4021
+			if = {
+				limit = { 
+					owns = 284
+					284 = { is_core = ROOT }
+					284 = { culture_group = romanian }
+					284 = { NOT = { has_province_flag = romanian_name } }
+				}
+				284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Oceac"
+					rename_capital = "Oceac"
+				}
+			}
+
+                        #dobrogea_area
+			if = {
+				limit = { 
+					owns = 159
+					159 = { is_core = ROOT }
+					159 = { culture_group = romanian }
+					159 = { NOT = { has_province_flag = romanian_name } }
+				}
+				159 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Dobrogea" #BUL - Dobruja
+					rename_capital = "Cavarna" #BUL - Karvuna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2380
+					2380 = { is_core = ROOT }
+					2380 = { culture_group = romanian }
+					2380 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2380 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Tulcea" #BUL - Tulcha
+					rename_capital = "Tulcea" #BUL - Tulcha
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2381
+					2381 = { is_core = ROOT }
+					2381 = { culture_group = romanian }
+					2381 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Varna" #BUL - Varna
+					rename_capital = "Varna" #BUL - Varna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3782
+					3782 = { is_core = ROOT }
+					3782 = { culture_group = romanian }
+					3782 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3782 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Constanta" #BUL - Kustenja
+					rename_capital = "Constanta" #BUL - Kustenja
+				}
+			}
+
+                        #basarabia_area
+			if = {
+				limit = { 
+					owns = 160
+					160 = { is_core = ROOT }
+					160 = { culture_group = romanian }
+					160 = { NOT = { has_province_flag = romanian_name } }
+				}
+				160 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Chilia"
+					rename_capital = "Chilia"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1400
+					1400 = { is_core = ROOT }
+					1400 = { culture_group = romanian }
+					1400 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Orhei"
+					rename_capital = "Orhei"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2626
+					2626 = { is_core = ROOT }
+					2626 = { culture_group = romanian }
+					2626 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2626 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Soroca"
+					rename_capital = "Soroca"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { culture_group = romanian }
+					3794 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Cetatea Alba"
+					rename_capital = "Cetatea Alba"
+				}
+			}
+
+                        #moldavia_area
+			if = {
+				limit = { 
+					owns = 1269
+					1269 = { is_core = ROOT }
+					1269 = { culture_group = romanian }
+					1269 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1269 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Carligatura"
+					rename_capital = "Iasi"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2236
+					2236 = { is_core = ROOT }
+					2236 = { culture_group = romanian }
+					2236 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2236 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Bucovina"
+					rename_capital = "Siret"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2379
+					2379 = { is_core = ROOT }
+					2379 = { culture_group = romanian }
+					2379 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2379 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Barlad"
+					rename_capital = "Galati"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3791
+					3791 = { is_core = ROOT }
+					3791 = { culture_group = romanian }
+					3791 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3791 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Bacau"
+					rename_capital = "Bacau"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3793
+					3793 = { is_core = ROOT }
+					3793 = { culture_group = romanian }
+					3793 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3793 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Hotin"
+					rename_capital = "Hotin"
+				}
+			}
+
+                        #alfold_area
+			if = {
+				limit = { 
+					owns = 1271
+					1271 = { is_core = ROOT }
+					1271 = { culture_group = romanian }
+					1271 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1271 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Bihor" #HUN - Bihar
+					rename_capital = "Oradea" #HUN - Nagyvarad
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1273
+					1273 = { is_core = ROOT }
+					1273 = { culture_group = romanian }
+					1273 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1273 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Jula" #HUN - Bekes
+					rename_capital = "Jula" #HUN - Gyula
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1404
+					1404 = { is_core = ROOT }
+					1404 = { culture_group = romanian }
+					1404 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1404 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Banat" #HUN - Bansag
+					rename_capital = "Timisoara" #HUN - Temesvar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1859
+					1859 = { is_core = ROOT }
+					1859 = { culture_group = romanian }
+					1859 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1859 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Torontal" #HUN - Torontal
+					rename_capital = "Becicherecu Mare" #HUN - Nagybecskerek
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2275
+					2275 = { is_core = ROOT }
+					2275 = { culture_group = romanian }
+					2275 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Satmar" #HUN - Szatmar
+					rename_capital = "Carei" #HUN - Nagykaroly
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3789
+					3789 = { is_core = ROOT }
+					3789 = { culture_group = romanian }
+					3789 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3789 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Arad" #HUN - Arad
+					rename_capital = "Arad" #HUN - Arad
+				}
+			}
+
+                        #kisalfold_area
+			if = {
+				limit = { 
+					owns = 1267
+					1267 = { is_core = ROOT }
+					1267 = { culture_group = romanian }
+					1267 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1267 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Pesta" #HUN - Pest
+					rename_capital = "Pesta" #HUN - Pest
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1270
+					1270 = { is_core = ROOT }
+					1270 = { culture_group = romanian }
+					1270 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1270 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Bacica" #HUN - Bacska
+					rename_capital = "Bacica" #HUN - Zombor
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1275
+					1275 = { is_core = ROOT }
+					1275 = { culture_group = romanian }
+					1275 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Heves" #HUN - Heves
+					rename_capital = "Eger" #HUN - Eger
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3770
+					3770 = { is_core = ROOT }
+					3770 = { culture_group = romanian }
+					3770 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3770 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Miscolt" #HUN - Borsod
+					rename_capital = "Miscolt" #HUN - Miskolc
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3771
+					3771 = { is_core = ROOT }
+					3771 = { culture_group = romanian }
+					3771 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3771 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Debretin" #HUN - Szabolcs
+					rename_capital = "Debretin" #HUN - Debrecen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3772
+					3772 = { is_core = ROOT }
+					3772 = { culture_group = romanian }
+					3772 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3772 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Ciongrad" #HUN - Csongrad
+					rename_capital = "Seghedin" #HUN - Szeged
+				}
+			}
+
+                        #transylvania_area
+			if = {
+				limit = { 
+					owns = 158
+					158 = { is_core = ROOT }
+					158 = { culture_group = romanian }
+					158 = { NOT = { has_province_flag = romanian_name } }
+				}
+				158 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Ardeal" #HUN - Erdely
+					rename_capital = "Sibiu" #HUN - Nagyszeben
+				}
+			}
+			if = {
+				limit = { 
+					owns = 162
+					162 = { is_core = ROOT }
+					162 = { culture_group = romanian }
+					162 = { NOT = { has_province_flag = romanian_name } }
+				}
+				162 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Maramures" #HUN - Maramaros
+					rename_capital = "Hust" #HUN - Huszt
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1405
+					1405 = { is_core = ROOT }
+					1405 = { culture_group = romanian }
+					1405 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1405 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Cluj" #HUN - Kolozs
+					rename_capital = "Cluj-Napoca" #HUN - Kolozsvar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2375
+					2375 = { is_core = ROOT }
+					2375 = { culture_group = romanian }
+					2375 = { NOT = { has_province_flag = romanian_name } }
+				}
+				2375 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Tinutul Secuiesc" #HUN - Szekelyfold
+					rename_capital = "Odorheiu Secuiesc" #HUN - Szekelyudvarhely
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3788
+					3788 = { is_core = ROOT }
+					3788 = { culture_group = romanian }
+					3788 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3788 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Hunedoara" #HUN - Hunyad
+					rename_capital = "Deva" #HUN - Deva
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3790
+					3790 = { is_core = ROOT }
+					3790 = { culture_group = romanian }
+					3790 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3790 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Bistrita-Nasaud" #HUN - Beszterce-Naszod
+					rename_capital = "Bistrita" #HUN - Beszterce
+				}
+			}
+
+                        #east_slovakia_area
+                        #1406 3754 3755
+			if = {
+				limit = { 
+					owns = 1282
+					1282 = { is_core = ROOT }
+					1282 = { culture_group = romanian }
+					1282 = { NOT = { has_province_flag = romanian_name } }
+				}
+				1282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Ujgorod" #SLV - Uzhorod
+					rename_capital = "Ujgorod" #SLV - Uzhorod
+				}
+			}
+
+                        #north_serbia_area
+                        #141 156 2612 3773 3774 
+			if = {
+				limit = { 
+					owns = 3776
+					3776 = { is_core = ROOT }
+					3776 = { culture_group = romanian }
+					3776 = { NOT = { has_province_flag = romanian_name } }
+				}
+				3776 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name 
+					change_province_name = "Valea Timocului" #SER - Timocka Krajina
+					rename_capital = "Zaicear" #SER - Zajecar
+				}
+			}
+                        #east_bulgaria_area
+                        #1427 1848 3780 3781
+			if = {
+				limit = { 
+					owns = 150
+					150 = { is_core = ROOT }
+					150 = { culture_group = romanian }
+					150 = { NOT = { has_province_flag = romanian_name } }
+				}
+				150 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = romanian_name
+					change_province_name = "Darstor" #BUL - Drastar
+					rename_capital = "Darstor" #BUL - Drastar
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

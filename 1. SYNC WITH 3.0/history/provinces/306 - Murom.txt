@@ -1,0 +1,32 @@
+owner = MUR
+controller = MUR
+add_core = MUR
+
+capital = "Murom"
+trade_goods = lumber
+culture = russian
+religion = orthodox
+
+hre = no
+
+base_tax = 6
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+town_hall = yes
+#harbour_infrastructure_1 = yes
+road_network = yes
+local_fortification_1 = yes
+temple = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 2.5 }
+	set_variable = { which = starting_urban_pop_1350 value = 5.000 }
+}

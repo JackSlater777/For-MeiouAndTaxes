@@ -1,0 +1,1009 @@
+castille_shakes_down_granada = {
+	
+}
+
+corruption_stop_gap = {
+	
+}
+
+free_loyalty = {
+	
+}
+
+
+ColonialIncome_0.1 = {
+	global_tax_income = 0.1
+}
+ColonialIncome_0.2 = {
+	global_tax_income = 0.2
+}
+ColonialIncome_0.4 = {
+	global_tax_income = 0.4
+}
+ColonialIncome_0.8 = {
+	global_tax_income = 0.8
+}
+ColonialIncome_1.6 = {
+	global_tax_income = 1.6
+}
+ColonialIncome_3.2 = {
+	global_tax_income = 3.2
+}
+ColonialIncome_6.4 = {
+	global_tax_income = 6.4
+}
+ColonialIncome_12.8 = {
+	global_tax_income = 12.8
+}
+ColonialIncome_25.6 = {
+	global_tax_income = 25.6
+}
+ColonialIncome_51.2 = {
+	global_tax_income = 51.2
+}
+ColonialIncome_102.4 = {
+	global_tax_income = 102.4
+}
+ColonialIncome_204.8 = {
+	global_tax_income = 204.8
+}
+ColonialIncome_409.6 = {
+	global_tax_income = 409.6
+}
+ColonialIncome_819.2 = {
+	global_tax_income = 819.2
+}
+ColonialIncome_1638.4 = {
+	global_tax_income = 1638.4
+}
+ColonialIncome_3276.8 = {
+	global_tax_income = 3276.8
+}
+ColonialIncome_6553.6 = {
+	global_tax_income = 6553.6
+}
+ColonialIncome_13107.2 = {
+	global_tax_income = 13107.2
+}
+
+
+
+ColonialSubsidy_0.1 = {
+	global_tax_income = -0.1
+}
+ColonialSubsidy_0.2 = {
+	global_tax_income = -0.2
+}
+ColonialSubsidy_0.4 = {
+	global_tax_income = -0.4
+}
+ColonialSubsidy_0.8 = {
+	global_tax_income = -0.8
+}
+ColonialSubsidy_1.6 = {
+	global_tax_income = -1.6
+}
+ColonialSubsidy_3.2 = {
+	global_tax_income = -3.2
+}
+ColonialSubsidy_6.4 = {
+	global_tax_income = -6.4
+}
+ColonialSubsidy_12.8 = {
+	global_tax_income = -12.8
+}
+ColonialSubsidy_25.6 = {
+	global_tax_income = -25.6
+}
+ColonialSubsidy_51.2 = {
+	global_tax_income = -51.2
+}
+ColonialSubsidy_102.4 = {
+	global_tax_income = -102.4
+}
+ColonialSubsidy_204.8 = {
+	global_tax_income = -204.8
+}
+ColonialSubsidy_409.6 = {
+	global_tax_income = -409.6
+}
+ColonialSubsidy_819.2 = {
+	global_tax_income = -819.2
+}
+ColonialSubsidy_1638.4 = {
+	global_tax_income = -1638.4
+}
+ColonialSubsidy_3276.8 = {
+	global_tax_income = -3276.8
+}
+ColonialSubsidy_6553.6 = {
+	global_tax_income = -6553.6
+}
+ColonialSubsidy_13107.2 = {
+	global_tax_income = -13107.2
+}
+
+
+recent_student_riot = { }
+
+#country_pop_level_1 = {
+#	
+#}
+#country_pop_level_2 = {
+#	
+#}
+#country_pop_level_3 = {
+#	
+#}
+#country_pop_level_4 = {
+#	
+#}
+#country_pop_level_5 = {
+#	
+#}
+#country_pop_level_6 = {
+#	
+#}
+#country_pop_level_7 = {
+#	
+#}
+#country_pop_level_8 = {
+#	
+#}
+#country_pop_level_9 = {
+#	
+#}
+#country_pop_level_10 = {
+#	
+#}
+#country_pop_level_11 = {
+#	
+#}
+#country_dev_level_1 = {
+#	
+#}
+#country_dev_level_2 = {
+#	
+#}
+#country_dev_level_3 = {
+#	
+#}
+#country_dev_level_4 = {
+#	
+#}
+#country_dev_level_5 = {
+#	
+#}
+#country_dev_level_6 = {
+#	
+#}
+#country_dev_level_7 = {
+#	
+#}
+#country_dev_level_8 = {
+#	
+#}
+#country_dev_level_9 = {
+#	
+#}
+#country_dev_level_10 = {
+#	
+#}
+#country_dev_level_11 = {
+#	
+#}
+#country_art_level_1 = {
+#	
+#}
+#country_art_level_2 = {
+#	
+#}
+#country_art_level_3 = {
+#	
+#}
+#country_art_level_4 = {
+#	
+#}
+#country_art_level_5 = {
+#	
+#}
+#country_art_level_6 = {
+#	
+#}
+#country_art_level_7 = {
+#	
+#}
+#country_art_level_8 = {
+#	
+#}
+#country_art_level_9 = {
+#	
+#}
+#country_art_level_10 = {
+#	
+#}
+#country_art_level_11 = {
+#	
+#}
+#disp_country_dev_level_1 = {
+#	mod_dev_level_1_influence = 1
+#}
+#disp_country_dev_level_2 = {
+#	mod_dev_level_1_influence = 2
+#}
+#disp_country_dev_level_3 = {
+#	mod_dev_level_1_influence = 3
+#}
+#disp_country_dev_level_4 = {
+#	mod_dev_level_1_influence = 4
+#}
+#disp_country_dev_level_5 = {
+#	mod_dev_level_1_influence = 5
+#}
+#disp_country_dev_level_6 = {
+#	mod_dev_level_1_influence = 6
+#}
+#disp_country_dev_level_7 = {
+#	mod_dev_level_1_influence = 7
+#}
+#disp_country_dev_level_8 = {
+#	mod_dev_level_1_influence = 8
+#}
+#disp_country_dev_level_9 = {
+#	mod_dev_level_1_influence = 9
+#}
+#disp_country_dev_level_10 = {
+#	mod_dev_level_1_influence = 10
+#}
+#disp_country_dev_level_11 = {
+#	mod_dev_level_1_influence = 11
+#}
+#disp_country_pop_level_1 = {
+#	mod_pop_level_1_influence = 1
+#}
+#disp_country_pop_level_2 = {
+#	mod_pop_level_1_influence = 2
+#}
+#disp_country_pop_level_3 = {
+#	mod_pop_level_1_influence = 3
+#}
+#disp_country_pop_level_4 = {
+#	mod_pop_level_1_influence = 4
+#}
+#disp_country_pop_level_5 = {
+#	mod_pop_level_1_influence = 5
+#}
+#disp_country_pop_level_6 = {
+#	mod_pop_level_1_influence = 6
+#}
+#disp_country_pop_level_7 = {
+#	mod_pop_level_1_influence = 7
+#}
+#disp_country_pop_level_8 = {
+#	mod_pop_level_1_influence = 8
+#}
+#disp_country_pop_level_9 = {
+#	mod_pop_level_1_influence = 9
+#}
+#disp_country_pop_level_10 = {
+#	mod_pop_level_1_influence = 10
+#}
+#disp_country_pop_level_11 = {
+#	mod_pop_level_1_influence = 11
+#}
+#disp_country_art_level_1 = {
+#	mod_art_level_1_influence = 1
+#}
+#disp_country_art_level_2 = {
+#	mod_art_level_1_influence = 2
+#}
+#disp_country_art_level_3 = {
+#	mod_art_level_1_influence = 3
+#}
+#disp_country_art_level_4 = {
+#	mod_art_level_1_influence = 4
+#}
+#disp_country_art_level_5 = {
+#	mod_art_level_1_influence = 5
+#}
+#disp_country_art_level_6 = {
+#	mod_art_level_1_influence = 6
+#}
+#disp_country_art_level_7 = {
+#	mod_art_level_1_influence = 7
+#}
+#disp_country_art_level_8 = {
+#	mod_art_level_1_influence = 8
+#}
+#disp_country_art_level_9 = {
+#	mod_art_level_1_influence = 9
+#}
+#disp_country_art_level_10 = {
+#	mod_art_level_1_influence = 10
+#}
+#disp_country_art_level_11 = {
+#	mod_art_level_1_influence = 11
+#}
+
+disp_country_development_1 = {
+	mod_dev_level_1_influence = 1
+}
+disp_country_development_2 = {
+	mod_dev_level_3_influence = 1
+}
+disp_country_development_3 = {
+	mod_dev_level_4_influence = 1
+}
+disp_country_development_4 = {
+	mod_dev_level_5_influence = 1
+}
+disp_country_development_5 = {
+	mod_dev_level_6_influence = 1
+}
+disp_country_development_6 = {
+	mod_dev_level_7_influence = 1
+}
+disp_country_development_7 = {
+	mod_dev_level_9_influence = 1
+}
+disp_country_development_8 = {
+	mod_dev_level_11_influence = 1
+}
+
+country_development_1 = {
+	build_cost = -0.3
+	
+	land_morale = -0.1
+	naval_morale = -0.1
+	siege_ability = -0.1
+	defensiveness = -0.1
+	discipline = -0.05
+	land_forcelimit_modifier = -0.15
+	
+	global_trade_power = -0.2
+}
+
+country_development_2 = {
+	build_cost = -0.15
+	
+	land_morale = -0.05
+	naval_morale = -0.05
+	siege_ability = -0.05
+	defensiveness = -0.05
+	discipline = -0.025
+	land_forcelimit_modifier = -0.10
+	
+	global_trade_power = -0.1
+}
+
+country_development_3 = {
+	mod_dev_level_4_influence = 1
+}
+
+country_development_4 = {
+	build_cost = 0.2
+	
+	land_morale = 0.025
+	naval_morale = 0.025
+	siege_ability = 0.025
+	defensiveness = 0.025
+	discipline = 0.012
+	land_forcelimit_modifier = 0.10
+	
+	global_trade_power = 0.075
+}
+
+country_development_5 = {
+	build_cost = 0.4
+	
+	land_morale = 0.05
+	naval_morale = 0.05
+	siege_ability = 0.05
+	defensiveness = 0.05
+	discipline = 0.025
+	land_forcelimit_modifier = 0.15
+	
+	global_trade_power = 0.15
+}
+country_development_6 = {
+	build_cost = 0.6
+	
+	land_morale = 0.1
+	naval_morale = 0.1
+	siege_ability = 0.1
+	defensiveness = 0.1
+	discipline = 0.05
+	land_forcelimit_modifier = 0.20
+	
+	global_trade_power = 0.2
+}
+country_development_7 = {
+	build_cost = 0.8
+	
+	land_morale = 0.125
+	naval_morale = 0.125
+	siege_ability = 0.125
+	defensiveness = 0.125
+	discipline = 0.075
+	land_forcelimit_modifier = 0.25
+	
+	global_trade_power = 0.25
+	
+}
+country_development_8 = {
+	build_cost = 1
+	
+	land_morale = 0.15
+	naval_morale = 0.15
+	siege_ability = 0.15
+	defensiveness = 0.15
+	discipline = 0.1
+	land_forcelimit_modifier = 0.30
+	
+	global_trade_power = 0.3
+}
+disp_education_level_illiterate = {
+	mod_art_level_1_influence = 1
+}
+disp_education_level_mediocre = {
+	mod_art_level_3_influence = 1
+}
+disp_education_level_poor = {
+	mod_art_level_5_influence = 1
+}
+disp_education_level_average = {
+	mod_art_level_6_influence = 1
+}
+disp_education_level_fair = {
+	mod_art_level_7_influence = 1
+}
+disp_education_level_good = {
+	mod_art_level_8_influence = 1
+}
+disp_education_level_high = {
+	mod_art_level_9_influence = 1
+}
+disp_education_level_exceptional = {
+	mod_art_level_10_influence = 1
+}
+disp_education_level_enlightened = {
+	mod_art_level_11_influence = 1
+}
+
+education_level_illiterate = {
+	technology_cost = 0.15
+	idea_cost = 0.10
+	army_tradition_decay = 0.015
+	navy_tradition_decay = 0.015
+	global_institution_spread = 0
+	
+	#stability_cost_modifier = -0.1
+	#global_autonomy = -0.15
+}
+
+education_level_mediocre = {
+	technology_cost = 0.1
+	idea_cost = 0.075
+	army_tradition_decay = 0.010
+	navy_tradition_decay = 0.010
+	global_institution_spread = 0.10
+	
+	#stability_cost_modifier = -0.05
+	#global_autonomy = -0.10
+}
+
+education_level_poor = {
+	technology_cost = 0.05
+	idea_cost = 0.05
+	army_tradition_decay = 0.005
+	navy_tradition_decay = 0.005
+	global_institution_spread = 0.20
+	
+	#stability_cost_modifier = -0.025
+	#global_autonomy = -0.05
+}
+
+education_level_average = {
+	#stability_cost_modifier = -0.025
+	global_institution_spread = 0.30
+	#global_autonomy = 0.025
+}
+
+
+education_level_fair = {
+	technology_cost = -0.05
+	idea_cost = -0.025
+	army_tradition_decay = -0.005
+	navy_tradition_decay = -0.005
+	global_institution_spread = 0.40
+	
+	#stability_cost_modifier = 0.05
+	#global_autonomy = 0.05
+}
+
+education_level_good = {
+	technology_cost = -0.1
+	idea_cost = -0.05
+	army_tradition_decay = -0.010
+	navy_tradition_decay = -0.010
+	global_institution_spread = 0.50
+	advisor_pool = 1
+	#stability_cost_modifier = 0.10
+	#global_autonomy = 0.075
+}
+
+education_level_high = {
+	technology_cost = -0.15
+	idea_cost = -0.075
+	army_tradition_decay = -0.015
+	navy_tradition_decay = -0.015
+	global_institution_spread = 0.60
+	advisor_pool = 1
+	#stability_cost_modifier = 0.15
+	#global_autonomy = 0.1
+}
+
+education_level_exceptional = {
+	technology_cost = -0.2
+	idea_cost = -0.1
+	army_tradition_decay = -0.020
+	navy_tradition_decay = -0.020
+	global_institution_spread = 0.70
+	advisor_pool = 2
+	#stability_cost_modifier = 0.20
+	#global_autonomy = 0.125
+}
+
+education_level_enlightened = {
+	technology_cost = -0.25
+	idea_cost = -0.125
+	army_tradition_decay = -0.025
+	navy_tradition_decay = -0.025
+	global_institution_spread = 0.80
+	advisor_pool = 2
+	#stability_cost_modifier = 0.25
+	#global_autonomy = 0.15
+}
+
+some_glassware_per_capita = {
+	technology_cost = -0.0125
+	picture = "urban_goods_glassware"
+}
+ample_glassware_per_capita = {
+	technology_cost = -0.025
+	picture = "urban_goods_glassware"
+}
+abundant_glassware_per_capita = {
+	technology_cost = -0.05
+	global_prov_trade_power_modifier = 0.05
+	picture = "urban_goods_glassware"
+}
+plentiful_glassware_per_capita = {
+	technology_cost = -0.075
+	prestige_decay = -0.005
+	global_prov_trade_power_modifier = 0.075
+	picture = "urban_goods_glassware"
+}
+copious_glassware_per_capita = {
+	technology_cost = -0.1
+	prestige_decay = -0.01
+	global_prov_trade_power_modifier = 0.1
+	picture = "urban_goods_glassware"
+}
+
+some_leather_per_capita = {
+	production_efficiency = 0.05
+	picture = "urban_goods_leather"
+}
+ample_leather_per_capita = {
+	production_efficiency = 0.075
+	global_regiment_cost = -0.025
+	picture = "urban_goods_leather"
+}
+abundant_leather_per_capita = {
+	production_efficiency = 0.1
+	global_regiment_cost = -0.05
+	picture = "urban_goods_leather"
+}
+plentiful_leather_per_capita = {
+	production_efficiency = 0.15
+	global_regiment_cost = -0.075
+	picture = "urban_goods_leather"
+}
+copious_leather_per_capita = {
+	production_efficiency = 0.25
+	global_regiment_cost = -0.1
+	picture = "urban_goods_leather"
+}
+
+some_silk_per_capita = {
+	adm_tech_cost_modifier = -0.025
+	picture = "urban_goods_silk"
+}
+ample_silk_per_capita = {
+	adm_tech_cost_modifier = -0.05
+	global_prov_trade_power_modifier = 0.05
+	picture = "urban_goods_silk"
+}
+abundant_silk_per_capita = {
+	picture = "urban_goods_silk"
+	adm_tech_cost_modifier = -0.1
+	global_prov_trade_power_modifier = 0.1
+	advisor_cost = -0.1
+}
+plentiful_silk_per_capita = {
+	adm_tech_cost_modifier = -0.15
+	global_prov_trade_power_modifier = 0.15
+	advisor_cost = -0.15
+	picture = "urban_goods_silk"
+}
+copious_silk_per_capita = {
+	adm_tech_cost_modifier = -0.2
+	global_prov_trade_power_modifier = 0.2
+	advisor_cost = -0.2
+	picture = "urban_goods_silk"
+}
+
+some_steel_per_capita = {
+	mil_tech_cost_modifier = -0.025
+	picture = "urban_goods_steel"
+}
+ample_steel_per_capita = {
+	mil_tech_cost_modifier = -0.05
+	cavalry_power = 0.025
+	artillery_power = 0.025
+	infantry_power = 0.025
+	picture = "urban_goods_steel"
+}
+abundant_steel_per_capita = {
+	mil_tech_cost_modifier = -0.1
+	cavalry_power = 0.05
+	artillery_power = 0.05
+	infantry_power = 0.05
+	picture = "urban_goods_steel"
+}
+plentiful_steel_per_capita = {
+	mil_tech_cost_modifier = -0.15
+	cavalry_power = 0.1
+	artillery_power = 0.1
+	infantry_power = 0.1
+	picture = "urban_goods_steel"
+}
+copious_steel_per_capita = {
+	mil_tech_cost_modifier = -0.2
+	cavalry_power = 0.15
+	artillery_power = 0.15
+	infantry_power = 0.15
+	picture = "urban_goods_steel"
+}
+
+some_naval_supplies_per_capita = {
+	naval_forcelimit_modifier = 0.01
+	ship_durability = 0.01
+	picture = "urban_goods_naval_supplies"
+}
+ample_naval_supplies_per_capita = {
+	naval_forcelimit_modifier = 0.025
+	ship_durability = 0.02
+	envoy_travel_time = -0.05
+	range = 0.1
+	picture = "urban_goods_naval_supplies"
+}
+abundant_naval_supplies_per_capita = {
+	naval_forcelimit_modifier = 0.05
+	ship_durability = 0.03
+	envoy_travel_time = -0.1
+	range = 0.15
+	colonist_placement_chance = 0.01
+	global_colonial_growth = 2
+	picture = "urban_goods_naval_supplies"
+}
+plentiful_naval_supplies_per_capita = {
+	naval_forcelimit_modifier = 0.075
+	ship_durability = 0.04
+	envoy_travel_time = -0.15
+	navy_tradition_decay = -0.02
+	range = 0.2
+	colonist_placement_chance = 0.02
+	global_colonial_growth = 4
+	picture = "urban_goods_naval_supplies"
+}
+copious_naval_supplies_per_capita = {
+	naval_forcelimit_modifier = 0.10
+	ship_durability = 0.05
+	envoy_travel_time = -0.2
+	navy_tradition_decay = -0.04
+	range = 0.25
+	colonist_placement_chance = 0.03
+	global_colonial_growth = 6
+	picture = "urban_goods_naval_supplies"
+}
+
+some_paper_per_capita = {
+	idea_cost = -0.05
+	picture = "urban_goods_paper"
+}
+ample_paper_per_capita = {
+	idea_cost = -0.075
+	advisor_cost = -0.05
+	picture = "urban_goods_paper"
+}
+abundant_paper_per_capita = {
+	idea_cost = -0.1
+	advisor_cost = -0.1
+	advisor_pool = 1
+	picture = "urban_goods_paper"
+}
+plentiful_paper_per_capita = {
+	idea_cost = -0.15
+	advisor_cost = -0.2
+	advisor_pool = 1
+	picture = "urban_goods_paper"
+}
+copious_paper_per_capita = {
+	idea_cost = -0.2
+	advisor_cost = -0.3
+	advisor_pool = 2
+	picture = "urban_goods_paper"
+}
+
+some_carpet_per_capita = {
+	prestige_decay = -0.0025
+	global_tax_modifier = 0.025
+	picture = "urban_goods_carpet"
+}
+ample_carpet_per_capita = {
+	prestige_decay = -0.005
+	global_tax_modifier = 0.05
+	picture = "urban_goods_carpet"
+}
+abundant_carpet_per_capita = {
+	prestige_decay = -0.01
+	global_tax_modifier = 0.10
+	picture = "urban_goods_carpet"
+}
+plentiful_carpet_per_capita = {
+	prestige_decay = -0.0125
+	global_tax_modifier = 0.15
+	picture = "urban_goods_carpet"
+}
+copious_carpet_per_capita = {
+	prestige_decay = -0.015
+	global_tax_modifier = 0.25
+	picture = "urban_goods_carpet"
+}
+
+some_chinaware_per_capita = {
+	diplomatic_reputation = 1
+	picture = "urban_goods_chinaware"
+}
+ample_chinaware_per_capita = {
+	diplomatic_reputation = 2
+	diplomats = 1
+	picture = "urban_goods_chinaware"
+}
+abundant_chinaware_per_capita = {
+	diplomatic_reputation = 3
+	diplomatic_upkeep = 1
+	diplomats = 1
+	picture = "urban_goods_chinaware"
+}
+plentiful_chinaware_per_capita = {
+	diplomatic_reputation = 4
+	diplomatic_upkeep = 1
+	diplomats = 1
+	picture = "urban_goods_chinaware"
+}
+copious_chinaware_per_capita = {
+	diplomatic_reputation = 5
+	diplomatic_upkeep = 2
+	diplomats = 2
+	picture = "urban_goods_chinaware"
+}
+
+some_jewelry_per_capita = {
+	global_tax_modifier = 0.05
+	picture = "urban_goods_jewelry"
+}
+ample_jewelry_per_capita = {
+	global_tax_modifier = 0.1
+	legitimacy = 0.15
+	republican_tradition = 0.15
+	picture = "urban_goods_jewelry"
+}
+abundant_jewelry_per_capita = {
+	global_tax_modifier = 0.15
+	inflation_reduction = 0.05
+	legitimacy = 0.3
+	republican_tradition = 0.30
+	picture = "urban_goods_jewelry"
+}
+plentiful_jewelry_per_capita = {
+	global_tax_modifier = 0.2
+	inflation_reduction = 0.075
+	legitimacy = 0.5
+	republican_tradition = 0.50
+	picture = "urban_goods_jewelry"
+}
+copious_jewelry_per_capita = {
+	global_tax_modifier = 0.3
+	inflation_reduction = 0.1
+	legitimacy = 0.75
+	republican_tradition = 0.75
+	picture = "urban_goods_jewelry"
+}
+
+some_luxury_cloth_per_capita = {
+	dip_tech_cost_modifier = -0.025
+	picture = "urban_goods_luxury_cloth"
+}
+ample_luxury_cloth_per_capita = {
+	dip_tech_cost_modifier = -0.05
+	global_prov_trade_power_modifier = 0.05
+	picture = "urban_goods_luxury_cloth"
+}
+abundant_luxury_cloth_per_capita = {
+	dip_tech_cost_modifier = -0.1
+	global_prov_trade_power_modifier = 0.075
+	diplomatic_upkeep = 1
+	picture = "urban_goods_luxury_cloth"
+}
+plentiful_luxury_cloth_per_capita = {
+	dip_tech_cost_modifier = -0.15
+	global_prov_trade_power_modifier = 0.1
+	diplomatic_upkeep = 1
+	picture = "urban_goods_luxury_cloth"
+}
+copious_luxury_cloth_per_capita = {
+	dip_tech_cost_modifier = -0.2
+	global_prov_trade_power_modifier = 0.125
+	diplomatic_upkeep = 2
+	picture = "urban_goods_luxury_cloth"
+}
+
+AI_policy_decisions_checked = {
+	
+}
+
+AI_centralization_policy = {
+	yearly_absolutism = 0.4
+}
+
+stability_policy_cooltime = {
+}
+
+stability_policy_1 = {
+	stability_cost_modifier = -0.15
+}
+
+stability_policy_2 = {
+	stability_cost_modifier = -0.25
+}
+
+stability_policy_3 = {
+	stability_cost_modifier = -0.3
+}
+
+road_maintenance_5 = {
+	state_maintenance_modifier = 0.05
+}
+
+road_maintenance_10 = {
+	state_maintenance_modifier = 0.10
+}
+
+road_maintenance_20 = {
+	state_maintenance_modifier = 0.20
+}
+
+road_maintenance_30 = {
+	state_maintenance_modifier = 0.30
+}
+
+road_maintenance_40 = {
+	state_maintenance_modifier = 0.40
+}
+
+road_maintenance_50 = {
+	state_maintenance_modifier = 0.50
+}
+
+road_maintenance_75 = {
+	state_maintenance_modifier = 0.75
+}
+
+road_maintenance_100 = {
+	state_maintenance_modifier = 1
+}
+
+capital_maintenance_1 = { global_tax_income = 5 }
+capital_maintenance_2 = { global_tax_income = 10 }
+capital_maintenance_3 = { global_tax_income = 15 }
+capital_maintenance_4 = { global_tax_income = 20 }
+capital_maintenance_5 = { global_tax_income = 25 }
+capital_maintenance_6 = { global_tax_income = 30 }
+capital_maintenance_7 = { global_tax_income = 35 }
+capital_maintenance_8 = { global_tax_income = 40 }
+capital_maintenance_9 = { global_tax_income = 45 }
+capital_maintenance_10 = { global_tax_income = 50 }
+capital_maintenance_11 = { global_tax_income = 55 }
+capital_maintenance_12 = { global_tax_income = 60 }
+capital_maintenance_13 = { global_tax_income = 65 }
+capital_maintenance_14 = { global_tax_income = 70 }
+capital_maintenance_15 = { global_tax_income = 75 }
+capital_maintenance_16 = { global_tax_income = 80 }
+capital_maintenance_17 = { global_tax_income = 85 }
+capital_maintenance_18 = { global_tax_income = 90 }
+capital_maintenance_19 = { global_tax_income = 95 }
+capital_maintenance_20 = { global_tax_income = 100 }
+capital_maintenance_21 = { global_tax_income = 120 }
+capital_maintenance_22 = { global_tax_income = 140 }
+capital_maintenance_23 = { global_tax_income = 160 }
+capital_maintenance_24 = { global_tax_income = 180 }
+capital_maintenance_25 = { global_tax_income = 200 }
+capital_maintenance_26 = { global_tax_income = 220 }
+capital_maintenance_27 = { global_tax_income = 240 }
+capital_maintenance_28 = { global_tax_income = 260 }
+capital_maintenance_29 = { global_tax_income = 280 }
+capital_maintenance_30 = { global_tax_income = 300 }
+capital_maintenance_31 = { global_tax_income = 320 }
+capital_maintenance_32 = { global_tax_income = 340 }
+capital_maintenance_33 = { global_tax_income = 360 }
+capital_maintenance_34 = { global_tax_income = 380 }
+capital_maintenance_35 = { global_tax_income = 400 }
+capital_maintenance_36 = { global_tax_income = 420 }
+capital_maintenance_37 = { global_tax_income = 440 }
+capital_maintenance_38 = { global_tax_income = 460 }
+capital_maintenance_39 = { global_tax_income = 480 }
+capital_maintenance_40 = { global_tax_income = 500 }
+capital_maintenance_41 = { global_tax_income = 600 }
+capital_maintenance_42 = { global_tax_income = 700 }
+capital_maintenance_43 = { global_tax_income = 800 }
+capital_maintenance_44 = { global_tax_income = 900 }
+capital_maintenance_45 = { global_tax_income = 1000 }
+capital_maintenance_46 = { global_tax_income = 1100 }
+capital_maintenance_47 = { global_tax_income = 1200 }
+capital_maintenance_48 = { global_tax_income = 1300 }
+capital_maintenance_49 = { global_tax_income = 1400 }
+capital_maintenance_50 = { global_tax_income = 1500 }
+capital_maintenance_51 = { global_tax_income = 1600 }
+capital_maintenance_52 = { global_tax_income = 1700 }
+capital_maintenance_53 = { global_tax_income = 1800 }
+capital_maintenance_54 = { global_tax_income = 1900 }
+capital_maintenance_55 = { global_tax_income = 2000 }
+capital_maintenance_56 = { global_tax_income = 2100 }
+capital_maintenance_57 = { global_tax_income = 2200 }
+capital_maintenance_58 = { global_tax_income = 2300 }
+capital_maintenance_59 = { global_tax_income = 2400 }
+capital_maintenance_60 = { global_tax_income = 2500 }
+capital_maintenance_61 = { global_tax_income = 2500 }
+
+capital_num_1 = { max_states = -1 }
+capital_num_2 = { max_states = -2 }
+capital_num_3 = { max_states = -3 }
+capital_num_4 = { max_states = -4 }
+capital_num_5 = { max_states = -5 }
+capital_num_6 = { max_states = -6 }
+capital_num_7 = { max_states = -7 }
+capital_num_8 = { max_states = -8 }
+capital_num_9 = { max_states = -9 }
+capital_num_10 = { max_states = -10 }
+capital_num_11 = { max_states = -11 }
+capital_num_12 = { max_states = -12 }
+capital_num_13 = { max_states = -13 }
+capital_num_14 = { max_states = -14 }
+capital_num_15 = { max_states = -15 }
+capital_num_16 = { max_states = -16 }
+capital_num_17 = { max_states = -17 }
+capital_num_18 = { max_states = -18 }
+capital_num_19 = { max_states = -19 }
+capital_num_20 = { max_states = -20 }
+
+stability_murder = {
+	stability_cost_modifier = 0.50
+}
+
+big_country_ai_starting_constraint = { ### This prevents the AI from violently overbuilding at game start as a big country
+	land_forcelimit_modifier = -0.5
+	naval_forcelimit_modifier = -0.5
+}

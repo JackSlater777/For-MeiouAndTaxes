@@ -1,0 +1,37 @@
+owner = YUA
+controller = YUA
+
+capital = "Kaiyuan"
+trade_goods = wheat
+#culture = uriankhai
+#religion = tengri_pagan_reformed
+culture = jilu
+religion = mahayana
+
+hre = no
+
+base_tax = 10
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+canal_level_1 = yes
+
+discovered_by = chinese
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 6 }
+	set_province_flag = tribals_control_province
+	set_province_flag = iron
+}
+1271.12.18 = {
+	add_core = YUA
+}
+1345.1.1 = {
+	owner = YUA
+	controller = YUA
+	add_core = YUA
+	#add_core = MXI
+	#add_core = CSE
+}

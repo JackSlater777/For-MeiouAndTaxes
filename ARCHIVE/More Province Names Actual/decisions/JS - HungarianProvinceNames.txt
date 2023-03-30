@@ -1,0 +1,719 @@
+country_decisions = {
+	rename_provinces_hungarian_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = magyar
+			any_owned_province = {
+				OR = {
+					area = basarabia_area
+					area = moldavia_area
+					area = alfold_area
+					area = transylvania_area
+					area = east_slovakia_area
+					area = west_slovakia_area
+					area = transdanubia_area
+					area = kisalfold_area
+					area = croatia_area
+
+                        		#north_serbia_area
+					province_id = 2612
+				}
+				culture = hungarian
+				NOT = { has_province_flag = hungarian_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture = hungarian
+				NOT = { has_province_flag = hungarian_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #basarabia_area
+			if = {
+				limit = { 
+					owns = 160
+					160 = { is_core = ROOT }
+					160 = { culture = hungarian }
+					160 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				160 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Kilija" #ROM - Chilia
+					rename_capital = "Kilija" #ROM - Chilia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1400
+					1400 = { is_core = ROOT }
+					1400 = { culture = hungarian }
+					1400 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Orhely" #ROM - Orhei
+					rename_capital = "Orhely" #ROM - Orhei
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2626
+					2626 = { is_core = ROOT }
+					2626 = { culture = hungarian }
+					2626 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2626 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Soroca" #ROM - Soroca
+					rename_capital = "Soroca" #ROM - Soroca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { culture = hungarian }
+					3794 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Dnyeszterfehervar" #ROM - Cetatea Alba
+					rename_capital = "Dnyeszterfehervar" #ROM - Cetatea Alba
+				}
+			}
+
+                        #moldavia_area
+			if = {
+				limit = { 
+					owns = 1269
+					1269 = { is_core = ROOT }
+					1269 = { culture = hungarian }
+					1269 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1269 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Jaszvasar" #ROM - Carligatura
+					rename_capital = "Jaszvasar" #ROM - Iasi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2236
+					2236 = { is_core = ROOT }
+					2236 = { culture = hungarian }
+					2236 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2236 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Bukovina" #ROM - Bucovina
+					rename_capital = "Szeretvasar" #ROM - Siret
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2379
+					2379 = { is_core = ROOT }
+					2379 = { culture = hungarian }
+					2379 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2379 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Barlad" #ROM - Barlad
+					rename_capital = "Galac" #ROM - Galati
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3791
+					3791 = { is_core = ROOT }
+					3791 = { culture = hungarian }
+					3791 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3791 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Bako" #ROM - Bacau
+					rename_capital = "Bako" #ROM - Bacau
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3793
+					3793 = { is_core = ROOT }
+					3793 = { culture = hungarian }
+					3793 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3793 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Hotin" #ROM - Hotin
+					rename_capital = "Hotin" #ROM - Hotin
+				}
+			}
+
+                        #alfold_area
+			if = {
+				limit = { 
+					owns = 1271
+					1271 = { is_core = ROOT }
+					1271 = { culture = hungarian }
+					1271 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1271 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Bihar" #ROM - Bihor
+					rename_capital = "Nagyvarad" #ROM - Oradea
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1273
+					1273 = { is_core = ROOT }
+					1273 = { culture = hungarian }
+					1273 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1273 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name
+					change_province_name = "Bekes" #ROM - Jula
+					rename_capital = "Gyula" #ROM - Jula
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1404
+					1404 = { is_core = ROOT }
+					1404 = { culture = hungarian }
+					1404 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1404 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Bansag" #ROM - Banat
+					rename_capital = "Temesvar" #ROM - Timisoara
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1859
+					1859 = { is_core = ROOT }
+					1859 = { culture = hungarian }
+					1859 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1859 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Torontal" #ROM - Torontal
+					rename_capital = "Nagybecskerek" #ROM - Becicherecu Mare
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2275
+					2275 = { is_core = ROOT }
+					2275 = { culture = hungarian }
+					2275 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szatmar" #ROM - Satmar
+					rename_capital = "Nagykaroly" #ROM - Carei
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3789
+					3789 = { is_core = ROOT }
+					3789 = { culture = hungarian }
+					3789 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3789 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Arad" #ROM - Arad
+					rename_capital = "Arad" #ROM - Arad
+				}
+			}
+
+                        #transylvania_area
+			if = {
+				limit = { 
+					owns = 158
+					158 = { is_core = ROOT }
+					158 = { culture = hungarian }
+					158 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				158 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Erdely" #ROM - Ardeal
+					rename_capital = "Nagyszeben" #ROM - Sibiu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 162
+					162 = { is_core = ROOT }
+					162 = { culture = hungarian }
+					162 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				162 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Maramaros" #ROM - Maramures
+					rename_capital = "Huszt" #ROM - Hust
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1405
+					1405 = { is_core = ROOT }
+					1405 = { culture = hungarian }
+					1405 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1405 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Kolozs" #ROM - Cluj
+					rename_capital = "Kolozsvar" #ROM - Cluj-Napoca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2375
+					2375 = { is_core = ROOT }
+					2375 = { culture = hungarian }
+					2375 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2375 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szekelyfold" #ROM - Tinutul Secuiesc
+					rename_capital = "Szekelyudvarhely" #ROM - Odorheiu Secuiesc
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3788
+					3788 = { is_core = ROOT }
+					3788 = { culture = hungarian }
+					3788 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3788 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Hunyad" #ROM - Hunedoara
+					rename_capital = "Deva" #ROM - Deva
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3790
+					3790 = { is_core = ROOT }
+					3790 = { culture = hungarian }
+					3790 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3790 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Beszterce-Naszod" #ROM - Bistrita-Nasaud
+					rename_capital = "Beszterce" #ROM - Bistrita
+				}
+			}
+
+                        #east_slovakia_area
+			if = {
+				limit = { 
+					owns = 1282
+					1282 = { is_core = ROOT }
+					1282 = { culture = hungarian }
+					1282 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Ungvar" #SLV - Uzhorod
+					rename_capital = "Ungvar" #SLV - Uzhorod
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1406
+					1406 = { is_core = ROOT }
+					1406 = { culture = hungarian }
+					1406 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1406 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Abauj-Torna" #SLV - Abov-Turna
+					rename_capital = "Kassa" #SLV - Kosice
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3754
+					3754 = { is_core = ROOT }
+					3754 = { culture = hungarian }
+					3754 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3754 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szepes" #SLV - Spis
+					rename_capital = "Locse" #SLV - Levoca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3755
+					3755 = { is_core = ROOT }
+					3755 = { culture = hungarian }
+					3755 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3755 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Saros" #SLV - Saris
+					rename_capital = "Eperjes" #SLV - Presov
+				}
+			}
+
+                        #west_slovakia_area
+			if = {
+				limit = { 
+					owns = 1272
+					1272 = { is_core = ROOT }
+					1272 = { culture = hungarian }
+					1272 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1272 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Nograd-Honth" #SLV - Novohrad-Hont
+					rename_capital = "Selmecbanya" #SLV - Banska Stiavnica
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1274
+					1274 = { is_core = ROOT }
+					1274 = { culture = hungarian }
+					1274 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1274 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Pozsony" #SLV - Presporok
+					rename_capital = "Pozsony" #SLV - Presporok
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1276
+					1276 = { is_core = ROOT }
+					1276 = { culture = hungarian }
+					1276 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1276 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Zolyom" #SLV - Zvolen
+					rename_capital = "Besztercebanya" #SLV - Banska Bistrica
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3753
+					3753 = { is_core = ROOT }
+					3753 = { culture = hungarian }
+					3753 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3753 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Trencsen" #SLV - Trencjn
+					rename_capital = "Kormocbanya" #SLV - Kremnica
+				}
+			}
+
+                        #transdanubia_area
+			if = {
+				limit = { 
+					owns = 133
+					133 = { is_core = ROOT }
+					133 = { culture = hungarian }
+					133 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				133 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Somogy"
+					rename_capital = "Kaposvar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 135
+					135 = { is_core = ROOT }
+					135 = { culture = hungarian }
+					135 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				135 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szombathely"
+					rename_capital = "Sopron"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 153
+					153 = { is_core = ROOT }
+					153 = { culture = hungarian }
+					153 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				153 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Pecs"
+					rename_capital = "Pecs"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2436
+					2436 = { is_core = ROOT }
+					2436 = { culture = hungarian }
+					2436 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2436 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Komarom"
+					rename_capital = "Komarom"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2846
+					2846 = { is_core = ROOT }
+					2846 = { culture = hungarian }
+					2846 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2846 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Orvidek"
+					rename_capital = "Kismarton"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3769
+					3769 = { is_core = ROOT }
+					3769 = { culture = hungarian }
+					3769 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3769 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Fejer"
+					rename_capital = "Szekesfehervar"
+				}
+			}
+
+                        #kisalfold_area
+			if = {
+				limit = { 
+					owns = 1267
+					1267 = { is_core = ROOT }
+					1267 = { culture = hungarian }
+					1267 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1267 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Pest"
+					rename_capital = "Pest"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1270
+					1270 = { is_core = ROOT }
+					1270 = { culture = hungarian }
+					1270 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1270 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Bacska"
+					rename_capital = "Zombor"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1275
+					1275 = { is_core = ROOT }
+					1275 = { culture = hungarian }
+					1275 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Heves"
+					rename_capital = "Eger"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3770
+					3770 = { is_core = ROOT }
+					3770 = { culture = hungarian }
+					3770 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3770 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Borsod"
+					rename_capital = "Miskolc"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3771
+					3771 = { is_core = ROOT }
+					3771 = { culture = hungarian }
+					3771 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3771 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szabolcs"
+					rename_capital = "Debrecen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3772
+					3772 = { is_core = ROOT }
+					3772 = { culture = hungarian }
+					3772 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				3772 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Csongrad"
+					rename_capital = "Szeged"
+				}
+			}
+
+                        #croatia_area
+			if = {
+				limit = { 
+					owns = 131
+					131 = { is_core = ROOT }
+					131 = { culture = hungarian }
+					131 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				131 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Prigorje" #CRO - Prigorje
+					rename_capital = "Gerec" #CRO - Gradec
+				}
+			}
+			if = {
+				limit = { 
+					owns = 152
+					152 = { is_core = ROOT }
+					152 = { culture = hungarian }
+					152 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				152 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Zagorje" #CRO - Zagorje
+					rename_capital = "Varasd" #CRO - Varazdin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1403
+					1403 = { is_core = ROOT }
+					1403 = { culture = hungarian }
+					1403 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1403 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Lika-Krbava" #CRO - Licko-Krbava
+					rename_capital = "Zengg" #CRO - Senj
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1450
+					1450 = { is_core = ROOT }
+					1450 = { culture = hungarian }
+					1450 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				1450 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szerem" #CRO - Srijem #SER - Srem
+					rename_capital = "Zimony" #CRO - Zemun #SER - Zemun
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2390
+					2390 = { is_core = ROOT }
+					2390 = { culture = hungarian }
+					2390 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2390 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Szlavonia" #CRO - Slavonija
+					rename_capital = "Eszek" #CRO - Osijek
+				}
+			}
+
+                        #north_serbia_area
+                        #141 156 3773 3774 3776
+			if = {
+				limit = { 
+					owns = 2612
+					2612 = { is_core = ROOT }
+					2612 = { culture = hungarian }
+					2612 = { NOT = { has_province_flag = hungarian_name } }
+				}
+				2612 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = hungarian_name 
+					change_province_name = "Nandorfehervar" #SER - Beograd
+					rename_capital = "Nandorfehervar" #SER - Beograd
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

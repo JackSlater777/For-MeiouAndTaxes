@@ -1,0 +1,500 @@
+country_decisions = {
+	prov_name_initialization_decision = {
+		potential = {
+			NOT = { has_global_flag = prov_name_init }
+		}
+		
+		allow = {
+			owns = 1240
+		}
+		
+		effect = {
+			set_global_flag = prov_name_init
+
+			6 = { 
+				change_province_name = "Scaniae"
+			}
+			13 = { 
+				change_province_name = "Sydslesvig"
+			}
+			15 = { 
+				change_province_name = "Ostjylland"
+			}
+			16 = { 
+				rename_capital = "Christiania"
+			}
+			19 = {
+				change_province_name = "Etela Pohjanmaa"
+			}
+			32 = { 
+				rename_capital = "Viipuri"
+			}
+			34 = {
+				rename_capital = "Kabrio"
+			}
+			35 = {
+				change_province_name = "Kemi"
+				rename_capital = "Kemi"
+			}
+			67 = { 
+				rename_capital = "Norraejylland"
+			}
+			136 = {
+				change_province_name = "Spalato"
+				rename_capital = "Spalato"
+			}
+			137 = {
+				change_province_name = "Dubrovnik"
+				rename_capital = "Dubrovnik"
+			}
+			138 = {
+				rename_capital = "Kotor"
+			}
+			159 = {
+				change_province_name = "Dobruja"
+			}
+			160 = {
+				change_province_name = "Kiliya"
+				rename_capital = "Kiliya"
+			}
+			162 = {
+				change_province_name = "Marmaroshchyna"
+				rename_capital = "Syhit"
+			}
+			261 = {
+				change_province_name = "Zhytomyr"
+				rename_capital = "Zhytomyr"
+			}
+			276 = {
+				change_province_name = "Braclav"
+				rename_capital = "Braclav"
+			}
+			278 = {
+				rename_capital = "Pechora"
+			}
+			279 = {
+				rename_capital = "Pinega"
+			}
+			281 = {
+				change_province_name = "Iset"
+				rename_capital = "Iset"
+			}
+			282 = {
+				change_province_name = "Qirim"
+			}
+			284 = {
+				change_province_name = "Edisan"
+				rename_capital = "Qara-Kerman"
+			}
+			285 = {
+				change_province_name = "Qizil-Yar"
+				rename_capital = "Qizil-Yar"
+			}
+			286 = {
+				change_province_name = "Kuban"
+				rename_capital = "Kuban"
+			}
+			287 = {
+				change_province_name = "Azaraba"
+				rename_capital = "Azaraba"
+			}
+			299 = {
+				change_province_name = "Pereiaslav"
+				rename_capital = "Pereiaslav"
+			}
+			300 = {
+				change_province_name = "Mansur"
+				rename_capital = "Mansur"
+			}
+			302 = {
+				change_province_name = "Tyn"
+				rename_capital = "Tyn"
+			}
+			303 = {
+				change_province_name = "Elst"
+				rename_capital = "Elst"
+			}
+			311 = {
+				change_province_name = "Staradub"
+				rename_capital = "Staradub"
+			}
+			381 = {
+				change_province_name = "Mscislav"
+				rename_capital = "Mscislav"
+			}
+			891 = {
+				change_province_name = "Lule Sami"
+				rename_capital = "Arjepluovvi gielda"
+			}
+			995 = {
+				rename_capital = "Dzaug"
+			}
+			1009 = {
+				rename_capital = "Sunzha"
+			}
+			1035 = {
+				rename_capital = "Koryak"
+			}
+			1036 = {
+				change_province_name = "Chukchi"
+				rename_capital = "Chukchi"
+			}
+			1037 = {
+				change_province_name = "Chukot"
+				rename_capital = "Chukot"
+			}
+			1038 = {
+				change_province_name = "Arman"
+				rename_capital = "Arman"
+			}
+			1039 = {
+				change_province_name = "Taui"
+				rename_capital = "Taui"
+			}
+			1040 = {
+				change_province_name = "Suntar Khayat"
+			}
+			1044 = {
+				rename_capital = "Neikan"
+			}
+			1048 = {
+				rename_capital = "Amgun"
+			}
+			1054 = {
+				rename_capital = "Khar Moron"
+			}
+			1056 = {
+				change_province_name = "Shilke"
+			}
+			1059 = {
+				change_province_name = "Barkhajan"
+				rename_capital = "Barkhajan"
+			}
+			1060 = {
+				change_province_name = "Dubhun"
+				rename_capital = "Dubhun"
+			}
+			1062 = {
+				change_province_name = "Erkuu"
+				rename_capital = "Erkuu"
+			}
+			1064 = {
+				rename_capital = "Ilim"
+			}
+			1070 = {
+				change_province_name = "Kargaly"
+				rename_capital = "Kargaly"
+			}
+			1071 = {
+				change_province_name = "Tara"
+				rename_capital = "Tara"
+			}
+			1072 = {
+				change_province_name = "Nadym"
+				rename_capital = "Nadym"
+			}
+			1074 = {
+				rename_capital = "Taz"
+			}
+			1075 = {
+				change_province_name = "Bardak"
+			}
+			1077 = {
+				change_province_name = "Yavlu-Tura"
+				rename_capital = "Yavlu-Tura"
+			}
+			1079 = {
+				change_province_name = "Chingi-Tura"
+			}
+			1080 = {
+				change_province_name = "Chelyaby"
+			}
+			1082 = {
+				change_province_name = "Or"
+				rename_capital = "Or"
+			}
+			1099 = {
+				change_province_name = "Or"
+				rename_capital = "Or"
+			}
+			1256 = {
+				change_province_name = "Baahuslen"
+				rename_capital = "Konghelle"
+			}
+			1260 = {
+				rename_capital = "Umea"
+			}
+			1266 = {
+				change_province_name = "Nordlanda"
+				rename_capital = "Badaddjo"
+			}
+			1271 = {
+				rename_capital = "Nagyvarad"
+			}
+			1272 = {
+				change_province_name = "Novohrad-Hont"
+				rename_capital = "Banska Stiavnica"
+			}
+			1276 = {
+				change_province_name = "Zvolen"
+				rename_capital = "Banska Bystrica"
+			}
+			1277 = {
+				rename_capital = "Plzen"
+			}
+			1287 = {
+				change_province_name = "Qalmiuz"
+				rename_capital = "Qalmiuz"
+			}
+			1293 = {
+				change_province_name = "Xaci-Tarxan"
+				rename_capital = "Xaci-Tarxan"
+			}
+			1296 = {
+				change_province_name = "Sary Tau"
+				rename_capital = "Ukek"
+			}
+			1297 = {
+				change_province_name = "Lower Don"
+				rename_capital = "Lower Don"
+			}
+			1303 = {
+				change_province_name = "Majar"
+				rename_capital = "Majar"
+			}
+			1304 = {
+				rename_capital = "Manych"
+			}
+			1307 = {
+				rename_capital = "Qazan"
+			}
+			1308 = {
+				change_province_name = "Samar"
+				rename_capital = "Samar"
+			}
+			1309 = {
+				change_province_name = "Kuma"
+				rename_capital = "Kuma"
+			}
+			1311 = {
+				change_province_name = "Yar Calli"
+				rename_capital = "Yar Calli"
+			}
+			1394 = {
+				change_province_name = "Turav"
+				rename_capital = "Turav"
+			}
+			1400 = {
+				change_province_name = "Shehr-al-Jadid"
+				rename_capital = "Shehr-al-Jadid"
+			}
+			1404 = {
+				change_province_name = "Banat"
+				rename_capital = "Timisoara"
+			}
+			1405 = {
+				change_province_name = "Cluj"
+				rename_capital = "Cluj-Napoca"
+			}
+			1406 = {
+				change_province_name = "Abov-Turna"
+			}
+			1431 = {
+				change_province_name = "Kyzy-Kermen"
+				rename_capital = "Kyzy-Kermen"
+			}
+			1433 = {
+				change_province_name = "Podilia"
+				rename_capital = "Kamianets"
+			}
+			1450 = {
+				change_province_name = "Szerem"
+			}
+			1529 = {
+				rename_capital = "Kazym-vosh"
+			}
+			1859 = {
+				rename_capital = "Nagybecskerek"
+			}
+			2156 = {
+				rename_capital = "Kuta"
+			}
+			2275 = {
+				rename_capital = "Nagykaroly"
+			}
+			2327 = {
+				change_province_name = "Skolt Sami"
+				rename_capital = "Ruavnjargg"
+			}
+			2382 = {
+				change_province_name = "Vidin"
+			}
+			2437 = {
+				change_province_name = "Ulatar"
+				rename_capital = "Ulatar"
+			}
+			2438 = {
+				change_province_name = "Bashgird"
+				rename_capital = "Bashgird"
+			}
+			2439 = {
+				change_province_name = "Mokhshi"
+				rename_capital = "Mokhshi"
+			}
+			2443 = {
+				change_province_name = "Qara-Ozen"
+				rename_capital = "Qara-Ozen"
+			}
+			2444 = {
+				rename_capital = "Yaik"
+			}
+			2446 = {
+				change_province_name = "Qashlik"
+			}
+			2537 = {
+				change_province_name = "Kremianets"
+				rename_capital = "Kremianets"
+			}
+			2545 = {
+				change_province_name = "Izyum"
+				rename_capital = "Izyum"
+			}
+			2547 = {
+				change_province_name = "Udmurt"
+			}
+			2578 = {
+				rename_capital = "Terek"
+			}
+			2626 = {
+				change_province_name = "Soroka"
+				rename_capital = "Soroka"
+			}
+			2848 = {
+				change_province_name = "Cherkasy"
+				rename_capital = "Cherkasy"
+			}
+			3251 = {
+				rename_capital = "Uda"
+			}
+			3252 = {
+				rename_capital = "Bidzhan"
+			}
+			3254 = {
+				rename_capital = "Jingkiri"
+			}
+			3269 = {
+				change_province_name = "Nerchuu"
+				rename_capital = "Nerchuu"
+			}
+			3271 = {
+				change_province_name = "Ude"
+			}
+			3401 = {
+				rename_capital = "Izhora"
+			}
+			3639 = {
+				rename_capital = "Malka"
+			}
+			3720 = {
+				change_province_name = "Vaestjulland"
+			}
+			3753 = {
+				change_province_name = "Trencin"
+			}
+			3754 = {
+				change_province_name = "Spis"
+			}
+			3755 = {
+				change_province_name = "Saris"
+				rename_capital = "Presov"
+			}
+			3761 = {
+				change_province_name = "Volodymyr-Volynskyi"
+				rename_capital = "Volodymyr-Volynskyi"
+			}
+			3762 = {
+				change_province_name = "Brest"
+				rename_capital = "Brest"
+			}
+			3776 = {
+				rename_capital = "Zajecar"
+			}
+			3788 = {
+				change_province_name = "Hunedoara"
+			}
+			3790 = {
+				change_province_name = "Bistritz-Naszod"
+			}
+			3794 = {
+				change_province_name = "Aq-Libo"
+				rename_capital = "Aq-Libo"
+			}
+			4016 = {
+				change_province_name = "Tetesh"
+				rename_capital = "Tetesh"
+			}
+			4018 = {
+				change_province_name = "Bokey"
+				rename_capital = "Bokey"
+			}
+			4019 = {
+				change_province_name = "Uzeu"
+				rename_capital = "Uzeu"
+			}
+			4020 = {
+				change_province_name = "Bahmut"
+				rename_capital = "Bahmut"
+			}
+			4021 = {
+				change_province_name = "Chyhyr-Batyr"
+				rename_capital = "Chyhyr-Batyr"
+			}
+			4023 = {
+				rename_capital = "Usa"
+			}
+			4033 = {
+				change_province_name = "Bira"
+				rename_capital = "Bira"
+			}
+			4110 = {
+				change_province_name = "Murava"
+				rename_capital = "Murava"
+			}
+			4111 = {
+				change_province_name = "Tomba"
+				rename_capital = "Tomba"
+			}
+			4197 = {
+				change_province_name = "Vidym"
+			}
+			4201 = {
+				change_province_name = "Qizil-Tura"
+				rename_capital = "Qizil-Tura"
+			}
+			4202 = {
+				change_province_name = "Belogor"
+			}
+			4203 = {
+				rename_capital = "Shorkar"
+			}
+			4205 = {
+				change_province_name = "Tabar"
+			}
+			4208 = {
+				rename_capital = "Sugmut-vosh"
+			}
+
+
+			every_province = {
+				clear_province_name_flag_effect = yes
+			}
+			every_province = {
+				province_name_flag_initialization_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

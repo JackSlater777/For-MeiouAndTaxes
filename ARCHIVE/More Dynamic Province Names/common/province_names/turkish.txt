@@ -1,0 +1,5 @@
+######################## From JackSlater
+# All province names are in JS - TurkishProvinceNames.txt decision
+
+######################## Main MEIOU&Taxes
+# All province names are in JS - TurkishProvinceNames.txt decision

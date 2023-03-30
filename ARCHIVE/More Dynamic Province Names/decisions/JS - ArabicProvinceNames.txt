@@ -1,0 +1,3167 @@
+country_decisions = {
+	rename_provinces_arabic_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			OR = {
+				culture_group = mashreqi
+				culture_group = maghreb
+				culture_group = arabian
+				AND = {
+					culture_group = iberian
+					religion_group = muslim
+				}
+			}
+			any_owned_province = {
+				OR = {
+					area = basra_area
+					area = mosul_area
+					area = syria_area
+					area = aleppo_area
+					area = kabylia_area
+					area = algiers_area
+					area = atlas_area
+					area = fezzan_area
+					area = fez_area
+					area = marrekesh_area
+					area = tafilalt_area
+					area = sus_area
+					area = tanja_area
+					area = elrif_area
+					area = anfa_area
+					area = north_saharan_area
+					area = djerba_area
+					######################
+					area = upper_andalucia_area
+					area = lower_guadalquivir_area
+					area = upper_guadalquivir_area
+					area = murcia_area
+					area = toledo_area
+					area = extremadura_area
+					area = extremadura_castilla_area
+					area = castille_area
+
+					#leon_area
+					province_id = 208
+					province_id = 216
+					province_id = 3353
+
+                        		#euskal_area
+					province_id = 210
+					province_id = 1421
+					province_id = 3370
+
+					area = valencia_area
+					area = aragon_area
+
+					#catalonia_area
+					province_id = 181
+					province_id = 212
+					province_id = 213
+					province_id = 2369
+
+					area = baleares_area
+					area = alentejo_area
+
+					#beieras_area
+					province_id = 230
+					province_id = 231
+					province_id = 232
+					province_id = 3349
+
+                        		#languedoc_area
+					province_id = 3861
+				}
+				OR = {
+					culture_group = mashreqi
+					culture_group = maghreb
+					culture_group = arabian
+					AND = {
+						culture_group = iberian
+						religion_group = muslim
+					}
+					AND = {
+						culture_group = portuguese
+						religion_group = muslim
+					}
+					AND = {
+						culture_group = basque_group
+						religion_group = muslim
+					}
+					AND = {
+						culture_group = langue_d_oc
+						religion_group = muslim
+					}
+				}
+				NOT = { has_province_flag = arabic_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				OR = {
+					culture_group = mashreqi
+					culture_group = maghreb
+					culture_group = arabian
+					AND = {
+						culture_group = iberian
+						religion_group = muslim
+					}
+					AND = {
+						culture_group = portuguese
+						religion_group = muslim
+					}
+					AND = {
+						culture_group = basque_group
+						religion_group = muslim
+					}
+					AND = {
+						culture_group = langue_d_oc
+						religion_group = muslim
+					}
+				}
+				NOT = { has_province_flag = arabic_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #basra_area
+			if = {
+				limit = { 
+					owns = 392
+					392 = { is_core = ROOT }
+					392 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					392 = { NOT = { has_province_flag = arabic_name } }
+				}
+				392 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Khuzistan" #PER - Khuzestan
+					rename_capital = "Abbad bin Hosayn" #PER - Abadan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 393
+					393 = { is_core = ROOT }
+					393 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					393 = { NOT = { has_province_flag = arabic_name } }
+				}
+				393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Kuwait"
+					rename_capital = "al-Kuwait"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 398
+					398 = { is_core = ROOT }
+					398 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					398 = { NOT = { has_province_flag = arabic_name } }
+				}
+				398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Basrah"
+					rename_capital = "al-Basrah"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3826
+					3826 = { is_core = ROOT }
+					3826 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3826 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3826 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Ahwaz" #PER - Ahvaz
+					rename_capital = "al-Ahwaz" #PER - Ahvaz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3902
+					3902 = { is_core = ROOT }
+					3902 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3902 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3902 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Zubair"
+					rename_capital = "al-Zubair"
+				}
+			}
+
+                        #mosul_area
+			if = {
+				limit = { 
+					owns = 411
+					411 = { is_core = ROOT }
+					411 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					411 = { NOT = { has_province_flag = arabic_name } }
+				}
+				411 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Karkuk" #Kurdish - Kerkuk #Syriac - Beth Garmai
+					rename_capital = "Karkuk" #Kurdish - Kerkuk #Syriac - Beth Garmai
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1320
+					1320 = { is_core = ROOT }
+					1320 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1320 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1320 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "al-Mawsil" #Assyrian - Mepsila #Syriac - Mawsil
+					rename_capital = "al-Mawsil" #Assyrian - Mepsila #Syriac - Mawsil
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1329
+					1329 = { is_core = ROOT }
+					1329 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1329 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1329 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Samarrah" #Assyrian - Surimarrat
+					rename_capital = "Samarrah" #Assyrian - Surimarrat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2654
+					2654 = { is_core = ROOT }
+					2654 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2654 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2654 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "as-Sulaymaniyyah" #Kurdish - Silemani
+					rename_capital = "as-Sulaymaniyyah" #Kurdish - Silemani
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3087
+					3087 = { is_core = ROOT }
+					3087 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3087 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3087 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Diyala" #Kurdish - Xaneqin
+					rename_capital = "Baqubah" #Kurdish - Xaneqin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3088
+					3088 = { is_core = ROOT }
+					3088 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3088 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3088 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Arbil" #Kurdish - Soran #Syriac - Arbela
+					rename_capital = "Arbil" #Kurdish - Hewler #Syriac - Arbela
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3885
+					3885 = { is_core = ROOT }
+					3885 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3885 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3885 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Qamishli" #Assyrian - Bet Zalin #Syriac - Qamishlo #Kurdish - Bokhtan
+					rename_capital = "Sinjar" #Assyrian - Bet Zalin #Syriac - Qamishlo #Kurdish - Singal
+				}
+			}
+
+                        #syria_area
+			if = {
+				limit = { 
+					owns = 378
+					378 = { is_core = ROOT }
+					378 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					378 = { NOT = { has_province_flag = arabic_name } }
+				}
+				378 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tarabulus al-Sham"
+					rename_capital = "Tarabulus al-Sham"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 382
+					382 = { is_core = ROOT }
+					382 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					378 = { NOT = { has_province_flag = arabic_name } }
+				}
+				382 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Dimashq"
+					rename_capital = "Dimashq"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 875
+					875 = { is_core = ROOT }
+					875 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					378 = { NOT = { has_province_flag = arabic_name } }
+				}
+				875 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Wadi al-Biqa"
+					rename_capital = "Zahle"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1328
+					1328 = { is_core = ROOT }
+					1328 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1328 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1328 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Hims"
+					rename_capital = "Hims"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1334
+					1334 = { is_core = ROOT }
+					1334 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1334 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1334 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bayrut" #Aramean - Birot
+					rename_capital = "Bayrut" #Aramean - Birot 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4057
+					4057 = { is_core = ROOT }
+					4057 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4057 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4057 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Busra al-Sham"
+					rename_capital = "Busra"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4058
+					4058 = { is_core = ROOT }
+					4058 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4058 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4058 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tadmur"
+					rename_capital = "Tadmur"
+				}
+			}
+
+                        #aleppo_area
+			if = {
+				limit = { 
+					owns = 332
+					332 = { is_core = ROOT }
+					332 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					332 = { NOT = { has_province_flag = arabic_name } }
+				}
+				332 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Antakiyyah"
+					rename_capital = "Antakiyyah"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 377
+					377 = { is_core = ROOT }
+					377 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					377 = { NOT = { has_province_flag = arabic_name } }
+				}
+				377 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Halab"
+					rename_capital = "Halab"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1327
+					1327 = { is_core = ROOT }
+					1327 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1327 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1327 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Hamah"
+					rename_capital = "Hamah"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2224
+					2224 = { is_core = ROOT }
+					2224 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2224 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2224 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "ar-Ruha" #Syriac - Orhay #Aramaic - Adma
+					rename_capital = "ar-Ruha" #Syriac - Orhay #Aramaic - Adma
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2655
+					2655 = { is_core = ROOT }
+					2655 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2655 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2655 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Aintab"
+					rename_capital = "Aintab"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3091
+					3091 = { is_core = ROOT }
+					3091 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3091 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3091 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "ar-Raqqah"
+					rename_capital = "ar-Raqqah"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3886
+					3886 = { is_core = ROOT }
+					3886 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					3886 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3886 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Ladhiqiyah"
+					rename_capital = "al-Ladhiqiyah"
+				}
+			}
+
+                        #kabylia_area
+			if = {
+				limit = { 
+					owns = 339
+					339 = { is_core = ROOT }
+					339 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					339 = { NOT = { has_province_flag = arabic_name } }
+				}
+				339 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jabal Jurjura" #Berber - Adrar n Jerjer
+					rename_capital = "Bouira" #Berber - Tubirett
+				}
+			}
+			if = {
+				limit = { 
+					owns = 340
+					340 = { is_core = ROOT }
+					340 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					340 = { NOT = { has_province_flag = arabic_name } }
+				}
+				340 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "'Annabah" #Berber - Bone
+					rename_capital = "'Annabah" #Berber - Bone
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1515
+					1515 = { is_core = ROOT }
+					1515 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1515 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1515 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qusantinah" #Berber - Cirta
+					rename_capital = "Qusantinah" #Berber - Cirta
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2861
+					2861 = { is_core = ROOT }
+					2861 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2861 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2861 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Skikda" #Berber - Skikda
+					rename_capital = "Skikda" #Berber - Skikda
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2863
+					2863 = { is_core = ROOT }
+					2863 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2863 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2863 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bijayah" #Berber - Bgayet
+					rename_capital = "Bijayah" #Berber - Bgayet
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2864
+					2864 = { is_core = ROOT }
+					2864 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2864 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2864 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Kabylie" #Berber - Tamurt n Iqbayliyen
+					rename_capital = "Tizi Ouzou" #Berber - Thizi Wezzu
+				}
+			}
+
+                        #algiers_area
+			if = {
+				limit = { 
+					owns = 337
+					337 = { is_core = ROOT }
+					337 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					337 = { NOT = { has_province_flag = arabic_name } }
+				}
+				337 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Wahran" #Berber - Wehran
+					rename_capital = "Wahran" #Berber - Wehran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 338
+					338 = { is_core = ROOT }
+					338 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					338 = { NOT = { has_province_flag = arabic_name } }
+				}
+				338 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "as-Selif" #Berber - Clef
+					rename_capital = "as-Selif" #Berber - Clef
+				}
+			}
+			if = {
+				limit = { 
+					owns = 350
+					350 = { is_core = ROOT }
+					350 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					350 = { NOT = { has_province_flag = arabic_name } }
+				}
+				350 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Jaza'er" #Berber - Gazir
+					rename_capital = "al-Jaza'er" #Berber - Gazir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1522
+					1522 = { is_core = ROOT }
+					1522 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1522 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1522 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tlemsan" #Berber - Thala Imsan
+					rename_capital = "Tlemsan" #Berber - Thala Imsan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2865
+					2865 = { is_core = ROOT }
+					2865 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2865 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2865 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Mers el-Kebir" #Berber - Marsa Kebir
+					rename_capital = "Mers el-Kebir" #Berber - Marsa Kebir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2866
+					2866 = { is_core = ROOT }
+					2866 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2866 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2866 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ksar ibn Senar" #Berber - Ait Iznassen
+					rename_capital = "Ksar ibn Senar" #Berber - Ait Iznassen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2933
+					2933 = { is_core = ROOT }
+					2933 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2933 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2933 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Titteri" #Berber - Ait Ouzera
+					rename_capital = "Titteri" #Berber - Ait Ouzera
+				}
+			}
+
+                        #atlas_area
+			if = {
+				limit = { 
+					owns = 1516
+					1516 = { is_core = ROOT }
+					1516 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1516 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1516 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ain Sefrah" #Berber - Wargla
+					rename_capital = "Ain Sefrah" #Berber - Wargla
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2932
+					2932 = { is_core = ROOT }
+					2932 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2932 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2932 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "N'amah" #Berber - Mzab
+					rename_capital = "N'amah" #Berber - Mzab
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2934
+					2934 = { is_core = ROOT }
+					2934 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2934 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2934 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Awras" #Berber - Awras
+					rename_capital = "Biskra" #Berber - Tibeskert
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2935
+					2935 = { is_core = ROOT }
+					2935 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2935 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2935 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Jilfah" #Berber - Wad Righ
+					rename_capital = "al-Jilfah" #Berber - Wad Righ
+				}
+			}
+
+                        #fezzan_area
+			if = {
+				limit = { 
+					owns = 1148
+					1148 = { is_core = ROOT }
+					1148 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1148 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1148 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ghat" #Berber - Kel Ajjer
+					rename_capital = "Ghat" #Berber - Kel Ajjer
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1524
+					1524 = { is_core = ROOT }
+					1524 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1524 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1524 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Murzuq" #Berber - Murzuk
+					rename_capital = "al-Qatrun" #Berber - Gatrone
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1543
+					1543 = { is_core = ROOT }
+					1543 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1543 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1543 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Illizi" #Berber - Kel Ahaggar
+					rename_capital = "Illizi" #Berber - Kel Ahaggar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2657
+					2657 = { is_core = ROOT }
+					2657 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2657 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2657 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Gadamis" #Berber - Ghadames
+					rename_capital = "Gadamis" #Berber - Ghadames
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2937
+					2937 = { is_core = ROOT }
+					2937 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2937 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2937 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tataouine" #Berber - Tittawin
+					rename_capital = "Tataouine" #Berber - Tittawin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2938
+					2938 = { is_core = ROOT }
+					2938 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2938 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2938 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Sabha" #Berber - Foqaha
+					rename_capital = "Sabha" #Berber - Foqaha
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2939
+					2939 = { is_core = ROOT }
+					2939 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2939 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2939 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Jawf" #Sahara - Igerramen #Berber - Kufra
+					rename_capital = "al-Jawf" #Sahara - Igerramen #Berber - Kufra
+				}
+			}
+
+                        #fez_area
+			if = {
+				limit = { 
+					owns = 336
+					336 = { is_core = ROOT }
+					336 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					336 = { NOT = { has_province_flag = arabic_name } }
+				}
+				336 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Taourirt" #Berber - Tawrirt
+					rename_capital = "Taourirt" #Berber - Tawrirt
+				}
+			}
+			if = {
+				limit = { 
+					owns = 343
+					343 = { is_core = ROOT }
+					343 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					343 = { NOT = { has_province_flag = arabic_name } }
+				}
+				343 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Fes" #Berber - Fas
+					rename_capital = "Fes" #Berber - Fas
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2941
+					2941 = { is_core = ROOT }
+					2941 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2941 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2941 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jbala" #Berber - Ashawen
+					rename_capital = "Shafshawan" #Berber - Ashawen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2972
+					2972 = { is_core = ROOT }
+					2972 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2972 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2972 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Taounat" #Berber - Arrif
+					rename_capital = "Taounat" #Berber - Tawnat
+				}
+			}
+
+                        #marrekesh_area
+			if = {
+				limit = { 
+					owns = 344
+					344 = { is_core = ROOT }
+					344 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					344 = { NOT = { has_province_flag = arabic_name } }
+				}
+				344 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Meknas" #Berber - Amknas
+					rename_capital = "Meknas" #Berber - Amknas
+				}
+			}
+			if = {
+				limit = { 
+					owns = 347
+					347 = { is_core = ROOT }
+					347 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					347 = { NOT = { has_province_flag = arabic_name } }
+				}
+				347 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bni Mellal" #Berber - Tadla
+					rename_capital = "Bni Mellal" #Berber - Oued-Zem
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4072
+					4072 = { is_core = ROOT }
+					4072 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4072 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4072 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Kenifra" #Berber - Azayi
+					rename_capital = "Kenifra" #Berber - Xnifra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4074
+					4074 = { is_core = ROOT }
+					4074 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4074 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4074 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ben Jerir" #Berber - Ben Grir
+					rename_capital = "Ben Jerir" #Berber - Ben Grir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4075
+					4075 = { is_core = ROOT }
+					4075 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4075 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4075 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Murrakus" #Berber - Merrakec
+					rename_capital = "Murrakus" #Berber - Merrakec
+				}
+			}
+
+                        #tafilalt_area
+			if = {
+				limit = { 
+					owns = 346
+					346 = { is_core = ROOT }
+					346 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					346 = { NOT = { has_province_flag = arabic_name } }
+				}
+				346 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ouarzazat" #Berber - Warzazat
+					rename_capital = "Ouarzazat" #Berber - Warzazat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 349
+					349 = { is_core = ROOT }
+					349 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					349 = { NOT = { has_province_flag = arabic_name } }
+				}
+				349 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tafilet" #Berber - Asif en Dra
+					rename_capital = "Tafilet" #Berber - Sijilmassa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1535
+					1535 = { is_core = ROOT }
+					1535 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1535 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1535 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Figuig" #Berber - Ifyey
+					rename_capital = "Figuig" #Berber - Ifyey
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1548
+					1548 = { is_core = ROOT }
+					1548 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1548 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1548 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Gourara" #Berber - Gourara
+					rename_capital = "Timimoun" #Berber - Timimoun
+				}
+			}
+
+                        #sus_area
+			if = {
+				limit = { 
+					owns = 1340
+					1340 = { is_core = ROOT }
+					1340 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1340 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1340 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Taroudant" #Berber - Tarudant
+					rename_capital = "Taroudant" #Berber - Tarudant
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1585
+					1585 = { is_core = ROOT }
+					1585 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1585 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1585 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Sidi Ifni" #Berber - Ifni
+					rename_capital = "Sidi Ifni" #Berber - Ifni
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2896
+					2896 = { is_core = ROOT }
+					2896 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2896 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2896 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Agadiriya" #Berber - Agadir
+					rename_capital = "Agadiriya" #Berber - Agadir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2943
+					2943 = { is_core = ROOT }
+					2943 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2943 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2943 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "el-Jerdane" #Berber - Tata
+					rename_capital = "el-Jerdane" #Berber - Tata
+				}
+			}
+
+                        #tanja_area
+			if = {
+				limit = { 
+					owns = 334
+					334 = { is_core = ROOT }
+					334 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					334 = { NOT = { has_province_flag = arabic_name } }
+				}
+				334 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tanjah" #Berber - Tanja
+					rename_capital = "Tanjah" #Berber - Tanja
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1533
+					1533 = { is_core = ROOT }
+					1533 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1533 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1533 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Sabtah" #Berber - Sebta
+					rename_capital = "Sabtah" #Berber - Sebta
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2942
+					2942 = { is_core = ROOT }
+					2942 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2942 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2942 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Gharb" #Berber - Beni Arous
+					rename_capital = "Ksar el-Kebir" #Berber - Leerayec
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2971
+					2971 = { is_core = ROOT }
+					2971 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2971 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2971 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Assilah" #Berber - Azila
+					rename_capital = "Assilah" #Berber - Azila
+				}
+			}
+
+                        #elrif_area
+			if = {
+				limit = { 
+					owns = 335
+					335 = { is_core = ROOT }
+					335 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					335 = { NOT = { has_province_flag = arabic_name } }
+				}
+				335 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Nador" #Berber - Iqer'iyen
+					rename_capital = "Nador" #Berber - Ennador
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1534
+					1534 = { is_core = ROOT }
+					1534 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1534 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1534 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Maliliyyah" #Berber - Mritc
+					rename_capital = "Maliliyyah" #Berber - Mritc
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4069
+					4069 = { is_core = ROOT }
+					4069 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4069 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4069 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Hoceima" #Berber - Ayt Weryaghel
+					rename_capital = "al-Hoceima" #Berber - Ayt Weryaghel
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4070
+					4070 = { is_core = ROOT }
+					4070 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4070 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4070 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Talambote" #Berber - Zenatiya
+					rename_capital = "Talambote" #Berber - Zenatiya
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4071
+					4071 = { is_core = ROOT }
+					4071 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4071 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4071 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tetouan" #Berber - Beni Hozmar
+					rename_capital = "Tetouan" #Berber - Beni Hozmar
+				}
+			}
+
+                        #anfa_area
+			if = {
+				limit = { 
+					owns = 1532
+					1532 = { is_core = ROOT }
+					1532 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1532 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1532 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Safi" #Berber - Asfi
+					rename_capital = "Safi" #Berber - Asfi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2869
+					2869 = { is_core = ROOT }
+					2869 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2869 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2869 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Sala" #Berber - Sla
+					rename_capital = "Sala" #Berber - Sla
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2940
+					2940 = { is_core = ROOT }
+					2940 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2940 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2940 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Ribat" #Berber - Arrbat
+					rename_capital = "al-Ribat" #Berber - Arrbat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2944
+					2944 = { is_core = ROOT }
+					2944 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2944 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2944 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Suwayrah" #Berber - Mugadur
+					rename_capital = "al-Suwayrah" #Berber - Mugadur
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2962
+					2962 = { is_core = ROOT }
+					2962 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2962 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2962 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "el-Jadida" #Berber - Mazigen
+					rename_capital = "el-Jadida" #Berber - Mazigen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4073
+					4073 = { is_core = ROOT }
+					4073 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4073 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4073 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "ad-Dar al-Bayda" #Berber - Anfa
+					rename_capital = "ad-Dar al-Bayda" #Berber - Anfa
+				}
+			}
+                        #north_saharan_area
+			if = {
+				limit = { 
+					owns = 1523
+					1523 = { is_core = ROOT }
+					1523 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					1523 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1523 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Aghuat" #Berber - Ain Madhi
+					rename_capital = "al-Aghuat" #Berber - Ain Madhi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2658
+					2658 = { is_core = ROOT }
+					2658 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2658 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2658 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ghardaia" #Berber - Tagherdayt
+					rename_capital = "Ghardaia" #Berber - Tagherdayt
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2659
+					2659 = { is_core = ROOT }
+					2659 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2659 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2659 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ouargla" #Berber - Wargren
+					rename_capital = "Ouargla" #Berber - Wargren
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2936
+					2936 = { is_core = ROOT }
+					2936 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2936 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2936 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Touggourt" #Berber - Temassin
+					rename_capital = "Touggourt" #Berber - Temassin
+				}
+			}
+
+                        #djerba_area
+			if = {
+				limit = { 
+					owns = 2528
+					2528 = { is_core = ROOT }
+					2528 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2528 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2528 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jarbah" #Berber - Jerba
+					rename_capital = "Jarbah" #Berber - Jerba
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2663
+					2663 = { is_core = ROOT }
+					2663 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2663 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2663 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Gabis" #Berber - Kapes
+					rename_capital = "Gabis" #Berber - Kapes
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2999
+					2999 = { is_core = ROOT }
+					2999 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					2999 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2999 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Sott el-Jarid" #Berber - Tuzer
+					rename_capital = "Tozir" #Berber - Tuzer
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4068
+					4068 = { is_core = ROOT }
+					4068 = {
+						OR = {
+							culture_group = mashreqi
+							culture_group = maghreb
+							culture_group = arabian
+						}
+					}
+					4068 = { NOT = { has_province_flag = arabic_name } }
+				}
+				4068 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Gafsa" #Berber - Capsa
+					rename_capital = "Gafsa" #Berber - Capsa
+				}
+			}
+
+                        #upper_andalucia_area
+			if = {
+				limit = { 
+					owns = 222
+					222 = { is_core = ROOT }
+					222 = { religion_group = muslim }
+					222 = { NOT = { has_province_flag = arabic_name } }
+				}
+				222 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "al-Mariyyah" #Spanish - Almeria
+					rename_capital = "al-Mariyyah" #Spanish - Almeria
+				}
+			}
+			if = {
+				limit = { 
+					owns = 223
+					223 = { is_core = ROOT }
+					223 = { religion_group = muslim }
+					223 = { NOT = { has_province_flag = arabic_name } }
+				}
+				223 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "Girnatah" #Spanish - Granada
+					rename_capital = "Girnatah" #Spanish - Granada
+				}
+			}
+			if = {
+				limit = { 
+					owns = 226
+					226 = { is_core = ROOT }
+					226 = { religion_group = muslim }
+					226 = { NOT = { has_province_flag = arabic_name } }
+				}
+				226 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "Malaqah" #Spanish - Malaga
+					rename_capital = "Malaqah" #Spanish - Malaga
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1407
+					1407 = { is_core = ROOT }
+					1407 = { religion_group = muslim }
+					1407 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1407 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "Jabal Tariq" #Spanish - Gibraltar
+					rename_capital = "Jabal Tariq" #Spanish - Gibraltar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2314
+					2314 = { is_core = ROOT }
+					2314 = { religion_group = muslim }
+					2314 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2314 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "Marballa" #Spanish - Marbella
+					rename_capital = "Marballa" #Spanish - Marbella
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3359
+					3359 = { is_core = ROOT }
+					3359 = { religion_group = muslim }
+					3359 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3359 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name
+					change_province_name = "Basta" #Spanish - Baza
+					rename_capital = "Basta" #Spanish - Baza
+				}
+			}
+
+                        #lower_guadalquivir_area
+			if = {
+				limit = { 
+					owns = 224
+					224 = { is_core = ROOT }
+					224 = { religion_group = muslim }
+					224 = { NOT = { has_province_flag = arabic_name } }
+				}
+				224 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Walbah" #Spanish - Huelva
+					rename_capital = "Walbah" #Spanish - Huelva
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2310
+					2310 = { is_core = ROOT }
+					2310 = { religion_group = muslim }
+					2310 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2310 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Qadis" #Spanish - Cadiz
+					rename_capital = "al-Qadis" #Spanish - Cadiz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2311
+					2311 = { is_core = ROOT }
+					2311 = { religion_group = muslim }
+					2311 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Isbiliyyah" #Spanish - Sevilla
+					rename_capital = "Isbiliyyah" #Spanish - Sevilla
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3357
+					3357 = { is_core = ROOT }
+					3357 = { religion_group = muslim }
+					3357 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3357 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Istijjah" #Spanish - Ecija
+					rename_capital = "Istijjah" #Spanish - Ecija
+				}
+			}
+
+                        #upper_guadalquivir_area
+			if = {
+				limit = { 
+					owns = 225
+					225 = { is_core = ROOT }
+					225 = { religion_group = muslim }
+					225 = { NOT = { has_province_flag = arabic_name } }
+				}
+				225 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qurtubah" #Spanish - Cordoba
+					rename_capital = "Qurtubah" #Spanish - Cordoba
+				}
+			}
+			if = {
+				limit = { 
+					owns = 227
+					227 = { is_core = ROOT }
+					227 = { religion_group = muslim }
+					227 = { NOT = { has_province_flag = arabic_name } }
+				}
+				227 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jayyan" #Spanish - Jaen
+					rename_capital = "Jayyan" #Spanish - Jaen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3358
+					3358 = { is_core = ROOT }
+					3358 = { religion_group = muslim }
+					3358 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3358 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Yussanah" #Spanish - Lucena
+					rename_capital = "al-Yussanah" #Spanish - Lucena
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3360
+					3360 = { is_core = ROOT }
+					3360 = { religion_group = muslim }
+					3360 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3360 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ubbaydah" #Spanish - El Condado
+					rename_capital = "Ubbaydah" #Spanish - Ubeda
+				}
+			}
+
+                        #murcia_area
+			if = {
+				limit = { 
+					owns = 221
+					221 = { is_core = ROOT }
+					221 = { religion_group = muslim }
+					221 = { NOT = { has_province_flag = arabic_name } }
+				}
+				221 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Mursiyyah" #Spanish - Murcia
+					rename_capital = "Mursiyyah" #Spanish - Murcia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2371
+					2371 = { is_core = ROOT }
+					2371 = { religion_group = muslim }
+					2371 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2371 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qartajannah al-Halfa" #Spanish - Cartagena
+					rename_capital = "Qartajannah al-Halfa" #Spanish - Cartagena
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3361
+					3361 = { is_core = ROOT }
+					3361 = { religion_group = muslim }
+					3361 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3361 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tudmir" #Spanish - Caravaca
+					rename_capital = "Tudmir" #Spanish - Caravaca de la Cruz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3363
+					3363 = { is_core = ROOT }
+					3363 = { religion_group = muslim }
+					3363 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3363 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Basit" #Spanish - Mancha de Monteragon
+					rename_capital = "al-Basit" #Spanish - Albacete
+				}
+			}
+
+                        #toledo_area
+			if = {
+				limit = { 
+					owns = 219
+					219 = { is_core = ROOT }
+					219 = { religion_group = muslim }
+					219 = { NOT = { has_province_flag = arabic_name } }
+				}
+				219 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jabal al-Baranis" #Spanish - La Mancha
+					rename_capital = "Karkuyah" #Spanish - Ciudad Real
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2312
+					2312 = { is_core = ROOT }
+					2312 = { religion_group = muslim }
+					2312 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2312 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tulaytulah" #Spanish - Toledo
+					rename_capital = "Tulaytulah" #Spanish - Toledo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3362
+					3362 = { is_core = ROOT }
+					3362 = { religion_group = muslim }
+					3362 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3362 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qal'at Rabah" #Spanish - Campo de Montiel
+					rename_capital = "Qal'at Rabah" #Spanish - Villarobledo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3364
+					3364 = { is_core = ROOT }
+					3364 = { religion_group = muslim }
+					3364 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3364 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-QaSsr" #Spanish - San Juan
+					rename_capital = "al-QaSsr" #Spanish - Alcazar de San Juan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3365
+					3365 = { is_core = ROOT }
+					3365 = { religion_group = muslim }
+					3365 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3365 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Uqlis" #Spanish - La Manchuela
+					rename_capital = "Uqlis" #Spanish - San Clemente
+				}
+			}
+
+                        #extremadura_area
+			if = {
+				limit = { 
+					owns = 182
+					182 = { is_core = ROOT }
+					182 = { religion_group = muslim }
+					182 = { NOT = { has_province_flag = arabic_name } }
+				}
+				182 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Qantara" #Spanish - Caceres
+					rename_capital = "al-Qantara" #Spanish - Caceres
+				}
+			}
+			if = {
+				limit = { 
+					owns = 218
+					218 = { is_core = ROOT }
+					218 = { religion_group = muslim }
+					218 = { NOT = { has_province_flag = arabic_name } }
+				}
+				218 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Turjalah" #Spanish - Trujillo
+					rename_capital = "Turjalah" #Spanish - Trujillo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2448
+					2448 = { is_core = ROOT }
+					2448 = { religion_group = muslim }
+					2448 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2448 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bayt al-Jaws" #Spanish - Badajoz
+					rename_capital = "Bayt al-Jaws" #Spanish - Badajoz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3355
+					3355 = { is_core = ROOT }
+					3355 = { religion_group = muslim }
+					3355 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3355 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Marida" #Spanish - La Serena
+					rename_capital = "Marida" #Spanish - Hinojosa del Duque
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3356
+					3356 = { is_core = ROOT }
+					3356 = { religion_group = muslim }
+					3356 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3356 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Ellerina" #Spanish - Llerena
+					rename_capital = "Ellerina" #Spanish - Llerena
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3865
+					3865 = { is_core = ROOT }
+					3865 = { religion_group = muslim }
+					3865 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3865 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Quriyyah" #Spanish/Asturian - Plasencia
+					rename_capital = "Quriyyah" #Spanish/Asturian - Plasencia
+				}
+			}
+
+                        #extremadura_castilla_area
+			if = {
+				limit = { 
+					owns = 217
+					217 = { is_core = ROOT }
+					217 = { religion_group = muslim }
+					217 = { NOT = { has_province_flag = arabic_name } }
+				}
+				217 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Majrit" #Spanish - Castilla la Nueva
+					rename_capital = "al-Majrit" #Spanish - Madrid
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2313
+					2313 = { is_core = ROOT }
+					2313 = { religion_group = muslim }
+					2313 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2313 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Siqubiyyah" #Spanish - Segovia
+					rename_capital = "Siqubiyyah" #Spanish - Segovia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2566
+					2566 = { is_core = ROOT }
+					2566 = { religion_group = muslim }
+					2566 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2566 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Madinat Salim" #Spanish - Soria
+					rename_capital = "Madinat Salim" #Spanish - Soria
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2567
+					2567 = { is_core = ROOT }
+					2567 = { religion_group = muslim }
+					2567 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2567 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qunkah" #Spanish - Cuenca
+					rename_capital = "Qunkah" #Spanish - Cuenca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3864
+					3864 = { is_core = ROOT }
+					3864 = { religion_group = muslim }
+					3864 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3864 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jabal al-Sarat" #Spanish - Avila
+					rename_capital = "Jabal al-Sarat" #Spanish - Avila
+				}
+			}
+
+                        #castille_area
+			if = {
+				limit = { 
+					owns = 198
+					198 = { is_core = ROOT }
+					198 = { religion_group = muslim }
+					198 = { NOT = { has_province_flag = arabic_name } }
+				}
+				198 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Burgus" #Spanish - Burgos
+					rename_capital = "Burgus" #Spanish - Burgos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 209
+					209 = { is_core = ROOT }
+					209 = { religion_group = muslim }
+					209 = { NOT = { has_province_flag = arabic_name } }
+				}
+				209 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qalahurra" #Spanish - La Rioja
+					rename_capital = "Qalahurra" #Spanish - Logrono
+				}
+			}
+			if = {
+				limit = { 
+					owns = 215
+					215 = { is_core = ROOT }
+					215 = { religion_group = muslim }
+					215 = { NOT = { has_province_flag = arabic_name } }
+				}
+				215 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Balad al-Walid" #Spanish - Castilla la Vieja
+					rename_capital = "Balad al-Walid" #Spanish - Valladolid
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1409
+					1409 = { is_core = ROOT }
+					1409 = { religion_group = muslim }
+					1409 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1409 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Madinat al-Pumar" #Spanish - Cantabria
+					rename_capital = "Madinat al-Pumar" #Spanish - Santander
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3354
+					3354 = { is_core = ROOT }
+					3354 = { religion_group = muslim }
+					3354 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3354 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Balanthia" #Spanish - Palencia
+					rename_capital = "Balanthia" #Spanish - Palencia
+				}
+			}
+
+                        #leon_area
+                        #207 3352
+			#if = {
+			#	limit = { 
+			#		owns = 207
+			#		207 = { is_core = ROOT }
+			#		207 = { religion_group = muslim }
+			#		207 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	207 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Spanish - Asturias #Asturian - Asturies
+			#		rename_capital = "" #Spanish - Oviedo #Asturian - Uvieu
+			#	}
+			#}
+			if = {
+				limit = { 
+					owns = 208
+					208 = { is_core = ROOT }
+					208 = { religion_group = muslim }
+					208 = { NOT = { has_province_flag = arabic_name } }
+				}
+				208 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Liyyun" #Spanish - Leon #Asturian - Llion
+					rename_capital = "Liyyun" #Spanish - Leon #Asturian - Llion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 216
+					216 = { is_core = ROOT }
+					216 = { religion_group = muslim }
+					216 = { NOT = { has_province_flag = arabic_name } }
+				}
+				216 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Salamanqah" #Spanish/Asturian - Salamanca
+					rename_capital = "Salamanqah" #Spanish/Asturian - Salamanca
+				}
+			}
+			#if = {
+			#	limit = { 
+			#		owns = 3352
+			#		3352 = { is_core = ROOT }
+			#		3352 = { religion_group = muslim }
+			#		3352 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	3352 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Spanish/Asturian - Navia
+			#		rename_capital = "" #Spanish - Tineo #Asturian - Tineu
+			#	}
+			#}
+			if = {
+				limit = { 
+					owns = 3353
+					3353 = { is_core = ROOT }
+					3353 = { religion_group = muslim }
+					3353 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3353 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Sammurah" #Spanish/Asturian - Zamora
+					rename_capital = "Sammurah" #Spanish/Asturian - Zamora
+				}
+			}
+
+                        #euskal_area
+                        #2514 2550
+			if = {
+				limit = { 
+					owns = 210
+					210 = { is_core = ROOT }
+					210 = { religion_group = muslim }
+					210 = { NOT = { has_province_flag = arabic_name } }
+				}
+				210 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Banbalunah" #Spanish - Navarra #Basque - Nafarroa
+					rename_capital = "Banbalunah" #Spanish - Pamplona #Basque - Iruna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1421
+					1421 = { is_core = ROOT }
+					1421 = { religion_group = muslim }
+					1421 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1421 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bahr al-Akhdar" #Spanish - Vizcaya #Basque - Bizkaia
+					rename_capital = "Bahr al-Akhdar" #Spanish - Bilbao #Basque - Bilbo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3370
+					3370 = { is_core = ROOT }
+					3370 = { religion_group = muslim }
+					3370 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3370 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tutilah" #Spanish - La Ribera #Basque - Erribera
+					rename_capital = "Tutilah" #Spanish - Tudela #Basque - Tutera
+				}
+			}
+
+                        #valencia_area 
+			if = {
+				limit = { 
+					owns = 220
+					220 = { is_core = ROOT }
+					220 = { religion_group = muslim }
+					220 = { NOT = { has_province_flag = arabic_name } }
+				}
+				220 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Balansiyyah" #Spanish/Catalan - Valencia
+					rename_capital = "Balansiyyah" #Spanish/Catalan - Valencia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1284
+					1284 = { is_core = ROOT }
+					1284 = { religion_group = muslim }
+					1284 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qastilyun" #Spanish - Castellon #Catalan - Castello
+					rename_capital = "Qastilyun" #Spanish - Castellon de la Plana #Catalan - Castello de la Plana
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1845
+					1845 = { is_core = ROOT }
+					1845 = { religion_group = muslim }
+					1845 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1845 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Uriyula" #Spanish - Orihuela #Catalan - Oriola
+					rename_capital = "Uriyula" #Spanish - Orihuela #Catalan - Oriola
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2565
+					2565 = { is_core = ROOT }
+					2565 = { religion_group = muslim }
+					2565 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2565 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Satiba" #Spanish - Jativa #Catalan - Xativa
+					rename_capital = "Satiba" #Spanish - Jativa #Catalan - Xativa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3366
+					3366 = { is_core = ROOT }
+					3366 = { religion_group = muslim }
+					3366 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3366 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Laqant" #Spanish - Alicante #Catalan - Alacant
+					rename_capital = "al-Laqant" #Spanish - Alicante #Catalan - Alcoy
+				}
+			}
+
+                        #aragon_area
+			if = {
+				limit = { 
+					owns = 211
+					211 = { is_core = ROOT }
+					211 = { religion_group = muslim }
+					211 = { NOT = { has_province_flag = arabic_name } }
+				}
+				211 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Wasqah" #Spanish - Alto Aragon #Aragonese - Alto Arago
+					rename_capital = "Wasqah" #Spanish - Huesca #Aragonese - Uesca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 214
+					214 = { is_core = ROOT }
+					214 = { religion_group = muslim }
+					214 = { NOT = { has_province_flag = arabic_name } }
+				}
+				214 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Saraqustah" #Spanish/Aragonese - Zaragoza
+					rename_capital = "Saraqustah" #Spanish/Aragonese - Zaragoza
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1408
+					1408 = { is_core = ROOT }
+					1408 = { religion_group = muslim }
+					1408 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1408 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tirul" #Spanish/Aragonese - Teruel
+					rename_capital = "Tirul" #Spanish/Aragonese - Teruel
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2473
+					2473 = { is_core = ROOT }
+					2473 = { religion_group = muslim }
+					2473 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2473 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qal'at Ayyub" #Spanish - Calatayud #Aragonese - Calatayu
+					rename_capital = "Qal'at Ayyub" #Spanish - Calatayud #Aragonese - Calatayu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3368
+					3368 = { is_core = ROOT }
+					3368 = { religion_group = muslim }
+					3368 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3368 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Barbastur" #Spanish/Aragonese - Ribagorza
+					rename_capital = "Barbastur" #Spanish - Barbastro #Aragonese - Balbastro
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3369
+					3369 = { is_core = ROOT }
+					3369 = { religion_group = muslim }
+					3369 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3369 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tarasunah" #Spanish/Aragonese - Tarazona
+					rename_capital = "Tarasunah" #Spanish/Aragonese - Tarazona
+				}
+			}
+
+                        #catalonia_area
+                        #197 213 1420 2368
+			if = {
+				limit = { 
+					owns = 181
+					181 = { is_core = ROOT }
+					181 = { religion_group = muslim }
+					181 = { NOT = { has_province_flag = arabic_name } }
+				}
+				181 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Tarrakunah" #Spanish/Catalan - Tarragona
+					rename_capital = "Tarrakunah" #Spanish/Catalan - Tarragona
+				}
+			}
+			#if = {
+			#	limit = { 
+			#		owns = 197
+			#		197 = { is_core = ROOT }
+			#		197 = { religion_group = muslim }
+			#		197 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	197 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Spanish - Rossellon #Catalan - Rossello
+			#		rename_capital = "" #Spanish - Perpinan #Catalan - Perpinya
+			#	}
+			#}
+			if = {
+				limit = { 
+					owns = 212
+					212 = { is_core = ROOT }
+					212 = { religion_group = muslim }
+					212 = { NOT = { has_province_flag = arabic_name } }
+				}
+				212 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Jarundah" #Spanish - Gerona #Catalan - Girona
+					rename_capital = "Jarundah" #Spanish - Gerona #Catalan - Girona
+				}
+			}
+			if = {
+				limit = { 
+					owns = 213
+					213 = { is_core = ROOT }
+					213 = { religion_group = muslim }
+					213 = { NOT = { has_province_flag = arabic_name } }
+				}
+				213 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Barsinunah" #Spanish/Catalan - Barcelona
+					rename_capital = "Barsinunah" #Spanish/Catalan - Barcelona
+				}
+			}
+			#if = {
+			#	limit = { 
+			#		owns = 1420
+			#		1420 = { is_core = ROOT }
+			#		1420 = { religion_group = muslim }
+			#		1420 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	1420 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Spanish - Urgel #Catalan - Urgell
+			#		rename_capital = "" #Spanish - Urgel #Catalan - Urgell
+			#	}
+			#}
+			#if = {
+			#	limit = { 
+			#		owns = 2368
+			#		2368 = { is_core = ROOT }
+			#		2368 = { religion_group = muslim }
+			#		2368 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	2368 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Spanish/Catalan - Osona
+			#		rename_capital = "" #Spanish/Catalan - Osona
+			#	}
+			#}
+			if = {
+				limit = { 
+					owns = 2369
+					2369 = { is_core = ROOT }
+					2369 = { religion_group = muslim }
+					2369 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2369 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Laridah" #Spanish - Poniente #Catalan - Ponent
+					rename_capital = "Laridah" #Spanish - Lerida #Catalan - Lleida
+				}
+			}
+
+                        #baleares_area
+			if = {
+				limit = { 
+					owns = 333
+					333 = { is_core = ROOT }
+					333 = { religion_group = muslim }
+					333 = { NOT = { has_province_flag = arabic_name } }
+				}
+				333 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Mayurqah" #Spanish/Catalan - Mallorca
+					rename_capital = "Mayurqah" #Spanish/Catalan - Mallorca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2358
+					2358 = { is_core = ROOT }
+					2358 = { religion_group = muslim }
+					2358 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2358 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Menurqah" #Spanish/Catalan - Menorca
+					rename_capital = "Menurqah" #Spanish/Catalan - Ciutadella
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3367
+					3367 = { is_core = ROOT }
+					3367 = { religion_group = muslim }
+					3367 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3367 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Yabisah" #Spanish - Ibiza #Catalan - Eivissa
+					rename_capital = "Yabisah" #Spanish - Ibiza #Catalan - Eivissa
+				}
+			}
+
+                        #alentejo_area
+			if = {
+				limit = { 
+					owns = 228
+					228 = { is_core = ROOT }
+					228 = { religion_group = muslim }
+					228 = { NOT = { has_province_flag = arabic_name } }
+				}
+				228 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Santamariyyat al-Gharb" #Portugese - Sotavento
+					rename_capital = "Santamariyyat" #Portugese - Faro
+				}
+			}
+			if = {
+				limit = { 
+					owns = 229
+					229 = { is_core = ROOT }
+					229 = { religion_group = muslim }
+					229 = { NOT = { has_province_flag = arabic_name } }
+				}
+				229 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Santarin" #Portugese - Ribatejo
+					rename_capital = "Santarin" #Portugese - Santarem
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1423
+					1423 = { is_core = ROOT }
+					1423 = { religion_group = muslim }
+					1423 = { NOT = { has_province_flag = arabic_name } }
+				}
+				1423 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Yaburah" #Portugese - Alentejo Central
+					rename_capital = "Yaburah" #Portugese - Evora
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2309
+					2309 = { is_core = ROOT }
+					2309 = { religion_group = muslim }
+					2309 = { NOT = { has_province_flag = arabic_name } }
+				}
+				2309 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bajat az-Zayt" #Portugese - Baixo Alentejo
+					rename_capital = "Bajat az-Zayt" #Portugese - Beja
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3346
+					3346 = { is_core = ROOT }
+					3346 = { religion_group = muslim }
+					3346 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3346 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Silb" #Portugese - Barlavento
+					rename_capital = "Silb" #Portugese - Lagos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3347
+					3347 = { is_core = ROOT }
+					3347 = { religion_group = muslim }
+					3347 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3347 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Thaghr al-Adna" #Portugese - Alto Alentejo
+					rename_capital = "al-Thaghr al-Adna" #Portugese - Portalegre
+				}
+			}
+			if = {
+				limit = {
+					owns = 3348
+					3348 = { is_core = ROOT }
+					3348 = { religion_group = muslim }
+					3348 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3348 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qasr 'Abi Danis" #Portugese - Vale do Sado
+					rename_capital = "Qasr 'Abi Danis" #Portugese - Setubal
+				}
+			}
+
+                        #beieras_area
+                        #1422 1508 2308
+			if = {
+				limit = { 
+					owns = 230
+					230 = { is_core = ROOT }
+					230 = { religion_group = muslim }
+					230 = { NOT = { has_province_flag = arabic_name } }
+				}
+				230 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "al-Usbunah" #Portugese - Estremadura
+					rename_capital = "al-Usbunah" #Portugese - Lisboa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 231
+					231 = { is_core = ROOT }
+					231 = { religion_group = muslim }
+					231 = { NOT = { has_province_flag = arabic_name } }
+				}
+				231 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Qulumriyyah" #Portugese - Beira Litoral
+					rename_capital = "Qulumriyyah" #Portugese - Coimbra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 232
+					232 = { is_core = ROOT }
+					232 = { religion_group = muslim }
+					232 = { NOT = { has_province_flag = arabic_name } }
+				}
+				232 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Bab al-Gharbiyyah" #Portugese - Minho
+					rename_capital = "Bab al-Gharbiyyah" #Portugese - Braga
+				}
+			}
+			#if = {
+			#	limit = { 
+			#		owns = 1422
+			#		1422 = { is_core = ROOT }
+			#		1422 = { religion_group = muslim }
+			#		1422 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	1422 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Portugese - Tras-os-Montes
+			#		rename_capital = "" #Portugese - Braganca
+			#	}
+			#}
+			#if = {
+			#	limit = { 
+			#		owns = 1508
+			#		1508 = { is_core = ROOT }
+			#		1508 = { religion_group = muslim }
+			#		1508 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	1508 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Portugese - Beira Alta
+			#		rename_capital = "" #Portugese - Viseu
+			#	}
+			#}
+			#if = {
+			#	limit = { 
+			#		owns = 2308
+			#		2308 = { is_core = ROOT }
+			#		2308 = { religion_group = muslim }
+			#		2308 = { NOT = { has_province_flag = arabic_name } }
+			#	}
+			#	2308 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = arabic_name 
+			#		change_province_name = "" #Portugese - Beira Baixa
+			#		rename_capital = "" #Portugese - Castelo Branco
+			#	}
+			#}
+			if = {
+				limit = { 
+					owns = 3349
+					3349 = { is_core = ROOT }
+					3349 = { religion_group = muslim }
+					3349 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3349 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Burtukal" #Portugese - Douro Litoral
+					rename_capital = "Burtukal" #Portugese - Porto
+				}
+			}
+
+                        #languedoc_area
+                        #2361 200 1383
+			if = {
+				limit = { 
+					owns = 3861
+					3861 = { is_core = ROOT }
+					3861 = { religion_group = muslim }
+					3861 = { NOT = { has_province_flag = arabic_name } }
+				}
+				3861 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = arabic_name 
+					change_province_name = "Arbuna" #Occitan - Narbona
+					rename_capital = "Arbuna" #Occitan - Narbona
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

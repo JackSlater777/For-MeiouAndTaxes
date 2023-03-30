@@ -1,0 +1,5 @@
+﻿l_english:
+ culture_conversions.8.name:1 "Culture Shifts in $PROVINCENAME$"
+ culture_conversions.8.desc:1 "My [Root.Owner.Monarch.GetTitle], the population in our province drove Tatars out."
+ culture_conversions.8.opta:1 "They have become Moldovian"
+ culture_conversions.8.optb:1 "They have become Ruthenian"

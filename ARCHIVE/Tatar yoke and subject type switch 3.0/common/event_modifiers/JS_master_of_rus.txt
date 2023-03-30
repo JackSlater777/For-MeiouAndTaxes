@@ -1,0 +1,7 @@
+MOS_RUS = {
+	reduced_liberty_desire = 20
+}
+
+rus_subject = {
+	liberty_desire = -60
+}

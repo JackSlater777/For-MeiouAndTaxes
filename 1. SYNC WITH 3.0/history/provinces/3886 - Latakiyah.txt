@@ -1,0 +1,43 @@
+#owner = MAM
+#controller = MAM
+#add_core = MAM
+
+owner = SYR
+controller = SYR
+add_core = SYR
+
+capital = "al Ladhiqiyah"
+trade_goods = cotton
+culture = shami
+#religion = sunni
+religion = shiite
+
+hre = no
+
+base_tax = 10
+base_production = 1
+base_manpower = 1
+
+is_city = yes
+temple = yes
+road_network = yes
+harbour_infrastructure_2 = yes
+town_hall = yes
+local_fortification_2 = yes
+
+discovered_by = muslim
+discovered_by = eastern
+discovered_by = western
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 5.5 }
+	set_variable = { which = starting_urban_pop_1350 value = 13.000 }
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_small_natural_harbour
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = latakia_natural_harbour
+		duration = -1
+	}
+}

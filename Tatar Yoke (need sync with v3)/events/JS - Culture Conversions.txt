@@ -1,0 +1,56 @@
+province_event = {
+	id = culture_conversions.8
+	title = "culture_conversions.8.name"
+	desc = "culture_conversions.8.desc"
+	picture = REFORM_eventPicture
+
+	trigger = {
+		OR = { 
+			area = basarabia_area
+			area = zaporizhia_area
+			area = sloboda_ukraine_area
+		}
+		culture_group = tartar_group
+		religion_group = christian
+		NOT = { nationalism = 1 }
+		owner = {
+			NOT = { culture_group = tartar_group }
+			religion_group = christian
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 0.9
+			owner = { stability = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { stability = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { stability = 3 }
+		}
+	}
+
+	option = {
+		name = "culture_conversions.8.opta"
+		trigger = {
+			area = basarabia_area
+		}
+		change_culture = moldovian
+	}
+	option = {
+		name = "culture_conversions.8.optb"
+		trigger = {
+			OR = {
+				area = zaporizhia_area
+				area = sloboda_ukraine_area
+			}
+		}
+		change_culture = ruthenian
+		add_core = ZAZ
+	}
+}

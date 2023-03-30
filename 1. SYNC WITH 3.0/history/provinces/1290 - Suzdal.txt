@@ -1,0 +1,28 @@
+owner = NZH
+controller = NZH
+add_core = NZH
+
+capital = "Suzdal"
+trade_goods = livestock
+culture = russian
+religion = orthodox
+
+hre = no
+
+base_tax = 7
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+canal_level_1 = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3 }
+	set_variable = { which = pop_level value = 3.5 }
+}

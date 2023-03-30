@@ -1,0 +1,304 @@
+# Nomadic CB's
+cb_nomadic_conquest = {
+	war_goal = nomad_conquest
+	is_triggered_only = yes # See cb_types.1
+	#valid_for_subject = no
+	months = 12000
+	ai_peace_desire = -5
+	
+	prerequisites = {
+		#is_nomad = yes
+		nomad_trigger = yes  # the same
+		OR = {
+			is_subject = no
+			overlord = { nomad_trigger = yes }
+			is_subject_of_type = daimyo_vassal
+			#is_subject_of_type = muscovite_tributary_state
+		}
+		#NOT = { core_claim = FROM }
+		OR = {
+			AND = {
+				#native_trigger = no #was tribal_nomads and tribal_nomads_hereditary
+				steppe_trigger = yes
+				NOT = {
+					OR = {
+						AND = {
+							#horde_unity = 95
+							legitimacy_equivalent = 75
+							mil = 5
+						}
+						AND = {
+							#horde_unity = 85
+							legitimacy_equivalent = 50
+							mil = 6
+						}
+					}
+				}
+				OR = {
+					#horde_unity = 50
+					legitimacy_equivalent = 50
+					mil = 3
+				}
+			}
+			AND = {
+				#OR = {
+				#	native_trigger = yes #was tribal_nomads and tribal_nomads_hereditary
+				#}
+				NOT = { steppe_trigger = yes }
+				OR = {
+					AND = {
+						#horde_unity = 95
+						legitimacy_equivalent = 75
+						mil = 4
+					}
+					AND = {
+						#horde_unity = 85
+						legitimacy_equivalent = 50
+						#mil = 6
+						mil = 5
+					}
+				}
+			}
+		}
+		OR = {
+			AND = {
+				NOT = { tag = GOL }
+				NOT = { tag = WHI }
+				NOT = { tag = BLU }
+			}
+			ai = no
+			FROM = { is_tribal = yes }
+			FROM = { is_nomad = yes }
+		}
+		is_neighbor_of = FROM
+		NOT = { overlord_of = FROM }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+	}
+	attacker_disabled_po = {
+		po_revoke_cores
+		po_return_cores
+		po_become_tributary_state
+		po_change_government
+		po_change_religion
+		po_trade_power
+	}
+}
+
+# Might version if you have the mil
+cb_nomadic_conquest_mil = {
+	war_goal = nomad_conquest_mil
+	is_triggered_only = yes # See cb_types.1
+	#valid_for_subject = no
+	months = 12000
+	ai_peace_desire = -5
+	
+	prerequisites = {
+		#is_nomad = yes
+		nomad_trigger = yes
+		steppe_trigger = yes
+		#native_trigger = no #was tribal_nomads and tribal_nomads_hereditary
+		OR = {
+			is_subject = no
+			overlord = { nomad_trigger = yes }
+			is_subject_of_type = daimyo_vassal
+			#is_subject_of_type = muscovite_tributary_state
+		}
+		#NOT = { core_claim = FROM }
+		OR = {
+			AND = {
+				#horde_unity = 95
+				legitimacy_equivalent = 75
+				mil = 5
+			}
+			AND = {
+				#horde_unity = 85
+				legitimacy_equivalent = 50
+				mil = 6
+			}
+		}
+		OR = {
+			AND = {
+				NOT = { tag = GOL }
+				NOT = { tag = WHI }
+				NOT = { tag = BLU }
+			}
+			ai = no
+			FROM = { is_tribal = yes }
+			FROM = { is_nomad = yes }
+		}
+		is_neighbor_of = FROM
+		NOT = { overlord_of = FROM }
+	}
+	attacker_disabled_po = {
+		po_revoke_cores
+		po_release_vassals
+		po_release_annexed
+		po_return_cores
+		po_become_vassal
+		po_subjugate_vassal
+		po_become_tributary_state
+		po_subjugate_tributary_state
+		po_form_personal_union
+		po_transfer_vassals
+		po_change_government
+		po_change_religion
+		po_trade_power
+	}
+}
+
+# from v3.0
+cb_nomadic_reconquest = {
+	war_goal = nomad_reconquest
+	is_triggered_only = yes # See cb_types.1
+	months = 12000
+	ai_peace_desire = -20
+	
+	prerequisites = {
+		core_claim = FROM
+		nomad_trigger = yes
+		OR = {
+			is_subject = no
+			overlord = { nomad_trigger = yes }
+			is_subject_of_type = daimyo_vassal
+			#is_subject_of_type = muscovite_tributary_state
+		}
+		OR = {
+			legitimacy_equivalent = 50
+			mil = 3
+		}
+		OR = {
+			AND = {
+				NOT = { tag = GOL }
+				NOT = { tag = WHI }
+				NOT = { tag = BLU }
+			}
+			ai = no
+			FROM = { is_tribal = yes }
+			FROM = { is_nomad = yes }
+		}
+		NOT = { overlord_of = FROM }
+	}
+	attacker_disabled_po = {
+		po_revoke_cores
+		po_release_vassals
+		po_release_annexed
+		po_become_vassal
+		po_subjugate_vassal
+		po_become_tributary_state
+		po_subjugate_tributary_state
+		po_form_personal_union
+		po_transfer_vassals
+		po_change_government
+		po_change_religion
+		po_trade_power
+	}
+}
+
+cb_nomadic_submission = {
+	war_goal = nomad_submission
+	valid_for_subject = no	
+	is_triggered_only = yes # See cb_types.1
+	months = 12000
+	ai_peace_desire = -30
+	
+	prerequisites = {
+		NOT = { has_country_flag = Timur_West }
+		#is_nomad = yes
+		nomad_trigger = yes
+		#native_trigger = no #was tribal_nomads and tribal_nomads_hereditary
+		OR = {
+			steppe_trigger = yes
+			Timur_Has = yes
+		}
+		OR = {
+			is_subject = no
+			overlord = { nomad_trigger = yes }
+			is_subject_of_type = daimyo_vassal
+			#is_subject_of_type = muscovite_tributary_state
+		}
+		#horde_unity = 80
+		legitimacy_equivalent = 70
+		mil = 5
+		FROM = {
+			#is_nomad = yes
+			OR = {
+				nomad_trigger = yes
+				tag = YUA
+				tag = WHI
+				tag = BLU
+				tag = MGH
+				tag = CHG
+			}
+		}
+		is_neighbor_of = FROM
+		NOT = { overlord_of = FROM }
+	}
+}
+
+cb_nomadic_tribute = {
+	war_goal = nomad_tribute
+	is_triggered_only = yes # See cb_types.1
+	#valid_for_subject = no
+	months = 12000
+	ai_peace_desire = -5
+	
+	prerequisites = {
+		#is_nomad = yes
+		nomad_trigger = yes
+		OR = {
+			is_subject = no
+			overlord = { nomad_trigger = yes }
+			is_subject_of_type = daimyo_vassal
+			#is_subject_of_type = muscovite_tributary_state
+		}
+		OR = {
+			AND = {
+				#native_trigger = no #was tribal_nomads and tribal_nomads_hereditary
+				#horde_unity = 25
+				steppe_trigger = yes
+				legitimacy_equivalent = 25
+				mil = 2
+			}
+			AND = {
+				#OR = {
+				#	native_trigger = yes #was tribal_nomads and tribal_nomads_hereditary
+				#}
+				#horde_unity = 50
+				NOT = { steppe_trigger = yes }
+				legitimacy_equivalent = 50
+				OR = {
+					mil = 4
+					#horde_unity = 85
+					legitimacy_equivalent = 75
+				}
+			}
+		}
+		is_neighbor_of = FROM
+		NOT = { overlord_of = FROM }
+		OR = {
+			ai = no
+			NOT = { has_country_flag = Horde_Timur }
+			has_country_flag = Timur_Dead
+			AND = {
+				has_country_flag = Timur_West
+				FROM = {
+					Timur_WestConquer = no
+				}
+			}
+			AND = {
+				has_country_flag = Timur_East
+				FROM = {
+					Timur_EastConquer = no
+				}
+			}
+		}
+	}
+	attacker_disabled_po = {
+		po_revoke_cores
+		po_return_cores
+		po_change_government
+		po_change_religion
+		po_trade_power
+	}
+}

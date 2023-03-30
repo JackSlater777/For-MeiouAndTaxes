@@ -1,0 +1,95 @@
+white_horde_collapse = {
+	potential = {
+		is_nomad = yes
+		hidden_trigger = {
+			OR = {
+				has_country_flag = white_horde_murdered_ruler
+				has_country_flag = white_horde_collapse_ongoing
+			}
+			OR = {
+				NOT = { is_year = 1370 }
+				has_country_flag = white_horde_collapse_ongoing
+			}
+		}
+	}
+	can_start = {
+		hidden_trigger = {
+			OR = {
+				has_country_flag = white_horde_murdered_ruler
+				has_country_flag = white_horde_collapse_ongoing
+			}
+			OR = {
+				#NOT = { is_year = 1370 }
+				NOT = { has_country_modifier = horde_collapse }
+				has_country_flag = white_horde_collapse_ongoing
+			}
+		}
+		#has_heir = yes
+		has_any_disaster = no
+	}
+	can_stop = {
+		hidden_trigger = {
+			NOT = { has_country_flag = white_horde_murdered_ruler }
+			NOT = { has_country_flag = white_horde_collapse_ongoing }
+		}
+		has_any_disaster = yes
+	}
+	progress = {
+		modifier = {
+			factor = 5
+			hidden_trigger = { has_country_flag = white_horde_murdered_ruler }
+			NOT = { legitimacy_or_horde_unity = 80 }
+		}
+		modifier = {
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = white_horde_collapse_not_ongoing
+				has_country_flag = white_horde_collapse_ongoing
+			}
+		}
+	}
+	can_end = {
+		OR = {
+			AND = {
+				months_of_ruling = 84
+				legitimacy_or_horde_unity = 80
+			}
+			custom_trigger_tooltip = {
+				tooltip = Timur_Rules
+				has_country_flag = Horde_Timur
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = white_horde_collapse_not_ongoing
+			NOT = { has_country_flag = white_horde_collapse_ongoing }
+		}
+		NOT = {
+			has_spawned_rebels = pretender_rebels
+		}
+		is_at_war = no
+	}
+	
+	modifier = {
+		global_unrest = 25
+		stability_cost_modifier = 0.30
+		discipline = -0.025
+		land_morale = -0.05
+		defensiveness = -0.8
+		diplomatic_upkeep = -4
+	}
+	on_start = white_horde_collapse.8
+	on_end = white_horde_collapse.7
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			1000 = 0
+			8 = white_horde_collapse.2 #heir kills you, takes throne
+			8 = white_horde_collapse.9 #heir kills you, takes throne
+			2 = white_horde_collapse.3 #Mamai
+			8 = white_horde_collapse.4 #deposed if weak legitimacy
+			80 = white_horde_collapse.5 #Mamai, if you've been suffering for 10 years
+			1 = timur.12 #Timur dies
+		}
+	}
+}

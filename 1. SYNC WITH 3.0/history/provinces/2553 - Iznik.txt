@@ -1,0 +1,36 @@
+owner = OTT
+controller = OTT
+add_permanent_claim = BYZ
+
+capital = "Eskisehir"
+trade_goods = lumber
+culture = turkish
+religion = sunni
+
+hre = no
+
+base_tax = 8
+base_production = 1
+base_manpower = 1
+
+is_city = yes
+road_network = yes
+town_hall = yes
+canal_level_1 = yes
+local_fortification_1 = yes
+workshop = yes
+temple = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 4 }
+}
+1356.1.1 = {
+	add_core = OTT
+	set_province_flag = turkish_name
+}

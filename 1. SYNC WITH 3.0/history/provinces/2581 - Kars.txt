@@ -1,0 +1,36 @@
+owner = GEO
+controller = GEO
+add_core = GEO
+add_claim = ARM
+
+capital = "Kars"
+trade_goods = wool
+culture = medieval_armenian
+#religion = orthodox
+religion = coptic
+
+hre = no
+
+base_tax = 5
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+fort_14th = yes
+temple = yes
+road_network = yes
+local_fortification_1 = yes
+
+discovered_by = steppestech
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = eastern
+discovered_by = western
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3 }
+	set_variable = { which = pop_level value = 4 }
+	#set_variable = { which = starting_urban_pop_1350 value = 1.532 }
+	set_variable = { which = starting_urban_pop_1350 value = 3.000 }
+	set_province_flag = copper
+}

@@ -1,0 +1,28 @@
+owner = MJZ
+controller = MJZ
+
+capital = "Icun"
+trade_goods = wheat
+#culture = jurchen
+culture = hulun
+religion = tengri_pagan_reformed
+
+hre = no
+
+base_tax = 5
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = chinese
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 2.5 }
+	set_province_flag = tribals_control_province
+	set_province_flag = coal
+}
+1356.1.1 = {
+	add_core = MJZ
+}

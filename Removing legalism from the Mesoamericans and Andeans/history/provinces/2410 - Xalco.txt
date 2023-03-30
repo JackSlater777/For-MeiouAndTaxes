@@ -1,0 +1,26 @@
+owner = NAH
+controller = NAH
+add_core = NAH
+
+capital = "Xalco"
+trade_goods = pepper
+culture = nahuatl_c
+religion = nahuatl
+
+base_tax = 23
+base_production = 2
+base_manpower = 0
+
+is_city = yes
+workshop = yes
+marketplace = yes
+urban_infrastructure_1 = yes
+temple = yes
+canal_level_1 = yes
+
+discovered_by = mesoamerican
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 14 }
+	set_province_flag = tribals_control_province
+}

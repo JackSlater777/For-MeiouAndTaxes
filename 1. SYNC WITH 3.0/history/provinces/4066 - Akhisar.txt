@@ -1,0 +1,37 @@
+owner = SRN
+controller = SRN
+add_core = SRN
+add_permanent_claim = BYZ
+
+capital = "Akhisar"
+trade_goods = cotton
+#culture = greek
+culture = anatolian
+religion = sunni
+
+hre = no
+
+base_tax = 6
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+canal_level_1 = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 3.500 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = coal
+}
+1356.1.1 = {
+	discovered_by = CIR
+	add_core = AYD
+	add_core = BYZ
+	set_province_flag = turkish_name
+}

@@ -1,0 +1,21 @@
+#Country scopes unless otherwise stated
+
+add_mutual_opinion_modifier_effect = {
+	add_opinion = {
+		who = $scope_country$
+		modifier = $opinion_modifier$
+	}
+	reverse_add_opinion = {
+		who = $scope_country$
+		modifier = $opinion_modifier$
+	}
+}
+
+add_mutual_truce_effect = {
+	add_truce_with = $scope$
+	$scope$ = {
+		add_truce_with = PREV
+	}
+}
+
+#### much more in v3.0 (key-built values)

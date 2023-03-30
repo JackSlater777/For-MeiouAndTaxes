@@ -1,0 +1,1841 @@
+########################################
+# Events for the Revolts against the Mongols
+#
+# written by Gilles Gaudray
+########################################
+
+namespace = flavor_ggk
+
+# Goal : model the massive revolts and breakouts the Mongol nations suffered in Central Asia
+
+# 931001 - Qara Koyunlu events (deleted)
+# Ak Koyunlu  events (deleted)
+
+# 931021 - Crimea events
+country_event = {
+	id = flavor_ggk.21
+	title = "flavor_ggk.21.t"				# Rise of the Crimea
+	desc = "flavor_ggk.21.d"				# In the midst or our dire situation, our traitrous Crimean subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = CRI }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			AND = {
+				region = crimea_region
+				NOT = { province_id = 305 }  # Kursk
+				NOT = { province_id = 1287 }  # Voronezh
+				NOT = { province_id = 2274 }  # Theodoro
+				NOT = { province_id = 3877 }  # Yamboli
+				NOT = { province_id = 1344 }  # Kafa
+				NOT = { province_id = 2573 }  # Kerch
+				NOT = { province_id = 1298 }  # Azov
+			}
+			#check_variable = { which = tribals_ratio value = 10 }
+		}
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		is_year = 1390
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				exists = KAZ
+				exists = NOG
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		crimea_region = {
+			if = {
+				limit = {
+					isValidProv = yes
+					NOT = { province_id = 305 }  # Kursk
+					NOT = { province_id = 1287 }  # Voronezh
+					NOT = { province_id = 2274 }  # Theodoro
+					NOT = { province_id = 3877 }  # Yamboli
+					NOT = { province_id = 1344 }  # Kafa
+					NOT = { province_id = 2573 }  # Kerch
+					NOT = { province_id = 1298 }  # Azov
+				}
+				add_core = CRI
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = crimean
+				#}
+			}
+		}
+		moldavia_area = {
+			if = {
+				limit = {
+					isValidProv = yes
+					culture = moldovian
+				}
+				add_core = MOL
+			}
+		}
+		basarabia_area = {
+			if = {
+				limit = {
+					isValidProv = yes
+				}
+				add_claim = MOL
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				is_nomad = no
+			}
+		}		
+		every_owned_province = {
+			limit = {
+				region = crimea_region
+				NOT = { province_id = 305 }  # Kursk
+				NOT = { province_id = 1287 }  # Voronezh
+				NOT = { province_id = 2274 }  # Theodoro
+				NOT = { province_id = 3877 }  # Yamboli
+				NOT = { province_id = 1344 }  # Kafa
+				NOT = { province_id = 2573 }  # Kerch
+				NOT = { province_id = 1298 }  # Azov
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = CRI
+		}
+		every_owned_province = {
+			limit = {
+				isValidProv = yes
+				OR = {
+					area = moldavia_area
+					area = basarabia_area
+				}
+				is_capital = no
+			}
+			cede_province = MOL
+		}
+		if = {
+			limit = {
+				CRI = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = CRI
+				subject_type = vassal
+			}
+		}
+		CRI = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+		MOL = {
+			country_event = { id = fe_MOL.1 }
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			limit = {
+				region = crimea_region
+				NOT = { province_id = 305 }  # Kursk
+				NOT = { province_id = 1287 }  # Voronezh
+				NOT = { province_id = 2274 }  # Theodoro
+				NOT = { province_id = 3877 }  # Yamboli
+				NOT = { province_id = 1344 }  # Kafa
+				NOT = { province_id = 2573 }  # Kerch
+				NOT = { province_id = 1298 }  # Azov
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = CRI
+		}
+		every_owned_province = {
+			limit = {
+				isValidProv = yes
+				OR = {
+					area = moldavia_area
+					area = basarabia_area
+				}
+				is_capital = no
+			}
+			cede_province = MOL
+		}
+		MOL = {
+			country_event = { id = fe_MOL.1 }
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		CRI = {
+			hidden_effect = {
+				if = {
+					limit = {
+						owns = 282
+					}
+					Effect_set_capital = { target=282 }
+				}
+				add_country_modifier = { name = blessing_of_god duration = 1825 }
+				steppe_effect = yes #was tribal_nomads_hereditary
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+	}
+}
+
+
+# 931031 - Astrakhan events
+country_event = {
+	id = flavor_ggk.31
+	title = "flavor_ggk.31.t"				# Rise of the Astrakhan
+	desc = "flavor_ggk.31.d"				# In the midst or our dire situation, our traitrous Astrakhanian subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = AST }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			OR = {
+				area = astrakhan_area
+				province_id = 4114
+				province_id = 1303
+			}
+			#check_variable = { which = tribals_ratio value = 10 }
+		}
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		is_year = 1390
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		astrakhan_area = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = AST
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = astrakhani
+				#}
+			}
+		}
+		4114 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = AST
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = astrakhani
+				#}
+			}
+		}
+		1303 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = AST
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = astrakhani
+				#}
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				is_nomad = no
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = astrakhan_area
+					province_id = 4114
+					province_id = 1303
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = AST
+		}
+		if = {
+			limit = {
+				AST = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = AST
+				subject_type = vassal
+			}
+		}
+		AST = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = astrakhan_area
+					province_id = 4114
+					province_id = 1303
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = AST
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		AST = {
+			hidden_effect = {
+				if = {
+					limit = {
+						owns = 1293
+					}
+					Effect_set_capital = { target=1293 }
+				}
+				else_if = {
+					limit = {
+						owns = 1310
+					}
+					Effect_set_capital = { target=1310 }
+				}
+				add_country_modifier = { name = blessing_of_god duration = 1825 }
+				steppe_effect = yes #was tribal_nomads_hereditary
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+	}
+}
+
+
+# 931041 - Nogai events
+country_event = {
+	id = flavor_ggk.41
+	title = "flavor_ggk.41.t"				# Rise of the Nogai
+	desc = "flavor_ggk.41.d"				# In the midst or our dire situation, our traitrous Nogai subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = NOG }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			OR = {
+				area = nogai_area
+				province_id = 462  # Buzachi
+				province_id = 439  # Mangyshlak
+			}
+			#check_variable = { which = tribals_ratio value = 10 }
+		}
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		is_year = 1390
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				exists = CRI
+				exists = KAZ
+			}
+		}		
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		nogai_area = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = NOG
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = nogai
+				#}
+			}
+		}
+		462 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = NOG
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = nogai
+				#}
+			}
+		}
+		439 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = NOG
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = nogai
+				#}
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				is_nomad = no
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = nogai_area
+					province_id = 462
+					province_id = 439
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = NOG
+		}
+		if = {
+			limit = {
+				NOG = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = NOG
+				subject_type = vassal
+			}
+		}
+		NOG = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = nogai_area
+					province_id = 462
+					province_id = 439
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = NOG
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		NOG = {
+			hidden_effect = {
+				if = {
+					limit = {
+						owns = 3287
+					}
+					Effect_set_capital = { target=3287 }
+				}
+				add_country_modifier = { name = blessing_of_god duration = 1825 }
+				steppe_effect = yes #was tribal_nomads_hereditary
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+		transcaspia_area = {
+			add_permanent_claim = NOG
+		}
+	}
+}
+
+
+# 931051 - Kazakh events
+country_event = {
+	id = flavor_ggk.51
+	title = "flavor_ggk.51.t"				# Rise of the Kazakh
+	desc = "flavor_ggk.51.d"				# In the midst or our dire situation, our traitrous Kazakh subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = KZH }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			OR = {
+				province_id = 1082  # Or
+				AND = {
+					region = kazakh_region
+					NOT = { province_id = 2442 }  # Ishim
+					NOT = { province_id = 1071 }  # Om
+				}
+			}
+			#check_key = { lhs = NM_Ratio value = 10 }
+		}
+		NOT = { has_country_flag = Horde_Collapse_Ongoing }
+		NOT = { has_country_flag = Horde_Ruler_Murdered }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		is_year = 1470
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = SHY  # revolt against Shaybanids
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		kazakh_region = {
+			if = {
+				limit = {
+					isValidProv = yes
+					NOT = { province_id = 2442 }  # Ishim
+					NOT = { province_id = 1071 }  # Om
+				}
+				add_core = KZH
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = khazak
+				#}
+			}
+		}
+		1082 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = KZH
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = khazak
+				#}
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				NOT = { is_nomad = yes }
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = kazakh_region
+					province_id = 1082
+				}
+				NOT = { province_id = 2442 }  # Ishim
+				NOT = { province_id = 1071 }  # Om
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = KZH
+		}
+		if = {
+			limit = {
+				KZH = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = KZH
+				subject_type = vassal
+			}
+		}
+		KZH = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = kazakh_region
+					province_id = 1082
+				}
+				NOT = { province_id = 2442 }  # Ishim
+				NOT = { province_id = 1071 }  # Om
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = KZH
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		KZH = {
+			hidden_effect = {
+				if = {
+					limit = { owns = 3285 }
+					Effect_set_capital = { target=3312 }
+				}
+				else_if = {
+					limit = { owns = 3298 }
+					Effect_set_capital = { target=3298 }
+				}
+				else_if = {
+					limit = { owns = 3296 }
+					Effect_set_capital = { target=3296 }
+				}
+				else_if = {
+					limit = { owns = 3287 }
+					Effect_set_capital = { target=3287 }
+				}
+				if = {
+					limit = { ai = no }
+					add_country_modifier = { name = blessing_of_god duration = 1825 }
+				}
+				steppe_effect = yes
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+	}
+}
+
+
+
+# 931061 - Shaybanid events
+country_event = {
+	id = flavor_ggk.61
+	title = "flavor_ggk.61.t"				# Rise of the Shaybanid
+	desc = "flavor_ggk.61.d"				# In the midst or our dire situation, our traitrous Uzbehk subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = SHY }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			OR = {
+				area = ural_area
+				area = iskier_area
+				region = kazakh_region
+			}
+			#check_variable = { which = tribals_ratio value = 10 }
+		}
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		NOT = {
+			any_known_country = {
+				Timur_Has = yes
+				isValidCountry = yes
+			}
+		}
+		is_year = 1410
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}		
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		kazakh_region = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SHY
+			}
+		}
+		ural_area = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SHY
+			}
+		}
+		iskier_area = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SHY
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				is_nomad = no
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = kazakh_region
+					area = ural_area
+					area = iskier_area
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = SHY
+		}
+		if = {
+			limit = {
+				SHY = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = SHY
+				subject_type = vassal
+			}
+		}
+		SHY = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = kazakh_region
+					area = ural_area
+					area = iskier_area
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = SHY
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		SHY = {
+			hidden_effect = {
+				if = {
+					limit = {
+						owns = 1079
+					}
+					Effect_set_capital = { target=1079 }
+				}
+				else_if = {
+					limit = {
+						owns = 3285
+					}
+					Effect_set_capital = { target=3285 }
+				}
+				else_if = {
+					limit = {
+						owns = 3296
+					}
+					Effect_set_capital = { target=3296 }
+				}
+				add_country_modifier = { name = blessing_of_god duration = 1825 }
+				steppe_effect = yes #was tribal_nomads_hereditary
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+		uzbek_region = {
+			add_permanent_claim = SHY
+		}
+	}
+}
+
+
+# 931071 - Khiva events (ToDo)
+#country_event = {
+#	id = flavor_ggk.71
+
+
+
+# 931081 - Kazan events
+country_event = {
+	id = flavor_ggk.81
+	title = "flavor_ggk.81.t"				# Rise of the Kazan Khanate
+	desc = "flavor_ggk.81.d"				# In the midst or our dire situation, our traitrous Kazani subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = KAZ }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 30 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			OR = {
+				area = kazan_area
+				province_id = 2547  # Udmurtia
+				province_id = 4016  # Chuvash
+				province_id = 1308  # Samara
+			}
+			#check_variable = { which = tribals_ratio value = 10 }
+		}
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		is_year = 1390
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				exists = CRI
+				exists = NOG
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		kazan_area = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = KAZ
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = kazani
+				#}
+			}
+		}
+		2547 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = KAZ
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = kazani
+				#}
+			}
+		}
+		4016 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = KAZ
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = kazani
+				#}
+			}
+		}
+		1308 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = KAZ
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = kazani
+				#}
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				is_nomad = no
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = kazan_area
+					province_id = 2547  # Udmurtia
+					province_id = 4016  # Chuvash
+					province_id = 1308  # Samara
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = KAZ
+		}
+		if = {
+			limit = {
+				KAZ = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = KAZ
+				subject_type = vassal
+			}
+		}
+		KAZ = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 50
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = kazan_area
+					province_id = 2547  # Udmurtia
+					province_id = 4016  # Chuvash
+					province_id = 1308  # Samara
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = KAZ
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		KAZ = {
+			hidden_effect = {
+				if = {
+					limit = {
+						owns = 1307
+					}
+					Effect_set_capital = { target=1307 }
+				}
+				add_country_modifier = { name = blessing_of_god duration = 1825 }
+				steppe_effect = yes #was tribal_nomads_hereditary
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+	}
+}
+
+
+# 931091 - Sibir events
+country_event = {
+	id = flavor_ggk.91
+	title = "flavor_ggk.91.t"				# Rise of the Sibir Khanate
+	desc = "flavor_ggk.91.d"				# In the midst or our dire situation, our traitrous Siberian subjects have risen against us in a bid to gain their independence.
+	picture = GENGIS_KHAN_eventPicture
+	
+	trigger = {
+		#NOT = { has_global_flag = 1530_start_date }
+		OR = {
+			culture_group = altaic
+			culture_group = tartar_group
+			culture_group = old_turkic
+		}
+		NOT = { tag = SIB }
+		OR = {
+			is_bankrupt = yes
+			AND = {
+				is_at_war = yes
+				NOT = { war_score = -20 }
+			}
+			NOT = { legitimacy_equivalent = 50 }
+			NOT = { stability = 0 }
+		}
+		num_of_owned_provinces_with = {
+			value = 2
+			OR = {
+				province_id = 1080  # Silabe
+				province_id = 1306  # Meyas
+				area = iskier_area
+				province_id = 2442  # Ishim
+				province_id = 1071  # Om
+			}
+			#check_variable = { which = tribals_ratio value = 10 }
+		}
+		NOT = { has_country_flag = white_horde_collapse_ongoing }
+		NOT = { has_country_flag = white_horde_murdered_ruler }
+		NOT = { war_with = TIM }
+		#NOT = { war_with = GGK }
+		Not_Have_Timur = yes
+		is_year = 1470
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = SHY  # revolt against Shaybanids
+				tag = GOL
+				tag = WHI
+				tag = BLU
+				tag = TIM
+				tag = YUA
+				#tag = GGK
+				tag = CHU
+				is_nomad = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 0.5
+			exists = RUS
+			NOT = { tag = RUS }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -30 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.9
+			is_at_war = yes
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { legitimacy_equivalent = 10 }
+		}
+		modifier = {
+			factor = 3
+			is_lesser_in_union = yes
+		}
+	}
+	
+	immediate = {
+		1080 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SIB
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = siberian
+				#}
+			}
+		}
+		1306 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SIB
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = siberian
+				#}
+			}
+		}
+		iskier_area = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SIB
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = siberian
+				#}
+			}
+		}
+		2442 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SIB
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = siberian
+				#}
+			}
+		}
+		1071 = {
+			if = {
+				limit = { isValidProv = yes }
+				add_core = SIB
+				#if = {
+				#	limit = { culture_group = tartar_group }
+				#	change_culture = siberian
+				#}
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.BASTARD"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				is_nomad = no
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1080  # Silabe
+					province_id = 1306  # Meyas
+					area = iskier_area
+					province_id = 2442  # Ishim
+					province_id = 1071  # Om
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = SIB
+		}
+		if = {
+			limit = {
+				SIB = { is_subject = no }
+				is_free_or_tributary_trigger = yes
+			}
+			create_subject = {
+				who = SIB
+				subject_type = vassal
+			}
+		}
+		SIB = {
+			if = {
+				limit = {
+					NOT = { war_with = ROOT }
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_independence_war
+					months = 12
+				}
+				declare_war_with_cb = { who = ROOT casus_belli = cb_independence_war }
+			}
+		}
+	}
+	
+	option = {
+		name = "OPT.VERYWELL"
+		ai_chance = {
+			factor = 70
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1080  # Silabe
+					province_id = 1306  # Meyas
+					area = iskier_area
+					province_id = 2442  # Ishim
+					province_id = 1071  # Om
+				}
+				owned_by = PREV
+				isValidProv = yes
+				is_capital = no
+			}
+			cede_province = SIB
+		}
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = -10
+		}
+	}
+	after = {
+		SIB = {
+			hidden_effect = {
+				define_ruler = {
+					name = "Abu'l Khayr"
+					dynasty = "Shaybanid"
+					culture = siberian
+					ADM = 3
+					DIP = 4
+					MIL = 5
+					claim = 90
+				}
+				if = {
+					limit = {
+						owns = 1079
+					}
+					Effect_set_capital = { target=1079 }
+				}
+				else_if = {
+					limit = {
+						owns = 2446
+					}
+					Effect_set_capital = { target=2446 }
+				}
+				add_country_modifier = { name = blessing_of_god duration = 1825 }
+				steppe_effect = yes #was tribal_nomads_hereditary
+				add_treasury = 100
+				capital_scope = {
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+        				cavalry = PREV
+				}
+			}
+		}
+	}
+}
+
+
+# 931.92 - Bashkir events (removed due to historical reasons - bashkir rebelled with kazani people)
+#country_event = {
+#	id = flavor_ggk.101

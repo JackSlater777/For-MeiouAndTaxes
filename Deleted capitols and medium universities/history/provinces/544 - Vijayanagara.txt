@@ -1,0 +1,31 @@
+owner = VIJ
+controller = VIJ
+add_core = VIJ
+
+capital = "Vijayanagara"
+trade_goods = livestock
+culture = kannada
+religion = hinduism
+
+hre = no
+
+base_tax = 25
+base_production = 13
+base_manpower = 0
+
+is_city = yes
+marketplace = yes
+urban_infrastructure_1 = yes
+workshop = yes
+# bureaucracy_1 = yes
+art_corporation = yes
+temple = yes
+road_network = yes
+fort_14th = yes
+
+discovered_by = indian
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 6 }
+}

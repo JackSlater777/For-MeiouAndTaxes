@@ -1,0 +1,45 @@
+#owner = OTT
+#controller = OTT
+#add_core = OTT
+
+owner = ERE
+controller = ERE
+add_core = ERE
+
+capital = "Kirikkale"
+trade_goods = wheat
+culture = turkish
+religion = sunni
+
+hre = no
+
+base_tax = 7
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+local_fortification_1 = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 1.500 }
+	#set_variable = { which = pop_level value = 3 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_variable = { which = tribals_ratio	value = 3 }
+}
+1356.1.1 = {
+	set_province_flag = turkish_name
+	#add_permanent_province_modifier = {
+	#	name = "ahis_fraternity"
+	#	duration = -1
+	#}# This is a fraternity independent until conquest by Murad I in 1362-politically irrelevant after 1354-impspy
+}
+#1362.1.1 = {
+#	remove_province_modifier = ahis_fraternity
+#}

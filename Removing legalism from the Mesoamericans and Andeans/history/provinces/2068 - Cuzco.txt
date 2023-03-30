@@ -1,0 +1,32 @@
+owner = CZC
+controller = CZC
+add_core = CZC
+
+capital = "Cuzco"
+trade_goods = cacao
+culture = quechuan
+religion = inti
+
+hre = no
+
+base_tax = 23
+base_production = 2
+base_manpower = 0
+
+is_city = yes
+temple = yes
+road_network = yes
+workshop = yes
+merchant_guild = yes
+urban_infrastructure_1 = yes
+warehouse = yes
+canal_level_1 = yes
+
+discovered_by = south_american
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 5.5 }
+	set_province_flag = tribals_control_province
+	set_province_flag = mined_goods
+	set_province_flag = salt
+}

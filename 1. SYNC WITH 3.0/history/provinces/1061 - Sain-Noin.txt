@@ -1,0 +1,27 @@
+owner = YUA
+controller = YUA
+add_core = YUA
+
+capital = "Urga"
+trade_goods = wheat
+culture = mongol
+religion = tengri_pagan_reformed
+
+hre = no
+
+base_tax = 9
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = steppestech
+
+200.1.1 = {
+	set_province_flag = gold
+	#set_province_flag = no_mines
+}
+450.1.1 = {
+	set_variable = { which = pop_level value = 2.5 }
+	set_province_flag = tribals_control_province
+}

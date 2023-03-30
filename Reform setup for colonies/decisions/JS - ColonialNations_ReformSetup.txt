@@ -1,0 +1,22 @@
+country_decisions = {
+
+	colonial_nation_setup = {
+		major = yes
+		potential = {
+			colonial_gov_trigger = yes
+			NOT = { has_country_flag = colonial_nation_setup }
+		}
+		allow = {
+			NOT = { has_reform = assembly_reform }
+		}
+		effect = {
+			set_country_flag = colonial_nation_setup
+                        add_government_reform = assembly_reform
+                        add_government_reform = vote_landowners
+                        #change_government = 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

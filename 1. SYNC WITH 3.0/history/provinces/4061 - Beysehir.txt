@@ -1,0 +1,47 @@
+#owner = HMD
+#controller = HMD
+#add_core = HMD
+
+owner = KAR
+controller = KAR
+add_core = KAR
+
+capital = "Beysehir"
+trade_goods = wool
+#culture = turkoman
+culture = yorouk
+religion = sunni
+
+hre = no
+
+base_tax = 5
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+temple = yes
+town_hall = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+
+200.1.1 = {
+	set_province_flag = coal
+}
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 4.000 }
+	#set_variable = { which = pop_level value = 2.5 }
+	set_variable = { which = pop_level value = 3 }
+	discovered_by = CIR
+	set_province_flag = tribals_control_province
+	set_variable = { which = tribals_ratio	value = 44 }
+	add_permanent_province_modifier = {
+		name = urban_goods_carpet
+		duration = -1
+	}
+}
+1356.1.1 = {
+	set_province_flag = turkish_name
+}

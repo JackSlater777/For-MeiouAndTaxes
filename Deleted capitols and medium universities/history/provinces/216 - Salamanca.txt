@@ -1,0 +1,36 @@
+owner = CAS
+controller = CAS
+add_core = CAS
+
+capital = "Salamanca"
+trade_goods = wheat
+culture = asturian
+religion = catholic
+
+hre = no
+
+base_tax = 25
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+local_fortification_1 = yes
+# medium_university = yes
+small_university = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+
+1356.1.1 = {
+	add_core = ENR
+	add_core = LEO
+}
+100.1.1 = {
+	set_variable = { which = starting_rural_pop_1350 value = 254.241 }
+	set_variable = { which = starting_urban_pop_1350 value = 19.250 }
+	set_variable = { which = starting_rural_pop_1400 value = 198.014 }
+	set_variable = { which = starting_rural_pop_1450 value = 214.857 }
+	set_variable = { which = starting_rural_pop_1850 value = 260.892 }
+}

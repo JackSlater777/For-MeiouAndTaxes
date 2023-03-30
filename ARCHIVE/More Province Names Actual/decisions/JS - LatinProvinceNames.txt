@@ -1,0 +1,309 @@
+country_decisions = {
+	rename_provinces_latin_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = latin
+			any_owned_province = {
+				OR = {
+					area = east_adriatic_coast_area
+					area = carinthia_area
+					area = albania_area
+
+                       		 	#croatia_area
+					province_id = 152
+					province_id = 1403
+				}
+				culture_group = latin
+				NOT = { has_province_flag = latin_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture_group = latin
+				NOT = { has_province_flag = latin_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #east_adriatic_coast_area
+			if = {
+				limit = { 
+					owns = 136
+					136 = { is_core = ROOT }
+					136 = { culture_group = latin }
+					136 = { NOT = { has_province_flag = latin_name } }
+				}
+				136 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Spalato"
+					rename_capital = "Spalato"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 137
+					137 = { is_core = ROOT }
+					137 = { culture_group = latin }
+					137 = { NOT = { has_province_flag = latin_name } }
+				}
+				137 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Ragusa"
+					rename_capital = "Ragusa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 138
+					138 = { is_core = ROOT }
+					138 = { culture_group = latin }
+					138 = { NOT = { has_province_flag = latin_name } }
+				}
+				138 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Cattaro"
+					rename_capital = "Cattaro"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2388
+					2388 = { is_core = ROOT }
+					2388 = { culture_group = latin }
+					2388 = { NOT = { has_province_flag = latin_name } }
+				}
+				2388 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Dalmatia"
+					rename_capital = "Tragur"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2571
+					2571 = { is_core = ROOT }
+					2571 = { culture_group = latin }
+					2571 = { NOT = { has_province_flag = latin_name } }
+				}
+				2571 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Jadera"
+					rename_capital = "Jadera"
+				}
+			}
+                        #carinthia_area
+			if = {
+				limit = { 
+					owns = 129
+					129 = { is_core = ROOT }
+					129 = { culture_group = latin }
+					129 = { NOT = { has_province_flag = latin_name } }
+				}
+				129 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Cragnisca"
+					rename_capital = "Cragnisca"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 130
+					130 = { is_core = ROOT }
+					130 = { culture_group = latin }
+					130 = { NOT = { has_province_flag = latin_name } }
+				}
+				130 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Eistria"
+					rename_capital = "Puola"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1355
+					1355 = { is_core = ROOT }
+					1355 = { culture_group = latin }
+					1355 = { NOT = { has_province_flag = latin_name } }
+				}
+				1355 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Gurize"
+					rename_capital = "Gurize"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2452
+					2452 = { is_core = ROOT }
+					2452 = { culture_group = latin }
+					2452 = { NOT = { has_province_flag = latin_name } }
+				}
+				2452 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Triest"
+					rename_capital = "Triest"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3747
+					3747 = { is_core = ROOT }
+					3747 = { culture_group = latin }
+					3747 = { NOT = { has_province_flag = latin_name } }
+				}
+				3747 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Alta Carniola" #Sloven - Gorenjska
+					rename_capital = "Craimburgo" #Sloven - Kranj
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4034
+					4034 = { is_core = ROOT }
+					4034 = { culture_group = latin }
+					4034 = { NOT = { has_province_flag = latin_name } }
+				}
+				4034 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Fiume"
+					rename_capital = "Fiume"
+				}
+			}
+
+                        #albania_area
+			if = {
+				limit = { 
+					owns = 144
+					144 = { is_core = ROOT }
+					144 = { culture_group = latin }
+					144 = { NOT = { has_province_flag = latin_name } }
+				}
+				144 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Argirocastro" #Albanian - Gjirokaster
+					rename_capital = "Argirocastro" #Albanian - Gjirokaster
+				}
+			}
+			if = {
+				limit = { 
+					owns = 805
+					805 = { is_core = ROOT }
+					805 = { culture_group = latin }
+					805 = { NOT = { has_province_flag = latin_name } }
+				}
+				805 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Valona" #Albanian - Vlore
+					rename_capital = "Valona" #Albanian - Vlore
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1424
+					1424 = { is_core = ROOT }
+					1424 = { culture_group = latin }
+					1424 = { NOT = { has_province_flag = latin_name } }
+				}
+				1424 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Alessio" #Albanian - Lezhe
+					rename_capital = "Alessio" #Albanian - Lezhe
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2373
+					2373 = { is_core = ROOT }
+					2373 = { culture_group = latin }
+					2373 = { NOT = { has_province_flag = latin_name } }
+				}
+				2373 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Durazzo" #Albanian - Durres
+					rename_capital = "Durazzo" #Albanian - Durres
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2374
+					2374 = { is_core = ROOT }
+					2374 = { culture_group = latin }
+					2374 = { NOT = { has_province_flag = latin_name } }
+				}
+				2374 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Croia" #Albanian - Kruje
+					rename_capital = "Croia" #Albanian - Kruje
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3778
+					3778 = { is_core = ROOT }
+					3778 = { culture_group = latin }
+					3778 = { NOT = { has_province_flag = latin_name } }
+				}
+				3778 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Belgrad di Romania" #Albanian - Muzakaj
+					rename_capital = "Belgrad di Romania" #Albanian - Berat
+				}
+			}
+
+                        #croatia_area
+                        #131 1450 2390
+			if = {
+				limit = { 
+					owns = 152
+					152 = { is_core = ROOT }
+					152 = { culture_group = latin }
+					152 = { NOT = { has_province_flag = latin_name } }
+				}
+				152 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Zagabria"
+					rename_capital = "Varasdino"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1403
+					1403 = { is_core = ROOT }
+					1403 = { culture_group = latin }
+					1403 = { NOT = { has_province_flag = latin_name } }
+				}
+				1403 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = latin_name 
+					change_province_name = "Lika"
+					rename_capital = "Segna"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

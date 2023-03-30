@@ -1,0 +1,68 @@
+country_decisions = {
+	carribean_posts = {
+		potential = {
+			NOT = { has_global_flag = carribean_posts_init }
+		}
+		
+		allow = {
+			owns = 1240
+		}
+		
+		effect = {
+			set_global_flag = carribean_posts_init
+
+			481 = { #Bermuda
+				add_permanent_province_modifier = {
+					name = trading_post_province
+					duration = -1
+				}
+			}
+			#482 = { #Turks
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+			#483 = { #Caycos
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+			#487 = { #Jamaica
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+			#491 = { #Curacao
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+			#493 = { #St Thomas
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+			#2592 = { #Cayman
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+			#2596 = { #Saint Croix
+			#	add_permanent_province_modifier = {
+			#		name = trading_post_province
+			#		duration = -1
+			#	}
+			#}
+		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

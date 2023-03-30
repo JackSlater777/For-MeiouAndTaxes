@@ -1,0 +1,41 @@
+country_decisions = {
+	ott_setup = {
+		major = yes
+		potential = {
+			tag = OTT
+			NOT = { has_country_flag = ott_setup }
+		}
+		allow = {
+			is_year = 1357
+			is_month = 2 # March
+		}
+		effect = {
+			set_country_flag = ott_setup
+			add_absolutism = 5  # up to 40
+			#if = {
+			#	limit = {
+			#		OR = {
+			#			has_country_flag = GN_high_court_titles_1_flag
+			#			has_country_flag = GN_high_court_titles_2_flag
+			#		}
+			#	}
+			#	remove_GN_high_court_titles_2 = yes
+			#	remove_GN_high_court_titles_1 = yes
+			#}
+			#if = {
+			#	limit = {
+			#		OR = {
+			#			has_country_flag = GN_high_nobles_court_1_flag
+			#			has_country_flag = GN_high_nobles_court_2_flag
+			#		}
+			#	}
+			#	remove_GN_high_nobles_court_2 = yes
+			#	remove_GN_high_nobles_court_1 = yes
+			#}
+                        add_government_reform = bureaucracy
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

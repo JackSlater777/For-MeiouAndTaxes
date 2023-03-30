@@ -1,0 +1,18 @@
+#New Institution Birthplaces
+
+birthplace_of_the_banking = {
+	interest = -0.2
+	inflation_reduction = 0.02
+}
+
+birthplace_of_gunpowder = {
+	regiment_recruit_speed = 0.2
+}
+
+birthplace_of_agricultural_revolution = {
+	trade_goods_size_modifier = 0.2
+}
+
+birthplace_of_steam_and_power = {
+	production_efficiency = 0.2
+}

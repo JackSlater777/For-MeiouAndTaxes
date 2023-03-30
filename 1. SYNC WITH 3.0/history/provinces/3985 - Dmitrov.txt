@@ -1,0 +1,31 @@
+owner = GLC
+controller = GLC
+add_core = GLC
+
+capital = "Dmitrov"
+trade_goods = wool
+culture = russian
+religion = orthodox
+
+hre = no
+
+base_tax = 4
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+local_fortification_1 = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 4 }
+	set_variable = { which = pop_level value = 4.5 }
+}
+1356.1.1 = {
+	add_core = MOS
+}

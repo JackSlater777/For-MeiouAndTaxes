@@ -1,0 +1,380 @@
+country_decisions = {
+	rename_provinces_balkan_slavic_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = balkan_slavic
+			any_owned_province = {
+				OR = {
+					area = east_adriatic_coast_area
+                        		area = carinthia_area
+                        		area = croatia_area
+
+                        		#macedonia_area
+					province_id = 1401
+
+                        		#kisalfold_area
+					province_id = 1270
+
+                        		#alfold_area
+					province_id = 1859
+
+                        		area = dobrogea_area
+				}
+				culture_group = balkan_slavic
+				NOT = { has_province_flag = balkan_slavic_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture_group = balkan_slavic
+				NOT = { has_province_flag = balkan_slavic_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #east_adriatic_coast_area
+			if = {
+				limit = { 
+					owns = 136
+					136 = { is_core = ROOT }
+					136 = { culture_group = balkan_slavic }
+					136 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				136 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Split"
+					rename_capital = "Split"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 137
+					137 = { is_core = ROOT }
+					137 = { culture_group = balkan_slavic }
+					137 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				137 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Dubrovnik"
+					rename_capital = "Dubrovnik"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 138
+					138 = { is_core = ROOT }
+					138 = { culture_group = balkan_slavic }
+					138 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				138 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Kotor"
+					rename_capital = "Kotor"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2388
+					2388 = { is_core = ROOT }
+					2388 = { culture_group = balkan_slavic }
+					2388 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				2388 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Dalmacija"
+					rename_capital = "Sibenik"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2571
+					2571 = { is_core = ROOT }
+					2571 = { culture_group = balkan_slavic }
+					2571 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				2571 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Zadar"
+					rename_capital = "Zadar"
+				}
+			}
+                        #carinthia_area
+			if = {
+				limit = { 
+					owns = 129
+					129 = { is_core = ROOT }
+					129 = { culture_group = balkan_slavic }
+					129 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				129 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Kranjska"
+					rename_capital = "Kranjska"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 130
+					130 = { is_core = ROOT }
+					130 = { culture_group = balkan_slavic }
+					130 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				130 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Istra"
+					rename_capital = "Pula"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1355
+					1355 = { is_core = ROOT }
+					1355 = { culture_group = balkan_slavic }
+					1355 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				1355 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Gorica"
+					rename_capital = "Gorica"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2452
+					2452 = { is_core = ROOT }
+					2452 = { culture_group = balkan_slavic }
+					2452 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				2452 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Trst"
+					rename_capital = "Trst"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3747
+					3747 = { is_core = ROOT }
+					3747 = { culture_group = balkan_slavic }
+					3747 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				3747 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Gorenjska"
+					rename_capital = "Kranj"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4034
+					4034 = { is_core = ROOT }
+					4034 = { culture_group = balkan_slavic }
+					4034 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				4034 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Rijeka"
+					rename_capital = "Rijeka"
+				}
+			}
+
+                        #croatia_area
+			if = {
+				limit = { 
+					owns = 131
+					131 = { is_core = ROOT }
+					131 = { culture_group = balkan_slavic }
+					131 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				131 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Prigorje"
+					rename_capital = "Gradec"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 152
+					152 = { is_core = ROOT }
+					152 = { culture_group = balkan_slavic }
+					152 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				152 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Zagorje"
+					rename_capital = "Varazdin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1403
+					1403 = { is_core = ROOT }
+					1403 = { culture_group = balkan_slavic }
+					1403 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				1403 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Licko-Krbava"
+					rename_capital = "Senj"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1450
+					1450 = { is_core = ROOT }
+					1450 = { culture_group = balkan_slavic }
+					1450 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				1450 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Srem" #CRO - Srijem
+					rename_capital = "Zemun"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2390
+					2390 = { is_core = ROOT }
+					2390 = { culture_group = balkan_slavic }
+					2390 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				2390 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Slavonija"
+					rename_capital = "Osijek"
+				}
+			}
+
+                        #macedonia_area
+                        #148 155 2124 2137 2387 3871 
+			if = {
+				limit = { 
+					owns = 1401
+					1401 = { is_core = ROOT }
+					1401 = { culture_group = balkan_slavic }
+					1401 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				1401 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Ohrid"
+					rename_capital = "Ohrid"
+				}
+			}
+
+                        #kisalfold_area
+                        #1267 1275 3770 3771 3772
+			if = {
+				limit = { 
+					owns = 1270
+					1270 = { is_core = ROOT }
+					1270 = { culture_group = balkan_slavic }
+					1270 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				1270 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Western Vojvodina"
+					rename_capital = "Sombor"
+				}
+			}
+
+                        #alfold_area
+                        #1271 1273 1404 2275 3789
+			if = {
+				limit = { 
+					owns = 1859
+					1859 = { is_core = ROOT }
+					1859 = { culture_group = balkan_slavic }
+					1859 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				1859 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Eastern Vojvodina"
+					rename_capital = "Zrenjanin"
+				}
+			}
+
+                        #dobrogea_area
+			if = {
+				limit = { 
+					owns = 159
+					159 = { is_core = ROOT }
+					159 = { culture_group = balkan_slavic }
+					159 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				159 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Dobruja"
+					rename_capital = "Karvuna"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2380
+					2380 = { is_core = ROOT }
+					2380 = { culture_group = balkan_slavic }
+					2380 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				2380 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Tulcha"
+					rename_capital = "Tulcha"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2381
+					2381 = { is_core = ROOT }
+					2381 = { culture_group = balkan_slavic }
+					2381 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				2381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Varna"
+					rename_capital = "Varna"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3782
+					3782 = { is_core = ROOT }
+					3782 = { culture_group = balkan_slavic }
+					3782 = { NOT = { has_province_flag = balkan_slavic_name } }
+				}
+				3782 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = balkan_slavic_name 
+					change_province_name = "Kustenja"
+					rename_capital = "Kustenja"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

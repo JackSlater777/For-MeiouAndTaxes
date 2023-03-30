@@ -1,0 +1,60 @@
+#Adding gunpowder institution in missed provinces
+country_event = {
+	id = js_tatar_yoke.1
+	title = js_tatar_yoke.1.t
+	desc = js_tatar_yoke.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		tag = HAW
+		#is_year = 1357
+		#is_month = 1 # February
+		NOT = { has_global_flag = tatar_yoke_enacted }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = tatar_yoke_enacted
+			west_dniepr_area = {
+				add_permanent_claim = GVO
+				add_permanent_claim = BRK
+				add_permanent_claim = LIT
+			}
+			east_dniepr_area = {
+				add_permanent_claim = BRK
+				add_permanent_claim = LIT
+			}
+			briansk_area = {
+				add_permanent_claim = BRK
+				add_permanent_claim = LIT
+			}
+			smolensk_area = {
+				add_permanent_claim = BRK
+				add_permanent_claim = LIT
+			}
+			284 = { add_permanent_claim = LIT }
+			4019 = { add_permanent_claim = LIT }
+			4021 = { add_permanent_claim = LIT }
+			300 = { add_permanent_claim = LIT }
+			4018 = { add_permanent_claim = LIT }
+			4110 = {
+				add_permanent_claim = BRK
+				add_permanent_claim = LIT
+			}
+			2545 = {
+				add_permanent_claim = BRK
+				add_permanent_claim = LIT
+			}
+		}
+	}
+	
+	option = {
+		name = js_institution_events.1.a
+	}
+}

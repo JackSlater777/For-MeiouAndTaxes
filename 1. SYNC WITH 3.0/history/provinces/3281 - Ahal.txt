@@ -1,0 +1,27 @@
+owner = JQB
+controller = JQB
+add_core = JQB
+
+capital = "Tejen"
+trade_goods = cotton
+#culture = persian
+#culture = tajihk
+culture = turkmeni
+religion = sunni
+
+base_tax = 2
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 2.500 }
+	#set_variable = { which = pop_level value = 2 }
+	set_variable = { which = pop_level value = 3 }
+}

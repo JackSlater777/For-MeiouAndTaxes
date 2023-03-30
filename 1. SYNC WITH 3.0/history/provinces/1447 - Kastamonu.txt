@@ -1,0 +1,38 @@
+owner = CND
+controller = CND
+add_core = CND
+add_permanent_claim = BYZ
+
+capital = "Kastamonu"
+trade_goods = lumber
+#culture = pontic
+#religion = orthodox
+culture = anatolian
+religion = sunni
+
+hre = no
+
+base_tax = 9
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+fort_14th = yes
+town_hall = yes
+local_fortification_1 = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 3.500 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = mined_goods
+	set_province_flag = copper
+}
+1356.1.1 = {
+	set_province_flag = turkish_name
+}

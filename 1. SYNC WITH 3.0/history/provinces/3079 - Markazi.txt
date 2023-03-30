@@ -1,0 +1,29 @@
+owner = CHU
+controller = CHU
+add_core = CHU
+
+capital = "Arak"
+trade_goods = hemp
+culture = persian
+religion = sunni
+
+hre = no
+
+base_tax = 13
+base_production = 0
+base_manpower = 1
+
+is_city = yes
+road_network = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3 }
+	set_variable = { which = pop_level value = 2.5 }
+	set_province_flag = iron
+}

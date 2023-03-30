@@ -1,0 +1,177 @@
+province_name_flag_initialization_effect = {
+	if = {
+		limit = {
+			culture_group = east_slavic
+		}
+		set_province_flag = russian_name
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = high_germanic
+				culture_group = low_germanic
+			}
+		}
+		set_province_flag = german_name
+	}
+	if = {
+		limit = {
+			culture_group = romanian
+		}
+		set_province_flag = romanian_name
+	}
+	if = {
+		limit = {
+			culture = hungarian
+		}
+		set_province_flag = hungarian_name
+	}
+	if = {
+		limit = {
+			culture_group = tartar_group
+		}
+		set_province_flag = tartar_name
+	}
+	if = {
+		limit = {
+			culture = polish
+		}
+		set_province_flag = polish_name
+	}
+	if = {
+		limit = {
+			culture = swedish
+		}
+		set_province_flag = swedish_name
+	}
+	if = {
+		limit = {
+			culture_group = balkan_slavic
+		}
+		set_province_flag = balkan_slavic_name
+	}
+	if = {
+		limit = {
+			culture_group = latin
+		}
+		set_province_flag = latin_name
+	}
+	if = {
+		limit = {
+			culture = turkish
+		}
+		set_province_flag = turkish_name
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = mashreqi
+				culture_group = maghreb
+				culture_group = arabian
+				AND = {
+					culture_group = iberian
+					religion_group = muslim
+				}
+				AND = {
+					culture_group = portuguese
+					religion_group = muslim
+				}
+				AND = {
+					culture_group = basque_group
+					religion_group = muslim
+				}
+				AND = {
+					culture_group = langue_d_oc
+					religion_group = muslim
+				}
+			}
+		}
+		set_province_flag = arabic_name
+	}
+	if = {
+		limit = {
+			OR = {
+				culture = persian
+				culture = adari
+			}
+			religion_group = muslim
+		}
+		set_province_flag = persian_name
+	}
+	if = {
+		limit = {
+			culture = kurdish
+		}
+		set_province_flag = kurdish_name
+	}
+	if = {
+		limit = {
+			culture_group = berber_group
+		}
+		set_province_flag = berber_name
+	}
+	if = {
+		limit = {
+			OR = {
+				culture = castillian
+				culture = andalucian
+			}
+			religion_group = christian
+		}
+		set_province_flag = spanish_name
+	}
+	if = {
+		limit = {
+			culture = portugese
+			religion_group = christian
+		}
+		set_province_flag = portuguese_name
+	}
+	if = {
+		limit = {
+			culture = basque
+			religion_group = christian
+		}
+		set_province_flag = basque_name
+	}
+	if = {
+		limit = {
+			culture = catalan
+			religion_group = christian
+		}
+		set_province_flag = catalan_name
+	}
+	if = {
+		limit = {
+			culture = azerbadjani
+			religion_group = muslim
+		}
+		set_province_flag = azerbaijani_name
+	}
+}
+
+clear_province_name_flag_effect = {
+	clr_province_flag = russian_name
+	clr_province_flag = standard_russian_name
+	clr_province_flag = german_name
+	clr_province_flag = standard_german_name
+	clr_province_flag = romanian_name
+	clr_province_flag = hungarian_name
+	clr_province_flag = tartar_name
+	clr_province_flag = polish_name
+	clr_province_flag = swedish_name
+	clr_province_flag = balkan_slavic_name
+	clr_province_flag = latin_name
+	clr_province_flag = turkish_name
+	clr_province_flag = arabic_name
+	clr_province_flag = persian_name
+	clr_province_flag = kurdish_name
+	clr_province_flag = berber_name
+	clr_province_flag = spanish_name
+	clr_province_flag = portuguese_name
+	clr_province_flag = basque_name
+	clr_province_flag = catalan_name
+	clr_province_flag = azerbaijani_name
+
+	clr_province_flag = greek_name
+}

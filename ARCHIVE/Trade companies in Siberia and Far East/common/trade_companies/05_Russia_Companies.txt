@@ -1,0 +1,27 @@
+trade_company_mongolia = {
+	color = { 23 36 36 }
+	provinces = {
+		1054 1056 4196 4197 1060 1063 2156 4195 2157 2158 2155 2154 2445 2152 1074 4200 2153 1066 1069 4199 480
+		3271 1059 1062 1067 1065 1064 1055 1051
+	}
+	names = {
+		name = "TRADE_COMPANY_MONGOLIA_Root_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_MONGOLIA_Mongolia_Trade_Company"
+	}
+}
+
+trade_company_western_siberia = {
+	color = { 255 11 155 }
+	provinces = {
+		1071 4201 1078 1529 1072 4209 4208 4206 281 1080 1077 1079 4204 4203
+		1082 1306 2442 1070 2446 4202 1075 4205
+	}
+	names = {
+		name = "TRADE_COMPANY_WESTERN_SIBERIA_Root_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_WESTERN_SIBERIA_Western_Siberia_Trade_Company"
+	}
+}

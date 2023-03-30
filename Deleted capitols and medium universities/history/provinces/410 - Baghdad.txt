@@ -1,0 +1,47 @@
+owner = JAI
+controller = JAI
+add_core = JAI
+
+capital = "Bagdad"
+trade_goods = sugar
+culture = iraqi
+religion = sunni
+
+hre = no
+
+base_tax = 20
+base_production = 9
+base_manpower = 0
+
+is_city = yes
+fort_14th = yes
+small_university = yes
+merchant_guild = yes
+urban_infrastructure_2 = yes
+workshop = yes
+warehouse = yes
+# bureaucracy_1 = yes
+road_network = yes
+temple = yes
+canal_level_1 = yes
+
+discovered_by = muslim
+discovered_by = western
+discovered_by = eastern
+discovered_by = turkishtech
+
+500.1.1 = {
+	set_variable = { which = pop_level value = 5 }
+	add_permanent_province_modifier = {
+		name = urban_goods_silk
+		duration = -1
+	}
+}
+1111.1.1 = {
+	set_province_flag = silk_road_town
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = baghdad_silk_road
+		duration = -1
+	}
+}

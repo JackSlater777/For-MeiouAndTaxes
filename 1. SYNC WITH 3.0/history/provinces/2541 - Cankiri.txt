@@ -1,0 +1,42 @@
+owner = CND
+controller = CND
+add_core = CND
+
+capital = "Tosya"
+trade_goods = lumber
+culture = turkish
+religion = sunni
+
+hre = no
+
+base_tax = 8
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+workshop = yes
+road_network = yes
+canal_level_1 = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 3.000 }
+	set_variable = { which = pop_level value = 4 }
+	add_permanent_province_modifier = {
+		name = urban_goods_cloth
+		duration = -1
+	}
+	set_variable = { which = tribals_ratio	value = 6 }
+}
+1356.1.1 = {
+	add_permanent_province_modifier = {
+		name = beylik_of_isfendiyar
+		duration = -1
+	}
+	set_province_flag = turkish_name
+}

@@ -1,0 +1,426 @@
+namespace = moghul
+
+#### The End of Qocho ####
+country_event = {
+	id = moghul.1
+	title = moghul.1.t
+	desc = moghul.1.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1389 # performance
+		NOT = { is_year = 1420 } # performance
+		tag = MGH
+		religion_group = muslim
+		OR = {
+			overlord_of = KAS
+			KAS = { is_subject = no }
+		}
+		KAS = {
+			NOT = { religion_group = muslim }
+			#NOT = { religion = tengri_pagan }
+			NOT = { religion = tengri_pagan_reformed }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			stability = 2
+		}
+		modifier = {
+			factor = 0.9
+			stability = 1
+		}
+		modifier = {
+			factor = 0.9
+			legitimacy_equivalent = 90
+		}
+		modifier = {
+			factor = 0.9
+			legitimacy_equivalent = 80
+		}
+		modifier = {
+			factor = 0.9
+			legitimacy_equivalent = 70
+		}
+		modifier = {
+			factor = 0.9
+			legitimacy_equivalent = 60
+		}
+		modifier = {
+			factor = 0.9
+			legitimacy_equivalent = 50
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 50
+		}
+	}
+	
+	option = { #end
+		name = moghul.1.a
+		KAS = { grant_independence = yes }
+		add_country_modifier = { name = CL_ReligiousWar_L duration = 3650 }
+		declare_war_with_cb = {
+			who = KAS
+			casus_belli = cb_crusade
+		}
+		3213 = {
+			add_core = MGH  # Turfan
+		}
+		KAS = { country_event = { id = moghul.2 } }
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+	
+	option = { #player only
+		name = moghul.1.b
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = moghul.2
+	title = moghul.2.t
+	desc = moghul.2.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+		name = moghul.2.a
+		trigger = {
+			ai = no
+		}
+		add_legitimacy = 25
+		add_stability_1 = yes
+		add_army_tradition = 10
+	}
+	
+	option = { 
+		name = moghul.2.b
+		trigger = {
+			ai = yes
+		}
+		subtract_stability_1 = yes
+	}
+}
+
+country_event = {
+	id = moghul.3
+	title = moghul.3.t
+	desc = moghul.3.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = KAS
+		war_with = MGH
+		MGH = { religion_group = muslim }
+		owns = 3213  # Turfan
+		NOT = { controls = 3213 }
+		NOT = { is_year = 1420 } # performance
+	}
+	
+	option = { 
+		name = moghul.3.a
+		#v3.0 prov
+		#if = {
+		#	limit = {
+		#		4705 = { culture = old_uyghur }
+		#	}
+		#	4705 = {
+		#		change_culture = chaghatai
+		#		change_religion = sunni
+		#		if = {
+		#			limit = {
+		#				owner = { ai = no }
+		#				4705 = {
+		#					any_neighbor_province = {
+		#						owned_by = MGH
+		#					}
+		#				}
+		#			}
+		#			4705 = {
+		#				cede_province = MGH
+		#			}
+		#			hidden_effect = {
+		#				province_event = {
+		#					id = Prov_UI.502
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+		if = {
+			limit = {
+				2118 = { culture = old_uyghur }
+			}
+			2118 = {  # Karashar
+				change_culture = chaghatai
+				change_religion = sunni
+				if = {
+					limit = {
+						owner = { ai = no }
+						2118 = {
+							any_neighbor_province = {
+								owned_by = MGH
+							}
+						}
+					}
+					2118 = {
+						cede_province = MGH
+					}
+					#hidden_effect = {
+					#	province_event = {
+					#		id = Prov_UI.502
+					#	}
+					#}
+				}
+			}
+		}
+		if = {
+			limit = {
+				717 = { culture = old_uyghur }
+			}
+			717 = {  # Loulan
+				change_culture = chaghatai
+				change_religion = sunni
+				if = {
+					limit = {
+						owner = { ai = no }
+						717 = {
+							any_neighbor_province = {
+								owned_by = MGH
+							}
+						}
+					}
+					717 = {
+						cede_province = MGH
+					}
+					hidden_effect = {
+						province_event = {
+							id = Prov_UI.502
+						}
+					}
+				}
+			}
+		}
+		#v3.0 prov
+		#if = {
+		#	limit = {
+		#		4958 = { OR = { culture = old_uyghur owned_by = KAS } }
+		#	}
+		#	4958 = {
+		#		change_culture = oirats
+		#		change_religion = tengri_pagan
+		#		if = {
+		#			limit = {
+		#				owner = { ai = no }
+		#				4958 = {
+		#					any_neighbor_province = {
+		#						owned_by = OIR
+		#					}
+		#				}
+		#			}
+		#			4958 = {
+		#				cede_province = OIR
+		#			}
+		#			hidden_effect = {
+		#				province_event = {
+		#					id = Prov_UI.502
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+		if = {
+			limit = {
+				ai = no
+			}
+			2743 = {  # Kumul
+				if = {
+					limit = {
+						culture = old_uyghur
+					}
+					change_culture = chaghatai
+				}
+			}
+			3213 = {  # Turfan
+				if = {
+					limit = {
+						culture = old_uyghur
+					}
+					change_culture = chaghatai
+				}
+			}
+			every_province = {
+				limit = {
+					owned_by = KAS
+					OR = {
+						AND = {
+							NOT = { 
+								#area = hami_area
+								province_id = 3213  # Turfan
+								province_id = 2743  # Kumul
+							}
+							NOT = {
+								#area = zungaria_area
+								province_id = 478  # Chuguchak
+								province_id = 2273 # Orongo Gol (Barkol)
+								province_id = 2742 # Yangjibaliq (Urumqi)
+								province_id = 3276  # Zaisan (Ulungur)
+								province_id = 3305 # Alaqol (Ili)
+							}
+						}
+						province_id = 3213  # Turfan
+					}
+				}
+				cede_province = MGH
+				#hidden_effect = {
+				#	province_event = {
+				#		id = Prov_UI.502
+				#	}
+				#}
+			}
+			if = {
+				limit = {
+					exists = OIR
+				}
+				every_province = {
+					limit = {
+						owned_by = KAS
+						#OR = {
+							province_id = 2742  # Urumqi
+						#	province_id = 4958  # v3.0 prov
+						#}
+					}
+					cede_province = OIR
+					#hidden_effect = {
+					#	province_event = {
+					#		id = Prov_UI.502
+					#	}
+					#}
+				}
+			}
+			if = {
+				limit = {
+					exists = YUA
+				}
+				every_province = {
+					limit = {
+						owned_by = KAS
+					}
+					cede_province = YUA
+					#hidden_effect = {
+					#	province_event = {
+					#		id = Prov_UI.502
+					#	}
+					#}
+				}
+			}
+			else = {
+				every_province = {
+					limit = {
+						owned_by = KAS
+					}
+					add_core = HMI
+					cede_province = HMI
+					#hidden_effect = {
+					#	province_event = {
+					#		id = Prov_UI.502
+					#	}
+					#}
+				}
+			}
+		}
+	}
+}
+
+#### The End of Qocho ####
+country_event = {
+	id = moghul.4
+	title = moghul.4.t
+	desc = moghul.4.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	
+	#trigger = {
+	#	is_year = 1370 # performance
+	#	NOT = { is_year = 1389 } # performance
+	#	tag = MGH
+	#	religion_group = muslim
+	#	OR = {
+	#		overlord_of = KAS
+	#		KAS = { is_subject = no }
+	#	}
+	#	KAS = {
+	#		NOT = { religion_group = muslim }
+	#		NOT = { religion = tengri_pagan_reformed }
+	#	}
+	#}
+
+	trigger = {
+		is_year = 1370 # performance
+		NOT = { is_year = 1389 } # performance
+		tag = KAS
+		NOT = { religion_group = muslim }
+		NOT = { religion = tengri_pagan_reformed }
+		MGH = {
+			religion_group = muslim
+			OR = {
+				overlord_of = KAS
+				KAS = { is_subject = no }
+			}	
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+	
+	option = { # remain buddhist
+		name = moghul.4.b
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+	
+	option = { #embrace islam
+		name = moghul.4.a
+		change_religion = sunni
+		force_converted = yes
+		subtract_stability_3 = yes
+		add_legitimacy = -50
+		add_prestige = -20
+		#Public_ChangeConcernTooltipProv = { Concern=Spirituality Amount=-3 }
+		#hidden_effect = {
+		#	capital_scope = {
+		#		province_event = {
+		#			id = Prov_UI.502
+		#		}
+		#	}
+		#}
+
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+owner = MIH
+controller = MIH
+add_core = MIH
+
+capital = "Dalbandin"
+trade_goods = opium
+culture = baluchi
+religion = sunni
+
+hre = no
+
+base_tax = 1
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = indian
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 1.5 }
+	set_variable = { which = pop_level value = 2 }
+	set_province_flag = tribals_control_province
+	set_province_flag = gold
+	#set_province_flag = silver
+	#set_province_flag = no_mines
+}

@@ -1,0 +1,29 @@
+owner = JQB
+controller = JQB
+add_core = JQB
+
+capital = "Tus"
+trade_goods = wool
+#culture = persian
+culture = tajihk
+religion = sunni
+
+hre = no
+
+base_tax = 2
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 2.5 }
+	set_variable = { which = pop_level value = 3 }
+}
+1356.1.1 = {
+	add_core = SDB
+}

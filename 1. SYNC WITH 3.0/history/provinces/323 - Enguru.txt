@@ -1,0 +1,39 @@
+owner = OTT
+controller = OTT
+add_core = OTT
+add_claim = KAR
+
+capital = "Ankara"
+trade_goods = wool
+culture = turkish
+religion = sunni
+
+hre = no
+
+base_tax = 10
+base_production = 3
+base_manpower = 1
+
+is_city = yes
+temple = yes
+marketplace = yes
+urban_infrastructure_1 = yes
+fort_14th = yes
+workshop = yes
+road_network = yes
+canal_level_1 = yes
+local_fortification_1 = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3 }
+	add_permanent_province_modifier = {
+		name = urban_goods_cloth
+		duration = -1
+	}
+}

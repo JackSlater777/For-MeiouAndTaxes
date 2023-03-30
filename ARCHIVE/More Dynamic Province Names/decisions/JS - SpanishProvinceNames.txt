@@ -1,0 +1,1951 @@
+country_decisions = {
+	rename_provinces_spanish_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = iberian
+			religion_group = christian
+			any_owned_province = {
+				OR = {
+					area = upper_andalucia_area
+					area = lower_guadalquivir_area
+					area = upper_guadalquivir_area
+					area = murcia_area
+					area = toledo_area
+					area = extremadura_area
+					area = extremadura_castilla_area
+					area = castille_area
+					area = leon_area
+					area = euskal_area
+					area = valencia_area
+					area = aragon_area
+					area = catalonia_area
+					area = baleares_area
+					area = alentejo_area
+					area = beieras_area
+					area = galicia_area
+					area = macaronesia_area
+				}
+				OR = {
+					culture = castillian
+					culture = andalucian
+				}
+				religion_group = christian
+				NOT = { has_province_flag = spanish_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				OR = {
+					culture = castillian
+					culture = andalucian
+				}
+				religion_group = christian
+				NOT = { has_province_flag = spanish_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #upper_andalucia_area
+			if = {
+				limit = { 
+					owns = 222
+					222 = { is_core = ROOT }
+					222 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					222 = { religion_group = christian }
+					222 = { NOT = { has_province_flag = spanish_name } }
+				}
+				222 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Almeria"
+					rename_capital = "Almeria"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 223
+					223 = { is_core = ROOT }
+					223 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					223 = { religion_group = christian }
+					223 = { NOT = { has_province_flag = spanish_name } }
+				}
+				223 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Granada"
+					rename_capital = "Granada"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 226
+					226 = { is_core = ROOT }
+					226 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					226 = { religion_group = christian }
+					226 = { NOT = { has_province_flag = spanish_name } }
+				}
+				226 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Malaga"
+					rename_capital = "Malaga"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1407
+					1407 = { is_core = ROOT }
+					1407 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1407 = { religion_group = christian }
+					1407 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1407 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Gibraltar"
+					rename_capital = "Gibraltar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2314
+					2314 = { is_core = ROOT }
+					2314 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2314 = { religion_group = christian }
+					2314 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2314 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Marbella"
+					rename_capital = "Marbella"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3359
+					3359 = { is_core = ROOT }
+					3359 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3359 = { religion_group = christian }
+					3359 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3359 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Baza"
+					rename_capital = "Baza"
+				}
+			}
+
+                        #lower_guadalquivir_area
+			if = {
+				limit = { 
+					owns = 224
+					224 = { is_core = ROOT }
+					224 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					224 = { religion_group = christian }
+					224 = { NOT = { has_province_flag = spanish_name } }
+				}
+				224 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Huelva"
+					rename_capital = "Huelva"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2310
+					2310 = { is_core = ROOT }
+					2310 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2310 = { religion_group = christian }
+					2310 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2310 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Cadiz"
+					rename_capital = "Cadiz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2311
+					2311 = { is_core = ROOT }
+					2311 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2311 = { religion_group = christian }
+					2311 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Sevilla"
+					rename_capital = "Sevilla"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3357
+					3357 = { is_core = ROOT }
+					3357 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3357 = { religion_group = christian }
+					3357 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3357 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Ecija"
+					rename_capital = "Ecija"
+				}
+			}
+
+                        #upper_guadalquivir_area
+			if = {
+				limit = { 
+					owns = 225
+					225 = { is_core = ROOT }
+					225 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					225 = { religion_group = christian }
+					225 = { NOT = { has_province_flag = spanish_name } }
+				}
+				225 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Cordoba"
+					rename_capital = "Cordoba"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 227
+					227 = { is_core = ROOT }
+					227 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					227 = { religion_group = christian }
+					227 = { NOT = { has_province_flag = spanish_name } }
+				}
+				227 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Jaen"
+					rename_capital = "Jaen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3358
+					3358 = { is_core = ROOT }
+					3358 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3358 = { religion_group = christian }
+					3358 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3358 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Lucena"
+					rename_capital = "Lucena"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3360
+					3360 = { is_core = ROOT }
+					3360 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3360 = { religion_group = christian }
+					3360 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3360 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "El Condado"
+					rename_capital = "Ubeda"
+				}
+			}
+
+                        #murcia_area
+			if = {
+				limit = { 
+					owns = 221
+					221 = { is_core = ROOT }
+					221 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					221 = { religion_group = christian }
+					221 = { NOT = { has_province_flag = spanish_name } }
+				}
+				221 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Murcia"
+					rename_capital = "Murcia"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2371
+					2371 = { is_core = ROOT }
+					2371 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2371 = { religion_group = christian }
+					2371 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2371 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Cartagena"
+					rename_capital = "Cartagena"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3361
+					3361 = { is_core = ROOT }
+					3361 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3361 = { religion_group = christian }
+					3361 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3361 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Caravaca"
+					rename_capital = "Caravaca de la Cruz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3363
+					3363 = { is_core = ROOT }
+					3363 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3363 = { religion_group = christian }
+					3363 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3363 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Mancha de Monteragon"
+					rename_capital = "Albacete"
+				}
+			}
+
+                        #toledo_area
+			if = {
+				limit = { 
+					owns = 219
+					219 = { is_core = ROOT }
+					219 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					219 = { religion_group = christian }
+					219 = { NOT = { has_province_flag = spanish_name } }
+				}
+				219 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "La Mancha"
+					rename_capital = "Ciudad Real"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2312
+					2312 = { is_core = ROOT }
+					2312 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2312 = { religion_group = christian }
+					2312 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2312 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Toledo"
+					rename_capital = "Toledo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3362
+					3362 = { is_core = ROOT }
+					3362 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3362 = { religion_group = christian }
+					3362 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3362 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Campo de Montiel"
+					rename_capital = "Villarrobledo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3364
+					3364 = { is_core = ROOT }
+					3364 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3364 = { religion_group = christian }
+					3364 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3364 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "San Juan"
+					rename_capital = "Alcazar de San Juan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3365
+					3365 = { is_core = ROOT }
+					3365 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3365 = { religion_group = christian }
+					3365 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3365 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "La Manchuela"
+					rename_capital = "San Clemente"
+				}
+			}
+
+                        #extremadura_area
+			if = {
+				limit = { 
+					owns = 182
+					182 = { is_core = ROOT }
+					182 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					182 = { religion_group = christian }
+					182 = { NOT = { has_province_flag = spanish_name } }
+				}
+				182 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Caceres" #Asturian - Caceres
+					rename_capital = "Caceres" #Asturian - Caceres
+				}
+			}
+			if = {
+				limit = { 
+					owns = 218
+					218 = { is_core = ROOT }
+					218 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					218 = { religion_group = christian }
+					218 = { NOT = { has_province_flag = spanish_name } }
+				}
+				218 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Trujillo"
+					rename_capital = "Trujillo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2448
+					2448 = { is_core = ROOT }
+					2448 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2448 = { religion_group = christian }
+					2448 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2448 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Badajoz"
+					rename_capital = "Badajoz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3355
+					3355 = { is_core = ROOT }
+					3355 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3355 = { religion_group = christian }
+					3355 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3355 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "La Serena"
+					rename_capital = "Hinojosa del Duque"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3356
+					3356 = { is_core = ROOT }
+					3356 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3356 = { religion_group = christian }
+					3356 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3356 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Llerena"
+					rename_capital = "Llerena"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3865
+					3865 = { is_core = ROOT }
+					3865 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3865 = { religion_group = christian }
+					3865 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3865 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Plasencia" #Asturian - Plasencia
+					rename_capital = "Plasencia" #Asturian - Plasencia
+				}
+			}
+
+                        #extremadura_castilla_area
+			if = {
+				limit = { 
+					owns = 217
+					217 = { is_core = ROOT }
+					217 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					217 = { religion_group = christian }
+					217 = { NOT = { has_province_flag = spanish_name } }
+				}
+				217 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Castilla la Nueva"
+					rename_capital = "Madrid"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2313
+					2313 = { is_core = ROOT }
+					2313 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2313 = { religion_group = christian }
+					2313 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2313 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Segovia"
+					rename_capital = "Segovia"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2566
+					2566 = { is_core = ROOT }
+					2566 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2566 = { religion_group = christian }
+					2566 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2566 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Soria"
+					rename_capital = "Soria"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2567
+					2567 = { is_core = ROOT }
+					2567= {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2567 = { religion_group = christian }
+					2567 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2567 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Cuenca"
+					rename_capital = "Cuenca"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3864
+					3864 = { is_core = ROOT }
+					3864 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3864 = { religion_group = christian }
+					3864 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3864 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Avila"
+					rename_capital = "Avila"
+				}
+			}
+
+                        #castille_area
+			if = {
+				limit = { 
+					owns = 198
+					198 = { is_core = ROOT }
+					198 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					198 = { religion_group = christian }
+					198 = { NOT = { has_province_flag = spanish_name } }
+				}
+				198 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Burgos"
+					rename_capital = "Burgos"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 209
+					209 = { is_core = ROOT }
+					209 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					209 = { religion_group = christian }
+					209 = { NOT = { has_province_flag = spanish_name } }
+				}
+				209 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "La Rioja"
+					rename_capital = "Logrono"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 215
+					215 = { is_core = ROOT }
+					215 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					215 = { religion_group = christian }
+					215 = { NOT = { has_province_flag = spanish_name } }
+				}
+				215 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Castilla la Vieja"
+					rename_capital = "Valladolid"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1409
+					1409 = { is_core = ROOT }
+					1409 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1409 = { religion_group = christian }
+					1409 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1409 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Cantabria"
+					rename_capital = "Santander"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3354
+					3354 = { is_core = ROOT }
+					3354 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3354 = { religion_group = christian }
+					3354 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3354 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Palencia"
+					rename_capital = "Palencia"
+				}
+			}
+
+                        #leon_area
+			if = {
+				limit = { 
+					owns = 207
+					207 = { is_core = ROOT }
+					207 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					207 = { religion_group = christian }
+					207 = { NOT = { has_province_flag = spanish_name } }
+				}
+				207 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Asturias" #Asturian - Asturies
+					rename_capital = "Oviedo" #Asturian - Uvieu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 208
+					208 = { is_core = ROOT }
+					208 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					208 = { religion_group = christian }
+					208 = { NOT = { has_province_flag = spanish_name } }
+				}
+				208 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Leon" #Asturian - Llion
+					rename_capital = "Leon" #Asturian - Llion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 216
+					216 = { is_core = ROOT }
+					216 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					216 = { religion_group = christian }
+					216 = { NOT = { has_province_flag = spanish_name } }
+				}
+				216 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Salamanca" #Asturian - Salamanca
+					rename_capital = "Salamanca" #Asturian - Salamanca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3352
+					3352 = { is_core = ROOT }
+					3352 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3352 = { religion_group = christian }
+					3352 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3352 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Navia" #Asturian - Navia
+					rename_capital = "Tineo" #Asturian - Tineu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3353
+					3353 = { is_core = ROOT }
+					3353= {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3353 = { religion_group = christian }
+					3353 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3353 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Zamora" #Asturian - Zamora
+					rename_capital = "Zamora" #Asturian - Zamora
+				}
+			}
+
+                        #euskal_area
+			if = {
+				limit = { 
+					owns = 210
+					210 = { is_core = ROOT }
+					210 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					210 = { religion_group = christian }
+					210 = { NOT = { has_province_flag = spanish_name } }
+				}
+				210 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Navarra" #Basque - Nafarroa
+					rename_capital = "Pamplona" #Basque - Iruna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1421
+					1421 = { is_core = ROOT }
+					1421 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1421 = { religion_group = christian }
+					1421 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1421 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Vizcaya" #Basque - Bizkaia
+					rename_capital = "Bilbao" #Basque - Bilbo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2514
+					2514 = { is_core = ROOT }
+					2514 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2514 = { religion_group = christian }
+					2514 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2514 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Labort" #Basque - Lapurdi #Gascon - Labord
+					rename_capital = "Bayona" #Basque - Baiona #Gascon - Baiona
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2550
+					2550 = { is_core = ROOT }
+					2550 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2550 = { religion_group = christian }
+					2550 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2550 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Sola" #Basque - Xiberoa #Gascon - Sola
+					rename_capital = "Mauleon" #Basque - Maule #Gascon - Mauleon
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3370
+					3370 = { is_core = ROOT }
+					3370 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3370 = { religion_group = christian }
+					3370 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3370 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "La Ribera" #Basque - Erribera
+					rename_capital = "Tudela" #Basque - Tutera
+				}
+			}
+
+                        #valencia_area
+			if = {
+				limit = { 
+					owns = 220
+					220 = { is_core = ROOT }
+					220 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					220 = { religion_group = christian }
+					220 = { NOT = { has_province_flag = spanish_name } }
+				}
+				220 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Valencia" #Catalan - Valencia
+					rename_capital = "Valencia" #Catalan - Valencia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1284
+					1284 = { is_core = ROOT }
+					1284 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1284 = { religion_group = christian }
+					1284 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Castellon" #Catalan - Castello
+					rename_capital = "Castellon de la Plana" #Catalan - Castello de la Plana
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1845
+					1845 = { is_core = ROOT }
+					1845 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1845 = { religion_group = christian }
+					1845 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1845 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Orihuela" #Catalan - Oriola
+					rename_capital = "Orihuela" #Catalan - Oriola
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2565
+					2565 = { is_core = ROOT }
+					2565 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2565 = { religion_group = christian }
+					2565 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2565 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Jativa" #Catalan - Xativa
+					rename_capital = "Jativa" #Catalan - Xativa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3366
+					3366 = { is_core = ROOT }
+					3366 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3366 = { religion_group = christian }
+					3366 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3366 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Alicante" #Catalan - Alacant
+					rename_capital = "Alicante" #Catalan - Alcoy
+				}
+			}
+
+                        #aragon_area
+			if = {
+				limit = { 
+					owns = 211
+					211 = { is_core = ROOT }
+					211 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					211 = { religion_group = christian }
+					211 = { NOT = { has_province_flag = spanish_name } }
+				}
+				211 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Alto Aragon" #Aragonese - Alto Aragon
+					rename_capital = "Huesca" #Aragonese - Uesca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 214
+					214 = { is_core = ROOT }
+					214 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					214 = { religion_group = christian }
+					214 = { NOT = { has_province_flag = spanish_name } }
+				}
+				214 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Zaragoza" #Aragonese - Zaragoza
+					rename_capital = "Zaragoza" #Aragonese - Zaragoza
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1408
+					1408 = { is_core = ROOT }
+					1408 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1408 = { religion_group = christian }
+					1408 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1408 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Teruel" #Aragonese - Teruel
+					rename_capital = "Teruel" #Aragonese - Teruel
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2473
+					2473 = { is_core = ROOT }
+					2473 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2473 = { religion_group = christian }
+					2473 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2473 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Calatayud" #Aragonese - Calatayu
+					rename_capital = "Calatayud" #Aragonese - Calatayu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3368
+					3368 = { is_core = ROOT }
+					3368 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3368 = { religion_group = christian }
+					3368 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3368 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Ribagorza" #Aragonese - Ribagorza
+					rename_capital = "Barbastro" #Aragonese - Balbastro
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3369
+					3369 = { is_core = ROOT }
+					3369 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3369 = { religion_group = christian }
+					3369 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3369 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Tarazona" #Aragonese - Tarazona
+					rename_capital = "Tarazona" #Aragonese - Tarazona
+				}
+			}
+
+                        #catalonia_area
+			if = {
+				limit = { 
+					owns = 181
+					181 = { is_core = ROOT }
+					181 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					181 = { religion_group = christian }
+					181 = { NOT = { has_province_flag = spanish_name } }
+				}
+				181 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Tarragona" #Catalan - Tarragona
+					rename_capital = "Tarragona" #Catalan - Tarragona
+				}
+			}
+			if = {
+				limit = { 
+					owns = 197
+					197 = { is_core = ROOT }
+					197 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					197 = { religion_group = christian }
+					197 = { NOT = { has_province_flag = spanish_name } }
+				}
+				197 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Rossellon" #Catalan - Rossello
+					rename_capital = "Perpinan" #Catalan - Perpinya
+				}
+			}
+			if = {
+				limit = { 
+					owns = 212
+					212 = { is_core = ROOT }
+					212 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					212 = { religion_group = christian }
+					212 = { NOT = { has_province_flag = spanish_name } }
+				}
+				212 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Gerona" #Catalan - Girona
+					rename_capital = "Gerona" #Catalan - Girona
+				}
+			}
+			if = {
+				limit = { 
+					owns = 213
+					213 = { is_core = ROOT }
+					213 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					213 = { religion_group = christian }
+					213 = { NOT = { has_province_flag = spanish_name } }
+				}
+				213 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Barcelona" #Catalan - Barcelona
+					rename_capital = "Barcelona" #Catalan - Barcelona
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1420
+					1420 = { is_core = ROOT }
+					1420 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1420 = { religion_group = christian }
+					1420 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1420 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Urgel" #Catalan - Urgell
+					rename_capital = "Urgel" #Catalan - Urgell
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2368
+					2368 = { is_core = ROOT }
+					2368 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2368 = { religion_group = christian }
+					2368 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2368 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Osona" #Catalan - Osona
+					rename_capital = "Osona" #Catalan - Osona
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2369
+					2369 = { is_core = ROOT }
+					2369 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2369 = { religion_group = christian }
+					2369 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2369 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Poniente" #Catalan - Ponent
+					rename_capital = "Lerida" #Catalan - Lleida
+				}
+			}
+
+                        #baleares_area
+			if = {
+				limit = { 
+					owns = 333
+					333 = { is_core = ROOT }
+					333 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					333 = { religion_group = christian }
+					333 = { NOT = { has_province_flag = spanish_name } }
+				}
+				333 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Mallorca" #Catalan - Mallorca
+					rename_capital = "Mallorca" #Catalan - Mallorca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2358
+					2358 = { is_core = ROOT }
+					2358 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2358 = { religion_group = christian }
+					2358 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2358 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Menorca" #Catalan - Menorca
+					rename_capital = "Ciutadella" #Catalan - Ciutadella
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3367
+					3367 = { is_core = ROOT }
+					3367 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3367 = { religion_group = christian }
+					3367 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3367 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Ibiza" #Catalan - Eivissa
+					rename_capital = "Ibiza" #Catalan - Eivissa
+				}
+			}
+
+                        #alentejo_area
+			if = {
+				limit = { 
+					owns = 228
+					228 = { is_core = ROOT }
+					228 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					228 = { religion_group = christian }
+					228 = { NOT = { has_province_flag = spanish_name } }
+				}
+				228 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Sotavento" #Portugese - Sotavento
+					rename_capital = "Faro" #Portugese - Faro
+				}
+			}
+			if = {
+				limit = { 
+					owns = 229
+					229 = { is_core = ROOT }
+					229 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					229 = { religion_group = christian }
+					229 = { NOT = { has_province_flag = spanish_name } }
+				}
+				229 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Ribatejo" #Portugese - Ribatejo
+					rename_capital = "Santaren" #Portugese - Santarem
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1423
+					1423 = { is_core = ROOT }
+					1423 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1423 = { religion_group = christian }
+					1423 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1423 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Alentejo Central" #Portugese - Alentejo Central
+					rename_capital = "Evora" #Portugese - Evora
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2309
+					2309 = { is_core = ROOT }
+					2309 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2309 = { religion_group = christian }
+					2309 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2309 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Bajo Alentejo" #Portugese - Baixo Alentejo
+					rename_capital = "Beja" #Portugese - Beja
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3346
+					3346 = { is_core = ROOT }
+					3346 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3346 = { religion_group = christian }
+					3346 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3346 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Barlavento" #Portugese - Barlavento
+					rename_capital = "Lagos" #Portugese - Lagos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3347
+					3347 = { is_core = ROOT }
+					3347 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3347 = { religion_group = christian }
+					3347 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3347 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Alto Alentejo" #Portugese - Alto Alentejo
+					rename_capital = "Portalegre" #Portugese - Portalegre
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3348
+					3348 = { is_core = ROOT }
+					3348 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3348 = { religion_group = christian }
+					3348 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3348 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Valle de Sado" #Portugese - Vale do Sado
+					rename_capital = "Setubal" #Portugese - Setubal
+				}
+			}
+
+                        #beieras_area
+			if = {
+				limit = { 
+					owns = 230
+					230 = { is_core = ROOT }
+					230 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					230 = { religion_group = christian }
+					230 = { NOT = { has_province_flag = spanish_name } }
+				}
+				230 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Extremadura" #Portugese - Estremadura
+					rename_capital = "Lisboa" #Portugese - Lisboa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 231
+					231 = { is_core = ROOT }
+					231 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					231 = { religion_group = christian }
+					231 = { NOT = { has_province_flag = spanish_name } }
+				}
+				231 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Beira Litoral" #Portugese - Beira Litoral
+					rename_capital = "Coimbra" #Portugese - Coimbra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 232
+					232 = { is_core = ROOT }
+					232 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					232 = { religion_group = christian }
+					232 = { NOT = { has_province_flag = spanish_name } }
+				}
+				232 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Mino" #Portugese - Minho
+					rename_capital = "Braga" #Portugese - Braga
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1422
+					1422 = { is_core = ROOT }
+					1422 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1422 = { religion_group = christian }
+					1422 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1422 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Tras los Montes" #Portugese - Tras-os-Montes
+					rename_capital = "Braganza" #Portugese - Braganca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1508
+					1508 = { is_core = ROOT }
+					1508 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					1508 = { religion_group = christian }
+					1508 = { NOT = { has_province_flag = spanish_name } }
+				}
+				1508 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Beira Alta" #Portugese - Beira Alta
+					rename_capital = "Vicedo" #Portugese - Viseu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2308
+					2308 = { is_core = ROOT }
+					2308 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2308 = { religion_group = christian }
+					2308 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2308 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Beira Baja" #Portugese - Beira Baixa
+					rename_capital = "Castillo Blanco" #Portugese - Castelo Branco
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3349
+					3349 = { is_core = ROOT }
+					3349 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3349 = { religion_group = christian }
+					3349 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3349 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Duero Litoral" #Portugese - Douro Litoral
+					rename_capital = "Oporto" #Portugese - Porto
+				}
+			}
+
+                        #galicia_area
+			if = {
+				limit = { 
+					owns = 143
+					143 = { is_core = ROOT }
+					143 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					143 = { religion_group = christian }
+					143 = { NOT = { has_province_flag = spanish_name } }
+				}
+				143 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "La Coruna" #Galician - Crunia
+					rename_capital = "La Coruna" #Galician - Crunia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 206
+					206 = { is_core = ROOT }
+					206 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					206 = { religion_group = christian }
+					206 = { NOT = { has_province_flag = spanish_name } }
+				}
+				206 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Santiago" #Galician - Santiago
+					rename_capital = "Santiago de Compostela" #Galician - Santiago de Compostela
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2454
+					2454 = { is_core = ROOT }
+					2454 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2454 = { religion_group = christian }
+					2454 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2454 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Orense" #Galician - Ourense
+					rename_capital = "Orense" #Galician - Ourense
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3350
+					3350 = { is_core = ROOT }
+					3350 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3350 = { religion_group = christian }
+					3350 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3350 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Tuy" #Galician - Tui
+					rename_capital = "Tuy" #Galician - Tui
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3351
+					3351 = { is_core = ROOT }
+					3351 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					3351 = { religion_group = christian }
+					3351 = { NOT = { has_province_flag = spanish_name } }
+				}
+				3351 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Mondonedo" #Galician - Mondonedo
+					rename_capital = "Lugo" #Galician - Lugo
+				}
+			}
+
+                        #macaronesia_area
+			if = {
+				limit = { 
+					owns = 366
+					366 = { is_core = ROOT }
+					366 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					366 = { religion_group = christian }
+					366 = { NOT = { has_province_flag = spanish_name } }
+				}
+				366 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Tenerife" #Berber - Achinet
+					rename_capital = "Santa Cruz" #Berber - Anazo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 367
+					367 = { is_core = ROOT }
+					367 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					367 = { religion_group = christian }
+					367 = { NOT = { has_province_flag = spanish_name } }
+				}
+				367 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Azores"
+					rename_capital = "Ponta Delgada"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 368
+					368 = { is_core = ROOT }
+					368 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					368 = { religion_group = christian }
+					368 = { NOT = { has_province_flag = spanish_name } }
+				}
+				368 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Madera"
+					rename_capital = "Madera"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2751
+					2751 = { is_core = ROOT }
+					2751 = {
+						OR = {
+							culture = castillian
+							culture = andalucian
+						}
+					}
+					2751 = { religion_group = christian }
+					2751 = { NOT = { has_province_flag = spanish_name } }
+				}
+				2751 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = spanish_name 
+					change_province_name = "Gran Canaria" #Berber - Tamaran
+					rename_capital = "Las Palmas" #Berber - Tamaran
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

@@ -1,0 +1,38 @@
+#owner = ERE
+#controller = ERE
+#add_core = ERE
+
+owner = AKK
+controller = AKK
+add_core = AKK
+add_core = ERZ
+
+capital = "Bayburt"
+trade_goods = wheat
+#culture = medieval_armenian
+#religion = coptic
+culture = turkoman
+religion = sunni
+
+hre = no
+
+base_tax = 3
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 4 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = silver
+	set_province_flag = tribals_control_province
+	set_variable = { which = tribals_ratio value = 35 }
+}

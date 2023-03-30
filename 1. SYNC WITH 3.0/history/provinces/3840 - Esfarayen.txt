@@ -1,0 +1,36 @@
+owner = SDB
+controller = SDB
+add_core = SDB
+
+capital = "Esfarayen"
+trade_goods = wool
+culture = persian
+religion = sunni
+
+hre = no
+
+base_tax = 4
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 7.000 }
+	set_variable = { which = pop_level value = 2.5 }
+	set_province_flag = gems
+}
+1356.1.1 = {
+	revolt = {
+		type = pretender_rebels
+		size = 1
+		leader = "Luft Allah Mas'ud"
+		name = "Mas'ud Loyalists"
+	}
+	controller = REB
+	add_claim = ATB
+}

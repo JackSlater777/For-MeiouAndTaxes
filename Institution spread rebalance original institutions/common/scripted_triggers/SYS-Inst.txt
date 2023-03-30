@@ -1,0 +1,438 @@
+#####################################################################
+#                                                                   #
+#                            Legalism                               #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Legalism_Country_Invent = {
+	AND = {
+		is_capital = yes
+		#NOT = { check_variable = { which = tribals_ratio value = 50 } }
+		owner = {
+			adm = 3
+			absolutism = 5
+			OR = {
+				AND = {
+					total_development = 100
+					OR = {
+						has_reform = tribal_kingdom
+						has_reform = steppe_horde
+						has_reform = tribal_federation
+						has_reform = tribal_despotism
+						has_reform = tribal_amalgamation
+						has_reform = nomad_reform
+					}
+				}
+				AND = {
+					NOT = {
+						has_reform = tribal_kingdom
+						has_reform = steppe_horde
+						has_reform = tribal_federation
+						has_reform = tribal_despotism
+						has_reform = tribal_amalgamation
+						has_reform = nomad_reform
+					}
+				}
+			}
+			#NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.5 } }
+		}
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Legalism_Spread = {
+	AND = {
+		#NOT = { check_variable = { which = tribals_ratio value = 50 } }
+		owner = {
+			absolutism = 5
+			#total_development = 100
+			#NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.5 } }
+		}
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                           Meritocracy                             #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Meritocracy_Inst_Country_Invent = {
+	AND = {
+		is_capital = yes
+		legalism = 100
+		owner = {
+			adm = 3
+			has_institution = legalism
+			absolutism = 40
+			NOT = {
+				has_country_flag = commoners_banned_from_officers_corps_1_flag
+				has_country_flag = commoners_banned_from_officers_corps_2_flag
+			}
+			NOT = {
+				has_country_flag = ceremonial_generalships_1_flag
+				has_country_flag = ceremonial_generalships_2_flag
+			}
+			NOT = {
+				has_country_flag = GN_exclude_commoners_cabinet_1_flag
+				has_country_flag = GN_exclude_commoners_cabinet_2_flag
+			}
+			NOT = {
+				has_country_flag = GN_high_court_titles_1_flag
+				has_country_flag = GN_high_court_titles_2_flag
+			}
+			NOT = {
+				has_country_flag = GN_high_nobles_court_1_flag
+				has_country_flag = GN_high_nobles_court_2_flag
+			}
+			check_variable = {
+				which = education_level
+				value = 50
+			}
+			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.2 } }
+		}
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Meritocracy_Inst_Spread = {
+	AND = {
+		legalism = 100
+		owner = {
+			has_institution = legalism
+			absolutism = 40
+			NOT = {
+				has_country_flag = commoners_banned_from_officers_corps_1_flag
+				has_country_flag = commoners_banned_from_officers_corps_2_flag
+			}
+			NOT = {
+				has_country_flag = ceremonial_generalships_1_flag
+				has_country_flag = ceremonial_generalships_2_flag
+			}
+			NOT = {
+				has_country_flag = GN_exclude_commoners_cabinet_1_flag
+				has_country_flag = GN_exclude_commoners_cabinet_2_flag
+			}
+			NOT = {
+				has_country_flag = GN_high_court_titles_1_flag
+				has_country_flag = GN_high_court_titles_2_flag
+			}
+			NOT = {
+				has_country_flag = GN_high_nobles_court_1_flag
+				has_country_flag = GN_high_nobles_court_2_flag
+			}
+			check_variable = {
+				which = education_level
+				value = 50
+			}
+			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.2 } }
+		}
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                             Banking                               #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Banking_Country_Invent = {
+	AND = {
+		is_capital = yes
+		continent = europe
+		owner = {
+			has_institution = legalism
+			#check_variable = { which = estate_burghers_weight_share	value = 0.1 }
+			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.4 } }
+			OR = {
+				economic_ideas = 4  # Real Economy  ## National Bank - 6 idea
+				trade_ideas = 4  # Free Trade
+			}
+		}
+		legalism = 100
+		OR = {
+			has_province_flag = burghers_control_province
+			has_province_flag = lesser_nobles_control_province
+		}
+		province_trade_power = 5.0
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Banking_Spread = {
+	AND = {
+		owner = {
+			has_institution = legalism
+			#check_variable = { which = estate_burghers_weight_share	value = 0.1 }
+			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.4 } }
+		}
+		legalism = 100
+		OR = {
+			has_province_flag = burghers_control_province
+			has_province_flag = lesser_nobles_control_province
+		}
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                           Renaissance                             #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Renaissance_Country_Invent = {
+	AND = {
+		is_capital = yes
+		continent = europe
+		owner = {
+			has_institution = legalism
+			culture_ideas = 4  # Scientific encouragement  ## Patron of the arts - 1 idea
+		}
+		legalism = 100
+		check_variable = { which = art_power value = 5 }
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Renaissance_Spread = {
+	AND = {
+		owner = { has_institution = legalism }
+		legalism = 100
+		check_variable = { which = art_power value = 2 }
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                         Casual Literacy                           #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Casual_Literacy_Country_Invent = {
+	AND = {
+		is_capital = yes
+		continent = europe
+		base_production = 5
+		owner = { 
+			has_institution = legalism
+			check_variable = {
+				which = education_level
+				value = 35
+			}
+			#full_idea_group = innovativeness_ideas
+		}
+		OR = {
+			owner = { adm_tech = 30 }
+			AND = {
+				owner = { adm_tech = 25 }
+				OR = {
+					AND = {
+						religion = protestant
+						owner = { religion = protestant }
+					}
+					AND = {
+						religion = reformed
+						owner = { religion = reformed }
+					}
+					AND = {
+						religion = hussite
+						owner = { religion = hussite }
+					}
+				}
+			}
+		}
+		legalism = 100
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Casual_Literacy_Spread = {
+	AND = {
+		owner = { 
+			has_institution = legalism
+			check_variable = {
+				which = education_level
+				value = 35
+			} 
+		}
+		OR = {
+			owner = { adm_tech = 30 }
+			AND = {
+				owner = { adm_tech = 25 }
+				OR = {
+					AND = {
+						religion = protestant
+						owner = { religion = protestant }
+					}
+					AND = {
+						religion = reformed
+						owner = { religion = reformed }
+					}
+					AND = {
+						religion = hussite
+						owner = { religion = hussite }
+					}
+				}
+			}
+		}
+		base_production = 1
+		legalism = 100
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                           Global Trade                            #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Global_Trade_Country_Invent = {
+	AND = {
+		is_capital = yes
+		#continent = europe
+		banking = 100
+		owner = {
+			has_institution = banking
+			dip_tech = 31
+			calc_true_if = {
+				amount = 2
+				all_active_trade_node = {
+					has_merchant = PREV
+					NOT = { same_continent = PREV }
+				}
+			}
+			#has_subject_of_type = colony
+			OR = {
+				colony = 2
+				AND = {
+					colony = 1
+					any_owned_province = {
+						is_owned_by_trade_company = yes
+					}
+				}
+			}
+			any_owned_province = {
+				is_island = no
+				has_port = yes
+				banking = 100
+				OR = {
+					has_province_modifier = dominant_center_of_trade
+					has_province_modifier = major_center_of_trade
+					has_province_modifier = important_center_of_trade
+					has_province_modifier = minor_center_of_trade
+				}
+			}
+		}
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Global_Trade_Spread = {
+	AND = {
+		banking = 100
+		owner = { 
+			has_institution = banking
+			dip_tech = 31
+		}
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                           Manufactories                           #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Manufactories_Country_Invent = {
+	AND = {
+		is_capital = yes
+		continent = europe
+		global_trade = 100
+		owner = {
+			has_institution = global_trade
+			adm_tech = 33
+			any_owned_province = {
+				global_trade = 100
+				OR = {
+					has_province_modifier = dominant_center_of_production
+					has_province_modifier = major_center_of_production
+					has_province_modifier = important_center_of_production
+					has_province_modifier = minor_center_of_production
+				}
+				OR = {
+					has_building = urban_manufactory
+					has_building = factory
+					has_building = steam_powered_factory
+				}
+			}
+		}
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Manufactories_Spread = {
+	AND = {
+		global_trade = 100
+		OR = {
+			has_building = urban_manufactory
+			has_building = factory
+			has_building = steam_powered_factory
+		}
+		owner = {
+			has_institution = global_trade
+			adm_tech = 33
+		}
+	}
+}
+
+#####################################################################
+#                                                                   #
+#                           Enlightenment                           #
+#                                                                   #
+#####################################################################
+
+# This unlock a possibility to invent an institution in the capital
+Inst_Can_Enlightenment_Country_Invent = {
+	AND = {
+		is_capital = yes
+		continent = europe
+		OR = { 
+			has_building = small_university
+			has_building = medium_university
+			has_building = big_university
+		}
+		owner = {
+			has_institution = renaissance
+			has_institution = casual_literacy
+			check_variable = {
+				which = education_level
+				value = 60
+			}
+		}
+		renaissance = 100
+		casual_literacy = 100
+	}
+}
+
+# This unlock a possibility to spread an institution
+Inst_Can_Enlightenment_Spread = {
+	AND = {
+		owner = { 
+			has_institution = renaissance
+			has_institution = casual_literacy
+			check_variable = {
+				which = education_level
+				value = 60
+			} 
+		}
+		renaissance = 100
+		casual_literacy = 100
+	}
+}

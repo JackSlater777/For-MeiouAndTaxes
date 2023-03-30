@@ -1,0 +1,41 @@
+owner = YAR
+controller = YAR
+add_core = YAR
+
+capital = "Yaroslavl"
+trade_goods = livestock
+culture = russian
+religion = orthodox
+
+hre = no
+
+base_tax = 8
+base_production = 1
+base_manpower = 0
+
+is_city = yes
+temple = yes
+road_network = yes
+marketplace = yes
+town_hall = yes
+local_fortification_1 = yes
+#harbour_infrastructure_1 = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3.5 }
+	set_variable = { which = pop_level value = 4 }
+	set_province_flag = mined_goods
+	set_province_flag = iron
+	set_province_flag = has_confluence
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = yaroslav_confluence
+		duration = -1
+	}
+}

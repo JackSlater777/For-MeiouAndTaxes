@@ -1,0 +1,49 @@
+owner = OTT
+controller = OTT
+add_core = OTT
+
+capital = "Balikesir"
+trade_goods = wool
+#culture = turkish
+culture = anatolian
+religion = sunni
+
+hre = no
+
+base_tax = 8
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+workshop = yes
+road_network = yes
+local_fortification_1 = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 2.500 }
+	#set_variable = { which = pop_level value = 4.5 }
+	set_variable = { which = pop_level value = 3.5 }
+	add_permanent_province_modifier = {
+		name = urban_goods_cloth
+		duration = -1
+	}
+	set_province_flag = coal
+}
+1356.1.1 = {
+	add_core = BYZ
+	discovered_by = CIR
+#	add_permanent_province_modifier = {
+#		name = "beylik_of_karasi"
+#		duration = -1
+#	}
+	set_province_flag = turkish_name
+}
+#1360.1.1 = {
+#	remove_province_modifier = beylik_of_karasi
+#}

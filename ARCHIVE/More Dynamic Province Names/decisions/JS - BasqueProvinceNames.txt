@@ -1,0 +1,489 @@
+country_decisions = {
+	rename_provinces_basque_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = basque_group
+			religion_group = christian
+			any_owned_province = {
+				OR = {
+					area = castille_area
+					area = euskal_area
+					area = aragon_area
+
+					#toulouse_area
+					province_id = 196
+					province_id = 3862
+
+					area = pyrenees_area
+					area = guyenne_area
+				}
+				culture = basque
+				religion_group = christian
+				NOT = { has_province_flag = basque_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture = basque
+				religion_group = christian
+				NOT = { has_province_flag = basque_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #castille_area
+			if = {
+				limit = { 
+					owns = 198
+					198 = { is_core = ROOT }
+					198 = { culture = basque }
+					198 = { religion_group = christian }
+					198 = { NOT = { has_province_flag = basque_name } }
+				}
+				198 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Barduria" #Spanish - Burgos
+					rename_capital = "Barduria" #Spanish - Burgos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 209
+					209 = { is_core = ROOT }
+					209 = { culture = basque }
+					209 = { religion_group = christian }
+					209 = { NOT = { has_province_flag = basque_name } }
+				}
+				209 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Errioxa" #Spanish - La Rioja
+					rename_capital = "Naiara" #Spanish - Logrono
+				}
+			}
+			if = {
+				limit = { 
+					owns = 215
+					215 = { is_core = ROOT }
+					215 = { culture = basque }
+					215 = { religion_group = christian }
+					215 = { NOT = { has_province_flag = basque_name } }
+				}
+				215 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Gaztela Zaharra" #Spanish - Castilla la Vieja
+					rename_capital = "Valladolid" #Spanish - Valladolid
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1409
+					1409 = { is_core = ROOT }
+					1409 = { culture = basque }
+					1409 = { religion_group = christian }
+					1409 = { NOT = { has_province_flag = basque_name } }
+				}
+				1409 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Kantabria" #Spanish - Cantabria
+					rename_capital = "Sanandere" #Spanish - Santander
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3354
+					3354 = { is_core = ROOT }
+					3354 = { culture = basque }
+					3354 = { religion_group = christian }
+					3354 = { NOT = { has_province_flag = basque_name } }
+				}
+				3354 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Palentzia" #Spanish - Palencia
+					rename_capital = "Palentzia" #Spanish - Palencia
+				}
+			}
+
+                        #euskal_area
+			if = {
+				limit = { 
+					owns = 210
+					210 = { is_core = ROOT }
+					210 = { culture = basque }
+					210 = { religion_group = christian }
+					210 = { NOT = { has_province_flag = basque_name } }
+				}
+				210 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Nafarroa" 
+					rename_capital = "Iruna" 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1421
+					1421 = { is_core = ROOT }
+					1421 = { culture = basque }
+					1421 = { religion_group = christian }
+					1421 = { NOT = { has_province_flag = basque_name } }
+				}
+				1421 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Bizkaia" 
+					rename_capital = "Bilbo" 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2514
+					2514 = { is_core = ROOT }
+					2514 = { culture = basque }
+					2514 = { religion_group = christian }
+					2514 = { NOT = { has_province_flag = basque_name } }
+				}
+				2514 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Lapurdi" 
+					rename_capital = "Baiona" 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2550
+					2550 = { is_core = ROOT }
+					2550 = { culture = basque }
+					2550 = { religion_group = christian }
+					2550 = { NOT = { has_province_flag = basque_name } }
+				}
+				2550 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Xiberoa" 
+					rename_capital = "Maule" 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3370
+					3370 = { is_core = ROOT }
+					3370 = { culture = basque }
+					3370 = { religion_group = christian }
+					3370 = { NOT = { has_province_flag = basque_name } }
+				}
+				3370 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Erribera" 
+					rename_capital = "Tutera" 
+				}
+			}
+
+                        #aragon_area
+			if = {
+				limit = { 
+					owns = 211
+					211 = { is_core = ROOT }
+					211 = { culture = basque }
+					211 = { religion_group = christian }
+					211 = { NOT = { has_province_flag = basque_name } }
+				}
+				211 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Aragoi" #Aragonese - Alto Aragon
+					rename_capital = "Oska" #Aragonese - Uesca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 214
+					214 = { is_core = ROOT }
+					214 = { culture = basque }
+					214 = { religion_group = christian }
+					214 = { NOT = { has_province_flag = basque_name } }
+				}
+				214 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Zarautza" #Aragonese - Zaragoza
+					rename_capital = "Zarautza" #Aragonese - Zaragoza
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1408
+					1408 = { is_core = ROOT }
+					1408 = { culture = basque }
+					1408 = { religion_group = christian }
+					1408 = { NOT = { has_province_flag = basque_name } }
+				}
+				1408 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Teruel" #Aragonese - Teruel
+					rename_capital = "Teruel" #Aragonese - Teruel
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2473
+					2473 = { is_core = ROOT }
+					2473 = { culture = basque }
+					2473 = { religion_group = christian }
+					2473 = { NOT = { has_province_flag = basque_name } }
+				}
+				2473 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Calatayud" #Aragonese - Calatayu
+					rename_capital = "Calatayud" #Aragonese - Calatayu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3368
+					3368 = { is_core = ROOT }
+					3368 = { culture = basque }
+					3368 = { religion_group = christian }
+					3368 = { NOT = { has_province_flag = basque_name } }
+				}
+				3368 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Ribagortza" #Aragonese - Ribagorza
+					rename_capital = "Barbastro" #Aragonese - Balbastro
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3369
+					3369 = { is_core = ROOT }
+					3369 = { culture = basque }
+					3369 = { religion_group = christian }
+					3369 = { NOT = { has_province_flag = basque_name } }
+				}
+				3369 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Aturiazu" #Aragonese - Tarazona
+					rename_capital = "Aturiazu" #Aragonese - Tarazona
+				}
+			}
+
+                        #toulouse_area
+                        #1323 3373
+			if = {
+				limit = { 
+					owns = 196
+					196 = { is_core = ROOT }
+					196 = { culture = basque }
+					196 = { religion_group = christian }
+					196 = { NOT = { has_province_flag = basque_name } }
+				}
+				196 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Tolosa" #Occitan - Tolzan
+					rename_capital = "Tolosa" #Occitan - Tholosa
+				}
+			}
+			#if = {
+			#	limit = { 
+			#		owns = 1323
+			#		1323 = { is_core = ROOT }
+			#		1323 = { culture = basque }
+			#		1323 = { religion_group = christian }
+			#		1323 = { NOT = { has_province_flag = basque_name } }
+			#	}
+			#	1323 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = basque_name
+			#		change_province_name = "" #Occitan - Roergue
+			#		rename_capital = "" #Occitan - Rodes
+			#	}
+			#}
+			#if = {
+			#	limit = { 
+			#		owns = 3373
+			#		3373 = { is_core = ROOT }
+			#		3373 = { culture = basque }
+			#		3373 = { religion_group = christian }
+			#		3373 = { NOT = { has_province_flag = basque_name } }
+			#	}
+			#	3373 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = basque_name
+			#		change_province_name = "" #Occitan - Carcin
+			#		rename_capital = "" #Occitan - Caors
+			#	}
+			#}
+			if = {
+				limit = { 
+					owns = 3862
+					3862 = { is_core = ROOT }
+					3862 = { culture = basque }
+					3862 = { religion_group = christian }
+					3862 = { NOT = { has_province_flag = basque_name } }
+				}
+				3862 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Carcassona" #Occitan - Carcassona
+					rename_capital = "Carcassona" #Occitan - Carcassona
+				}
+			}
+
+                        #pyrenees_area
+			if = {
+				limit = { 
+					owns = 179
+					179 = { is_core = ROOT }
+					179 = { culture = basque }
+					179 = { religion_group = christian }
+					179 = { NOT = { has_province_flag = basque_name } }
+				}
+				179 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Bearno" #Gascon - Bearn
+					rename_capital = "Pabe" #Gascon - Pau
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1375
+					1375 = { is_core = ROOT }
+					1375 = { culture = basque }
+					1375 = { religion_group = christian }
+					1375 = { NOT = { has_province_flag = basque_name } }
+				}
+				1375 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Fox" #Gascon - Fois
+					rename_capital = "Fox" #Gascon - Fois
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1385
+					1385 = { is_core = ROOT }
+					1385 = { culture = basque }
+					1385 = { religion_group = christian }
+					1385 = { NOT = { has_province_flag = basque_name } }
+				}
+				1385 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Autxerri Garaia" #Gascon - Comenge
+					rename_capital = "Murueta" #Gascon - Mureth
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3371
+					3371 = { is_core = ROOT }
+					3371 = { culture = basque }
+					3371 = { religion_group = christian }
+					3371 = { NOT = { has_province_flag = basque_name } }
+				}
+				3371 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Bigorra" #Gascon - Bigorra
+					rename_capital = "Aturbe" #Gascon - Tarba
+				}
+			}
+
+                        #guyenne_area
+			if = {
+				limit = { 
+					owns = 174
+					174 = { is_core = ROOT }
+					174 = { culture = basque }
+					174 = { religion_group = christian }
+					174 = { NOT = { has_province_flag = basque_name } }
+				}
+				174 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Gaskoinia" #Gascon - Gasconha
+					rename_capital = "Liburna" #Gascon - Liborna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 175
+					175 = { is_core = ROOT }
+					175 = { culture = basque }
+					175 = { religion_group = christian }
+					175 = { NOT = { has_province_flag = basque_name } }
+				}
+				175 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Autxerri Beherea" #Gascon - Armanhac
+					rename_capital = "Hiriberri Autxoa" #Gascon - Aush
+				}
+			}
+			if = {
+				limit = { 
+					owns = 176
+					176 = { is_core = ROOT }
+					176 = { culture = basque }
+					176 = { religion_group = christian }
+					176 = { NOT = { has_province_flag = basque_name } }
+				}
+				176 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Guiena" #Gascon - Guiana
+					rename_capital = "Bordele" #Gascon - Bordeu
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1381
+					1381 = { is_core = ROOT }
+					1381 = { culture = basque }
+					1381 = { religion_group = christian }
+					1381 = { NOT = { has_province_flag = basque_name } }
+				}
+				1381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Albareta" #Gascon - Labrit
+					rename_capital = "Nerako" #Gascon - Nerac
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3372
+					3372 = { is_core = ROOT }
+					3372 = { culture = basque }
+					3372 = { religion_group = christian }
+					3372 = { NOT = { has_province_flag = basque_name } }
+				}
+				3372 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = basque_name
+					change_province_name = "Agen" #Occitan - Agenois
+					rename_capital = "Agen" #Occitan - Agen
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

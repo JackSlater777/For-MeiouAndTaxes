@@ -1,0 +1,51 @@
+country_decisions = {
+        ################################ Moldavia
+	move_capital_iasi = {
+		major = yes
+		potential = {
+			primary_culture = moldovian
+			is_at_war = no
+			any_owned_province = { area = moldavia_area }
+			NOT = { capital = 1269 } # Iasi
+			NOT = { has_country_flag = capital_to_iasi }
+		}
+		allow = {
+			owns = 1269 # Iasi
+			controls = 1269 # Iasi
+			1269 = { is_core = ROOT }
+		}
+		effect = {
+			set_country_flag = capital_to_iasi
+			add_adm_power = -50
+			Effect_set_capital = { target= 1269 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+        ################################ Azerbaijan
+	move_capital_baku = {
+		major = yes
+		potential = {
+			primary_culture = azerbadjani
+			is_at_war = no
+			any_owned_province = { area = shirvan_area }
+			NOT = { capital = 416 }   # Tabriz
+			NOT = { capital = 3811 }  # Baku
+			NOT = { has_country_flag = capital_to_baku }
+		}
+		allow = {
+			owns = 3811 # Baku
+			controls = 3811 # Baku
+			3811 = { is_core = ROOT }
+		}
+		effect = {
+			set_country_flag = capital_to_baku
+			add_adm_power = -50
+			Effect_set_capital = { target= 3811 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+        ######

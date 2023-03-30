@@ -1,0 +1,36 @@
+#owner = JAI
+#controller = JAI
+#add_core = JAI
+
+owner = SYR
+controller = SYR
+add_core = SYR
+
+capital = "Dayr az-Zawr"
+trade_goods = wheat
+#culture = shami
+culture = iraqi
+religion = sunni
+
+hre = no
+
+base_tax = 4
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+local_fortification_1 = yes
+canal_level_1 = yes
+
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = western
+discovered_by = eastern
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = tribals_control_province
+	set_variable = { which = tribals_ratio	value = 53 }
+}

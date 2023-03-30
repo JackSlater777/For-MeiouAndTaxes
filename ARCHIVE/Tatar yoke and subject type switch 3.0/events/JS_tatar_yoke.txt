@@ -1,0 +1,59 @@
+#Set rivalry
+country_event = {
+	id = js_tatar_yoke.1
+	title = js_tatar_yoke.1.t
+	desc = js_tatar_yoke.1.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_year = 1360
+		tag = MOS
+		NOT = { has_country_flag = rivalry_created }
+	}
+
+	option = {
+		name = js_diplomacy_events.1.a
+		set_country_flag = rivalry_created
+		TVE = { add_historical_rival = MOS }
+		RYA = { add_historical_rival = MOS }
+	}
+}
+
+#Forcing defeated principalities into Tributary dependency if Muscovite Tributary exists
+country_event = {
+	id = js_tatar_yoke.2
+	title = js_tatar_yoke.2.t
+	desc = js_tatar_yoke.2.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		OR = {
+			primary_culture = russian
+			tag = BOZ
+		}
+		NOT = { is_subject_of_type = tributary_state }
+		NOT = { is_subject_of_type = close_tributary_state }
+		NOT = { is_subject_of_type = muscovite_tributary_state }
+		NOT = { is_subject_of_type = vassal }
+		NOT = { is_subject_of_type = decentralized_vassal }
+		MOS = { is_subject_of_type = muscovite_tributary_state }
+	}
+
+	option = {
+		name = mec_vassals.12.opta
+		MOS = { 
+			create_subject={subject_type=tributary_state subject=ROOT } 
+		}
+	}
+}

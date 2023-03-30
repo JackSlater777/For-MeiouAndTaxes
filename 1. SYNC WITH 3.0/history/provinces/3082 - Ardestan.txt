@@ -1,0 +1,31 @@
+owner = MUZ
+controller = MUZ
+add_core = MUZ
+
+capital = "Ardestan"
+trade_goods = wool
+culture = persian
+religion = sunni
+
+hre = no
+
+base_tax = 10
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+town_hall = yes
+temple = yes
+
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3 }
+	set_variable = { which = starting_urban_pop_1350 value = 7.500 }
+}
+1356.1.1 = {
+	add_core = ISF
+}

@@ -1,0 +1,1112 @@
+country_decisions = {
+	rename_provinces_swedish_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = nord_germanic
+			any_owned_province = {
+				OR = {
+					area = finland_inland_area
+					area = finland_coastal_area
+					area = norrland_area
+					area = northern_norway_area
+					area = western_norway_area
+					area = eastern_norway_area
+					area = karelia_area
+					area = svealand_area
+					area = gotaland_area
+					area = skaneland_area
+					area = denmark_area
+					area = jutland_area
+
+                        		#pskov_area
+					province_id = 34
+					province_id = 274
+
+                        		#novgorod_area
+					province_id = 3401
+
+					area = estonia_ingria_area
+					area = livonia_area
+
+                        		#curonia_area
+					province_id = 1354
+
+                        		#beloozero_area
+					province_id = 3994
+
+                        		#pomor_area
+					province_id = 314
+				}
+				culture = swedish
+				NOT = { has_province_flag = swedish_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture = swedish
+				NOT = { has_province_flag = swedish_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #finland_inland_area
+			if = {
+				limit = { 
+					owns = 29
+					29 = { is_core = ROOT }
+					29 = { culture = swedish }
+					29 = { NOT = { has_province_flag = swedish_name } }
+				}
+				29 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Tavastland" #FIN - Hame
+					rename_capital = "Tavastehus" #FIN - Hameenlinna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 31
+					31 = { is_core = ROOT }
+					31 = { culture = swedish }
+					31 = { NOT = { has_province_flag = swedish_name } }
+				}
+				31 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Savolax" #FIN - Savo
+					rename_capital = "Olofsborg" #FIN - Olavinlinna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2327
+					2327 = { is_core = ROOT }
+					2327 = { culture = swedish }
+					2327 = { NOT = { has_province_flag = swedish_name } }
+				}
+				2327 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Ostra Lappland" #FIN - Itaan Lappi 
+					rename_capital = "Rovaniemi" #FIN - Rovaniemi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3997
+					3997 = { is_core = ROOT }
+					3997 = { culture = swedish }
+					3997 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3997 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Norra Osterbotten" #FIN - Pohjoiseen Pohjanmaa
+					rename_capital = "Uleaborg" #FIN - Oulu
+				}
+			}
+
+                        #finland_coastal_area
+			if = {
+				limit = { 
+					owns = 19
+					19 = { is_core = ROOT }
+					19 = { culture = swedish }
+					19 = { NOT = { has_province_flag = swedish_name } }
+				}
+				19 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Sodra Osterbotten" #FIN - Etela Pohjanmaa
+					rename_capital = "Korsholm" #FIN - Mustasaari
+				}
+			}
+			if = {
+				limit = { 
+					owns = 27
+					27 = { is_core = ROOT }
+					27 = { culture = swedish }
+					27 = { NOT = { has_province_flag = swedish_name } }
+				}
+				27 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Egentliga Finland" #FIN - Varsinaissuomi
+					rename_capital = "Abo" #FIN - Turku
+				}
+			}
+			if = {
+				limit = { 
+					owns = 28
+					28 = { is_core = ROOT }
+					28 = { culture = swedish }
+					28 = { NOT = { has_province_flag = swedish_name } }
+				}
+				28 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Nyland" #FIN - Uusimaa
+					rename_capital = "Borga" #FIN - Porvoo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 30
+					30 = { is_core = ROOT }
+					30 = { culture = swedish }
+					30 = { NOT = { has_province_flag = swedish_name } }
+				}
+				30 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Satakunda" #FIN - Satakunta
+					rename_capital = "Ulvsby" #FIN - Ulvila
+				}
+			}
+			if = {
+				limit = { 
+					owns = 32
+					32 = { is_core = ROOT }
+					32 = { culture = swedish }
+					32 = { NOT = { has_province_flag = swedish_name } }
+				}
+				32 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Karelen" #FIN - Viipuri
+					rename_capital = "Viborg" #FIN - Viipuri
+				}
+			}
+
+                        #norrland_area
+			if = {
+				limit = { 
+					owns = 4
+					4 = { is_core = ROOT }
+					4 = { culture = swedish }
+					4 = { NOT = { has_province_flag = swedish_name } }
+				}
+				4 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Dalarna" #FIN - Taalainmaa
+					rename_capital = "Falun" #FIN - Falun
+				}
+			}
+			if = {
+				limit = { 
+					owns = 11
+					11 = { is_core = ROOT }
+					11 = { culture = swedish }
+					11 = { NOT = { has_province_flag = swedish_name } }
+				}
+				11 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Halsingland"
+					rename_capital = "Gavle"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 891
+					891 = { is_core = ROOT }
+					891 = { culture = swedish }
+					891 = { NOT = { has_province_flag = swedish_name } }
+				}
+				891 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Vastra Lappland" #FIN - Western Lappi
+					rename_capital = "Arjeplog" #FIN - Arjeplog
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1260
+					1260 = { is_core = ROOT }
+					1260 = { culture = swedish }
+					1260 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1260 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Vasterbotten" #FIN - Lansipohja
+					rename_capital = "Umea" #FIN - Uumaja
+				}
+			}
+
+                        #northern_norway_area
+			if = {
+				limit = { 
+					owns = 10
+					10 = { is_core = ROOT }
+					10 = { culture = swedish }
+					10 = { NOT = { has_province_flag = swedish_name } }
+				}
+				10 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Jamtland" #NOR - Jemtland
+					rename_capital = "Froson" #NOR - Froson
+				}
+			}
+			if = {
+				limit = { 
+					owns = 22
+					22 = { is_core = ROOT }
+					22 = { culture = swedish }
+					22 = { NOT = { has_province_flag = swedish_name } }
+				}
+				22 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Trondelag" #NOR - Trondelag
+					rename_capital = "Trondheim" #NOR - Trondheim
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1255
+					1255 = { is_core = ROOT }
+					1255 = { culture = swedish }
+					1255 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1255 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Troms" #NOR - Troms #Saam - Romsa
+					rename_capital = "Troms" #NOR - Troms #Saam - Romsa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1266
+					1266 = { is_core = ROOT }
+					1266 = { culture = swedish }
+					1266 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1266 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Nordland" #NOR - Nordland #Saam - Nordlanda
+					rename_capital = "Bodo" #NOR - Bodo #Saam - Badaddjo
+				}
+			}
+
+                        #western_norway_area
+			if = {
+				limit = { 
+					owns = 20
+					20 = { is_core = ROOT }
+					20 = { culture = swedish }
+					20 = { NOT = { has_province_flag = swedish_name } }
+				}
+				20 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Stavanger" #NOR - Stavanger 
+					rename_capital = "Stavanger" #NOR - Stavanger
+				}
+			}
+			if = {
+				limit = { 
+					owns = 23
+					23 = { is_core = ROOT }
+					23 = { culture = swedish }
+					23 = { NOT = { has_province_flag = swedish_name } }
+				}
+				23 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Bergenhus" #NOR - Bergenhus
+					rename_capital = "Bergen" #NOR - Bergen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 24
+					24 = { is_core = ROOT }
+					24 = { culture = swedish }
+					24 = { NOT = { has_province_flag = swedish_name } }
+				}
+				24 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Agdesiden" #NOR - Agdesiden
+					rename_capital = "Arendall" #NOR - Arendall 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3998
+					3998 = { is_core = ROOT }
+					3998 = { culture = swedish }
+					3998 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3998 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Alesund" #NOR - Alesund
+					rename_capital = "Alesund" #NOR - Alesund
+				}
+			}
+
+                        #eastern_norway_area
+			if = {
+				limit = { 
+					owns = 16
+					16 = { is_core = ROOT }
+					16 = { culture = swedish }
+					16 = { NOT = { has_province_flag = swedish_name } }
+				}
+				16 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Akershus" #NOR - Akershus
+					rename_capital = "Kristiania" #NOR - Christiania
+				}
+			}
+			if = {
+				limit = { 
+					owns = 17
+					17 = { is_core = ROOT }
+					17 = { culture = swedish }
+					17 = { NOT = { has_province_flag = swedish_name } }
+				}
+				17 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Tonsberg" #NOR - Tunsberg
+					rename_capital = "Tonsberg" #NOR - Tunsberg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 21
+					21 = { is_core = ROOT }
+					21 = { culture = swedish }
+					21 = { NOT = { has_province_flag = swedish_name } }
+				}
+				21 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Bratsberg" #NOR - Bratsberg
+					rename_capital = "Skien" #NOR - Skien
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1256
+					1256 = { is_core = ROOT }
+					1256 = { culture = swedish }
+					1256 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1256 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Bohuslan" #NOR - Baahuslen
+					rename_capital = "Kungahalla" #NOR - Konghelle
+				}
+			}
+
+                        #karelia_area
+			if = {
+				limit = { 
+					owns = 33
+					33 = { is_core = ROOT }
+					33 = { culture = swedish }
+					33 = { NOT = { has_province_flag = swedish_name } }
+				}
+				33 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Kolahalvon" #FIN - Kuolan niemimaa #Saam - Ter Sami
+					rename_capital = "Kola" #FIN - Kuola #Saam - Guoladat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 35
+					35 = { is_core = ROOT }
+					35 = { culture = swedish }
+					35 = { NOT = { has_province_flag = swedish_name } }
+				}
+				35 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Kem" #FIN - Kemi #Karel - Kemi
+					rename_capital = "Kem" #FIN - Kemi #Karel - Kemi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 315
+					315 = { is_core = ROOT }
+					315 = { culture = swedish }
+					315 = { NOT = { has_province_flag = swedish_name } }
+				}
+				315 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Aunus" #FIN - Aunuksenlinna #Karel - Aunus
+					rename_capital = "Aunus" #FIN - Aunuksenlinna #Karel - Aunus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1261
+					1261 = { is_core = ROOT }
+					1261 = { culture = swedish }
+					1261 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1261 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Norra Karelen" #FIN - Pohjois-Karjala #Karel - Pohjois-Karjala
+					rename_capital = "Lieksa" #FIN - Lieksa #Karel - Lieksa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1262
+					1262 = { is_core = ROOT }
+					1262 = { culture = swedish }
+					1262 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1262 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Kexholm" #FIN - Kakisalmi #Karel - Kakisalmi
+					rename_capital = "Kexholm" #FIN - Kakisalmi #Karel - Kakisalmi
+				}
+			}
+
+                        #svealand_area
+			if = {
+				limit = { 
+					owns = 1
+					1 = { is_core = ROOT }
+					1 = { culture = swedish }
+					1 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Uppland"
+					rename_capital = "Stockholm"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 5
+					5 = { is_core = ROOT }
+					5 = { culture = swedish }
+					5 = { NOT = { has_province_flag = swedish_name } }
+				}
+				5 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Varmland"
+					rename_capital = "Karlstad"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 9
+					9 = { is_core = ROOT }
+					9 = { culture = swedish }
+					9 = { NOT = { has_province_flag = swedish_name } }
+				}
+				9 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Aland" #FIN - Ahvenanmaa
+					rename_capital = "Sund" #FIN - Sund
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1258
+					1258 = { is_core = ROOT }
+					1258 = { culture = swedish }
+					1258 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1258 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Sodermanland"
+					rename_capital = "Nykoping"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1259
+					1259 = { is_core = ROOT }
+					1259 = { culture = swedish }
+					1259 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1259 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Vastmanland"
+					rename_capital = "Vasteras"
+				}
+			}
+
+                        #gotaland_area
+			if = {
+				limit = { 
+					owns = 2
+					2 = { is_core = ROOT }
+					2 = { culture = swedish }
+					2 = { NOT = { has_province_flag = swedish_name } }
+				}
+				2 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Ostergotland"
+					rename_capital = "Linkoping"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3
+					3 = { is_core = ROOT }
+					3 = { culture = swedish }
+					3 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Smaland"
+					rename_capital = "Vaxjo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 7
+					7 = { is_core = ROOT }
+					7 = { culture = swedish }
+					7 = { NOT = { has_province_flag = swedish_name } }
+				}
+				7 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Alvsborg"
+					rename_capital = "Vanersborg"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 8
+					8 = { is_core = ROOT }
+					8 = { culture = swedish }
+					8 = { NOT = { has_province_flag = swedish_name } }
+				}
+				8 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Vastergotland"
+					rename_capital = "Skara"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 25
+					25 = { is_core = ROOT }
+					25 = { culture = swedish }
+					25 = { NOT = { has_province_flag = swedish_name } }
+				}
+				25 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Gotland" #GUT - Gutland
+					rename_capital = "Visborg" #GUT - Visby
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1257
+					1257 = { is_core = ROOT }
+					1257 = { culture = swedish }
+					1257 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1257 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Oland" 
+					rename_capital = "Borgholm"
+				}
+			}
+
+                        #skaneland_area
+			if = {
+				limit = { 
+					owns = 6
+					6 = { is_core = ROOT }
+					6 = { culture = swedish }
+					6 = { NOT = { has_province_flag = swedish_name } }
+				}
+				6 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Skane" #DEN - Scaniae
+					rename_capital = "Lund" #DEN - Lund
+				}
+			}
+			if = {
+				limit = { 
+					owns = 18
+					18 = { is_core = ROOT }
+					18 = { culture = swedish }
+					18 = { NOT = { has_province_flag = swedish_name } }
+				}
+				18 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Blekinge" #DEN - Blekyng
+					rename_capital = "Karlskrona" #DEN - Rotnaeby
+				}
+			}
+			if = {
+				limit = { 
+					owns = 26
+					26 = { is_core = ROOT }
+					26 = { culture = swedish }
+					26 = { NOT = { has_province_flag = swedish_name } }
+				}
+				26 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Halland" #DEN - Halland
+					rename_capital = "Halmstad" #DEN - Halmstathe
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2515
+					2515 = { is_core = ROOT }
+					2515 = { culture = swedish }
+					2515 = { NOT = { has_province_flag = swedish_name } }
+				}
+				2515 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Bornholm" #DEN - Borghandaholm
+					rename_capital = "Ronne" #DEN - Rothnne
+				}
+			}
+
+                        #denmark_area
+			if = {
+				limit = { 
+					owns = 12
+					12 = { is_core = ROOT }
+					12 = { culture = swedish }
+					12 = { NOT = { has_province_flag = swedish_name } }
+				}
+				12 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Nordsjalland" #DEN - Norrasyaland
+					rename_capital = "Kopenhamn" #DEN - Kobenhavn
+				}
+			}
+			if = {
+				limit = { 
+					owns = 14
+					14 = { is_core = ROOT }
+					14 = { culture = swedish }
+					14 = { NOT = { has_province_flag = swedish_name } }
+				}
+				14 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Fyn" #DEN - Fyun
+					rename_capital = "Odense" #DEN - Othaenso
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1428
+					1428 = { is_core = ROOT }
+					1428 = { culture = swedish }
+					1428 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1428 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Lolland" #DEN - Laland
+					rename_capital = "Nakskov" #DEN - Nacascogh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2755
+					2755 = { is_core = ROOT }
+					2755 = { culture = swedish }
+					2755 = { NOT = { has_province_flag = swedish_name } }
+				}
+				2755 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Sjalland" #DEN - Syaland
+					rename_capital = "Ringsted" #DEN - Ryngstath
+				}
+			}
+
+                        #jutland_area
+			if = {
+				limit = { 
+					owns = 13
+					13 = { is_core = ROOT }
+					13 = { culture = swedish }
+					13 = { NOT = { has_province_flag = swedish_name } }
+				}
+				13 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Sydslesvig" #DEN - Sydslesvig #GER - Sudschleswig
+					rename_capital = "Flensburg" #DEN - Flensborg #GER - Flensburg
+				}
+			}
+			if = {
+				limit = { 
+					owns = 15
+					15 = { is_core = ROOT }
+					15 = { culture = swedish }
+					15 = { NOT = { has_province_flag = swedish_name } }
+				}
+				15 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Ostjylland" #DEN - Ostjylland #GER - Ostjutland
+					rename_capital = "Arhus" #DEN - Aarhus #GER - Aarhus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 67
+					67 = { is_core = ROOT }
+					67 = { culture = swedish }
+					67 = { NOT = { has_province_flag = swedish_name } }
+				}
+				67 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Norrajylland" #DEN - Norraejylland
+					rename_capital = "Alborg" #DEN - Aleburgh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2754
+					2754 = { is_core = ROOT }
+					2754 = { culture = swedish }
+					2754 = { NOT = { has_province_flag = swedish_name } }
+				}
+				2754 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Norraslesvig" #DEN - Norraeslesvig
+					rename_capital = "Ribe" #DEN - Ribe
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3720
+					3720 = { is_core = ROOT }
+					3720 = { culture = swedish }
+					3720 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3720 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Vastjylland" #DEN - Vaestjylland
+					rename_capital = "Viborg" #DEN - Wibiaergh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3721
+					3721 = { is_core = ROOT }
+					3721 = { culture = swedish }
+					3721 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3721 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Nordfriesland" #DEN - Nordfrisland #Frisian - Nuurdfresklun
+					rename_capital = "Husum" #Frisian - Husem
+				}
+			}
+
+                        #holstein_area
+			#if = {
+			#	limit = { 
+			#		owns = 45
+			#		45 = { is_core = ROOT }
+			#		45 = { culture = swedish }
+			#		45 = { NOT = { has_province_flag = swedish_name } }
+			#	}
+			#	45 = {
+			#		clear_province_name_flag_effect = yes
+			#		set_province_flag = swedish_name
+			#		change_province_name = "Lybeck" #DEN - Lybaek
+			#		rename_capital = "Lybeck" #DEN - Lybaek
+			#	}
+			#}
+
+                        #pskov_area
+                        #274 310 3980 3981
+			if = {
+				limit = { 
+					owns = 34
+					34 = { is_core = ROOT }
+					34 = { culture = swedish }
+					34 = { NOT = { has_province_flag = swedish_name } }
+				}
+				34 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Johanstad" #EST - Jaanilinn
+					rename_capital = "Johanstad" #FIN - Kaprio
+				}
+			}
+
+                        #novgorod_area
+                        #292 309 3982 4017
+			if = {
+				limit = { 
+					owns = 3401
+					3401 = { is_core = ROOT }
+					3401 = { culture = swedish }
+					3401 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3401 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Nyen" #RUS - Neva
+					rename_capital = "Nyenskans" #RUS - Neva
+				}
+			}
+
+                        #estonia_ingria_area
+			if = {
+				limit = { 
+					owns = 36
+					36 = { is_core = ROOT }
+					36 = { culture = swedish }
+					36 = { NOT = { has_province_flag = swedish_name } }
+				}
+				36 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Reval"
+					rename_capital = "Reval"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3400
+					3400 = { is_core = ROOT }
+					3400 = { culture = swedish }
+					3400 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Wierland"
+					rename_capital = "Narva"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3766
+					3766 = { is_core = ROOT }
+					3766 = { culture = swedish }
+					3766 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3766 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Jerwen"
+					rename_capital = "Wittenstein"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3767
+					3767 = { is_core = ROOT }
+					3767 = { culture = swedish }
+					3767 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3767 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Rappel"
+					rename_capital = "Hapsal"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3768
+					3768 = { is_core = ROOT }
+					3768 = { culture = swedish }
+					3768 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3768 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Dago"
+					rename_capital = "Karrdal"
+				}
+			}
+
+                        #livonia_area
+			if = {
+				limit = { 
+					owns = 37
+					37 = { is_core = ROOT }
+					37 = { culture = swedish }
+					37 = { NOT = { has_province_flag = swedish_name } }
+				}
+				37 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Norralivland"
+					rename_capital = "Pernau"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 273
+					273 = { is_core = ROOT }
+					273 = { culture = swedish }
+					273 = { NOT = { has_province_flag = swedish_name } }
+				}
+				273 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Lettgallen"
+					rename_capital = "Dunaburg"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1263
+					1263 = { is_core = ROOT }
+					1263 = { culture = swedish }
+					1263 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1263 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Dorpat"
+					rename_capital = "Dorpat"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1430
+					1430 = { is_core = ROOT }
+					1430 = { culture = swedish }
+					1430 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1430 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Venden"
+					rename_capital = "Venden"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3399
+					3399 = { is_core = ROOT }
+					3399 = { culture = swedish }
+					3399 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3399 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Sodlivland"
+					rename_capital = "Wolmar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3765
+					3765 = { is_core = ROOT }
+					3765 = { culture = swedish }
+					3765 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3765 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Ronneburg"
+					rename_capital = "Ronneburg"
+				}
+			}
+
+                        #curonia_area
+                        #38 39 1264 1432
+			if = {
+				limit = { 
+					owns = 1354
+					1354 = { is_core = ROOT }
+					1354 = { culture = swedish }
+					1354 = { NOT = { has_province_flag = swedish_name } }
+				}
+				1354 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Osel"
+					rename_capital = "Arensburg"
+				}
+			}
+
+                        #beloozero_area
+                        #291 312 3992
+			if = {
+				limit = { 
+					owns = 3994
+					3994 = { is_core = ROOT }
+					3994 = { culture = swedish }
+					3994 = { NOT = { has_province_flag = swedish_name } }
+				}
+				3994 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Onegabukten"
+					rename_capital = "Onega"
+				}
+			}
+
+                        #pomor_area
+                        #278 279 288 4023
+			if = {
+				limit = { 
+					owns = 314
+					314 = { is_core = ROOT }
+					314 = { culture = swedish }
+					314 = { NOT = { has_province_flag = swedish_name } }
+				}
+				314 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = swedish_name
+					change_province_name = "Bjarmaland"
+					rename_capital = "Gandvik"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

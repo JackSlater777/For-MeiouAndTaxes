@@ -1,0 +1,467 @@
+namespace = afarawaymod
+province_event = {
+	id = afarawaymod.1
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+	hidden = yes
+	
+	trigger = {
+		is_colony = yes
+		has_port = yes
+		NOT = { has_province_flag = coastal_colony_here }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = { set_province_flag = coastal_colony_here }
+}
+
+province_event = {
+	id = afarawaymod.2
+	title = afarawaymod.2_t
+	desc = afarawaymod.2_d
+	picture = NAVAL_MILITARY_eventPicture
+	
+	trigger = {
+		has_province_flag = coastal_colony_here
+		is_colony = no
+		NOT = {
+			continent = north_america
+			continent = south_america
+			continent = oceania
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	immediate = { clr_province_flag = coastal_colony_here }
+	
+	option = {
+		name = afarawaymod.2_o
+		#if = {
+		#	limit = { has_province_flag = has_great_natural_harbour }
+		#	add_building = harbour_infrastructure_3x
+		#	add_building = town_hall
+		#}
+		#else_if = {
+		#	limit = { has_province_flag = has_small_natural_harbour  }
+		#	add_building = harbour_infrastructure_2
+		#	add_building = town_hall
+		#}
+		#else = { add_building = harbour_infrastructure_1 }
+		if = {
+			limit = { has_province_modifier = trading_post_province }
+			add_building = trading_post
+		}
+		if = {
+			limit = { NOT = { has_province_modifier = lack_of_harbour } }
+			add_building = harbour_infrastructure_2
+			add_building = town_hall
+		}
+		else_if = {
+			limit = { has_province_modifier = lack_of_harbour }
+			add_building = harbour_infrastructure_1
+			add_building = town_hall
+		}
+	}
+}
+
+province_event = {
+	id = afarawaymod.3
+	title = afarawaymod.3_t
+	desc = afarawaymod.3_d
+	picture = NAVAL_MILITARY_eventPicture
+	
+	trigger = {
+		has_province_flag = coastal_colony_here
+		is_colony = no
+		OR = {
+			continent = north_america
+			continent = south_america
+			continent = oceania
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	immediate = {
+		hidden_effect = {
+			clr_province_flag = coastal_colony_here
+			set_variable = { which = colony_rural_pop_compare which = rural_pop_display }
+			multiply_variable = { which = colony_rural_pop_compare value = 0.75 }
+			if = {
+				limit = { NOT = { check_variable = { which = colony_rural_pop_compare which = innate_rural_pop } } }
+				if = {
+					limit = { NOT = { check_variable = { which = innate_rural_pop value = 15 } } }
+					set_variable = { which = rural_percentage_added value = 0.15 }
+					add_rural_population_DEVS = yes
+				}
+				else = {
+					set_variable = { which = rural_base_pop_added value = 0.3 }
+					set_variable = { which = rural_percentage_added value = 0.15 }
+					add_rural_population_DEVS = yes
+				}
+			}
+			if = {
+				limit = { check_variable = { which = rural_pop_display which = ideal_rural_pop } }
+				set_variable = { which = ideal_rural_pop which = rural_pop_display }
+				multiply_variable = { which = ideal_rural_pop value = 1.2 }
+			}
+			if = {
+				limit = { check_variable = { which = ideal_rural_pop  which = innate_rural_pop } }
+				set_variable = { which = ideal_rural_pop which = innate_rural_pop }
+			}
+			set_variable = { which = colony_rural_pop_compare value = 0 }
+		}
+	}
+	
+	option = {
+		name = afarawaymod.3_o
+		#if = {
+		#	limit = { has_province_flag = has_great_natural_harbour }
+		#	add_building = harbour_infrastructure_3x
+		#	add_building = town_hall
+		#}
+		#else_if = {
+		#	limit = { has_province_flag = has_small_natural_harbour  }
+		#	add_building = harbour_infrastructure_2
+		#	add_building = town_hall
+		#}
+		#else = { add_building = harbour_infrastructure_1 }
+
+		if = {
+			limit = { has_province_modifier = trading_post_province }
+			add_building = trading_post
+		}
+		if = {
+			limit = { NOT = { has_province_modifier = lack_of_harbour } }
+			add_building = harbour_infrastructure_2
+			add_building = town_hall
+		}
+		else_if = {
+			limit = { has_province_modifier = lack_of_harbour }
+			add_building = harbour_infrastructure_1
+			add_building = town_hall
+		}
+	}
+}
+
+province_event = {
+	id = afarawaymod.4
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+	hidden = yes
+	
+	trigger = {
+		is_colony = yes
+		has_port = no
+		#continent = north_america
+		#has_province_flag = has_confluence
+		NOT = { has_province_flag = inland_colony_here }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = { set_province_flag = inland_colony_here }
+}
+
+province_event = {
+	id = afarawaymod.5
+	title = afarawaymod.5_t
+	desc = afarawaymod.5_d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		has_province_flag = inland_colony_here
+		is_colony = no
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	immediate = {
+		hidden_effect = {
+			clr_province_flag = inland_colony_here
+			set_variable = { which = colony_rural_pop_compare which = rural_pop_display }
+			multiply_variable = { which = colony_rural_pop_compare value = 0.75 }
+			if = {
+				limit = { NOT = { check_variable = { which = colony_rural_pop_compare which = innate_rural_pop } } }
+				if = {
+					limit = { NOT = { check_variable = { which = innate_rural_pop value = 15 } } }
+					set_variable = { which = rural_percentage_added value = 0.15 }
+					add_rural_population_DEVS = yes
+				}
+				else = {
+					set_variable = { which = rural_base_pop_added value = 0.3 }
+					set_variable = { which = rural_percentage_added value = 0.15 }
+					add_rural_population_DEVS = yes
+				}
+			}
+			if = {
+				limit = { check_variable = { which = rural_pop_display which = ideal_rural_pop } }
+				set_variable = { which = ideal_rural_pop which = rural_pop_display }
+				multiply_variable = { which = ideal_rural_pop value = 1.2 }
+			}
+			if = {
+				limit = { check_variable = { which = ideal_rural_pop  which = innate_rural_pop } }
+				set_variable = { which = ideal_rural_pop which = innate_rural_pop }
+			}
+			set_variable = { which = colony_rural_pop_compare value = 0 }
+		}
+	}
+	
+	option = {
+		name = afarawaymod.5_o
+		add_building = town_hall
+	}
+}
+
+country_event = {
+	id = afarawaymod.6
+	title = afarawaymod.6_t
+	desc = afarawaymod.6_d
+	picture = HARBOUR_eventPicture
+	
+	trigger = {
+		OR = {
+			has_idea = additional_colonists
+			has_idea = colonial_ventures
+			has_idea = colonial_race
+		}
+		is_at_war = no
+		treasury = 500
+		NOT = { num_of_owned_provinces_with = { value = 30 OR = { continent = southeast_asia continent = indian_continent } } }
+		any_known_country = {
+			any_owned_province = {
+				OR = { continent = southeast_asia continent = indian_continent }
+				is_capital = no
+				has_port = yes
+				range = ROOT
+				NOT = { development = 25 }
+			}
+			NOT = { num_of_colonists = 1 }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = { ai_attitude = { who = ROOT attitude = attitude_neutral } ai_attitude = { who = ROOT attitude = attitude_friendly } }
+			#NOT = { border_distance = { who = ROOT distance = 250 } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			ai = no
+			factor = 2
+		}
+	}
+	
+	option = {
+		name = afarawaymod.6_o
+		ai_chance = { factor = 100 }
+		add_treasury = -150
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					any_owned_province = {
+						OR = { continent = southeast_asia continent = indian_continent }
+						is_capital = no
+						has_port = yes
+						range = ROOT
+						NOT = { development = 25 }
+					}
+					NOT = { num_of_colonists = 1 }
+					is_free_or_tributary_trigger = yes
+					is_at_war = no
+					OR = { ai_attitude = { who = ROOT attitude = attitude_neutral } ai_attitude = { who = ROOT attitude = attitude_friendly } }
+					#NOT = { border_distance = { who = ROOT distance = 250 } }
+				}
+				country_event = { id = afarawaymod.7 days = 30 }
+			}
+		}
+	}
+	option = {
+		name = afarawaymod.6_r
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = afarawaymod.7
+	title = afarawaymod.7_t
+	desc = afarawaymod.7_d
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afarawaymod.7_o
+		ai_chance = {
+			factor = 50
+			modifier = { NOT = { treasury = 100 } factor = 1.5 }
+			modifier = { num_of_loans = 1 factor = 1.5 }
+		}
+		add_treasury = 150
+		add_opinion = { who = FROM modifier = opinion_made_a_deal }
+		hidden_effect = { FROM = { country_event = { id = afarawaymod.8 } } }
+	}
+	option = {
+		name = afarawaymod.6_r
+		ai_chance = { factor = 50 }
+		FROM = { country_event = { id = afarawaymod.9 } }
+	}
+}
+
+country_event = {
+	id = afarawaymod.8
+	title = afarawaymod.8_t
+	desc = afarawaymod.8_d
+	picture = TRADING_POST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afarawaymod.8_o
+		FROM = {
+			random_owned_province = {
+				limit = {
+					OR = { continent = southeast_asia continent = indian_continent }
+					is_capital = no
+					has_port = yes
+					range = FROM
+					NOT = { development = 25 }
+				}
+				cede_province = ROOT
+				remove_core = FROM
+				set_province_flag = purchased_province
+			}
+		}
+		add_truce_with = FROM
+		add_opinion = { who = FROM modifier = opinion_made_a_deal }
+		hidden_effect = { country_event = { id = afarawaymod.10 } }
+	}
+}
+
+country_event = {
+	id = afarawaymod.9
+	title = afarawaymod.9_t
+	desc = afarawaymod.9_d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afarawaymod.9_o
+		add_treasury = 150
+	}
+}
+
+province_event = {
+	id = afarawaymod.10
+	title = afarawaymod.10_t
+	desc = afarawaymod.10_d
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = { has_province_flag = purchased_province }
+	
+	mean_time_to_happen = { months = 3 }
+	
+	immediate = { hidden_effect = { clr_province_flag = purchased_province } }
+	
+	option = {
+		name = afarawaymod.10_o
+		trigger = {
+			NOT = { has_building = harbour_infrastructure_1 }
+			NOT = { has_building = harbour_infrastructure_2 }
+			NOT = { has_building = harbour_infrastructure_3x }
+			NOT = { has_building = harbour_infrastructure_4 }
+			NOT = { has_building = harbour_infrastructure_5 }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { NOT = { treasury = 300 } factor = 0 }
+		}
+		add_building = harbour_infrastructure_1
+		add_treasury = -200
+	}
+	option = {
+		name = afarawaymod.10_o1
+		trigger = {
+			has_building = harbour_infrastructure_1
+			NOT = { has_building = harbour_infrastructure_2 }
+			NOT = { has_building = harbour_infrastructure_3x }
+			NOT = { has_building = harbour_infrastructure_4 }
+			NOT = { has_building = harbour_infrastructure_5 }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { NOT = { treasury = 400 } factor = 0 }
+		}
+		add_building = harbour_infrastructure_2
+		add_treasury = -300
+	}
+	option = {
+		name = afarawaymod.10_p
+		trigger = {
+			NOT = { has_building = fort_14th }
+			NOT = { has_building = fort_15th }
+			NOT = { has_building = fort_16th }
+			NOT = { has_building = fort_17th }
+			NOT = { has_building = fort_18th }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { NOT = { treasury = 300 } factor = 0 }
+		}
+		add_building = fort_14th
+		add_treasury = -200
+	}
+	option = {
+		name = afarawaymod.10_r
+		trigger = {
+			NOT = { has_building = harbour_infrastructure_1 }
+			NOT = { has_building = harbour_infrastructure_2 }
+			NOT = { has_building = harbour_infrastructure_3x }
+			NOT = { has_building = harbour_infrastructure_4 }
+			NOT = { has_building = harbour_infrastructure_5 }
+			NOT = { has_building = fort_14th }
+			NOT = { has_building = fort_15th }
+			NOT = { has_building = fort_16th }
+			NOT = { has_building = fort_17th }
+			NOT = { has_building = fort_18th }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { NOT = { treasury = 500 } factor = 0 }
+		}
+		add_building = harbour_infrastructure_1
+		add_building = fort_14th
+		add_treasury = -400
+	}
+	option = {
+		name = afarawaymod.10_r1
+		trigger = {
+			has_building = harbour_infrastructure_1
+			NOT = { has_building = harbour_infrastructure_2 }
+			NOT = { has_building = harbour_infrastructure_3x }
+			NOT = { has_building = harbour_infrastructure_4 }
+			NOT = { has_building = harbour_infrastructure_5 }
+			NOT = { has_building = fort_14th }
+			NOT = { has_building = fort_15th }
+			NOT = { has_building = fort_16th }
+			NOT = { has_building = fort_17th }
+			NOT = { has_building = fort_18th }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { NOT = { treasury = 600 } factor = 0 }
+		}
+		add_building = harbour_infrastructure_2
+		add_building = fort_14th
+		add_treasury = -500
+	}
+	option = {
+		name = afarawaymod.10_s
+		ai_chance = { factor = 25 }
+	}
+}

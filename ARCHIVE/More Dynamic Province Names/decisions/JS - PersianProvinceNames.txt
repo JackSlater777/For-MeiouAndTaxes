@@ -1,0 +1,1871 @@
+country_decisions = {
+	rename_provinces_persian_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = persian_group
+			religion_group = muslim
+			any_owned_province = {
+				OR = {
+					area = baluchi_area
+					area = kerman_area
+					area = sistan_area
+					area = quetta_area
+					area = shirvan_area
+					area = azerbaijan_area
+					area = south_kurdistan_area
+					area = basra_area
+					area = luristan_area
+					area = larestan_area
+					area = farsistan_area
+					area = hormuz_area
+					area = iraq_e_ajam_area
+					area = tabarestan_area
+					area = nishapur_area
+					area = isfahan_area
+					area = khorasan_area
+					area = merv_area
+				}
+				OR = {
+					culture = persian
+					culture = adari
+				}
+				religion_group = muslim
+				NOT = { has_province_flag = persian_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				OR = {
+					culture = persian
+					culture = adari
+				}
+				religion_group = muslim
+				NOT = { has_province_flag = persian_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #baluchi_area
+			if = {
+				limit = { 
+					owns = 434
+					434 = { is_core = ROOT }
+					434 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					434 = { religion_group = muslim }
+					434 = { NOT = { has_province_flag = persian_name } }
+				}
+				434 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Chabahar" #Balochi - Makran
+					rename_capital = "Chabahar" #Balochi - Cahbar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 437
+					437 = { is_core = ROOT }
+					437 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					437 = { religion_group = muslim }
+					437 = { NOT = { has_province_flag = persian_name } }
+				}
+				437 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Nik Shahr" #Balochi - Nik Shahr
+					rename_capital = "Nik Shahr" #Balochi - Nik Shahr
+				}
+			}
+			if = {
+				limit = { 
+					owns = 575
+					575 = { is_core = ROOT }
+					575 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					575 = { religion_group = muslim }
+					575 = { NOT = { has_province_flag = persian_name } }
+				}
+				575 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Gwadar" #Balochi/Urdu - Gwadar
+					rename_capital = "Gwadar" #Balochi/Urdu - Gwadar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 576
+					576 = { is_core = ROOT }
+					576 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					576 = { religion_group = muslim }
+					576 = { NOT = { has_province_flag = persian_name } }
+				}
+				576 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Bela" #Balochi/Urdu - Lasbela
+					rename_capital = "Bela" #Balochi/Urdu - Bela
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3100
+					3100 = { is_core = ROOT }
+					3100 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3100 = { religion_group = muslim }
+					3100 = { NOT = { has_province_flag = persian_name } }
+				}
+				3100 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Awaran" #Balochi/Urdu - Awaran
+					rename_capital = "Awaran" #Balochi/Urdu - Awaran
+				}
+			}
+
+                        #kerman_area
+			if = {
+				limit = { 
+					owns = 390
+					390 = { is_core = ROOT }
+					390 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					390 = { religion_group = muslim }
+					390 = { NOT = { has_province_flag = persian_name } }
+				}
+				390 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Yazd" #Zoroastrian - Yazd
+					rename_capital = "Yazd" #Zoroastrian - Yazd
+				}
+			}
+			if = {
+				limit = { 
+					owns = 435
+					435 = { is_core = ROOT }
+					435 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					435 = { religion_group = muslim }
+					435 = { NOT = { has_province_flag = persian_name } }
+				}
+				435 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kerman" #Zoroastrian - Veh-Ardashir
+					rename_capital = "Kerman" #Zoroastrian - Veh-Ardashir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 464
+					464 = { is_core = ROOT }
+					464 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					464 = { religion_group = muslim }
+					464 = { NOT = { has_province_flag = persian_name } }
+				}
+				464 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sirjan"
+					rename_capital = "Sirjan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3831
+					3831 = { is_core = ROOT }
+					3831 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3831 = { religion_group = muslim }
+					3831 = { NOT = { has_province_flag = persian_name } }
+				}
+				3831 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = ""
+					rename_capital = ""
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3832
+					3832 = { is_core = ROOT }
+					3832 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3832 = { religion_group = muslim }
+					3832 = { NOT = { has_province_flag = persian_name } }
+				}
+				3832 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = ""
+					rename_capital = ""
+				}
+			}
+
+                        #sistan_area
+			if = {
+				limit = { 
+					owns = 551
+					551 = { is_core = ROOT }
+					551 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					551 = { religion_group = muslim }
+					551 = { NOT = { has_province_flag = persian_name } }
+				}
+				551 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sistan" #Balochi - Sistan
+					rename_capital = "Duzdab" #Balochi - Dozd-Aab
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3099
+					3099 = { is_core = ROOT }
+					3099 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3099 = { religion_group = muslim }
+					3099 = { NOT = { has_province_flag = persian_name } }
+				}
+				3099 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Koh-i-Taftan" #Balochi - Chaghi
+					rename_capital = "Taftan" #Balochi - Chaghi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3833
+					3833 = { is_core = ROOT }
+					3833 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3833 = { religion_group = muslim }
+					3833 = { NOT = { has_province_flag = persian_name } }
+				}
+				3833 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Jalq" #Balochi - Jalak
+					rename_capital = "Jalq" #Balochi - Jalak
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4030
+					4030 = { is_core = ROOT }
+					4030 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					4030 = { religion_group = muslim }
+					4030 = { NOT = { has_province_flag = persian_name } }
+				}
+				4030 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sarbisheh" #Balochi - Sarbisheh
+					rename_capital = "Sarbisheh" #Balochi - Nih
+				}
+			}
+
+                        #quetta_area
+			if = {
+				limit = { 
+					owns = 448
+					448 = { is_core = ROOT }
+					448 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					448 = { religion_group = muslim }
+					448 = { NOT = { has_province_flag = persian_name } }
+				}
+				448 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kalat" #Balochi - Qalat
+					rename_capital = "Kalat" #Balochi - Qalat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 577
+					577 = { is_core = ROOT }
+					577 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					577 = { religion_group = muslim }
+					577 = { NOT = { has_province_flag = persian_name } }
+				}
+				577 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Quetta" #Pashtun/Urdu - Quetta
+					rename_capital = "Quetta" #Pashtun/Urdu - Quetta
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2715
+					2715 = { is_core = ROOT }
+					2715 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2715 = { religion_group = muslim }
+					2715 = { NOT = { has_province_flag = persian_name } }
+				}
+				2715 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kharan" #Balochi - Kharan
+					rename_capital = "Kharan" #Balochi - Kharan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3834
+					3834 = { is_core = ROOT }
+					3834 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3834 = { religion_group = muslim }
+					3834 = { NOT = { has_province_flag = persian_name } }
+				}
+				3834 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Dalbandin" #Balochi - Dalbandin
+					rename_capital = "Dalbandin" #Balochi - Dalbandin
+				}
+			}
+
+                        #shirvan_area
+			if = {
+				limit = { 
+					owns = 424
+					424 = { is_core = ROOT }
+					424 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					424 = { religion_group = muslim }
+					424 = { NOT = { has_province_flag = persian_name } }
+				}
+				424 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Shaberan" #AZB - Sabran
+					rename_capital = "Shaberan" #AZB - Sabran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 425
+					425 = { is_core = ROOT }
+					425 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					425 = { religion_group = muslim }
+					425 = { NOT = { has_province_flag = persian_name } }
+				}
+				425 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Darband" #Lezgian - Kvevar #AZB - Derbend
+					rename_capital = "Darband" #Lezgian - Kvevar #AZB - Derbend
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1317
+					1317 = { is_core = ROOT }
+					1317 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1317 = { religion_group = muslim }
+					1317 = { NOT = { has_province_flag = persian_name } }
+				}
+				1317 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Shamaki" #AZB - Samaxi
+					rename_capital = "Shamaki" #AZB - Samaxi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2579
+					2579 = { is_core = ROOT }
+					2579 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2579 = { religion_group = muslim }
+					2579 = { NOT = { has_province_flag = persian_name } }
+				}
+				2579 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Khunzakh" #Avar - Avaria
+					rename_capital = "Khunzakh" #Avar - Khunzah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2656
+					2656 = { is_core = ROOT }
+					2656 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2656 = { religion_group = muslim }
+					2656 = { NOT = { has_province_flag = persian_name } }
+				}
+				2656 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Ghezelir" #Dagestani - Kizlyar
+					rename_capital = "Tarki" #Dagestani - Tarki
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3810
+					3810 = { is_core = ROOT }
+					3810 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3810 = { religion_group = muslim }
+					3810 = { NOT = { has_province_flag = persian_name } }
+				}
+				3810 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sharvan" #AZB - Sirvan
+					rename_capital = "Sharvan" #AZB - Sirvan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3811
+					3811 = { is_core = ROOT }
+					3811 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3811 = { religion_group = muslim }
+					3811 = { NOT = { has_province_flag = persian_name } }
+				}
+				3811 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Baku" #AZB - Baki
+					rename_capital = "Baku" #AZB - Baki
+				}
+			}
+
+                        #azerbaijan_area
+			if = {
+				limit = { 
+					owns = 416
+					416 = { is_core = ROOT }
+					416 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					416 = { religion_group = muslim }
+					416 = { NOT = { has_province_flag = persian_name } }
+				}
+				416 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Tabriz" #AZB - Tebriz
+					rename_capital = "Tabriz" #AZB - Tebriz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 463
+					463 = { is_core = ROOT }
+					463 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					463 = { religion_group = muslim }
+					463 = { NOT = { has_province_flag = persian_name } }
+				}
+				463 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Zanjan" #AZB - Zencan
+					rename_capital = "Zanjan" #AZB - Zencan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1318
+					1318 = { is_core = ROOT }
+					1318 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1318 = { religion_group = muslim }
+					1318 = { NOT = { has_province_flag = persian_name } }
+				}
+				1318 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Ardabil" #AZB - Erdebil
+					rename_capital = "Ardabil" #AZB - Erdebil
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1321
+					1321 = { is_core = ROOT }
+					1321 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1321 = { religion_group = muslim }
+					1321 = { NOT = { has_province_flag = persian_name } }
+				}
+				1321 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Maragheh" #AZB - Maraga
+					rename_capital = "Maragheh" #AZB - Maraga
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1445
+					1445 = { is_core = ROOT }
+					1445 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1445 = { religion_group = muslim }
+					1445 = { NOT = { has_province_flag = persian_name } }
+				}
+				1445 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Khoy" #Turkoman - Vaspurakan
+					rename_capital = "Khoy" #Turkoman - Vaspurakan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3090
+					3090 = { is_core = ROOT }
+					3090 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3090 = { religion_group = muslim }
+					3090 = { NOT = { has_province_flag = persian_name } }
+				}
+				3090 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Lanceran" #AZB - Lenkeran
+					rename_capital = "Lanceran" #AZB - Lenkeran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3823
+					3823 = { is_core = ROOT }
+					3823 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3823 = { religion_group = muslim }
+					3823 = { NOT = { has_province_flag = persian_name } }
+				}
+				3823 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Astara" #AZB - Astara
+					rename_capital = "Astara" #AZB - Astara
+				}
+			}
+
+                        #south_kurdistan_area
+			if = {
+				limit = { 
+					owns = 412
+					412 = { is_core = ROOT }
+					412 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					412 = { religion_group = muslim }
+					412 = { NOT = { has_province_flag = persian_name } }
+				}
+				412 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kermanshah" #Kurdish - Kirmashan
+					rename_capital = "Kermanshah" #Kurdish - Kirmashan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2219
+					2219 = { is_core = ROOT }
+					2219 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2219 = { religion_group = muslim }
+					2219 = { NOT = { has_province_flag = persian_name } }
+				}
+				2219 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Orumieh" #AZB - Urmu #Kurdish - Wermi
+					rename_capital = "Orumieh" #AZB - Urmu #Kurdish - Wermi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2559
+					2559 = { is_core = ROOT }
+					2559 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2559 = { religion_group = muslim }
+					2559 = { NOT = { has_province_flag = persian_name } }
+				}
+				2559 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sanandaj" #Kurdish - Ardalan
+					rename_capital = "Sanandaj" #Kurdish - Sine
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2724
+					2724 = { is_core = ROOT }
+					2724 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2724 = { religion_group = muslim }
+					2724 = { NOT = { has_province_flag = persian_name } }
+				}
+				2724 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Ilam" #Kurdish - Ilam
+					rename_capital = "Ilam" #Kurdish - Ilam
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3825
+					3825 = { is_core = ROOT }
+					3825 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3825 = { religion_group = muslim }
+					3825 = { NOT = { has_province_flag = persian_name } }
+				}
+				3825 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Qasr-e Shirin" #Kurdish - Qesiri Sirin
+					rename_capital = "Qasr-e Shirin" #Kurdish - Qesiri Sirin
+				}
+			}
+
+                        #basra_area
+			if = {
+				limit = { 
+					owns = 392
+					392 = { is_core = ROOT }
+					392 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					392 = { religion_group = muslim }
+					392 = { NOT = { has_province_flag = persian_name } }
+				}
+				392 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Khuzestan" #Arabic - Khuzistan
+					rename_capital = "Abadan" #Arabic - Abbad bin Hosayn
+				}
+			}
+			if = {
+				limit = { 
+					owns = 393
+					393 = { is_core = ROOT }
+					393 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					393 = { religion_group = muslim }
+					393 = { NOT = { has_province_flag = persian_name } }
+				}
+				393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kuwait" #Arabic - al-Kuwait
+					rename_capital = "Kuwait" #Arabic - al-Kuwait
+				}
+			}
+			if = {
+				limit = { 
+					owns = 398
+					398 = { is_core = ROOT }
+					398 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					398 = { religion_group = muslim }
+					398 = { NOT = { has_province_flag = persian_name } }
+				}
+				398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Basra" #Arabic - al-Basrah
+					rename_capital = "Basra" #Arabic - al-Basrah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3826
+					3826 = { is_core = ROOT }
+					3826 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3826 = { religion_group = muslim }
+					3826 = { NOT = { has_province_flag = persian_name } }
+				}
+				3826 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Ahvaz" #Arabic - al-Ahwaz
+					rename_capital = "Ahvaz" #Arabic - al-Ahwaz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3902
+					3902 = { is_core = ROOT }
+					3902 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3902 = { religion_group = muslim }
+					3902 = { NOT = { has_province_flag = persian_name } }
+				}
+				3902 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Zubair" #Arabic - al-Zubair
+					rename_capital = "Zubair" #Arabic - al-Zubair
+				}
+			}
+
+                        #luristan_area
+			if = {
+				limit = { 
+					owns = 413
+					413 = { is_core = ROOT }
+					413 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					413 = { religion_group = muslim }
+					413 = { NOT = { has_province_flag = persian_name } }
+				}
+				413 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Khorramabad" #Lurish - Luristan
+					rename_capital = "Khorramabad" #Lurish - Khorram Abad
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2470
+					2470 = { is_core = ROOT }
+					2470 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2470 = { religion_group = muslim }
+					2470 = { NOT = { has_province_flag = persian_name } }
+				}
+				2470 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Izeh" #Lurish - Izeh
+					rename_capital = "Izeh" #Lurish - Izeh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2726
+					2726 = { is_core = ROOT }
+					2726 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2726 = { religion_group = muslim }
+					2726 = { NOT = { has_province_flag = persian_name } }
+				}
+				2726 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Dezful" #Lurish - Desfile
+					rename_capital = "Dezful" #Lurish - Desfile
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3080
+					3080 = { is_core = ROOT }
+					3080 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3080 = { religion_group = muslim }
+					3080 = { NOT = { has_province_flag = persian_name } }
+				}
+				3080 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Shahr-e Kord" #Lurish - Deh Kord
+					rename_capital = "Shahr-e Kord" #Lurish - Deh Kord
+				}
+			}
+
+                        #larestan_area
+			if = {
+				limit = { 
+					owns = 430
+					430 = { is_core = ROOT }
+					430 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					430 = { religion_group = muslim }
+					430 = { NOT = { has_province_flag = persian_name } }
+				}
+				430 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Lengeh" #Khuzi - Bastak
+					rename_capital = "Bandar-e Lengeh" #Khuzi - Bastak
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2228
+					2228 = { is_core = ROOT }
+					2228 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2228 = { religion_group = muslim }
+					2228 = { NOT = { has_province_flag = persian_name } }
+				}
+				2228 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Bushehr" #Lurish - Rishakhar
+					rename_capital = "Bandar-e Bushehr" #Lurish - Rishakhar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2725
+					2725 = { is_core = ROOT }
+					2725 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2725 = { religion_group = muslim }
+					2725 = { NOT = { has_province_flag = persian_name } }
+				}
+				2725 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Larestan"
+					rename_capital = "Lar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3828
+					3828 = { is_core = ROOT }
+					3828 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3828 = { religion_group = muslim }
+					3828 = { NOT = { has_province_flag = persian_name } }
+				}
+				3828 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Qir" #Qashqai - Qir
+					rename_capital = "Qir" #Qashqai - Qir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3829
+					3829 = { is_core = ROOT }
+					3829 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3829 = { religion_group = muslim }
+					3829 = { NOT = { has_province_flag = persian_name } }
+				}
+				3829 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Deyr" #Khuzi - Dayyer
+					rename_capital = "Bandar-e Deyr" #Khuzi - Dayyer
+				}
+			}
+
+                        #farsistan_area
+			if = {
+				limit = { 
+					owns = 429
+					429 = { is_core = ROOT }
+					429 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					429 = { religion_group = muslim }
+					429 = { NOT = { has_province_flag = persian_name } }
+				}
+				429 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Fars"
+					rename_capital = "Shiraz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3081
+					3081 = { is_core = ROOT }
+					3081 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3081 = { religion_group = muslim }
+					3081 = { NOT = { has_province_flag = persian_name } }
+				}
+				3081 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Yasuj" #Lurish - Jasuc
+					rename_capital = "Yasuj" #Lurish - Jasuc
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3827
+					3827 = { is_core = ROOT }
+					3827 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3827 = { religion_group = muslim }
+					3827 = { NOT = { has_province_flag = persian_name } }
+				}
+				3827 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Marvdasht" #Qashqai - Mervdest
+					rename_capital = "Marvdasht" #Qashqai - Mervdest
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3836
+					3836 = { is_core = ROOT }
+					3836 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3836 = { religion_group = muslim }
+					3836 = { NOT = { has_province_flag = persian_name } }
+				}
+				3836 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Eghlid" #Zoroastrian - Azargarta
+					rename_capital = "Eghlid" #Zoroastrian - Azargarta
+				}
+			}
+
+                        #hormuz_area
+			if = {
+				limit = { 
+					owns = 431
+					431 = { is_core = ROOT }
+					431 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					431 = { religion_group = muslim }
+					431 = { NOT = { has_province_flag = persian_name } }
+				}
+				431 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Qeshm" #Arabic - Qishm
+					rename_capital = "Bandar-e Qeshm" #Arabic - Qishm
+				}
+			}
+			if = {
+				limit = { 
+					owns = 468
+					468 = { is_core = ROOT }
+					468 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					468 = { religion_group = muslim }
+					468 = { NOT = { has_province_flag = persian_name } }
+				}
+				468 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Bampur" #Balochi - Bonpur
+					rename_capital = "Bampur" #Balochi - Bonpur
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2229
+					2229 = { is_core = ROOT }
+					2229 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2229 = { religion_group = muslim }
+					2229 = { NOT = { has_province_flag = persian_name } }
+				}
+				2229 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Jask" #Balochi - Jask
+					rename_capital = "Bandar-e Jask" #Balochi - Jask
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2235
+					2235 = { is_core = ROOT }
+					2235 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2235 = { religion_group = muslim }
+					2235 = { NOT = { has_province_flag = persian_name } }
+				}
+				2235 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kuh-e-Hormoz"
+					rename_capital = "Bandar Abbas"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3830
+					3830 = { is_core = ROOT }
+					3830 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3830 = { religion_group = muslim }
+					3830 = { NOT = { has_province_flag = persian_name } }
+				}
+				3830 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Hajjiabad" #Khuzi - Hajjiabad
+					rename_capital = "Hajjiabad" #Khuzi - Hajjiabad
+				}
+			}
+
+                        #iraq_e_ajam_area
+			if = {
+				limit = { 
+					owns = 1313
+					1313 = { is_core = ROOT }
+					1313 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1313 = { religion_group = muslim }
+					1313 = { NOT = { has_province_flag = persian_name } }
+				}
+				1313 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Rey"
+					rename_capital = "Tehran"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1314
+					1314 = { is_core = ROOT }
+					1314 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1314 = { religion_group = muslim }
+					1314 = { NOT = { has_province_flag = persian_name } }
+				}
+				1314 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Qazvin"
+					rename_capital = "Qazvin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1315
+					1315 = { is_core = ROOT }
+					1315 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					1315 = { religion_group = muslim }
+					1315 = { NOT = { has_province_flag = persian_name } }
+				}
+				1315 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Soltanieh" #AZB - Sultaniye
+					rename_capital = "Soltanieh" #AZB - Sultaniye
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2227
+					2227 = { is_core = ROOT }
+					2227 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2227 = { religion_group = muslim }
+					2227 = { NOT = { has_province_flag = persian_name } }
+				}
+				2227 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Hamedan"
+					rename_capital = "Hamedan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3078
+					3078 = { is_core = ROOT }
+					3078 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3078 = { religion_group = muslim }
+					3078 = { NOT = { has_province_flag = persian_name } }
+				}
+				3078 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Alborz"
+					rename_capital = "Karaj"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3083
+					3083 = { is_core = ROOT }
+					3083 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3083 = { religion_group = muslim }
+					3083 = { NOT = { has_province_flag = persian_name } }
+				}
+				3083 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Semnan"
+					rename_capital = "Semnan"
+				}
+			}
+
+                        #tabarestan_area
+			if = {
+				limit = { 
+					owns = 386
+					386 = { is_core = ROOT }
+					386 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					386 = { religion_group = muslim }
+					386 = { NOT = { has_province_flag = persian_name } }
+				}
+				386 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Dahan" #Turkmen - Dihistan
+					rename_capital = "Atrak" #Turkmen - Etrek
+				}
+			}
+			if = {
+				limit = { 
+					owns = 405
+					405 = { is_core = ROOT }
+					405 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					405 = { religion_group = muslim }
+					405 = { NOT = { has_province_flag = persian_name } }
+				}
+				405 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Golestan" #Tabari - Golestan
+					rename_capital = "Astarabad" #Tabari - Astarabad
+				}
+			}
+			if = {
+				limit = { 
+					owns = 417
+					417 = { is_core = ROOT }
+					417 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					417 = { religion_group = muslim }
+					417 = { NOT = { has_province_flag = persian_name } }
+				}
+				417 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Gilan" #Tabari - Gilan
+					rename_capital = "Rast" #Tabari - Resht
+				}
+			}
+			if = {
+				limit = { 
+					owns = 426
+					426 = { is_core = ROOT }
+					426 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					426 = { religion_group = muslim }
+					426 = { NOT = { has_province_flag = persian_name } }
+				}
+				426 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Mazandaran" #Tabari - Mazandaran
+					rename_capital = "Sari" #Tabari - Sari
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3824
+					3824 = { is_core = ROOT }
+					3824 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3824 = { religion_group = muslim }
+					3824 = { NOT = { has_province_flag = persian_name } }
+				}
+				3824 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Feiz" #Tabari - Rostamdar
+					rename_capital = "Feiz" #Tabari - Rostamdar
+				}
+			}
+
+                        #nishapur_area
+			if = {
+				limit = { 
+					owns = 3281
+					3281 = { is_core = ROOT }
+					3281 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3281 = { religion_group = muslim }
+					3281 = { NOT = { has_province_flag = persian_name } }
+				}
+				3281 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Akhal" #Turkmen - Ahal
+					rename_capital = "Eshq-Abad" #Turkmen - Asgabat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3284
+					3284 = { is_core = ROOT }
+					3284 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3284 = { religion_group = muslim }
+					3284 = { NOT = { has_province_flag = persian_name } }
+				}
+				3284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Qezelarat" #Turkmen - Ghuzz
+					rename_capital = "Qezelarat" #Turkmen - Gyzylarbat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3840
+					3840 = { is_core = ROOT }
+					3840 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3840 = { religion_group = muslim }
+					3840 = { NOT = { has_province_flag = persian_name } }
+				}
+				3840 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Esfarin"
+					rename_capital = "Esfarin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3841
+					3841 = { is_core = ROOT }
+					3841 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3841 = { religion_group = muslim }
+					3841 = { NOT = { has_province_flag = persian_name } }
+				}
+				3841 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Jajarm"
+					rename_capital = "Jajarm"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4234
+					4234 = { is_core = ROOT }
+					4234 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					4234 = { religion_group = muslim }
+					4234 = { NOT = { has_province_flag = persian_name } }
+				}
+				4234 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Nishapur"
+					rename_capital = "Nishapur"
+				}
+			}
+
+                        #isfahan_area
+			if = {
+				limit = { 
+					owns = 414
+					414 = { is_core = ROOT }
+					414 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					414 = { religion_group = muslim }
+					414 = { NOT = { has_province_flag = persian_name } }
+				}
+				414 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Esfahan"
+					rename_capital = "Esfahan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2225
+					2225 = { is_core = ROOT }
+					2225 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2225 = { religion_group = muslim }
+					2225 = { NOT = { has_province_flag = persian_name } }
+				}
+				2225 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Qom"
+					rename_capital = "Qom"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3079
+					3079 = { is_core = ROOT }
+					3079 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3079 = { religion_group = muslim }
+					3079 = { NOT = { has_province_flag = persian_name } }
+				}
+				3079 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Markazi"
+					rename_capital = "Arak"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3082
+					3082 = { is_core = ROOT }
+					3082 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3082 = { religion_group = muslim }
+					3082 = { NOT = { has_province_flag = persian_name } }
+				}
+				3082 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Ardestan"
+					rename_capital = "Ardestan"
+				}
+			}
+
+                        #khorasan_area
+			if = {
+				limit = { 
+					owns = 432
+					432 = { is_core = ROOT }
+					432 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					432 = { religion_group = muslim }
+					432 = { NOT = { has_province_flag = persian_name } }
+				}
+				432 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Kuh-e-Rud"
+					rename_capital = "Qaen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 433
+					433 = { is_core = ROOT }
+					433 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					433 = { religion_group = muslim }
+					433 = { NOT = { has_province_flag = persian_name } }
+				}
+				433 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sabzevar"
+					rename_capital = "Sabzevar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 446
+					446 = { is_core = ROOT }
+					446 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					446 = { religion_group = muslim }
+					446 = { NOT = { has_province_flag = persian_name } }
+				}
+				446 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Gulshan"
+					rename_capital = "Gulshan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3092
+					3092 = { is_core = ROOT }
+					3092 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3092 = { religion_group = muslim }
+					3092 = { NOT = { has_province_flag = persian_name } }
+				}
+				3092 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Shahrud"
+					rename_capital = "Bastam"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3839
+					3839 = { is_core = ROOT }
+					3839 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3839 = { religion_group = muslim }
+					3839 = { NOT = { has_province_flag = persian_name } }
+				}
+				3839 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Khvaf"
+					rename_capital = "Khvaf"
+				}
+			}
+
+                        #merv_area
+			if = {
+				limit = { 
+					owns = 387
+					387 = { is_core = ROOT }
+					387 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					387 = { religion_group = muslim }
+					387 = { NOT = { has_province_flag = persian_name } }
+				}
+				387 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Sarakhs"
+					rename_capital = "Sarakhs"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 445
+					445 = { is_core = ROOT }
+					445 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					445 = { religion_group = muslim }
+					445 = { NOT = { has_province_flag = persian_name } }
+				}
+				445 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Marv" #Turkmen - Merw
+					rename_capital = "Marv" #Turkmen - Merw
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2220
+					2220 = { is_core = ROOT }
+					2220 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					2220 = { religion_group = muslim }
+					2220 = { NOT = { has_province_flag = persian_name } }
+				}
+				2220 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Mashad"
+					rename_capital = "Mashad"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3849
+					3849 = { is_core = ROOT }
+					3849 = { 
+						OR = {
+							culture = persian
+							culture = adari
+						}
+					}
+					3849 = { religion_group = muslim }
+					3849 = { NOT = { has_province_flag = persian_name } }
+				}
+				3849 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = persian_name
+					change_province_name = "Tus"
+					rename_capital = "Tus"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

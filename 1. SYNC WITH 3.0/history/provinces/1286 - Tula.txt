@@ -1,0 +1,29 @@
+owner = RYA
+controller = RYA
+add_core = RYA
+
+capital = "Pronsk"
+trade_goods = lumber
+culture = russian
+religion = orthodox
+
+hre = no
+
+base_tax = 10
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3.5 }
+	set_variable = { which = pop_level value = 4 }
+	set_province_flag = mined_goods
+	set_province_flag = iron
+}

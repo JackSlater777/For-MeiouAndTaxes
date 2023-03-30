@@ -1,0 +1,28 @@
+owner = PLT
+controller = PLT
+add_core = PLT
+
+capital = "Sebezh"
+trade_goods = livestock
+culture = ruthenian
+religion = orthodox
+
+hre = no
+
+base_tax = 4
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 2 }
+}
+1356.1.1 = {
+	add_core = LIT
+}

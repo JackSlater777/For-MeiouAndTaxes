@@ -1,0 +1,33 @@
+owner = YUA
+controller = YUA
+add_core = YUA
+
+capital = "Kaicheng"
+trade_goods = wheat
+culture = mongol
+religion = tengri_pagan_reformed
+
+hre = no
+
+base_tax = 25
+base_production = 2
+base_manpower = 1
+
+is_city = yes
+road_network = yes
+urban_infrastructure_1 = yes
+canal_level_1 = yes
+
+discovered_by = chinese
+discovered_by = steppestech
+
+200.1.1 = {
+	set_province_flag = iron
+}
+450.1.1 = {
+	set_variable = { which = pop_level value = 5 }
+	set_province_flag = tribals_control_province
+}
+1356.1.1 = {
+	add_core = MXI
+}

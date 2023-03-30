@@ -1,0 +1,963 @@
+country_decisions = {
+	rename_provinces_tartar_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = tartar_group
+			any_owned_province = {
+				OR = {
+					area = basarabia_area
+					area = crimea_area
+					area = zaporizhia_area
+
+                        		#sloboda_ukraine_area
+					province_id = 1287
+					province_id = 2545
+					province_id = 4110
+
+					area = azov_area
+					area = lower_don_area
+
+                        		#astrakhan_area
+					province_id = 303
+					province_id = 1293
+					province_id = 1310
+
+                        		#nogai_area
+					province_id = 2443
+					province_id = 2444
+					province_id = 3287
+
+                        		#west_circassia_area
+					province_id = 4114
+
+                        		#east_circassia_area
+					province_id = 1303
+
+					area = mordovia_area
+					area = kazan_area
+					area = ural_area
+					area = iskier_area
+
+                        		#ishim_area
+					province_id = 472
+					province_id = 475
+					province_id = 1076
+
+                        		#yrtesh_area
+					province_id = 1071
+					province_id = 3277
+					province_id = 3308
+				}
+				culture_group = tartar_group
+				NOT = { has_province_flag = tartar_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture_group = tartar_group
+				NOT = { has_province_flag = tartar_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #basarabia_area
+			if = {
+				limit = { 
+					owns = 160
+					160 = { is_core = ROOT }
+					160 = { culture_group = tartar_group }
+					160 = { NOT = { has_province_flag = tartar_name } }
+				}
+				160 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Kiliya"
+					rename_capital = "Kiliya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1400
+					1400 = { is_core = ROOT }
+					1400 = { culture_group = tartar_group }
+					1400 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Shehr-al-Jadid"
+					rename_capital = "Shehr-al-Jadid"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2626
+					2626 = { is_core = ROOT }
+					2626 = { culture_group = tartar_group }
+					2626 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2626 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Soroka"
+					rename_capital = "Soroka"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { culture_group = tartar_group }
+					3794 = { NOT = { has_province_flag = tartar_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Aq-Libo"
+					rename_capital = "Aq-Libo"
+				}
+			}
+
+                        #crimea_area
+			if = {
+				limit = { 
+					owns = 282
+					282 = { is_core = ROOT }
+					282 = { culture_group = tartar_group }
+					282 = { NOT = { has_province_flag = tartar_name } }
+				}
+				282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Qirim"
+					rename_capital = "Salaciq"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1299
+					1299 = { is_core = ROOT }
+					1299 = { culture_group = tartar_group }
+					1299 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1299 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Tuymen-Tarxan"
+					rename_capital = "Tuymen-Tarxan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1344
+					1344 = { is_core = ROOT }
+					1344 = { culture_group = tartar_group }
+					1344 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1344 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Kefe"
+					rename_capital = "Kefe"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2274
+					2274 = { is_core = ROOT }
+					2274 = { culture_group = tartar_group }
+					2274 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2274 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Aqyar"
+					rename_capital = "Aqyar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2573
+					2573 = { is_core = ROOT }
+					2573 = { culture_group = tartar_group }
+					2573 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2573 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Keric"
+					rename_capital = "Keric"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3877
+					3877 = { is_core = ROOT }
+					3877 = { culture_group = tartar_group }
+					3877 = { NOT = { has_province_flag = tartar_name } }
+				}
+				3877 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Baliqlava"
+					rename_capital = "Baliqlava"
+				}
+			}
+
+                        #zaporizhia_area
+			if = {
+				limit = { 
+					owns = 284
+					284 = { is_core = ROOT }
+					284 = { culture_group = tartar_group }
+					284 = { NOT = { has_province_flag = tartar_name } }
+				}
+				284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Edisan"
+					rename_capital = "Qara-Kerman"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 285
+					285 = { is_core = ROOT }
+					285 = { culture_group = tartar_group }
+					285 = { NOT = { has_province_flag = tartar_name } }
+				}
+				285 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Qizil-Yar"
+					rename_capital = "Qizil-Yar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 300
+					300 = { is_core = ROOT }
+					300 = { culture_group = tartar_group }
+					300 = { NOT = { has_province_flag = tartar_name } }
+				}
+				300 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Mansur"
+					rename_capital = "Mansur"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1431
+					1431 = { is_core = ROOT }
+					1431 = { culture_group = tartar_group }
+					1431 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1431 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Dogan-Gecit"
+					rename_capital = "Dogan-Gecit"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4018
+					4018 = { is_core = ROOT }
+					4018 = { culture_group = tartar_group }
+					4018 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4018 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Bokey Sakma"
+					rename_capital = "Bokey Sakma"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4019
+					4019 = { is_core = ROOT }
+					4019 = { culture_group = tartar_group }
+					4019 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4019 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Uzeu"
+					rename_capital = "Uzeu"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4021
+					4021 = { is_core = ROOT }
+					4021 = { culture_group = tartar_group }
+					4021 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4021 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Chyhyr-Batyr"
+					rename_capital = "Chyhyr-Batyr"
+				}
+			}
+
+                        #sloboda_ukraine_area
+                        #305
+			if = {
+				limit = { 
+					owns = 1287
+					1287 = { is_core = ROOT }
+					1287 = { culture_group = tartar_group }
+					1287 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Qalmiuz Sakma"
+					rename_capital = "Qalmiuz Sakma"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2545
+					2545 = { is_core = ROOT }
+					2545 = { culture_group = tartar_group }
+					2545 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2545 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Izyum Sakma"
+					rename_capital = "Izyum Sakma"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4110
+					4110 = { is_core = ROOT }
+					4110 = { culture_group = tartar_group }
+					4110 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4110 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Murava Sakma"
+					rename_capital = "Murava Sakma"
+				}
+			}
+
+                        #azov_area
+			if = {
+				limit = { 
+					owns = 286
+					286 = { is_core = ROOT }
+					286 = { culture_group = tartar_group }
+					286 = { NOT = { has_province_flag = tartar_name } }
+				}
+				286 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Koban"
+					rename_capital = "Koban"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 287
+					287 = { is_core = ROOT }
+					287 = { culture_group = tartar_group }
+					287 = { NOT = { has_province_flag = tartar_name } }
+				}
+				287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Azaraba"
+					rename_capital = "Azaraba"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 302
+					302 = { is_core = ROOT }
+					302 = { culture_group = tartar_group }
+					302 = { NOT = { has_province_flag = tartar_name } }
+				}
+				302 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Tyn"
+					rename_capital = "Tyn"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1298
+					1298 = { is_core = ROOT }
+					1298 = { culture_group = tartar_group }
+					1298 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1298 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Azaq"
+					rename_capital = "Azaq"
+				}
+			}
+
+                        #lower_don_area
+			if = {
+				limit = { 
+					owns = 1296
+					1296 = { is_core = ROOT }
+					1296 = { culture_group = tartar_group }
+					1296 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1296 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Sary Tau"
+					rename_capital = "Ukek"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1297
+					1297 = { is_core = ROOT }
+					1297 = { culture_group = tartar_group }
+					1297 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1297 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Lower Don"
+					rename_capital = "Lower Don"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4020
+					4020 = { is_core = ROOT }
+					4020 = { culture_group = tartar_group }
+					4020 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4020 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Bahmut"
+					rename_capital = "Bahmut"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4111
+					4111 = { is_core = ROOT }
+					4111 = { culture_group = tartar_group }
+					4111 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4111 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Tomba"
+					rename_capital = "Tomba"
+				}
+			}
+
+                        #astrakhan_area
+                        #1304 1309
+			if = {
+				limit = { 
+					owns = 303
+					303 = { is_core = ROOT }
+					303 = { culture_group = tartar_group }
+					303 = { NOT = { has_province_flag = tartar_name } }
+				}
+				303 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Elst"
+					rename_capital = "Elst"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1293
+					1293 = { is_core = ROOT }
+					1293 = { culture_group = tartar_group }
+					1293 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1293 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Xaci-Tarxan"
+					rename_capital = "Xaci-Tarxan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1310
+					1310 = { is_core = ROOT }
+					1310 = { culture_group = tartar_group }
+					1310 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1310 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Sarai-al-Jadid"
+					rename_capital = "Sarai Berke"
+				}
+			}
+
+                        #nogai_area
+                        #1083 4113
+			if = {
+				limit = { 
+					owns = 2443
+					2443 = { is_core = ROOT }
+					2443 = { culture_group = tartar_group }
+					2443 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2443 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name
+					change_province_name = "Qara-Ozen"
+					rename_capital = "Qara-Ozen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2444
+					2444 = { is_core = ROOT }
+					2444 = { culture_group = tartar_group }
+					2444 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2444 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Yaik"
+					rename_capital = "Yaik"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3287
+					3287 = { is_core = ROOT }
+					3287 = { culture_group = tartar_group }
+					3287 = { NOT = { has_province_flag = tartar_name } }
+				}
+				3287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Nogay"
+					rename_capital = "Saraychik"
+				}
+			}
+
+                        #west_circassia_area
+                        #999 1302 3795 3796
+			if = {
+				limit = { 
+					owns = 4114
+					4114 = { is_core = ROOT }
+					4114 = { culture_group = tartar_group }
+					4114 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4114 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Shetkala"
+					rename_capital = "Shetkala"
+				}
+			}
+
+                        #east_circassia_area
+                        #995 1009 2578 3639
+			if = {
+				limit = { 
+					owns = 1303
+					1303 = { is_core = ROOT }
+					1303 = { culture_group = tartar_group }
+					1303 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1303 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Majar"
+					rename_capital = "Majar"
+				}
+			}
+
+                        #mordovia_area
+			if = {
+				limit = { 
+					owns = 1308
+					1308 = { is_core = ROOT }
+					1308 = { culture_group = tartar_group }
+					1308 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1308 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Samar"
+					rename_capital = "Samar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2437
+					2437 = { is_core = ROOT }
+					2437 = { culture_group = tartar_group }
+					2437 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2437 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Ulatar"
+					rename_capital = "Ulatar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2439
+					2439 = { is_core = ROOT }
+					2439 = { culture_group = tartar_group }
+					2439 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2439 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Mokhshi"
+					rename_capital = "Mokhshi"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4016
+					4016 = { is_core = ROOT }
+					4016 = { culture_group = tartar_group }
+					4016 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4016 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Tetesh"
+					rename_capital = "Tetesh"
+				}
+			}
+
+                        #kazan_area
+			if = {
+				limit = { 
+					owns = 1307
+					1307 = { is_core = ROOT }
+					1307 = { culture_group = tartar_group }
+					1307 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1307 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Qazan"
+					rename_capital = "Qazan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1311
+					1311 = { is_core = ROOT }
+					1311 = { culture_group = tartar_group }
+					1311 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Yar Calli"
+					rename_capital = "Yar Calli"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2438
+					2438 = { is_core = ROOT }
+					2438 = { culture_group = tartar_group }
+					2438 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2438 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Bashgird"
+					rename_capital = "Bashgird"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4112
+					4112 = { is_core = ROOT }
+					4112 = { culture_group = tartar_group }
+					4112 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4112 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Sylva"
+					rename_capital = "Sylva"
+				}
+			}
+
+                        #ural_area
+			if = {
+				limit = { 
+					owns = 281
+					281 = { is_core = ROOT }
+					281 = { culture_group = tartar_group }
+					281 = { NOT = { has_province_flag = tartar_name } }
+				}
+				281 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Iset"
+					rename_capital = "Iset"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1080
+					1080 = { is_core = ROOT }
+					1080 = { culture_group = tartar_group }
+					1080 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1080 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Chelyaby"
+					rename_capital = "Chelyaby"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1082
+					1082 = { is_core = ROOT }
+					1082 = { culture_group = tartar_group }
+					1082 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1082 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Or"
+					rename_capital = "Or"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1306
+					1306 = { is_core = ROOT }
+					1306 = { culture_group = tartar_group }
+					1306 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1306 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Miass"
+					rename_capital = "Miass"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4205
+					4205 = { is_core = ROOT }
+					4205 = { culture_group = tartar_group }
+					4205 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4205 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Tabar"
+					rename_capital = "Tabar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4206
+					4206 = { is_core = ROOT }
+					4206 = { culture_group = tartar_group }
+					4206 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4206 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Pelym"
+					rename_capital = "Pelym"
+				}
+			}
+
+                        #iskier_area
+			if = {
+				limit = { 
+					owns = 1070
+					1070 = { is_core = ROOT }
+					1070 = { culture_group = tartar_group }
+					1070 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1070 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Kargaly"
+					rename_capital = "Kargaly"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1077
+					1077 = { is_core = ROOT }
+					1077 = { culture_group = tartar_group }
+					1077 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1077 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Yavlu-Tura"
+					rename_capital = "Yavlu-Tura"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1079
+					1079 = { is_core = ROOT }
+					1079 = { culture_group = tartar_group }
+					1079 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1079 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Chingi-Tura"
+					rename_capital = "Chingi-Tura"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2446
+					2446 = { is_core = ROOT }
+					2446 = { culture_group = tartar_group }
+					2446 = { NOT = { has_province_flag = tartar_name } }
+				}
+				2446 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Qashlik"
+					rename_capital = "Isker"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4201
+					4201 = { is_core = ROOT }
+					4201 = { culture_group = tartar_group }
+					4201 = { NOT = { has_province_flag = tartar_name } }
+				}
+				4201 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Qizil-Tura"
+					rename_capital = "Qizil-Tura"
+				}
+			}
+
+                        #ishim_area
+                        #2442
+			if = {
+				limit = { 
+					owns = 472
+					472 = { is_core = ROOT }
+					472 = { culture_group = tartar_group }
+					472 = { NOT = { has_province_flag = tartar_name } }
+				}
+				472 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Khazakh"
+					rename_capital = "Kopa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 475
+					475 = { is_core = ROOT }
+					475 = { culture_group = tartar_group }
+					475 = { NOT = { has_province_flag = tartar_name } }
+				}
+				475 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Qostanai"
+					rename_capital = "Qostanai"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1076
+					1076 = { is_core = ROOT }
+					1076 = { culture_group = tartar_group }
+					1076 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1076 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Zhangeldi"
+					rename_capital = "Torgay"
+				}
+			}
+
+                        #yrtesh_area
+                        #480 3276
+			if = {
+				limit = { 
+					owns = 1071
+					1071 = { is_core = ROOT }
+					1071 = { culture_group = tartar_group }
+					1071 = { NOT = { has_province_flag = tartar_name } }
+				}
+				1071 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Tara"
+					rename_capital = "Tara"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3277
+					3277 = { is_core = ROOT }
+					3277 = { culture_group = tartar_group }
+					3277 = { NOT = { has_province_flag = tartar_name } }
+				}
+				3277 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Irtysh"
+					rename_capital = "Irtysh"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3308
+					3308 = { is_core = ROOT }
+					3308 = { culture_group = tartar_group }
+					3308 = { NOT = { has_province_flag = tartar_name } }
+				}
+				3308 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = tartar_name 
+					change_province_name = "Argyn"
+					rename_capital = "Argyn"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

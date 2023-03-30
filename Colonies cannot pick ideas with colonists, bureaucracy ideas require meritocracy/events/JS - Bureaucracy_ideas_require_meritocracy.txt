@@ -1,0 +1,20 @@
+country_event = {
+	id = js_ideas.1
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_institution = I_meritocracy }
+		has_idea_group = bureaucracy_ideas
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		remove_idea_group = bureaucracy_ideas
+	}
+
+	option = { name = afarawaymod.2_o }
+}

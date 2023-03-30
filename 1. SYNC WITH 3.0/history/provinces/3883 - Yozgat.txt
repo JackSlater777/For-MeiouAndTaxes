@@ -1,0 +1,35 @@
+owner = ERE
+controller = ERE
+add_core = ERE
+
+capital = "Yozgat"
+trade_goods = livestock
+culture = turkoman
+#religion = sunni
+religion = shiite
+
+hre = no
+
+base_tax = 12
+base_production = 0
+base_manpower = 1
+
+is_city = yes
+road_network = yes
+temple = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 6.000 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = tribals_control_province
+	set_variable = { which = tribals_ratio	value = 36 }
+}
+1356.1.1 = {
+	set_province_flag = turkish_name
+}

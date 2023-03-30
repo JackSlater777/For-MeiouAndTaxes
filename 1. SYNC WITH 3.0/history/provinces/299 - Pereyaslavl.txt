@@ -1,0 +1,30 @@
+owner = KIE
+controller = KIE
+add_core = KIE
+
+capital = "Pereyaslavl"
+trade_goods = wheat
+culture = ruthenian
+religion = orthodox
+
+hre = no
+
+base_tax = 14
+base_production = 0
+base_manpower = 2
+
+is_city = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 4.500 }
+	set_variable = { which = pop_level value = 3 }
+}
+1356.1.1 = {
+	add_permanent_claim = LIT
+}

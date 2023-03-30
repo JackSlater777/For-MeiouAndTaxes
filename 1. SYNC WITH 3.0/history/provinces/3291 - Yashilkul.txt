@@ -1,0 +1,37 @@
+#owner = MGH
+#controller = MGH
+owner = CHG
+controller = CHG
+add_core = CHG
+#add_core = MGH
+
+capital = "Khorugh"
+trade_goods = wool #lapis lazuli
+#culture = tajihk
+culture = pamiri #FB was: "pashtun", was causing issues with Khivan revolt and the area is mixed Tajik/Pashtun
+religion = sunni
+
+#base_tax = 1
+base_tax = 7
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+#road_network = yes
+
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 1 }
+	set_variable = { which = pop_level value = 2 }
+	set_province_flag = tribals_control_province
+	set_province_flag = mined_goods
+	set_province_flag = gems
+}
+1356.1.1 = {
+	add_core = YRK
+	add_core = KAB
+	add_core = DHE
+}

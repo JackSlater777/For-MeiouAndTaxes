@@ -1,0 +1,6 @@
+#New Institution Birthplaces
+
+birthplace_of_the_banking = {
+	interest = -0.2
+	inflation_reduction = 0.02
+}

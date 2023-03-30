@@ -1,0 +1,48 @@
+owner = JAI
+controller = JAI
+add_core = JAI
+add_claim = QAR
+
+capital = "Mosul"
+trade_goods = wool
+culture = aramaic
+religion = chaldean
+
+hre = no
+
+base_tax = 8
+base_production = 3
+base_manpower = 1
+
+is_city = yes
+marketplace = yes
+urban_infrastructure_1 = yes
+workshop = yes
+road_network = yes
+canal_level_1 = yes
+fort_14th = yes
+temple = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = tribals_control_province
+	set_variable = { which = tribals_ratio	value = 11 }
+	set_province_flag = mined_goods
+	set_province_flag = marble
+	add_permanent_province_modifier = {
+		name = urban_goods_cloth
+		duration = -1
+	}
+	set_province_flag = silk_road_town
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = mosul_silk_road
+		duration = -1
+	}
+}

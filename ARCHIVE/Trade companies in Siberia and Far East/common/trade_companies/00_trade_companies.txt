@@ -1,0 +1,10 @@
+colonial_the_carribean = {
+	color = { 61 49 165 }
+	provinces = { 481 482 483 487 491 493 494 495 496 497 498 499 500 501 502 2592 2593 2594 2595 2596 }
+	names = {
+		name = "TRADE_COMPANY_CARRIBEAN_Root_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CARRIBEAN_Carribean_Trade_Company"
+	}
+}

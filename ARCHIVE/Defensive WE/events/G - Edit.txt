@@ -1,0 +1,120 @@
+#############################
+# defensive war WE modifier #
+#############################
+
+# Is in a defensive war
+country_event = {
+	id = war_dynamism.9
+	title = war_dynamism.9.t
+	desc = war_dynamism.9.d
+	picture = CIVIL_WAR_eventPicture
+	
+	trigger = {
+		NOT = { has_country_modifier = defensive_war }
+		is_at_war = yes
+		NOT = { is_subject_other_than_tributary_trigger = yes }
+		is_in_war = {
+			defenders = ROOT
+		}
+		NOT = {
+			is_in_war = {
+				defenders = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+		NOT = {
+			is_in_war = {
+				defenders = ROOT
+				casus_belli = cb_colonial_independance_war
+			}
+		}
+		NOT = {
+			is_in_war = {
+				defenders = ROOT
+				casus_belli = cb_overlord_attacking_independence_war
+			}
+		}
+		NOT = {
+			is_in_war = {
+				defenders = ROOT
+				casus_belli = cb_religious_independence
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		add_country_modifier = {
+			name = defensive_war
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = OPT.NOCHOICE
+	}
+}
+
+# war_dynamism.10 - End defensive war?
+country_event = {
+	id = war_dynamism.10
+	title = "no_localization"
+	desc = "no_localization"
+	picture = CIVIL_WAR_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_modifier = defensive_war
+		OR = {
+			is_at_war = no
+			is_subject_other_than_tributary_trigger = yes
+			NOT = {
+				AND = {
+					is_in_war = {
+						defenders = ROOT
+					}
+					NOT = {
+						is_in_war = {
+							defenders = ROOT
+							casus_belli = cb_independence_war
+						}
+					}
+					NOT = {
+						is_in_war = {
+							defenders = ROOT
+							casus_belli = cb_colonial_independance_war
+						}
+					}
+					NOT = {
+						is_in_war = {
+							defenders = ROOT
+							casus_belli = cb_overlord_attacking_independence_war
+						}
+					}
+					NOT = {
+						is_in_war = {
+							defenders = ROOT
+							casus_belli = cb_religious_independence
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		remove_country_modifier = defensive_war
+	}
+	
+	option = {
+		name = "no_localization"
+	}
+}

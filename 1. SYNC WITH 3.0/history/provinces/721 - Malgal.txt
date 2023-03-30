@@ -1,0 +1,24 @@
+owner = YUA
+controller = YUA
+add_core = YUA
+
+capital = "Ergun"
+trade_goods = wool
+#culture = khamnigan
+culture = oroqen
+religion = tengri_pagan_reformed
+
+hre = no
+
+base_tax = 2
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 1.5 }
+	set_province_flag = tribals_control_province
+}

@@ -1,0 +1,1193 @@
+#Handles the special vassal types which "revert to the crown on extinction of the male line"
+country_event = {
+	id = js_diplomacy_events.1
+	title = js_diplomacy_events.1.t
+	desc = js_diplomacy_events.1.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_subject_of_type = appanage_subject
+		OR = {
+			AND = {
+				has_regency = yes
+				has_female_heir = yes
+			}
+			AND = {
+				has_consort_regency = yes
+				has_female_heir = yes
+			}
+			is_female = yes
+		}
+		NOT = { has_country_modifier = bur_succession_cooldown }
+		NOT = { has_country_flag = burgundian_succession_crisis }
+	}
+
+	option = {
+		name = js_diplomacy_events.1.a
+		overlord = { 
+			country_event = {id = mec_vassals.1}
+		}
+	}
+}
+
+#Handles the special vassal types which "revert to the crown on extinction of the male line"
+country_event = {
+	id = js_diplomacy_events.2
+	title = js_diplomacy_events.2.t
+	desc = js_diplomacy_events.2.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		OR = {
+			is_subject_of_type = tributary_state
+			is_subject_of_type = close_tributary_state
+			is_subject_of_type = decentralized_vassal
+			is_subject_of_type = vassal
+		}
+		OR = {
+			AND = {
+				has_regency = yes
+				has_female_heir = yes
+			}
+			AND = {
+				has_consort_regency = yes
+				has_female_heir = yes
+			}
+			is_female = yes
+		}
+		dynasty="Rurikovich"
+	}
+
+	option = {
+		name = js_diplomacy_events.2.a
+		overlord = { 
+			country_event = {id = mec_vassals.1}
+		}
+	}
+}
+
+
+#Removing country modifiers from Muscovy if it is independent
+country_event = {
+	id = js_diplomacy_events.3
+	title = js_diplomacy_events.3.t
+	desc = js_diplomacy_events.3.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		tag = MOS
+		NOT = {is_subject_of_type = muscovite_tributary_state}
+		is_at_war = no
+	}
+
+	option = {
+		name = js_diplomacy_events.3.a
+		remove_country_modifier = MOS_RUS
+		remove_country_modifier = rus_subject
+		add_country_modifier = { name = MOS_RUS duration = 18250 }
+	}
+}
+
+#Decentralised vassal rebels - decentral_collapse_disaster in 3.0
+country_event = {
+	id = js_diplomacy_events.4
+	title = js_diplomacy_events.4.t
+	desc = js_diplomacy_events.4.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		OR={
+			government=monarchy
+			government=tribal 
+		}
+		OR={
+			OR={
+				has_heir=no 
+				AND={
+					has_heir=yes 
+					NOT={heir_age=15 }
+					has_consort=yes 
+					NOT={
+						OR={
+							consort_adm=5 
+							consort_dip=5 
+							consort_mil=5 
+						}
+					}
+				}
+			}
+			OR={
+				AND={
+					has_regency=yes 
+					has_consort_regency=no 
+				}
+				AND={
+					has_consort_regency=yes 
+					NOT={
+						OR={
+							adm=5 
+							dip=5 
+							mil=5 
+						}
+					}
+				}
+			}
+		}
+		is_at_war = no
+		any_subject_country={
+			OR={
+				is_subject_of_type=decentralized_vassal 
+				is_subject_of_type=rebellious_decentralized_vassal 
+			}
+			is_at_war = no
+		}
+		NOT={stability=0 legitimacy_equivalent=65 }
+	}
+
+	option = {
+		name = js_diplomacy_events.4.a
+		country_event = {id = mec_vassals.2}
+	}
+}
+
+#Switching from Decentralised Vassal to Rebellious Decentralised Vassal
+country_event = {
+	id = js_diplomacy_events.5
+	title = js_diplomacy_events.5.t
+	desc = js_diplomacy_events.5.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		OR = {
+			is_subject_of_type = decentralized_vassal
+			is_subject_of_type = subjugated_vassal
+		}
+		liberty_desire = 50
+	}
+
+	option = {
+		name = js_diplomacy_events.5.a
+		if={
+			limit={is_subject_of_type = decentralized_vassal}
+			overlord={
+				create_subject={subject_type=rebellious_decentralized_vassal subject=ROOT } 
+			}
+		}
+		if={
+			limit={is_subject_of_type = subjugated_vassal}
+			overlord={
+				create_subject={subject_type=rebellious_subjugated_vassal subject=ROOT } 
+			}
+		}
+		if={
+			limit={ai=no }
+			country_event={id=mec_vassals.11 }
+		}
+		overlord={
+			if={
+				limit={ai=no }
+				country_event={id=mec_vassals.12 }
+			}
+		}
+		#add_liberty_desire = -10
+	}
+}
+
+#Switching from Rebellious Decentralised Vassal/Appanage to Decentralised Vassal
+country_event = {
+	id = js_diplomacy_events.6
+	title = js_diplomacy_events.6.t
+	desc = js_diplomacy_events.6.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		NOT = { liberty_desire = 50 }
+		OR = {
+			is_subject_of_type = rebellious_decentralized_vassal
+			AND = {
+				is_subject_of_type = appanage_subject
+				overlord = {
+					OR = {
+						NOT = {tag = FRA}
+						has_country_flag = edit_de_moulins
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.6.a
+		if={
+			limit={ai=no }
+			country_event={id=mec_vassals.13 }
+		}
+		overlord={
+			create_subject={
+				subject_type=decentralized_vassal
+				subject=ROOT 
+			}
+			if={
+				limit={ai=no }
+				country_event={id=mec_vassals.14 }
+			}
+		}
+	}
+}
+
+#Switching from Rebellious Subjugated Vassal to Subjugated Vassal
+country_event = {
+	id = js_diplomacy_events.7
+	title = js_diplomacy_events.7.t
+	desc = js_diplomacy_events.7.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_subject_of_type = rebellious_subjugated_vassal
+		NOT = { liberty_desire = 50 }
+	}
+
+	option = {
+		name = js_diplomacy_events.7.a
+		if={
+			limit={ai=no }
+			country_event={id=mec_vassals.13 }
+		}
+		overlord={
+			create_subject={
+				subject_type=subjugated_vassal
+				subject=ROOT 
+			}
+			if={
+				limit={ai=no }
+				country_event={id=mec_vassals.14 }
+			}
+		}
+	}
+}
+
+#Switching from Daimyo to Centralised Daimyo
+country_event = {
+	id = js_diplomacy_events.8
+	title = js_diplomacy_events.8.t
+	desc = js_diplomacy_events.8.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_subject_of_type = rebellious_subjugated_vassal
+		NOT = { liberty_desire = 50 }
+		overlord={
+			OR={
+				NOT = {culture_group = japanese }
+				has_country_flag=centralised_japan 
+			}
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.8.a
+		if={
+			limit={ai=no }
+			country_event={id=mec_vassals.13 }
+		}
+		overlord={
+			create_subject={
+				subject_type=centralised_daimyo_vassal
+				subject=ROOT 
+			}
+			if={
+				limit={ai=no }
+				country_event={id=mec_vassals.14 }
+			}
+		}
+	}
+}
+
+#Switching from Tributary to Closed Tributary
+country_event = {
+	id = js_diplomacy_events.9
+	title = js_diplomacy_events.9.t
+	desc = js_diplomacy_events.9.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_subject_of_type = tributary_state
+		NOT = { liberty_desire = 50 }
+		overlord = {
+			OR = {
+				AND = {
+					is_emperor_of_china = yes
+					ROOT = { culture_group = tibetic }
+				}
+				is_subject_of_type = muscovite_tributary_state
+				is_neighbor_of = PREV
+			}
+			#has_opinion = {value = 100 who = PREV}
+			trust = {who = PREV value = 75}
+			PREV = {
+				#has_opinion = { value = 100 who = PREV}
+				trust = {who = PREV value = 75}
+			}
+			NOT = {
+				is_subject_of_type = close_tributary_state
+				is_subject_of_type = tributary_state
+				is_nomad = yes
+			}
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.9.a
+		if = { 
+			limit = { ai = no } 
+			country_event = { id = mec_vassals.15 } 
+		}
+		overlord = {
+			create_subject = {
+				subject_type = close_tributary_state
+				subject = ROOT
+			}
+			if = { 
+				limit = { ai = no } 
+				country_event = { id = mec_vassals.16 } 
+			}
+		}
+	}
+}
+
+#Switching from Closed Tributary to Tributary
+country_event = {
+	id = js_diplomacy_events.10
+	title = js_diplomacy_events.10.t
+	desc = js_diplomacy_events.10.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_subject_of_type = close_tributary_state
+		overlord = {
+			OR = {
+				is_emperor_of_china = no
+				PREV = { NOT = { culture_group = tibetic } }
+			}
+			NOT = { is_subject_of_type = muscovite_tributary_state }
+			#OR={
+			#NOT={ has_opinion={ value=100 who=PREV }}
+			#NOT={ PREV={ has_opinion={ value=100 who=PREV }}}
+			#}
+			OR={
+				NOT={ trust={ value=75 who=PREV }}
+				NOT={ PREV={ trust={value=75 who=PREV }}}
+			}
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.10.a
+		if={
+			limit={ai=no }
+			country_event={id=mec_vassals.17 }
+		}
+		overlord={
+			create_subject={subject_type=tributary_state subject=ROOT }
+			if={
+				limit={ai=no }
+				country_event={id=mec_vassals.18 }
+			}
+		}
+	}
+}
+
+#Switching from Closed Tributary to Decentralized Vassal
+country_event = {
+	id = js_diplomacy_events.11
+	title = js_diplomacy_events.11.t
+	desc = js_diplomacy_events.11.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_subject_of_type = close_tributary_state
+		overlord = {
+			is_neighbor_of = PREV
+			#has_opinion = {value = 100 who = PREV}
+			trust = { who = PREV value = 100 }
+			PREV = {
+				#has_opinion = {value = 100 who = PREV}
+				trust = {who = PREV value = 100}
+				NOT = { liberty_desire = 25 }
+			}
+			prestige = 1
+			is_nomad = no
+			NOT = { religion_group = taoic }
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.11.a
+
+		export_to_variable={which=export value=total_development }
+		set_variable={which=hzw which=export }
+		export_to_variable={which=export value=total_development who=overlord }
+		set_variable={which=hzx which=export }
+		divide_variable={which=hzx which=hzw }
+
+		if={
+			limit={ 
+				check_variable = { which = hzx value = 3 }
+			}
+			#if={
+			#	limit={ai=no }
+			#	country_event={id=mec_vassals.19 }
+			#}
+			overlord={
+				create_subject={subject_type=decentralized_vassal subject=ROOT }
+				#if={
+				#	limit={ai=no }
+				#	country_event={id=mec_vassals.20 }
+				#}
+			}
+		}
+		overlord = {
+			add_trust = {
+				who = ROOT
+				value = -50
+				mutual = yes
+			}
+		}
+	}
+}
+
+#Switching from Overseas Fief to Personal Union
+country_event = {
+	id = js_diplomacy_events.12
+	title = js_diplomacy_events.12.t
+	desc = js_diplomacy_events.12.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_subject_of_type = overseas_fief
+		overlord = {
+			OR={
+				AND={
+					absolutism = 40
+					OR={
+						NOT={culture_group=japanese }
+						has_country_flag=centralised_japan 
+					}
+				}
+				any_owned_province={any_neighbor_province={owner={tag=ROOT }}}
+			}
+			OR = {
+				NOT = { tag = ENG }
+				has_global_flag = hundred_years_war_ENG_win
+				has_global_flag = hundred_years_war_FRA_win
+				is_year = 1500
+			}
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.12.a
+		if = { 
+			limit = { ai = no tag = GUY } 
+			country_event = { id = mec_vassals.21 } 
+		}
+		else_if = { 
+			limit = { ai = no } 
+			country_event = { id = mec_vassals.23 }
+		}
+		overlord = {
+			create_subject = {
+				subject_type = personal_union
+				subject = ROOT
+			}
+			if = { 
+				limit = {
+					ai = no 
+					OR = { tag = ENG tag = GBR tag = UEF } 
+					GUY = { is_subject_of = ROOT } 
+				} 
+				country_event = { id = mec_vassals.22 } 
+			}
+			else_if = { 
+				limit = { ai = no } 
+				country_event = { id = mec_vassals.24 } 
+			}
+		}
+	}
+}
+
+#Switching from Decentralised Types to Vassal
+country_event = {
+	id = js_diplomacy_events.13
+	title = js_diplomacy_events.13.t
+	desc = js_diplomacy_events.13.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		NOT = { liberty_desire = 50 }
+		OR = {
+			is_subject_of_type = decentralized_vassal
+			is_subject_of_type = subjugated_vassal
+			AND = {
+				overlord = {
+					OR = {
+						NOT = {tag = FRA}
+						has_country_flag = edit_de_moulins
+					}
+				}
+				is_subject_of_type = autonomous_vassal
+			}
+			AND = {
+				overlord = {
+					OR = {
+						AND = {
+							culture_group = japanese
+							has_reform = celestial_empire
+						}
+						has_reform = daimyo_legacy
+						has_reform = shogunate_legacy
+						has_reform = indep_daimyo_legacy
+					}
+				}
+				is_subject_of_type = centralised_daimyo_vassal
+			}
+		}
+		overlord = {
+			#has_opinion = {value = 100 who = PREV}
+			trust = {who = ROOT value = 100}
+			ROOT = {
+				#has_opinion = { value = 100 who = PREV}
+				trust = {who = PREV value = 100}
+			}
+			#NOT = { has_subject_of_type = vassal } #DOESNOT WORK! WHY???
+			num_of_free_diplomatic_relations = 1
+		}
+	}
+
+	option = {
+		name = js_diplomacy_events.13.a
+		#if={
+		#	limit={ai=no }
+		#	country_event={id=mec_vassals.25 }
+		#}
+		#overlord={
+		#	create_subject={
+		#		subject_type=vassal
+		#		subject=ROOT 
+		#	}
+		#	if={
+		#		limit={ai=no }
+		#		country_event={id=mec_vassals.26 }
+		#	}
+		#}
+		#overlord = {
+		#	country_event = { diplomacy_events.030 }
+		#}
+
+
+		set_variable = {which = ai_value value = 0}
+		set_variable = {which = target_trust value = 0}
+		set_variable = {which = target_opinion value = 0}
+		set_variable = {which = target_dip_rep value = 0}
+		set_variable = {which = sender_dip_rep value = 0}
+		set_variable = {which = target_legitimacy value = 0}
+		set_variable = {which = sender_legitimacy value = 0}
+		set_variable = {which = target_reptrad value = 0}
+		set_variable = {which = sender_reptrad value = 0}
+		set_variable = {which = target_devotion value = 0}
+		set_variable = {which = sender_devotion value = 0}
+		set_variable = {which = target_horde_unity value = 0}
+		set_variable = {which = sender_horde_unity value = 0}
+		set_variable = {which = target_prestige value = 0}
+		set_variable = {which = sender_prestige value = 0}
+		set_variable = {which = target_army value = 0}
+		set_variable = {which = sender_army value = 0}
+		set_variable = {which = target_navy value = 0}
+		set_variable = {which = sender_navy value = 0}
+		set_variable = {which = target_dev value = 0}
+		set_variable = {which = sender_dev value = 0}
+		set_variable = {which = target_distance value = 0}
+		export_to_variable = {
+			variable_name = target_trust
+			value = trust
+			who = overlord
+			with = ROOT
+		}
+		subtract_variable = {
+			which = target_trust
+			value = 50
+		}
+		multiply_variable = {
+			which = target_trust
+			value = 2
+		}
+		export_to_variable = {
+			variable_name = target_opinion
+			value = opinion
+			who = overlord
+			with = ROOT
+		}
+		multiply_variable = {
+			which = target_opinion
+			value = 0.1
+		}
+		export_to_variable = {
+			variable_name = target_dip_rep
+			value = modifier:diplomatic_reputation
+		}
+		multiply_variable = {
+			which = target_dip_rep
+			value = -2
+		}
+		export_to_variable = {
+			variable_name = sender_dip_rep
+			value = modifier:diplomatic_reputation
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_dip_rep
+			value = 2
+		}
+		export_to_variable = {
+			which = target_legitimacy
+			value = trigger_value:legitimacy
+		}
+		multiply_variable = {
+			which = target_legitimacy
+			value = -2
+		}
+		export_to_variable = {
+			which = sender_legitimacy
+			value = trigger_value:legitimacy
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_legitimacy
+			value = 2
+		}
+		export_to_variable = {
+			which = target_reptrad
+			value = trigger_value:republican_tradition
+		}
+		multiply_variable = {
+			which = target_reptrad
+			value = -2
+		}
+		export_to_variable = {
+			which = sender_reptrad
+			value = trigger_value:republican_tradition
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_reptrad
+			value = 2
+		}
+		export_to_variable = {
+			which = target_devotion
+			value = trigger_value:devotion
+		}
+		multiply_variable = {
+			which = target_devotion
+			value = -2
+		}
+		export_to_variable = {
+			which = sender_devotion
+			value = trigger_value:devotion
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_devotion
+			value = 2
+		}
+		export_to_variable = {
+			which = target_horde_unity
+			value = trigger_value:horde_unity
+		}
+		multiply_variable = {
+			which = target_horde_unity
+			value = -2
+		}
+		export_to_variable = {
+			which = sender_horde_unity
+			value = trigger_value:horde_unity
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_horde_unity
+			value = 2
+		}
+		export_to_variable = {
+			variable_name = target_prestige
+			value = prestige
+		}
+		multiply_variable = {
+			which = target_prestige
+			value = -0.75
+		}
+		export_to_variable = {
+			variable_name = sender_prestige
+			value = prestige
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_prestige
+			value = 0.75
+		}
+		export_to_variable = {
+			variable_name = target_army
+			value = army_size
+		}
+		multiply_variable = {
+			which = target_army
+			value = -1
+		}
+		export_to_variable = {
+			variable_name = sender_army
+			value = army_size
+			who = overlord
+		}
+		export_to_variable = {
+			variable_name = target_navy
+			value = navy_size
+		}
+		multiply_variable = {
+			which = target_navy
+			value = -1
+		}
+		export_to_variable = {
+			variable_name = sender_navy
+			value = navy_size
+			who = overlord
+		}
+		export_to_variable = {
+			variable_name = target_dev
+			value = total_development
+		}
+		multiply_variable = {
+			which = target_dev
+			value = -1
+		}
+		export_to_variable = {
+			variable_name = sender_dev
+			value = total_development
+			who = overlord
+		}
+		multiply_variable = {
+			which = sender_dev
+			value = 0.2
+		}
+		export_to_variable = {
+			which = target_distance
+			value = border_distance
+			who = ROOT
+			with = overlord
+		}
+		multiply_variable = {
+			which = target_distance
+			value = -1000
+		}
+		change_variable = {
+			which = ai_value
+			which = target_trust
+		}
+		change_variable = {
+			which = ai_value
+			which = target_opinion
+		}
+		change_variable = {
+			which = ai_value
+			which = target_dip_rep
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_dip_rep
+		}
+		change_variable = {
+			which = ai_value
+			which = target_legitimacy
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_legitimacy
+		}
+		change_variable = {
+			which = ai_value
+			which = target_reptrad
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_reptrad
+		}
+		change_variable = {
+			which = ai_value
+			which = target_devotion
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_devotion
+		}
+		change_variable = {
+			which = ai_value
+			which = target_horde_unity
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_horde_unity
+		}
+		change_variable = {
+			which = ai_value
+			which = target_prestige
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_prestige
+		}
+		change_variable = {
+			which = ai_value
+			which = target_army
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_army
+		}
+		change_variable = {
+			which = ai_value
+			which = target_dev
+		}
+		change_variable = {
+			which = ai_value
+			which = sender_dev
+		}
+		change_variable = {
+			which = ai_value
+			which = target_distance
+		}
+		set_variable = {
+			which = target_trust
+			value = 0
+		}
+		set_variable = {
+			which = target_opinion
+			value = 0
+		}
+		set_variable = {
+			which = target_dip_rep
+			value = 0
+		}
+		set_variable = {
+			which = sender_dip_rep
+			value = 0
+		}
+		set_variable = {
+			which = target_legitimacy
+			value = 0
+		}
+		set_variable = {
+			which = sender_legitimacy
+			value = 0
+		}
+		set_variable = {
+			which = target_reptrad
+			value = 0
+		}
+		set_variable = {
+			which = sender_reptrad
+			value = 0
+		}
+		set_variable = {
+			which = target_devotion
+			value = 0
+		}
+		set_variable = {
+			which = sender_devotion
+			value = 0
+		}
+		set_variable = {
+			which = target_horde_unity
+			value = 0
+		}
+		set_variable = {
+			which = sender_horde_unity
+			value = 0
+		}
+		set_variable = {
+			which = target_prestige
+			value = 0
+		}
+		set_variable = {
+			which = sender_prestige
+			value = 0
+		}
+		set_variable = {
+			which = target_army
+			value = 0
+		}
+		set_variable = {
+			which = sender_army
+			value = 0
+		}
+		set_variable = {
+			which = target_navy
+			value = 0
+		}
+		set_variable = {
+			which = sender_navy
+			value = 0
+		}
+		set_variable = {
+			which = target_dev
+			value = 0
+		}
+		set_variable = {
+			which = sender_dev
+			value = 0
+		}
+		set_variable = {
+			which = target_distance
+			value = 0
+		}
+		set_variable = {
+			which = ai_likelyhood
+			which = ai_value
+		}
+		change_variable = {
+			which = ai_likelyhood
+			value = 100
+		}
+		multiply_variable = {
+			which = ai_likelyhood
+			value = 0.5
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = ai_likelyhood
+						value = 0.01
+					}
+				}
+			}
+			set_variable = {
+				which = ai_likelyhood
+				value = 0.01
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = ai_likelyhood
+					value = 100
+				}
+			}
+			set_variable = {
+				which = ai_likelyhood
+				value = 100
+			}
+		}
+		country_event = { id = diplomacy_events.034 }
+	}
+}
+
+#Decentralizing disloyal vassal
+country_event = {
+	id = js_diplomacy_events.14
+	title = js_diplomacy_events.14.t
+	desc = js_diplomacy_events.14.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_year = 1360
+		is_subject_of_type = vassal
+		liberty_desire = 100
+	}
+
+	option = {
+		name = js_diplomacy_events.14.a
+		overlord = { 
+			country_event = {id = js_diplomacy_events.15}
+		}
+	}
+}
+country_event = {
+	id = js_diplomacy_events.15
+	title = js_diplomacy_events.15.t
+	desc = js_diplomacy_events.15.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = js_diplomacy_events.15.a
+		create_subject = {subject_type = decentralized_vassal subject = FROM}
+		FROM = {
+			add_liberty_desire = -25
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = js_diplomacy_events.15.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Extremely Rebellious Decentralized Vassal\Muscovite Tributary declares war\is released
+country_event = {
+	id = js_diplomacy_events.16
+	title = js_diplomacy_events.16.t
+	desc = js_diplomacy_events.16.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_at_war = no
+		is_year = 1360
+		OR = {
+			is_subject_of_type = rebellious_decentralized_vassal
+			is_subject_of_type = rebellious_subjugated_vassal
+			is_subject_of_type = muscovite_tributary_state
+		}
+		liberty_desire = 100
+	}
+
+	option = {
+		name = js_diplomacy_events.16.a
+		overlord = { 
+			country_event = {id = js_diplomacy_events.17}
+		}
+	}
+}
+country_event = {
+	id = js_diplomacy_events.17
+	title = js_diplomacy_events.17.t
+	desc = js_diplomacy_events.17.d
+	picture = OVERLORDVASSAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = js_diplomacy_events.17.a
+		FROM={
+			#grant_independence=yes
+			declare_war_with_cb={
+				casus_belli=cb_independence_war 
+				who=ROOT 
+			}
+		}		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = js_diplomacy_events.17.b
+		FROM={
+			grant_independence=yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,25 @@
+country_decisions = {
+	prov_name_initialization_decision = {
+		potential = {
+			NOT = { has_global_flag = prov_name_init }
+		}
+		
+		allow = {
+			owns = 1240
+		}
+		
+		effect = {
+			set_global_flag = prov_name_init
+			every_province = {
+				clear_province_name_flag_effect = yes
+			}
+			every_province = {
+				province_name_flag_initialization_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

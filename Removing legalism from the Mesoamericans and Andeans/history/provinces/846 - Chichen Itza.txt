@@ -1,0 +1,25 @@
+owner = CIZ
+controller = CIZ
+add_core = CIZ
+
+capital = "Chichen Itza"
+trade_goods = cacao
+culture = yucatecan
+religion = mesoamerican_religion
+
+hre = no
+
+base_tax = 38
+base_production = 1
+base_manpower = 0
+
+is_city = yes
+town_hall = yes
+temple = yes
+
+discovered_by = mesoamerican
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 6 }
+	set_province_flag = tribals_control_province
+}

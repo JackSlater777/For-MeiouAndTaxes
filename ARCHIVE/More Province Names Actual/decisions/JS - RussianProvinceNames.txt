@@ -1,0 +1,3589 @@
+country_decisions = {
+	rename_provinces_russian_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = east_slavic
+			any_owned_province = {
+				OR = {
+					area = zaporizhia_area
+
+                        		#transylvania_area
+					province_id = 162
+
+                       		        #east_slovakia_area
+					province_id = 1282
+
+					area = white_ruthenia_area
+					area = black_ruthenia_area
+					area = east_dniepr_area
+					area = west_dniepr_area
+					area = podolia_volhynia_area
+					area = polesie_area
+					area = red_ruthenia_area
+
+                        		#estonia_ingria_area
+					province_id = 36
+					province_id = 3400
+					province_id = 3767
+
+                        		#livonia_area
+					province_id = 37
+					province_id = 1263
+					province_id = 3399
+					province_id = 3765
+
+                        		#curonia_area
+					province_id = 39
+					province_id = 1264
+					province_id = 1432
+
+                        		#finland_coastal_area
+					province_id = 32
+
+					area = lithuania_area
+					area = basarabia_area
+					area = crimea_area
+
+                        		#sloboda_ukraine_area
+					province_id = 1287
+					province_id = 2545
+					province_id = 4110
+
+					area = azov_area
+					area = lower_don_area
+
+                        		#astrakhan_area
+					province_id = 303
+					province_id = 1293
+					province_id = 1310
+
+                        		#nogai_area
+					province_id = 2443
+					province_id = 2444
+					province_id = 3287
+
+					area = west_circassia_area
+					area = east_circassia_area
+
+                        		#abkhazia_area
+					province_id = 2549
+
+					area = mordovia_area
+					area = kazan_area
+
+                        		#galich_area
+					province_id = 1865
+
+                        		#perm_area
+					province_id = 2547
+
+                        		#karelia_area
+					province_id = 33
+					province_id = 35
+					province_id = 315
+					province_id = 1262
+
+                        		#pskov_area
+					province_id = 34
+
+                        		#novgorod_area
+					province_id = 3401
+
+                        		#pomor_area
+					province_id = 278
+					province_id = 279
+
+                        		#lower_ob_area
+					province_id = 1529
+					province_id = 4208
+					province_id = 4209
+
+					area = ural_area
+
+                        		#central_siberia_area
+					province_id = 1066
+					province_id = 1075
+					province_id = 1078
+					province_id = 4202
+
+					area = iskier_area
+
+                        		#ishim_area
+					province_id = 472
+					province_id = 475
+					province_id = 1076
+
+                        		#yrtesh_area
+					province_id = 480
+					province_id = 1071
+					province_id = 3277
+					province_id = 3308
+
+					area = tunguska_area
+					area = upper_ob_area
+					area = irkutsk_area
+					area = buryatia_area
+
+                        		#outer_mongolia_area
+					province_id = 719
+					province_id = 3266
+					province_id = 3270
+
+                        		#govi_area
+					province_id = 3265
+
+					area = yakutia_area
+
+                        		#nercha_area
+					province_id = 1054
+					province_id = 1056
+					province_id = 3269
+
+                        		#urkan_area
+					province_id = 3253
+					province_id = 3254
+					province_id = 3255
+
+					area = oroqen_area
+
+                        		#amour_area
+					province_id = 1047
+					province_id = 1050
+					province_id = 3249
+
+					area = ningguta_area
+
+                        		#hokkaido_area
+					province_id = 2301
+					province_id = 2302
+					province_id = 2744
+
+					area = magadan_area
+					area = kamchatka_area
+				}
+				OR = {
+					AND = {
+						OR = { culture = russian culture = novgorodian culture = pomor }
+						NOT = { has_province_flag = russian_name }
+					}
+					AND = {
+						culture = ruthenian
+						NOT = { has_province_flag = ruthenian_name }
+					}
+				}				
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				OR = {
+					AND = {
+						OR = { culture = russian culture = novgorodian culture = pomor }
+						NOT = { has_province_flag = russian_name }
+					}
+					AND = {
+						culture = ruthenian
+						NOT = { has_province_flag = ruthenian_name }
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #zaporizhia_area
+			if = {
+				limit = { 
+					owns = 284
+					284 = { is_core = ROOT }
+					284 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					284 = { NOT = { has_province_flag = russian_name } }
+				}
+				284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ochakov"
+					rename_capital = "Ochakov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 285
+					285 = { is_core = ROOT }
+					285 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					285 = { NOT = { has_province_flag = russian_name } }
+				}
+				285 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Priazovye"
+					rename_capital = "Mariupol"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 300
+					300 = { is_core = ROOT }
+					300 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					300 = { NOT = { has_province_flag = russian_name } }
+				}
+				300 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Zaporozhye"
+					rename_capital = "Aleksandrovskaya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1431
+					1431 = { is_core = ROOT }
+					1431 = { culture_group = east_slavic }
+					1431 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				1431 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Beryslav"
+					rename_capital = "Beryslav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4018
+					4018 = { is_core = ROOT }
+					4018 = { culture_group = east_slavic }
+					4018 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				4018 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Poltava"
+					rename_capital = "Poltava"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4019
+					4019 = { is_core = ROOT }
+					4019 = { culture_group = east_slavic }
+					4019 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				4019 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Kherson"
+					rename_capital = "Kherson"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4021
+					4021 = { is_core = ROOT }
+					4021 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					4021 = { NOT = { has_province_flag = russian_name } }
+				}
+				4021 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Chigirin"
+					rename_capital = "Chigirin"
+				}
+			}
+			###
+			if = {
+				limit = { 
+					owns = 284
+					284 = { is_core = ROOT }
+					284 = { culture = ruthenian }
+					284 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Ochakiv"
+					rename_capital = "Ochakiv"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 285
+					285 = { is_core = ROOT }
+					285 = { culture = ruthenian }
+					285 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				285 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Pryazovia"
+					rename_capital = "Mariupol"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 300
+					300 = { is_core = ROOT }
+					300 = { culture = ruthenian }
+					300 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				300 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Zaporizhia"
+					rename_capital = "Oleksandrivska"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4021
+					4021 = { is_core = ROOT }
+					4021 = { culture = ruthenian }
+					4021 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				4021 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Chyhyryn"
+					rename_capital = "Chyhyryn"
+				}
+			}
+
+                        #transylvania_area
+                        #3788 1405 3790 2375 158 
+			if = {
+				limit = { 
+					owns = 162
+					162 = { is_core = ROOT }
+					162 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					162 = { NOT = { has_province_flag = russian_name } }
+				}
+				162 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Marmaroshchyna"
+					rename_capital = "Siget"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 162
+					162 = { is_core = ROOT }
+					162 = { culture = ruthenian }
+					162 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				162 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Marmaroshchyna"
+					rename_capital = "Syhit"
+				}
+			}
+
+                        #east_slovakia_area
+                        #1406 3755 3754
+			if = {
+				limit = { 
+					owns = 1282
+					1282 = { is_core = ROOT }
+					1282 = { culture_group = east_slavic }
+					1282 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				1282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Uzhgorod"
+					rename_capital = "Uzhgorod"
+				}
+			}
+
+                        #white_ruthenia_area
+			if = {
+				limit = { 
+					owns = 275
+					275 = { is_core = ROOT }
+					275 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					275 = { NOT = { has_province_flag = russian_name } }
+				}
+				275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Polotsk"
+					rename_capital = "Polotsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 297
+					297 = { is_core = ROOT }
+					297 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					297 = { NOT = { has_province_flag = russian_name } }
+				}
+				297 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vitebsk"
+					rename_capital = "Vitebsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1393
+					1393 = { is_core = ROOT }
+					1393 = { culture_group = east_slavic }
+					1393 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				1393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Minsk"
+					rename_capital = "Minsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2841
+					2841 = { is_core = ROOT }
+					2841 = { culture_group = east_slavic }
+					2841 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				2841 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Nevel"
+					rename_capital = "Nevel"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2842
+					2842 = { is_core = ROOT }
+					2842 = { culture_group = east_slavic }
+					2842 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				2842 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Sebezh"
+					rename_capital = "Sebezh"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 275
+					275 = { is_core = ROOT }
+					275 = { culture = ruthenian }
+					275 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Polack"
+					rename_capital = "Polack"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 297
+					297 = { is_core = ROOT }
+					297 = { culture = ruthenian }
+					297 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				297 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Viciebsk"
+					rename_capital = "Viciebsk"
+				}
+			}
+
+                        #black_ruthenia_area
+			if = {
+				limit = { 
+					owns = 2836
+					2836 = { is_core = ROOT }
+					2836 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2836 = { NOT = { has_province_flag = russian_name } }
+				}
+				2836 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Novogrudok"
+					rename_capital = "Novogrudok"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2837
+					2837 = { is_core = ROOT }
+					2837 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2837 = { NOT = { has_province_flag = russian_name } }
+				}
+				2837 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Slutsk"
+					rename_capital = "Slutsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2839
+					2839 = { is_core = ROOT }
+					2839 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2839 = { NOT = { has_province_flag = russian_name } }
+				}
+				2839 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mozir"
+					rename_capital = "Mozir"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3764
+					3764 = { is_core = ROOT }
+					3764 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					3764 = { NOT = { has_province_flag = russian_name } }
+				}
+				3764 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Grodno"
+					rename_capital = "Grodno"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 2836
+					2836 = { is_core = ROOT }
+					2836 = { culture = ruthenian }
+					2836 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2836 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Navahrudak"
+					rename_capital = "Navahrudak"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2837
+					2837 = { is_core = ROOT }
+					2837 = { culture = ruthenian }
+					2837 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2837 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Sluck"
+					rename_capital = "Sluck"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2839
+					2839 = { is_core = ROOT }
+					2839 = { culture = ruthenian }
+					2839 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2839 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Mazyr"
+					rename_capital = "Mazyr"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3764
+					3764 = { is_core = ROOT }
+					3764 = { culture = ruthenian }
+					3764 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				3764 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Hrodna"
+					rename_capital = "Hrodna"
+				}
+			}
+
+                        #east_dniepr_area
+			if = {
+				limit = { 
+					owns = 289
+					289 = { is_core = ROOT }
+					289 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					289 = { NOT = { has_province_flag = russian_name } }
+				}
+				289 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Chernigov"
+					rename_capital = "Chernigov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 299
+					299 = { is_core = ROOT }
+					299 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					299 = { NOT = { has_province_flag = russian_name } }
+				}
+				299 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Pereyaslav"
+					rename_capital = "Pereyaslav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 311
+					311 = { is_core = ROOT }
+					311 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					311 = { NOT = { has_province_flag = russian_name } }
+				}
+				311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Starodub"
+					rename_capital = "Starodub"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 381
+					381 = { is_core = ROOT }
+					381 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					381 = { NOT = { has_province_flag = russian_name } }
+				}
+				381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mstislavl"
+					rename_capital = "Mstislavl"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2840
+					2840 = { is_core = ROOT }
+					2840 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2840 = { NOT = { has_province_flag = russian_name } }
+				}
+				2840 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Gomel"
+					rename_capital = "Gomel"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 289
+					289 = { is_core = ROOT }
+					289 = { culture = ruthenian }
+					289 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				289 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Chernihiv"
+					rename_capital = "Chernihiv"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 299
+					299 = { is_core = ROOT }
+					299 = { culture = ruthenian }
+					299 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				299 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Pereiaslav"
+					rename_capital = "Pereiaslav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 311
+					311 = { is_core = ROOT }
+					311 = { culture = ruthenian }
+					311 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Staradub"
+					rename_capital = "Staradub"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 381
+					381 = { is_core = ROOT }
+					381 = { culture = ruthenian }
+					381 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Mscislav"
+					rename_capital = "Mscislav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2840
+					2840 = { is_core = ROOT }
+					2840 = { culture = ruthenian }
+					2840 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2840 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Homiel"
+					rename_capital = "Homiel"
+				}
+			}
+
+                        #west_dniepr_area
+			if = {
+				limit = { 
+					owns = 261
+					261 = { is_core = ROOT }
+					261 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					261 = { NOT = { has_province_flag = russian_name } }
+				}
+				261 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Zhitomir"
+					rename_capital = "Zhitomir"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 276
+					276 = { is_core = ROOT }
+					276 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					276 = { NOT = { has_province_flag = russian_name } }
+				}
+				276 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Bratslav"
+					rename_capital = "Bratslav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 280
+					280 = { is_core = ROOT }
+					280 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					280 = { NOT = { has_province_flag = russian_name } }
+				}
+				280 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kiev"
+					rename_capital = "Kiev"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2848
+					2848 = { is_core = ROOT }
+					2848 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2848 = { NOT = { has_province_flag = russian_name } }
+				}
+				2848 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Cherkassy"
+					rename_capital = "Cherkassy"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 261
+					261 = { is_core = ROOT }
+					261 = { culture = ruthenian }
+					261 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				261 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Zhytomyr"
+					rename_capital = "Zhytomyr"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 276
+					276 = { is_core = ROOT }
+					276 = { culture = ruthenian }
+					276 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				276 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Braclav"
+					rename_capital = "Braclav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 280
+					280 = { is_core = ROOT }
+					280 = { culture = ruthenian }
+					280 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				280 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Kyiv"
+					rename_capital = "Kyiv"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2848
+					2848 = { is_core = ROOT }
+					2848 = { culture = ruthenian }
+					2848 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2848 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Cherkasy"
+					rename_capital = "Cherkasy"
+				}
+			}
+
+                        #podolia_volhynia_area
+			if = {
+				limit = { 
+					owns = 1429
+					1429 = { is_core = ROOT }
+					1429 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					1429 = { NOT = { has_province_flag = russian_name } }
+				}
+				1429 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Volhynia"
+					rename_capital = "Lutsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1433
+					1433 = { is_core = ROOT }
+					1433 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					1433 = { NOT = { has_province_flag = russian_name } }
+				}
+				1433 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Podolia"
+					rename_capital = "Kamenets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2537
+					2537 = { is_core = ROOT }
+					2537 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2537 = { NOT = { has_province_flag = russian_name } }
+				}
+				2537 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kremenets"
+					rename_capital = "Kremenets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2838
+					2838 = { is_core = ROOT }
+					2838 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					2838 = { NOT = { has_province_flag = russian_name } }
+				}
+				2838 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ostrog"
+					rename_capital = "Ostrog"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3761
+					3761 = { is_core = ROOT }
+					3761 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					3761 = { NOT = { has_province_flag = russian_name } }
+				}
+				3761 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vladimir-Volhynskyi"
+					rename_capital = "Vladimir-Volhynskyi"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 1429
+					1429 = { is_core = ROOT }
+					1429 = { culture = ruthenian }
+					1429 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				1429 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Volyn"
+					rename_capital = "Luck"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1433
+					1433 = { is_core = ROOT }
+					1433 = { culture = ruthenian }
+					1433 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				1433 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Podilia"
+					rename_capital = "Kamianets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2537
+					2537 = { is_core = ROOT }
+					2537 = { culture = ruthenian }
+					2537 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2537 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Kremianets"
+					rename_capital = "Kremianets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2838
+					2838 = { is_core = ROOT }
+					2838 = { culture = ruthenian }
+					2838 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				2838 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Ostroh"
+					rename_capital = "Ostroh"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3761
+					3761 = { is_core = ROOT }
+					3761 = { culture = ruthenian }
+					3761 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				3761 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Volodymyr-Volynskyi"
+					rename_capital = "Volodymyr-Volynskyi"
+				}
+			}
+
+                        #polesie_area
+			if = {
+				limit = { 
+					owns = 283
+					283 = { is_core = ROOT }
+					283 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					283 = { NOT = { has_province_flag = russian_name } }
+				}
+				283 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Belaya"
+					rename_capital = "Belaya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1394
+					1394 = { is_core = ROOT }
+					1394 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					1394 = { NOT = { has_province_flag = russian_name } }
+				}
+				1394 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Turov"
+					rename_capital = "Turov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1395
+					1395 = { is_core = ROOT }
+					1395 = { culture_group = east_slavic }
+					1395 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				1395 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Pinsk"
+					rename_capital = "Pinsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3762
+					3762 = { is_core = ROOT }
+					3762 = { culture_group = east_slavic }
+					3762 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				3762 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Brest"
+					rename_capital = "Brest"
+				}
+			}
+			###
+			if = {
+				limit = { 
+					owns = 283
+					283 = { is_core = ROOT }
+					283 = { culture = ruthenian }
+					283 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				283 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Bila"
+					rename_capital = "Bila"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1394
+					1394 = { is_core = ROOT }
+					1394 = { culture = ruthenian }
+					1394 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				1394 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Turav"
+					rename_capital = "Turav"
+				}
+			}
+
+                        #red_ruthenia_area
+			if = {
+				limit = { 
+					owns = 258
+					258 = { is_core = ROOT }
+					258 = { culture_group = east_slavic }
+					258 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				258 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Peremyshl"
+					rename_capital = "Peremyshl"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 260
+					260 = { is_core = ROOT }
+					260 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					260 = { NOT = { has_province_flag = russian_name } }
+				}
+				260 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Lvov"
+					rename_capital = "Lvov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1281
+					1281 = { is_core = ROOT }
+					1281 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					1281 = { NOT = { has_province_flag = russian_name } }
+				}
+				1281 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ratno"
+					rename_capital = "Ratno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2507
+					2507 = { is_core = ROOT }
+					2507 = { culture_group = east_slavic }
+					2507 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				2507 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Belz"
+					rename_capital = "Belz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2535
+					2535 = { is_core = ROOT }
+					2535 = { culture_group = east_slavic }
+					2535 = { OR = { NOT = { has_province_flag = russian_name } NOT = { has_province_flag = ruthenian_name } } }
+				}
+				2535 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					set_province_flag = ruthenian_name
+					change_province_name = "Cholm"
+					rename_capital = "Cholm"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3760
+					3760 = { is_core = ROOT }
+					3760 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					3760 = { NOT = { has_province_flag = russian_name } }
+				}
+				3760 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Grabovets"
+					rename_capital = "Grabovets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3792
+					3792 = { is_core = ROOT }
+					3792 = { OR = { culture = russian culture = novgorodian culture = pomor } }
+					3792 = { NOT = { has_province_flag = russian_name } }
+				}
+				3792 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Galicia"
+					rename_capital = "Galich"
+				}
+			}
+			###
+			if = {
+				limit = { 
+					owns = 260
+					260 = { is_core = ROOT }
+					260 = { culture = ruthenian }
+					260 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				260 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Lvivshchyna"
+					rename_capital = "Lviv"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1281
+					1281 = { is_core = ROOT }
+					1281 = { culture = ruthenian }
+					1281 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				1281 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Ratne"
+					rename_capital = "Ratne"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3760
+					3760 = { is_core = ROOT }
+					3760 = { culture = ruthenian }
+					3760 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				3760 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Hrabovets"
+					rename_capital = "Hrabovets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3792
+					3792 = { is_core = ROOT }
+					3792 = { culture = ruthenian }
+					3792 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				3792 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Halychyna"
+					rename_capital = "Halych"
+				}
+			}
+
+                        #estonia_ingria_area
+                        #3766 3768
+			if = {
+				limit = { 
+					owns = 36
+					36 = { is_core = ROOT }
+					36 = { culture_group = east_slavic }
+					36 = { NOT = { has_province_flag = russian_name } }
+				}
+				36 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Revel"
+					rename_capital = "Revel"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3400
+					3400 = { is_core = ROOT }
+					3400 = { culture_group = east_slavic }
+					3400 = { NOT = { has_province_flag = russian_name } }
+				}
+				3400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Narva"
+					rename_capital = "Narva"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3767
+					3767 = { is_core = ROOT }
+					3767 = { culture_group = east_slavic }
+					3767 = { NOT = { has_province_flag = russian_name } }
+				}
+				3767 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Gapsal"
+					rename_capital = "Gapsal"
+				}
+			}
+
+                        #livonia_area
+                        #273 1430
+			if = {
+				limit = { 
+					owns = 37
+					37 = { is_core = ROOT }
+					37 = { culture_group = east_slavic }
+					37 = { NOT = { has_province_flag = russian_name } }
+				}
+				37 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Pernov"
+					rename_capital = "Pernov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1263
+					1263 = { is_core = ROOT }
+					1263 = { culture_group = east_slavic }
+					1263 = { NOT = { has_province_flag = russian_name } }
+				}
+				1263 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Uriev"
+					rename_capital = "Uriev"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3765
+					3765 = { is_core = ROOT }
+					3765 = { culture_group = east_slavic }
+					3765 = { NOT = { has_province_flag = russian_name } }
+				}
+				3765 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Valk"
+					rename_capital = "Valk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3399
+					3399 = { is_core = ROOT }
+					3399 = { culture_group = east_slavic }
+					3399 = { NOT = { has_province_flag = russian_name } }
+				}
+				3399 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Verro"
+					rename_capital = "Verro"
+				}
+			}
+
+                        #curonia_area
+                        #38 1354
+			if = {
+				limit = { 
+					owns = 39
+					39 = { is_core = ROOT }
+					39 = { culture_group = east_slavic }
+					39 = { NOT = { has_province_flag = russian_name } }
+				}
+				39 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Libava"
+					rename_capital = "Libava"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1264
+					1264 = { is_core = ROOT }
+					1264 = { culture_group = east_slavic }
+					1264 = { NOT = { has_province_flag = russian_name } }
+				}
+				1264 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mitava"
+					rename_capital = "Mitava"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1432
+					1432 = { is_core = ROOT }
+					1432 = { culture_group = east_slavic }
+					1432 = { NOT = { has_province_flag = russian_name } }
+				}
+				1432 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vindava"
+					rename_capital = "Vindava"
+				}
+			}
+
+                        #finland_coastal_area
+                        #19 30 27 28
+			if = {
+				limit = { 
+					owns = 32
+					32 = { is_core = ROOT }
+					32 = { culture_group = east_slavic }
+					32 = { NOT = { has_province_flag = russian_name } }
+				}
+				32 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vyborg"
+					rename_capital = "Vyborg"
+				}
+			}
+
+                        #lithuania_area
+			if = {
+				limit = { 
+					owns = 272
+					272 = { is_core = ROOT }
+					272 = { culture_group = east_slavic }
+					272 = { NOT = { has_province_flag = russian_name } }
+				}
+				272 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vilno"
+					rename_capital = "Vilno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 296
+					296 = { is_core = ROOT }
+					296 = { culture_group = east_slavic }
+					296 = { NOT = { has_province_flag = russian_name } }
+				}
+				296 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Troki"
+					rename_capital = "Troki"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1265
+					1265 = { is_core = ROOT }
+					1265 = { culture_group = east_slavic }
+					1265 = { NOT = { has_province_flag = russian_name } }
+				}
+				1265 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Zhmud"
+					rename_capital = "Medniki"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1280
+					1280 = { is_core = ROOT }
+					1280 = { culture_group = east_slavic }
+					1280 = { NOT = { has_province_flag = russian_name } }
+				}
+				1280 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Suvalkiya"
+					rename_capital = "Mariampol"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3397
+					3397 = { is_core = ROOT }
+					3397 = { culture_group = east_slavic }
+					3397 = { NOT = { has_province_flag = russian_name } }
+				}
+				3397 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kovno"
+					rename_capital = "Kovno"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3398
+					3398 = { is_core = ROOT }
+					3398 = { culture_group = east_slavic }
+					3398 = { NOT = { has_province_flag = russian_name } }
+				}
+				3398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Braslav"
+					rename_capital = "Braslav"
+				}
+			}
+
+                        #basarabia_area
+			if = {
+				limit = { 
+					owns = 160
+					160 = { is_core = ROOT }
+					160 = { culture_group = east_slavic }
+					160 = { NOT = { has_province_flag = russian_name } }
+				}
+				160 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Suvorovo"
+					rename_capital = "Suvorovo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1400
+					1400 = { is_core = ROOT }
+					1400 = { culture_group = east_slavic }
+					1400 = { NOT = { has_province_flag = russian_name } }
+				}
+				1400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tiraspol"
+					rename_capital = "Tiraspol"
+				}
+			}
+			if = {
+				limit = {
+					owns = 2626
+					2626 = { is_core = ROOT }
+					2626 = { culture_group = east_slavic }
+					2626 = { NOT = { has_province_flag = russian_name } }
+				}
+				2626 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Soroki"
+					rename_capital = "Soroki"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { OR = { culture = russian culture = novgorodian culture = pomor }
+					3794 = { NOT = { has_province_flag = russian_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Belgorod-Dnestrovskiy"
+					rename_capital = "Belgorod-Dnestrovskiy"
+				}
+			}
+                        ###
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { culture = ruthenian }
+					3794 = { NOT = { has_province_flag = ruthenian_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = ruthenian_name
+					change_province_name = "Bilhorod-Dnistrovskyi"
+					rename_capital = "Bilhorod-Dnistrovskyi"
+				}
+			}
+
+                        #crimea_area
+			if = {
+				limit = { 
+					owns = 282
+					282 = { is_core = ROOT }
+					282 = { culture_group = east_slavic }
+					282 = { NOT = { has_province_flag = russian_name } }
+				}
+				282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Crimea"
+					rename_capital = "Simferopol"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1299
+					1299 = { is_core = ROOT }
+					1299 = { culture_group = east_slavic }
+					1299 = { NOT = { has_province_flag = russian_name } }
+				}
+				1299 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Taman"
+					rename_capital = "Taman"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1344
+					1344 = { is_core = ROOT }
+					1344 = { culture_group = east_slavic }
+					1344 = { NOT = { has_province_flag = russian_name } }
+				}
+				1344 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Feodosia"
+					rename_capital = "Feodosia"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2274
+					2274 = { is_core = ROOT }
+					2274 = { culture_group = east_slavic }
+					2274 = { NOT = { has_province_flag = russian_name } }
+				}
+				2274 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Sevastopol"
+					rename_capital = "Sevastopol"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2573
+					2573 = { is_core = ROOT }
+					2573 = { culture_group = east_slavic }
+					2573 = { NOT = { has_province_flag = russian_name } }
+				}
+				2573 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kerch"
+					rename_capital = "Kerch"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3877
+					3877 = { is_core = ROOT }
+					3877 = { culture_group = east_slavic }
+					3877 = { NOT = { has_province_flag = russian_name } }
+				}
+				3877 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Balaklava"
+					rename_capital = "Balaklava"
+				}
+			}
+
+                        #sloboda_ukraine_area
+                        #305
+			if = {
+				limit = { 
+					owns = 1287
+					1287 = { is_core = ROOT }
+					1287 = { culture_group = east_slavic }
+					1287 = { NOT = { has_province_flag = russian_name } }
+				}
+				1287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Voronezh"
+					rename_capital = "Voronezh"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2545
+					2545 = { is_core = ROOT }
+					2545 = { culture_group = east_slavic }
+					2545 = { NOT = { has_province_flag = russian_name } }
+				}
+				2545 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Belgorod"
+					rename_capital = "Belgorod"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4110
+					4110 = { is_core = ROOT }
+					4110 = { culture_group = east_slavic }
+					4110 = { NOT = { has_province_flag = russian_name } }
+				}
+				4110 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kharkov"
+					rename_capital = "Kharkov"
+				}
+			}
+
+                        #azov_area
+			if = {
+				limit = { 
+					owns = 286
+					286 = { is_core = ROOT }
+					286 = { culture_group = east_slavic }
+					286 = { NOT = { has_province_flag = russian_name } }
+				}
+				286 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ekaterinodar"
+					rename_capital = "Ekaterinodar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 287
+					287 = { is_core = ROOT }
+					287 = { culture_group = east_slavic }
+					287 = { NOT = { has_province_flag = russian_name } }
+				}
+				287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Rostov-na-Donu"
+					rename_capital = "Rostov-na-Donu"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 302
+					302 = { is_core = ROOT }
+					302 = { culture_group = east_slavic }
+					302 = { NOT = { has_province_flag = russian_name } }
+				}
+				302 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Siverskyi Donets"
+					rename_capital = "Taganrog"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1298
+					1298 = { is_core = ROOT }
+					1298 = { culture_group = east_slavic }
+					1298 = { NOT = { has_province_flag = russian_name } }
+				}
+				1298 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Azov"
+					rename_capital = "Azov"
+				}
+			}
+
+                        #lower_don_area
+			if = {
+				limit = { 
+					owns = 1296
+					1296 = { is_core = ROOT }
+					1296 = { culture_group = east_slavic }
+					1296 = { NOT = { has_province_flag = russian_name } }
+				}
+				1296 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Saratov"
+					rename_capital = "Saratov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1297
+					1297 = { is_core = ROOT }
+					1297 = { culture_group = east_slavic }
+					1297 = { NOT = { has_province_flag = russian_name } }
+				}
+				1297 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ust-Medveditskaya"
+					rename_capital = "Ust-Medveditskaya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4020
+					4020 = { is_core = ROOT }
+					4020 = { culture_group = east_slavic }
+					4020 = { NOT = { has_province_flag = russian_name } }
+				}
+				4020 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vyoshenskaya"
+					rename_capital = "Vyoshenskaya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4111
+					4111 = { is_core = ROOT }
+					4111 = { culture_group = east_slavic }
+					4111 = { NOT = { has_province_flag = russian_name } }
+				}
+				4111 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tambov"
+					rename_capital = "Tambov"
+				}
+			}
+
+                        #astrakhan_area
+                        #1304 1309
+			if = {
+				limit = { 
+					owns = 303
+					303 = { is_core = ROOT }
+					303 = { culture_group = east_slavic }
+					303 = { NOT = { has_province_flag = russian_name } }
+				}
+				303 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kalmykia"
+					rename_capital = "Elista"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1293
+					1293 = { is_core = ROOT }
+					1293 = { culture_group = east_slavic }
+					1293 = { NOT = { has_province_flag = russian_name } }
+				}
+				1293 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Astrakhan"
+					rename_capital = "Astrakhan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1310
+					1310 = { is_core = ROOT }
+					1310 = { culture_group = east_slavic }
+					1310 = { NOT = { has_province_flag = russian_name } }
+				}
+				1310 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tsaritsyn"
+					rename_capital = "Tsaritsyn"
+				}
+			}
+
+                        #nogai_area
+                        #1083 4113
+			if = {
+				limit = { 
+					owns = 2443
+					2443 = { is_core = ROOT }
+					2443 = { culture_group = east_slavic }
+					2443 = { NOT = { has_province_flag = russian_name } }
+				}
+				2443 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Uzenya"
+					rename_capital = "Uzenya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2444
+					2444 = { is_core = ROOT }
+					2444 = { culture_group = east_slavic }
+					2444 = { NOT = { has_province_flag = russian_name } }
+				}
+				2444 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Uralsk"
+					rename_capital = "Uralsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3287
+					3287 = { is_core = ROOT }
+					3287 = { culture_group = east_slavic }
+					3287 = { NOT = { has_province_flag = russian_name } }
+				}
+				3287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Guriev"
+					rename_capital = "Guriev"
+				}
+			}
+
+                        #west_circassia_area 
+			if = {
+				limit = { 
+					owns = 999
+					999 = { is_core = ROOT }
+					999 = { culture_group = east_slavic }
+					999 = { NOT = { has_province_flag = russian_name } }
+				}
+				999 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Cherkessk"
+					rename_capital = "Cherkessk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1302
+					1302 = { is_core = ROOT }
+					1302 = { culture_group = east_slavic }
+					1302 = { NOT = { has_province_flag = russian_name } }
+				}
+				1302 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Maikop"
+					rename_capital = "Maikop"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3795
+					3795 = { is_core = ROOT }
+					3795 = { culture_group = east_slavic }
+					3795 = { NOT = { has_province_flag = russian_name } }
+				}
+				3795 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Anapa"
+					rename_capital = "Anapa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3796
+					3796 = { is_core = ROOT }
+					3796 = { culture_group = east_slavic }
+					3796 = { NOT = { has_province_flag = russian_name } }
+				}
+				3796 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Novorossiysk"
+					rename_capital = "Novorossiysk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4114
+					4114 = { is_core = ROOT }
+					4114 = { culture_group = east_slavic }
+					4114 = { NOT = { has_province_flag = russian_name } }
+				}
+				4114 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Stavropol"
+					rename_capital = "Stavropol"
+				}
+			}
+
+                        #east_circassia_area
+			if = {
+				limit = { 
+					owns = 995
+					995 = { is_core = ROOT }
+					995 = { culture_group = east_slavic }
+					995 = { NOT = { has_province_flag = russian_name } }
+				}
+				995 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Vladikavkaz"
+					rename_capital = "Vladikavkaz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1009
+					1009 = { is_core = ROOT }
+					1009 = { culture_group = east_slavic }
+					1009 = { NOT = { has_province_flag = russian_name } }
+				}
+				1009 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Grozny"
+					rename_capital = "Grozny"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1303
+					1303 = { is_core = ROOT }
+					1303 = { culture_group = east_slavic }
+					1303 = { NOT = { has_province_flag = russian_name } }
+				}
+				1303 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Budyonnovsk"
+					rename_capital = "Budyonnovsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2578
+					2578 = { is_core = ROOT }
+					2578 = { culture_group = east_slavic }
+					2578 = { NOT = { has_province_flag = russian_name } }
+				}
+				2578 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mozdok"
+					rename_capital = "Mozdok"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3639
+					3639 = { is_core = ROOT }
+					3639 = { culture_group = east_slavic }
+					3639 = { NOT = { has_province_flag = russian_name } }
+				}
+				3639 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Nalchik"
+					rename_capital = "Nalchik"
+				}
+			}
+
+                        #abkhazia_area
+                        #1300 3798 3799
+			if = {
+				limit = { 
+					owns = 2549
+					2549 = { is_core = ROOT }
+					2549 = { culture_group = east_slavic }
+					2549 = { NOT = { has_province_flag = russian_name } }
+				}
+				2549 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Sochi"
+					rename_capital = "Sochi"
+				}
+			}
+
+                        #mordovia_area
+			if = {
+				limit = { 
+					owns = 1308
+					1308 = { is_core = ROOT }
+					1308 = { culture_group = east_slavic }
+					1308 = { NOT = { has_province_flag = russian_name } }
+				}
+				1308 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Samara"
+					rename_capital = "Samara"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2437
+					2437 = { is_core = ROOT }
+					2437 = { culture_group = east_slavic }
+					2437 = { NOT = { has_province_flag = russian_name } }
+				}
+				2437 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Alatyr"
+					rename_capital = "Alatyr"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2439
+					2439 = { is_core = ROOT }
+					2439 = { culture_group = east_slavic }
+					2439 = { NOT = { has_province_flag = russian_name } }
+				}
+				2439 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mordoviya"
+					rename_capital = "Penza"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4016
+					4016 = { is_core = ROOT }
+					4016 = { culture_group = east_slavic }
+					4016 = { NOT = { has_province_flag = russian_name } }
+				}
+				4016 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Syzran"
+					rename_capital = "Syzran"
+				}
+			}
+
+                        #kazan_area
+			if = {
+				limit = { 
+					owns = 1307
+					1307 = { is_core = ROOT }
+					1307 = { culture_group = east_slavic }
+					1307 = { NOT = { has_province_flag = russian_name } }
+				}
+				1307 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kazan"
+					rename_capital = "Kazan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1311
+					1311 = { is_core = ROOT }
+					1311 = { culture_group = east_slavic }
+					1311 = { NOT = { has_province_flag = russian_name } }
+				}
+				1311 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Naberezhnye Chelny"
+					rename_capital = "Naberezhnye Chelny"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2438
+					2438 = { is_core = ROOT }
+					2438 = { culture_group = east_slavic }
+					2438 = { NOT = { has_province_flag = russian_name } }
+				}
+				2438 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Bashkiria"
+					rename_capital = "Ufa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4112
+					4112 = { is_core = ROOT }
+					4112 = { culture_group = east_slavic }
+					4112 = { NOT = { has_province_flag = russian_name } }
+				}
+				4112 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kungur"
+					rename_capital = "Kungur"
+				}
+			}
+
+                        #galich_area
+                        #290 1291 2440
+			if = {
+				limit = { 
+					owns = 1865
+					1865 = { is_core = ROOT }
+					1865 = { culture_group = east_slavic }
+					1865 = { NOT = { has_province_flag = russian_name } }
+				}
+				1865 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Chuvashia"
+					rename_capital = "Cheboksary"
+				}
+			}
+
+                        #perm_area
+                        #1294 1295 1343 2548
+			if = {
+				limit = { 
+					owns = 2547
+					2547 = { is_core = ROOT }
+					2547 = { culture_group = east_slavic }
+					2547 = { NOT = { has_province_flag = russian_name } }
+				}
+				2547 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Udmurtia"
+					rename_capital = "Izhevsk"
+				}
+			}
+
+                        #karelia_area
+                        #1261
+			if = {
+				limit = { 
+					owns = 33
+					33 = { is_core = ROOT }
+					33 = { culture_group = east_slavic }
+					33 = { NOT = { has_province_flag = russian_name } }
+				}
+				33 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kola"
+					rename_capital = "Kola"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 35
+					35 = { is_core = ROOT }
+					35 = { culture_group = east_slavic }
+					35 = { NOT = { has_province_flag = russian_name } }
+				}
+				35 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kem"
+					rename_capital = "Kem"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 315
+					315 = { is_core = ROOT }
+					315 = { culture_group = east_slavic }
+					315 = { NOT = { has_province_flag = russian_name } }
+				}
+				315 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Olonets"
+					rename_capital = "Olonets"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1262
+					1262 = { is_core = ROOT }
+					1262 = { culture_group = east_slavic }
+					1262 = { NOT = { has_province_flag = russian_name } }
+				}
+				1262 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Korela"
+					rename_capital = "Korela"
+				}
+			}
+
+                        #pskov_area
+                        #274 310 3980 3981
+			if = {
+				limit = { 
+					owns = 34
+					34 = { is_core = ROOT }
+					34 = { culture_group = east_slavic }
+					34 = { NOT = { has_province_flag = russian_name } }
+				}
+				34 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ivangorod"
+					rename_capital = "Koporye"
+				}
+			}
+
+                        #novgorod_area
+                        #292 309 3982 4017
+			if = {
+				limit = { 
+					owns = 3401
+					3401 = { is_core = ROOT }
+					3401 = { culture_group = east_slavic }
+					3401 = { NOT = { has_province_flag = russian_name } }
+				}
+				3401 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Neva"
+					rename_capital = "Oreshek"
+				}
+			}
+
+                        #pomor_area
+                        #288 314 4023
+			if = {
+				limit = { 
+					owns = 278
+					278 = { is_core = ROOT }
+					278 = { culture_group = east_slavic }
+					278 = { NOT = { has_province_flag = russian_name } }
+				}
+				278 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Pechora"
+					rename_capital = "Pustozersk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 279
+					279 = { is_core = ROOT }
+					279 = { culture_group = east_slavic }
+					279 = { NOT = { has_province_flag = russian_name } }
+				}
+				279 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mezen"
+					rename_capital = "Mezen"
+				}
+			}
+
+                        #lower_ob_area
+                        #1072
+			if = {
+				limit = { 
+					owns = 1529
+					1529 = { is_core = ROOT }
+					1529 = { culture_group = east_slavic }
+					1529 = { NOT = { has_province_flag = russian_name } }
+				}
+				1529 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kazym"
+					rename_capital = "Kazym"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4208
+					4208 = { is_core = ROOT }
+					4208 = { culture_group = east_slavic }
+					4208 = { NOT = { has_province_flag = russian_name } }
+				}
+				4208 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Berezov"
+					rename_capital = "Berezov"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4209
+					4209 = { is_core = ROOT }
+					4209 = { culture_group = east_slavic }
+					4209 = { NOT = { has_province_flag = russian_name } }
+				}
+				4209 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Obdorsk"
+					rename_capital = "Obdorsk"
+				}
+			}
+
+                        #ural_area
+			if = {
+				limit = { 
+					owns = 281
+					281 = { is_core = ROOT }
+					281 = { culture_group = east_slavic }
+					281 = { NOT = { has_province_flag = russian_name } }
+				}
+				281 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ekaterinburg"
+					rename_capital = "Ekaterinburg"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1080
+					1080 = { is_core = ROOT }
+					1080 = { culture_group = east_slavic }
+					1080 = { NOT = { has_province_flag = russian_name } }
+				}
+				1080 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Chelyabinsk"
+					rename_capital = "Chelyabinsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1082
+					1082 = { is_core = ROOT }
+					1082 = { culture_group = east_slavic }
+					1082 = { NOT = { has_province_flag = russian_name } }
+				}
+				1082 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Orsk"
+					rename_capital = "Orsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1306
+					1306 = { is_core = ROOT }
+					1306 = { culture_group = east_slavic }
+					1306 = { NOT = { has_province_flag = russian_name } }
+				}
+				1306 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Zlatoust"
+					rename_capital = "Zlatoust"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4205
+					4205 = { is_core = ROOT }
+					4205 = { culture_group = east_slavic }
+					4205 = { NOT = { has_province_flag = russian_name } }
+				}
+				4205 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tavda"
+					rename_capital = "Tavda"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4206
+					4206 = { is_core = ROOT }
+					4206 = { culture_group = east_slavic }
+					4206 = { NOT = { has_province_flag = russian_name } }
+				}
+				4206 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Serov"
+					rename_capital = "Serov"
+				}
+			}
+
+                        #central_siberia_area
+                        #4203 4204
+			if = {
+				limit = { 
+					owns = 1066
+					1066 = { is_core = ROOT }
+					1066 = { culture_group = east_slavic }
+					1066 = { NOT = { has_province_flag = russian_name } }
+				}
+				1066 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tomsk"
+					rename_capital = "Tomsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1075
+					1075 = { is_core = ROOT }
+					1075 = { culture_group = east_slavic }
+					1075 = { NOT = { has_province_flag = russian_name } }
+				}
+				1075 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Surgut"
+					rename_capital = "Surgut"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1078
+					1078 = { is_core = ROOT }
+					1078 = { culture_group = east_slavic }
+					1078 = { NOT = { has_province_flag = russian_name } }
+				}
+				1078 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Narym"
+					rename_capital = "Narym"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4202
+					4202 = { is_core = ROOT }
+					4202 = { culture_group = east_slavic }
+					4202 = { NOT = { has_province_flag = russian_name } }
+				}
+				4202 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Belogorye"
+					rename_capital = "Belogorye"
+				}
+			}
+
+                        #iskier_area
+			if = {
+				limit = { 
+					owns = 1070
+					1070 = { is_core = ROOT }
+					1070 = { culture_group = east_slavic }
+					1070 = { NOT = { has_province_flag = russian_name } }
+				}
+				1070 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Orehovo"
+					rename_capital = "Orehovo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1077
+					1077 = { is_core = ROOT }
+					1077 = { culture_group = east_slavic }
+					1077 = { NOT = { has_province_flag = russian_name } }
+				}
+				1077 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kurgan"
+					rename_capital = "Kurgan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1079
+					1079 = { is_core = ROOT }
+					1079 = { culture_group = east_slavic }
+					1079 = { NOT = { has_province_flag = russian_name } }
+				}
+				1079 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tyumen"
+					rename_capital = "Tyumen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2446
+					2446 = { is_core = ROOT }
+					2446 = { culture_group = east_slavic }
+					2446 = { NOT = { has_province_flag = russian_name } }
+				}
+				2446 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tobolsk"
+					rename_capital = "Tobolsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4201
+					4201 = { is_core = ROOT }
+					4201 = { culture_group = east_slavic }
+					4201 = { NOT = { has_province_flag = russian_name } }
+				}
+				4201 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ust-Ishim"
+					rename_capital = "Ust-Ishim"
+				}
+			}
+
+                        #ishim_area
+                        #2442
+			if = {
+				limit = { 
+					owns = 472
+					472 = { is_core = ROOT }
+					472 = { culture_group = east_slavic }
+					472 = { NOT = { has_province_flag = russian_name } }
+				}
+				472 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kokchetav"
+					rename_capital = "Kokchetav"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 475
+					475 = { is_core = ROOT }
+					475 = { culture_group = east_slavic }
+					475 = { NOT = { has_province_flag = russian_name } }
+				}
+				475 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Nikolaevsk"
+					rename_capital = "Nikolaevsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1076
+					1076 = { is_core = ROOT }
+					1076 = { culture_group = east_slavic }
+					1076 = { NOT = { has_province_flag = russian_name } }
+				}
+				1076 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ulutavskiy"
+					rename_capital = "Ulutavskiy"
+				}
+			}
+
+                        #yrtesh_area
+                        #3276
+			if = {
+				limit = { 
+					owns = 480
+					480 = { is_core = ROOT }
+					480 = { culture_group = east_slavic }
+					480 = { NOT = { has_province_flag = russian_name } }
+				}
+				480 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Barnaul"
+					rename_capital = "Barnaul"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1071
+					1071 = { is_core = ROOT }
+					1071 = { culture_group = east_slavic }
+					1071 = { NOT = { has_province_flag = russian_name } }
+				}
+				1071 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Omsk"
+					rename_capital = "Omsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3277
+					3277 = { is_core = ROOT }
+					3277 = { culture_group = east_slavic }
+					3277 = { NOT = { has_province_flag = russian_name } }
+				}
+				3277 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ust-Kamenogorsk"
+					rename_capital = "Ust-Kamenogorsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3308
+					3308 = { is_core = ROOT }
+					3308 = { culture_group = east_slavic }
+					3308 = { NOT = { has_province_flag = russian_name } }
+				}
+				3308 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Pavlodar"
+					rename_capital = "Pavlodar"
+				}
+			}
+
+                        #tunguska_area
+			if = {
+				limit = { 
+					owns = 1074
+					1074 = { is_core = ROOT }
+					1074 = { culture_group = east_slavic }
+					1074 = { NOT = { has_province_flag = russian_name } }
+				}
+				1074 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Mangazeya"
+					rename_capital = "Mangazeya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2152
+					2152 = { is_core = ROOT }
+					2152 = { culture_group = east_slavic }
+					2152 = { NOT = { has_province_flag = russian_name } }
+				}
+				2152 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Khantayskoye"
+					rename_capital = "Dudinka"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2154
+					2154 = { is_core = ROOT }
+					2154 = { culture_group = east_slavic }
+					2154 = { NOT = { has_province_flag = russian_name } }
+				}
+				2154 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tura"
+					rename_capital = "Tura"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2155
+					2155 = { is_core = ROOT }
+					2155 = { culture_group = east_slavic }
+					2155 = { NOT = { has_province_flag = russian_name } }
+				}
+				2155 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Katangsk"
+					rename_capital = "Yerbogachen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2445
+					2445 = { is_core = ROOT }
+					2445 = { culture_group = east_slavic }
+					2445 = { NOT = { has_province_flag = russian_name } }
+				}
+				2445 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Turukhansk"
+					rename_capital = "Turukhansk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4200
+					4200 = { is_core = ROOT }
+					4200 = { culture_group = east_slavic }
+					4200 = { NOT = { has_province_flag = russian_name } }
+				}
+				4200 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Imbatskoye"
+					rename_capital = "Imbatskoye"
+				}
+			}
+
+                        #upper_ob_area
+			if = {
+				limit = { 
+					owns = 1064
+					1064 = { is_core = ROOT }
+					1064 = { culture_group = east_slavic }
+					1064 = { NOT = { has_province_flag = russian_name } }
+				}
+				1064 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ilimsk"
+					rename_capital = "Ilimsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1065
+					1065 = { is_core = ROOT }
+					1065 = { culture_group = east_slavic }
+					1065 = { NOT = { has_province_flag = russian_name } }
+				}
+				1065 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kansk"
+					rename_capital = "Kansk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1067
+					1067 = { is_core = ROOT }
+					1067 = { culture_group = east_slavic }
+					1067 = { NOT = { has_province_flag = russian_name } }
+				}
+				1067 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Krasnoyarsk"
+					rename_capital = "Krasnoyarsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1069
+					1069 = { is_core = ROOT }
+					1069 = { culture_group = east_slavic }
+					1069 = { NOT = { has_province_flag = russian_name } }
+				}
+				1069 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Novosibirsk"
+					rename_capital = "Novosibirsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2153
+					2153 = { is_core = ROOT }
+					2153 = { culture_group = east_slavic }
+					2153 = { NOT = { has_province_flag = russian_name } }
+				}
+				2153 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Yeniseisk"
+					rename_capital = "Yeniseisk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4199
+					4199 = { is_core = ROOT }
+					4199 = { culture_group = east_slavic }
+					4199 = { NOT = { has_province_flag = russian_name } }
+				}
+				4199 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kuznetsk"
+					rename_capital = "Kuznetsk"
+				}
+			}
+
+                        #irkutsk_area
+			if = {
+				limit = { 
+					owns = 1060
+					1060 = { is_core = ROOT }
+					1060 = { culture_group = east_slavic }
+					1060 = { NOT = { has_province_flag = russian_name } }
+				}
+				1060 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Usolye"
+					rename_capital = "Usolye"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1062
+					1062 = { is_core = ROOT }
+					1062 = { culture_group = east_slavic }
+					1062 = { NOT = { has_province_flag = russian_name } }
+				}
+				1062 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Irkutsk"
+					rename_capital = "Irkutsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1063
+					1063 = { is_core = ROOT }
+					1063 = { culture_group = east_slavic }
+					1063 = { NOT = { has_province_flag = russian_name } }
+				}
+				1063 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Bratsk"
+					rename_capital = "Bratsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2156
+					2156 = { is_core = ROOT }
+					2156 = { culture_group = east_slavic }
+					2156 = { NOT = { has_province_flag = russian_name } }
+				}
+				2156 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ust-Kut"
+					rename_capital = "Ust-Kut"
+				}
+			}
+
+                        #buryatia_area
+			if = {
+				limit = { 
+					owns = 1059
+					1059 = { is_core = ROOT }
+					1059 = { culture_group = east_slavic }
+					1059 = { NOT = { has_province_flag = russian_name } }
+				}
+				1059 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Barguzin"
+					rename_capital = "Barguzin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3271
+					3271 = { is_core = ROOT }
+					3271 = { culture_group = east_slavic }
+					3271 = { NOT = { has_province_flag = russian_name } }
+				}
+				3271 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Udinskoye"
+					rename_capital = "Udinskoye"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4196
+					4196 = { is_core = ROOT }
+					4196 = { culture_group = east_slavic }
+					4196 = { NOT = { has_province_flag = russian_name } }
+				}
+				4196 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Verhneangarsk"
+					rename_capital = "Verhneangarsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4197
+					4197 = { is_core = ROOT }
+					4197 = { culture_group = east_slavic }
+					4197 = { NOT = { has_province_flag = russian_name } }
+				}
+				4197 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Telembinsk"
+					rename_capital = "Telembinsk"
+				}
+			}
+
+                        #outer_mongolia_area
+                        #1061 3267
+			if = {
+				limit = { 
+					owns = 719
+					719 = { is_core = ROOT }
+					719 = { culture_group = east_slavic }
+					719 = { NOT = { has_province_flag = russian_name } }
+				}
+				719 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Chita"
+					rename_capital = "Chita"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3266
+					3266 = { is_core = ROOT }
+					3266 = { culture_group = east_slavic }
+					3266 = { NOT = { has_province_flag = russian_name } }
+				}
+				3266 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ust-Ingoda"
+					rename_capital = "Ust-Ingoda"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3270
+					3270 = { is_core = ROOT }
+					3270 = { culture_group = east_slavic }
+					3270 = { NOT = { has_province_flag = russian_name } }
+				}
+				3270 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Irgenskoye"
+					rename_capital = "Irgenskoye"
+				}
+			}
+
+                        #govi_area
+                        #1057 2268 4039
+			if = {
+				limit = { 
+					owns = 3265
+					3265 = { is_core = ROOT }
+					3265 = { culture_group = east_slavic }
+					3265 = { NOT = { has_province_flag = russian_name } }
+				}
+				3265 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Krasnokamensk"
+					rename_capital = "Krasnokamensk"
+				}
+			}
+
+                        #yakutia_area 
+			if = {
+				limit = { 
+					owns = 1051
+					1051 = { is_core = ROOT }
+					1051 = { culture_group = east_slavic }
+					1051 = { NOT = { has_province_flag = russian_name } }
+				}
+				1051 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Olyokminsk"
+					rename_capital = "Olyokminsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1055
+					1055 = { is_core = ROOT }
+					1055 = { culture_group = east_slavic }
+					1055 = { NOT = { has_province_flag = russian_name } }
+				}
+				1055 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Lensk"
+					rename_capital = "Lensk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2157
+					2157 = { is_core = ROOT }
+					2157 = { culture_group = east_slavic }
+					2157 = { NOT = { has_province_flag = russian_name } }
+				}
+				2157 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Yakutsk"
+					rename_capital = "Yakutsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2158
+					2158 = { is_core = ROOT }
+					2158 = { culture_group = east_slavic }
+					2158 = { NOT = { has_province_flag = russian_name } }
+				}
+				2158 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Zhigansk"
+					rename_capital = "Zhigansk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4194
+					4194 = { is_core = ROOT }
+					4194 = { culture_group = east_slavic }
+					4194 = { NOT = { has_province_flag = russian_name } }
+				}
+				4194 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Butalskoye"
+					rename_capital = "Butalskoye"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4195
+					4195 = { is_core = ROOT }
+					4195 = { culture_group = east_slavic }
+					4195 = { NOT = { has_province_flag = russian_name } }
+				}
+				4195 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kirensk"
+					rename_capital = "Kirensk"
+				}
+			}
+
+                        #nercha_area
+                        #721
+			if = {
+				limit = { 
+					owns = 1054
+					1054 = { is_core = ROOT }
+					1054 = { culture_group = east_slavic }
+					1054 = { NOT = { has_province_flag = russian_name } }
+				}
+				1054 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tungirskoye"
+					rename_capital = "Tungirskoye"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1056
+					1056 = { is_core = ROOT }
+					1056 = { culture_group = east_slavic }
+					1056 = { NOT = { has_province_flag = russian_name } }
+				}
+				1056 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Sretensk"
+					rename_capital = "Sretensk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3269
+					3269 = { is_core = ROOT }
+					3269 = { culture_group = east_slavic }
+					3269 = { NOT = { has_province_flag = russian_name } }
+				}
+				3269 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Nerchinsk"
+					rename_capital = "Nerchinsk"
+				}
+			}
+
+                        #urkan_area
+                        #1052 1058
+			if = {
+				limit = { 
+					owns = 3253
+					3253 = { is_core = ROOT }
+					3253 = { culture_group = east_slavic }
+					3253 = { NOT = { has_province_flag = russian_name } }
+				}
+				3253 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ekimchan"
+					rename_capital = "Ekimchan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3254
+					3254 = { is_core = ROOT }
+					3254 = { culture_group = east_slavic }
+					3254 = { NOT = { has_province_flag = russian_name } }
+				}
+				3254 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Zeya"
+					rename_capital = "Zeya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3255
+					3255 = { is_core = ROOT }
+					3255 = { culture_group = east_slavic }
+					3255 = { NOT = { has_province_flag = russian_name } }
+				}
+				3255 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Albazin"
+					rename_capital = "Albazin"
+				}
+			}
+
+                        #oroqen_area
+			if = {
+				limit = { 
+					owns = 727
+					727 = { is_core = ROOT }
+					727 = { culture_group = east_slavic }
+					727 = { NOT = { has_province_flag = russian_name } }
+				}
+				727 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Blagoveshchensk"
+					rename_capital = "Blagoveshchensk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3251
+					3251 = { is_core = ROOT }
+					3251 = { culture_group = east_slavic }
+					3251 = { NOT = { has_province_flag = russian_name } }
+				}
+				3251 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Udskoye"
+					rename_capital = "Udskoye"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3252
+					3252 = { is_core = ROOT }
+					3252 = { culture_group = east_slavic }
+					3252 = { NOT = { has_province_flag = russian_name } }
+				}
+				3252 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Pashkovo"
+					rename_capital = "Pashkovo"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4033
+					4033 = { is_core = ROOT }
+					4033 = { culture_group = east_slavic }
+					4033 = { NOT = { has_province_flag = russian_name } }
+				}
+				4033 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Bureya"
+					rename_capital = "Bureya"
+				}
+			}
+
+                        #amour_area
+                        #1048 1049 3250
+			if = {
+				limit = { 
+					owns = 1047
+					1047 = { is_core = ROOT }
+					1047 = { culture_group = east_slavic }
+					1047 = { NOT = { has_province_flag = russian_name } }
+				}
+				1047 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Chumikan"
+					rename_capital = "Chumikan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1050
+					1050 = { is_core = ROOT }
+					1050 = { culture_group = east_slavic }
+					1050 = { NOT = { has_province_flag = russian_name } }
+				}
+				1050 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Amursk"
+					rename_capital = "Amursk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3249
+					3249 = { is_core = ROOT }
+					3249 = { culture_group = east_slavic }
+					3249 = { NOT = { has_province_flag = russian_name } }
+				}
+				3249 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Nikolaevsk-na-Amure"
+					rename_capital = "Nikolaevsk-na-Amure"
+				}
+			}
+
+                        #ningguta_area
+			if = {
+				limit = { 
+					owns = 729
+					729 = { is_core = ROOT }
+					729 = { culture_group = east_slavic }
+					729 = { NOT = { has_province_flag = russian_name } }
+				}
+				729 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Nahodka"
+					rename_capital = "Nahodka"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3247
+					3247 = { is_core = ROOT }
+					3247 = { culture_group = east_slavic }
+					3247 = { NOT = { has_province_flag = russian_name } }
+				}
+				3247 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Khabarovsk"
+					rename_capital = "Khabarovsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3248
+					3248 = { is_core = ROOT }
+					3248 = { culture_group = east_slavic }
+					3248 = { NOT = { has_province_flag = russian_name } }
+				}
+				3248 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Avvakumovka"
+					rename_capital = "Avvakumovka"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4032
+					4032 = { is_core = ROOT }
+					4032 = { culture_group = east_slavic }
+					4032 = { NOT = { has_province_flag = russian_name } }
+				}
+				4032 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Dalnerechensk"
+					rename_capital = "Dalnerechensk"
+				}
+			}
+
+                        #hokkaido_area
+                        #1019 1025 2299 2300
+			if = {
+				limit = { 
+					owns = 2301
+					2301 = { is_core = ROOT }
+					2301 = { culture_group = east_slavic }
+					2301 = { NOT = { has_province_flag = russian_name } }
+				}
+				2301 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Aleksandrovsk"
+					rename_capital = "Aleksandrovsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2302
+					2302 = { is_core = ROOT }
+					2302 = { culture_group = east_slavic }
+					2302 = { NOT = { has_province_flag = russian_name } }
+				}
+				2302 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Kurily"
+					rename_capital = "Kurilsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2744
+					2744 = { is_core = ROOT }
+					2744 = { culture_group = east_slavic }
+					2744 = { NOT = { has_province_flag = russian_name } }
+				}
+				2744 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Korsakov"
+					rename_capital = "Korsakov"
+				}
+			}
+
+                        #magadan_area
+			if = {
+				limit = { 
+					owns = 1038
+					1038 = { is_core = ROOT }
+					1038 = { culture_group = east_slavic }
+					1038 = { NOT = { has_province_flag = russian_name } }
+				}
+				1038 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Magadan"
+					rename_capital = "Magadan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1039
+					1039 = { is_core = ROOT }
+					1039 = { culture_group = east_slavic }
+					1039 = { NOT = { has_province_flag = russian_name } }
+				}
+				1039 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Tauisk"
+					rename_capital = "Tauisk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1040
+					1040 = { is_core = ROOT }
+					1040 = { culture_group = east_slavic }
+					1040 = { NOT = { has_province_flag = russian_name } }
+				}
+				1040 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Okhotsk"
+					rename_capital = "Okhotsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1044
+					1044 = { is_core = ROOT }
+					1044 = { culture_group = east_slavic }
+					1044 = { NOT = { has_province_flag = russian_name } }
+				}
+				1044 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Ayan"
+					rename_capital = "Ayan"
+				}
+			}
+
+                        #kamchatka_area
+			if = {
+				limit = { 
+					owns = 1034
+					1034 = { is_core = ROOT }
+					1034 = { culture_group = east_slavic }
+					1034 = { NOT = { has_province_flag = russian_name } }
+				}
+				1034 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Petropavlovsk"
+					rename_capital = "Petropavlovsk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1035
+					1035 = { is_core = ROOT }
+					1035 = { culture_group = east_slavic }
+					1035 = { NOT = { has_province_flag = russian_name } }
+				}
+				1035 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Penzhina"
+					rename_capital = "Penzhina"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1036
+					1036 = { is_core = ROOT }
+					1036 = { culture_group = east_slavic }
+					1036 = { NOT = { has_province_flag = russian_name } }
+				}
+				1036 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Anadyr"
+					rename_capital = "Anadyr"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1037
+					1037 = { is_core = ROOT }
+					1037 = { culture_group = east_slavic }
+					1037 = { NOT = { has_province_flag = russian_name } }
+				}
+				1037 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = russian_name
+					change_province_name = "Nizhekolymsk"
+					rename_capital = "Nizhekolymsk"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

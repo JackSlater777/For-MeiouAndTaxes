@@ -1,0 +1,591 @@
+protectorate = {
+	copy_from = vassal
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+	pays_overlord = 0.5
+	military_focus = 1.5
+	base_liberty_desire = -5.0
+	can_be_annexed = no
+	scutage = no
+	subsidize_armies = yes
+	send_officers = yes
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = march_subject
+	}
+	modifier_subject = {
+		modifier = march_bonus
+		trigger = {
+			NOT = {
+				total_development = 100
+			}
+		}
+		expiration_message_overlord = MARCHTOOLARGE
+		expiration_message_subject = MARCHTOOLARGEUS
+	}
+}
+appanage_subject = {
+	copy_from = vassal
+	count = vassal
+	is_potential_overlord = {
+		technology_group = western
+	}
+	can_be_established = {
+		technology_group = western
+	}
+	can_be_annexed = no
+	takes_diplo_slot = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	overlord_can_be_subject=yes 
+	#can_use_claims = yes
+	pays_overlord = 0.5
+	forcelimit_bonus = 0
+	liberty_desire_development_ratio=0.20 
+	liberty_desire_negative_prestige=0.2
+	trust_on_start = 10
+	military_focus = 1.0
+	relative_power_class = 1
+	can_fight = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	can_rival = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	can_ally = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	can_marry = {
+		independent_nations=yes
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	scutage = no
+	#grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	return_land=no 
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+autonomous_vassal = {
+	copy_from = appanage_subject
+	count = vassal
+	is_potential_overlord = {
+		technology_group = western
+	}
+	can_be_established = {
+		technology_group = western
+	}
+	can_be_annexed = no
+	overlord_can_attack=yes
+	has_power_projection=yes
+	takes_diplo_slot = no
+	gets_help_with_rebels = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = yes
+	overlord_can_be_subject=yes
+	overlord_enforce_peace_attacking=yes
+	overlord_protects_external = yes
+	can_have_subjects_of_other_types = yes
+	joins_colonial_wars=no 
+	can_transfer_in_peace=no
+	joins_overlords_wars = yes
+	pays_overlord = 0.5
+	forcelimit_bonus = 1.25
+	liberty_desire_negative_prestige=0.2 
+	liberty_desire_development_ratio=0.35
+	trust_on_start = 0
+	military_focus = 1.0
+	relative_power_class = 3
+	can_fight = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	can_rival = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	can_ally = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	can_marry = {
+		same_overlord = appanage_subject
+		same_overlord = autonomous_vassal
+	}
+	scutage = no
+	#grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	return_land=no
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = is_decentralized_vassal
+	subject_opinion_modifier = is_decentralized_vassal
+}
+decentralized_vassal = {
+	copy_from = appanage_subject
+	count = vassal
+	is_potential_overlord = {
+		always = yes
+	}
+	can_be_established = {
+		always = yes
+	}
+	can_be_annexed = no
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = no
+	can_have_subjects_of_other_types = yes
+	overlord_can_attack = no
+	overlord_protects_external = yes
+	takes_diplo_slot = no
+	can_use_claims = yes
+	joins_overlords_wars = yes
+	pays_overlord = 0.5
+	forcelimit_bonus = 1.25
+	liberty_desire_development_ratio=0.4
+	trust_on_start = 10
+	military_focus = 0.5
+	relative_power_class = 1
+	can_fight = {}
+	can_rival = {}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = is_decentralized_vassal
+	subject_opinion_modifier = is_decentralized_vassal
+}
+rebellious_decentralized_vassal = {
+	copy_from = appanage_subject
+	count = vassal
+	is_potential_overlord = {
+		always = yes
+	}
+	can_be_established = {
+		always = yes
+	}
+	can_be_annexed = no
+	gets_help_with_rebels = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_have_subjects_of_other_types = yes
+	overlord_can_attack = yes
+	overlord_protects_external = yes
+	takes_diplo_slot = no
+	can_use_claims = no
+	joins_overlords_wars = no
+	can_fight_independence_war=yes
+	pays_overlord = 0
+	base_liberty_desire = 10
+	forcelimit_bonus = 1.25
+	liberty_desire_development_ratio=0.4
+	trust_on_start = 10
+	military_focus = 1.2
+	relative_power_class = 1
+	can_fight = {
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_rival = {
+		independent_nations=yes 
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	scutage = no
+	grant_core_claim = no
+	grant_province = no
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = is_rebellious_vassal
+	subject_opinion_modifier = is_rebellious_vassal
+}
+subjugated_vassal = {
+	copy_from = appanage_subject
+	count = vassal
+	is_potential_overlord = {
+		always = yes
+	}
+	can_be_established = {
+		always = yes
+	}
+	can_be_annexed = no
+	can_fight_independence_war = yes
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = no
+	can_have_subjects_of_other_types = yes
+	overlord_can_attack = no
+	overlord_protects_external = yes
+	takes_diplo_slot = no
+	can_use_claims = yes
+	joins_overlords_wars = yes
+	pays_overlord = 0.5
+	forcelimit_bonus = 0.5
+	liberty_desire_development_ratio=0.4
+	trust_on_start = 10
+	military_focus = 1.0
+	relative_power_class = 1
+	can_fight = {
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_rival = {
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_ally = {
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_marry = {
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = is_decentralized_vassal
+	subject_opinion_modifier = is_decentralized_vassal
+}
+rebellious_subjugated_vassal = {
+	copy_from = appanage_subject
+	count = vassal
+	is_potential_overlord = {
+		always = yes
+	}
+	can_be_established = {
+		always = yes
+	}
+	can_be_annexed = no
+	can_fight_independence_war = yes
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = no
+	can_have_subjects_of_other_types = yes
+	overlord_can_attack = yes
+	overlord_protects_external = yes
+	takes_diplo_slot = no
+	can_use_claims = yes
+	joins_overlords_wars = no
+	pays_overlord = 0
+	base_liberty_desire = 10
+	liberty_desire_development_ratio=0.4
+	forcelimit_bonus = 0.5
+	trust_on_start = 10
+	military_focus = 1.2
+	relative_power_class = 1
+	can_fight = {
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+		independent_nations = yes
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		other_overlord = all
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_ally = {
+		other_overlord = all
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	can_marry = {
+		other_overlord = all
+		independent_nations = yes
+		same_overlord = decentralized_vassal
+		same_overlord = rebellious_decentralized_vassal
+	}
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = is_rebellious_vassal
+	subject_opinion_modifier = is_rebellious_vassal
+}
+
+centralised_daimyo_vassal = {
+	copy_from = daimyo_vassal
+	count = daimyo_vassal
+	has_power_projection = no
+	can_be_annexed = yes
+	overlord_protects_external = yes
+	allows_taking_land_without_independence = no
+	separatists_become_subjects = yes
+	trust_on_start = 0
+	base_liberty_desire = 0.0
+	pays_overlord = 1.0
+	forcelimit_bonus = 1.0
+	military_focus = 1.2
+	relative_power_class = 1
+	can_fight = {}
+	can_rival = {}
+	can_ally = {}
+	can_marry = {
+		same_overlord = daimyo_vassal
+	}
+	liberty_desire_development_ratio = 0.0
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	enforce_religion = no
+	enforce_culture = no
+	force_seppuku = yes
+	return_land = yes
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_subject = {
+		modifier = daimyo_nation
+	}
+	modifier_subject = {
+		modifier = daimyo_defense
+		trigger = {
+			overlord = {
+				is_at_war = yes
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = daimyo_kanrei
+		trigger = {
+			has_country_flag = kanrei_appointement
+		}
+	}
+	modifier_subject = {
+		modifier = daimyo_kyoto_kanrei
+		trigger = {
+			has_country_flag = kyoto_kanrei
+		}
+	}
+	modifier_subject = {
+		modifier = daimyo_tandai
+		trigger = {
+			OR = {
+				has_country_flag = kyushu_tandai
+				has_country_flag = chugoku_tandai
+				has_country_flag = shikoku_tandai
+				has_country_flag = uo_tandai
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	modifier_overlord = {
+		modifier = overlord_sword_hunt
+		trigger = {
+			has_country_modifier = subject_sword_hunt
+		}
+	}
+}
+warlord = {
+	copy_from = march
+	count = march
+	can_fight_independence_war = no
+	overlord_can_attack = yes
+	has_power_projection = yes
+	takes_diplo_slot = no
+	can_be_annexed = yes
+	gets_help_with_rebels = yes
+	overlord_protects_external = no
+	counts_for_borders = yes
+	overlord_enforce_peace_attacking = yes
+	can_use_claims = yes
+	allows_taking_land_without_independence = yes
+	separatists_become_subjects = no
+	trust_on_start = 0
+	base_liberty_desire = 0.0
+	pays_overlord = -0.5
+	forcelimit_bonus = 0.0
+	military_focus = 2.0
+	relative_power_class = 1
+	can_fight = {
+		independent_nations = yes
+		other_overlord = warlord
+	}
+	can_rival = {
+		independent_nations = yes
+		other_overlord = warlord
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = warlord
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = warlord
+	}
+	liberty_desire_development_ratio = 0.0
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = yes
+	force_seppuku = yes
+	return_land = yes
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = warlord_bonus
+		trigger = {
+			overlord = {
+				NOT = {
+					absolutism = 50
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = daimyo_defense
+		trigger = {
+			overlord = {
+				is_at_war = yes
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = warlord_subject
+		trigger = {
+			OR = {
+				overlord = {
+					dynasty = ROOT
+				}
+				AND = {
+					OR = {
+						dynasty = "Qublaid"
+						dynasty = "Ariq-Bökid"
+						dynasty = "Chagatayid"
+						dynasty = "Dayanid"
+						dynasty = "Ögedeid"
+						dynasty = "Toluid"
+						dynasty = "Jochid"
+						dynasty = "Shaybanid"
+						dynasty = "Geray"
+						dynasty = "Edigüid"
+						dynasty = "Janid"
+						dynasty = "Qasarid"
+					}
+					overlord = {
+						OR = {
+							dynasty = "Qublaid"
+							dynasty = "Ariq-Bökid"
+							dynasty = "Chagatayid"
+							dynasty = "Dayanid"
+							dynasty = "Ögedeid"
+							dynasty = "Toluid"
+							dynasty = "Jochid"
+							dynasty = "Shaybanid"
+							dynasty = "Geray"
+							dynasty = "Edigüid"
+							dynasty = "Janid"
+							dynasty = "Qasarid"
+						}
+					}
+				}
+			}
+		}
+	}
+}

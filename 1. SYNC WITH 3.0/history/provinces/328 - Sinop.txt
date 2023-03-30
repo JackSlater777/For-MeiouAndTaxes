@@ -1,0 +1,49 @@
+owner = CND
+controller = CND
+add_core = CND
+
+capital = "Sinop"
+trade_goods = lumber
+#culture = pontic
+#religion = orthodox
+culture = anatolian
+religion = sunni
+
+hre = no
+
+base_tax = 6
+base_production = 2
+base_manpower = 1
+
+is_city = yes
+harbour_infrastructure_2 = yes
+marketplace = yes
+urban_infrastructure_1 = yes
+road_network = yes
+local_fortification_1 = yes
+canal_level_1 = yes
+temple = yes
+fort_14th = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+add_permanent_claim = BYZ
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 4 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_small_natural_harbour
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = sinope_natural_harbour
+		duration = -1
+	}
+	add_permanent_province_modifier = {
+		name = urban_goods_naval_supplies
+		duration = -1
+	}
+}

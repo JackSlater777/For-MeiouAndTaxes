@@ -1,0 +1,337 @@
+# Horde Events
+
+# This file is for horde-specific events actually visable to the player. For invisible events, use M - Hordes
+
+namespace = horde_events
+
+country_event = {
+	id = horde_events.20 #Untimely Death of Jani Beg Jochid
+	title = horde_events.20.t
+	desc = horde_events.20.d
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WHI
+		has_ruler = "Jani Beg"
+		NOT = { is_year = 1360 }
+		has_any_disaster = no
+		#NOT = { war_with = CHU } # Makes the event description make sense
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "OPT.OHNO"
+		kill_ruler = yes
+		add_horde_unity = -50
+		hidden_effect = {
+			set_country_flag = white_horde_murdered_ruler
+			define_heir = {
+				name = "Qulpa"
+				dynasty = ROOT
+				culture = turco_mongol
+				age = 18
+				ADM = 1
+				DIP = 1
+				MIL = 1
+			}
+			add_horde_unity = -5
+			add_prestige = -10
+		}
+		random_list = {
+			30 = {}
+			50 = { subtract_stability_points_50 = yes }
+			20 = { subtract_stability_1 = yes }
+		}
+		hidden_effect = {
+			CHU = { #Chupanids
+				# Stablisation of the state
+				add_stability = 2
+				add_estate_greater_nobles_loyalty_effect_preset = { amount = 30 }
+				add_estate_lesser_nobles_loyalty_effect_preset = { amount = 30 }
+				add_estate_tribes_loyalty_effect_preset = { amount = 30 }
+				add_estate_burghers_loyalty_effect_preset = { amount = 20 }
+			}
+		}
+	}
+}
+
+########################
+# General Horde Events #
+########################
+
+country_event = { #We have countries under PU for less than 5 years before our monarch died, and we have to fight for those claims or give up
+	id = horde_events.100
+	title = horde_events.100.t
+	desc = horde_events.100.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { Timur_Has = yes }
+		OR = {
+			steppe_trigger = yes
+			native_trigger = yes
+		}
+		personal_union = 1
+		any_subject_country = {
+			junior_union_with = ROOT
+			OR = {
+				steppe_trigger = yes
+				native_trigger = yes
+			}
+			NOT = {
+				years_in_union_under = {
+					who = ROOT
+					years = 5
+				}
+			}
+		}
+	}
+	
+	option = { #Let them be free
+		name = horde_events.100.a
+		every_subject_country = {
+			limit = {
+				junior_union_with = ROOT
+				OR = {
+					steppe_trigger = yes
+					native_trigger = yes
+				}
+				NOT = {
+					years_in_union_under = {
+						who = ROOT
+						years = 5
+					}
+				}
+			}
+			break_union = ROOT
+		}
+		hidden_effect = {
+			CHU = {
+				if = {
+					limit = {
+						has_country_flag = under_WHI_PU
+						is_lesser_in_union = no
+					}
+					country_event = {
+						id = flavor_chu.4
+					}
+					clr_country_flag = under_WHI_PU
+				}
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				OR = {
+					tag = JAI
+					tag = MUZ
+				}
+			}
+		}
+	}
+	
+	option = { #Fight for what's ours
+		name = horde_events.100.b
+		custom_tooltip = horde_PU_war
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					junior_union_with = ROOT
+					OR = {
+						steppe_trigger = yes
+						native_trigger = yes
+					}
+					NOT = {
+						years_in_union_under = {
+							who = ROOT
+							years = 5
+						}
+					}
+				}
+				break_union = ROOT
+				ROOT = {
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_nomadic_submission
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				tag = WHI
+				NOT = { is_year = 1360 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = horde_events.22
+	title = horde_events.22.t
+	desc = horde_events.22.d
+	picture = BORDER_TENSION_eventPicture
+	
+	trigger = {
+		is_at_war = yes
+		is_nomad = yes
+		NOT = { has_country_flag = steppe_declined_tributary }
+		is_in_war = {
+			war_score = 25
+			attacker_leader = ROOT
+			casus_belli = cb_tribal_raid
+		}
+		any_known_country = {
+			is_in_war = {
+				defender_leader = THIS
+				casus_belli = cb_tribal_raid
+			}
+			NOT = { 
+				is_nomad = yes
+				tag = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 2
+		modifier = {
+			factor = 0.8
+			is_in_war = {
+				war_score = 30
+				attacker_leader = ROOT
+				casus_belli = cb_tribal_raid
+			}
+		}
+		modifier = {
+			factor = 0.8
+			is_in_war = {
+				war_score = 40
+				attacker_leader = ROOT
+				casus_belli = cb_tribal_raid
+			}
+		}
+		modifier = {
+			factor = 0.8
+			is_in_war = {
+				war_score = 50
+				attacker_leader = ROOT
+				casus_belli = cb_tribal_raid
+			}
+		}
+	}
+	
+	option = { ## propose them to become a tributary
+		name = "horde_events.22.a"
+		ai_chance = {
+			factor = 5
+		}
+		every_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = THIS
+					casus_belli = cb_tribal_raid
+				}
+				NOT = { tag = ROOT }
+			}
+			country_event = { id = horde_events.23 days = 5 }
+		}
+	}
+	option = { ## continue the war
+		name = "horde_events.22.b"
+		ai_chance = {
+			factor = 1
+		}
+		add_war_exhaustion = 1
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = horde_events.23
+	title = horde_events.23.t
+	desc = horde_events.23.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = { ## accept to become a tributary
+		name = "horde_events.23.a"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 5
+				military_strength = {
+					who = FROM
+					value = 0.5
+				}
+			}
+		}
+		add_treasury = -25
+		white_peace = FROM
+		add_truce_with = FROM
+		FROM = {
+			create_subject = {
+				subject_type = tributary_state
+				who = ROOT
+			}
+			country_event = { id = horde_events.24 days = 1 }
+		}
+	}
+	option = { ## decline and continue the war
+		name = "horde_events.23.b"
+		ai_chance = {
+			factor = 1
+		}
+		add_war_exhaustion = 2.5
+		add_prestige = 10
+		country_event = { id = horde_events.25 days = 1 }
+	}
+}
+
+## accepted notification to become a tributary
+country_event = {
+	id = horde_events.24
+	title = horde_events.24.t
+	desc = horde_events.24.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = horde_events.24.a
+		add_prestige = 2.5
+		add_treasury = 25
+		add_truce_with = FROM
+	}
+}
+
+## declined notification to become a tributary
+country_event = {
+	id = horde_events.25
+	title = horde_events.25.t
+	desc = horde_events.25.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = horde_events.25.a
+		add_prestige = -1
+		set_country_flag = steppe_declined_tributary
+	}
+}

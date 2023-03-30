@@ -1,0 +1,245 @@
+country_event = {
+	id = diplomacy_events.034
+	title = "diplomacy_events.034.name"
+	desc = "diplomacy_events.034.desc"
+	picture = OVERLORDVASSAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "diplomacy_events.034.opta"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -100}}
+				factor = 0
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -90}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -80}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -70}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -60}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -50}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -40}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -30}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -20}}
+				factor = 0.9
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -10}}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 10}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 20}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 30}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 40}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 50}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 60}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 70}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 80}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 90}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 100}
+				factor = 1.1
+			}
+		}
+		overlord = {
+			country_event = { id = diplomacy_events.035 }
+		}
+	}
+	option = {
+		name = "diplomacy_events.034.optb"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -100}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -90}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -80}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -70}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -60}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -50}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -40}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -30}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -20}}
+				factor = 1.1
+			}
+			modifier = {
+				NOT = {check_variable = {which = ai_value value = -10}}
+				factor = 1.1
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 10}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 20}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 30}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 40}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 50}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 60}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 70}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 80}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 90}
+				factor = 0.9
+			}
+			modifier = {
+				check_variable = {which = ai_value value = 100}
+				factor = 0.0
+			}
+		}
+		overlord = {
+			country_event = { id = diplomacy_events.036 }
+		}
+	}
+}
+country_event = {
+	id = diplomacy_events.035
+	title = "diplomacy_events.035.name"
+	desc = "diplomacy_events.035.desc"
+	picture = OVERLORDVASSAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "diplomacy_events.035.opta"
+		if = {
+			limit = {
+				FROM = {is_subject_of_type = autonomous_vassal}
+			}
+			create_subject = { subject_type = vassal subject = FROM}
+		}
+		if = {
+			limit = {
+				FROM = {is_subject_of_type = decentralized_vassal}
+			}
+			create_subject = {subject_type = vassal subject = FROM}
+		}
+		if = {
+			limit = {
+				FROM = {is_subject_of_type = subjugated_vassal}
+			}
+			create_subject = {subject_type = vassal subject = FROM}
+		}
+		if = {
+			limit = {
+				FROM = {is_subject_of_type = centralised_daimyo_vassal}
+			}
+			create_subject = {subject_type = vassal subject = FROM}
+		}
+		FROM = {
+			add_liberty_desire = -25
+			add_trust = {
+				who = ROOT
+				value = -50
+				mutual = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = diplomacy_events.036
+	title = "diplomacy_events.036.name"
+	desc = "diplomacy_events.036.desc"
+	picture = OVERLORDVASSAL_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = "diplomacy_events.036.opta"
+		FROM = {
+			add_trust = {
+				who = ROOT
+				value = -2
+				mutual = yes
+			}
+		}
+	}
+}

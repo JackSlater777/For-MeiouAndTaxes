@@ -1,0 +1,29 @@
+owner = SMO
+controller = SMO
+add_core = SMO
+
+capital = "Rzhev"
+trade_goods = lumber
+culture = russian
+religion = orthodox
+
+hre = no
+
+base_tax = 7
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = steppestech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 2.5 }
+}
+1356.1.1 = {
+	add_permanent_claim = LIT
+	set_province_flag = coal
+}

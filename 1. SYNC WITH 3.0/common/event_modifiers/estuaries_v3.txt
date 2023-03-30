@@ -1,0 +1,294 @@
+### Confluences
+tura_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+songhua_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+kama_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+oka_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+lena_vitim_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+lena_olekma_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+yenisey_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+
+# Silk Road Towns
+hotan_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+saraychik_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+khujand_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+khiva_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+kabul_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+otrar_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+astarabad_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+saray_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+derbent_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+erzurum_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+adrianopol_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+nigde_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+jerusalem_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+homs_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+mosul_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+hamadan_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+fars_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+kerman_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+quetta_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+bam_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+herat_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+peshawar_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+zaranj_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+nishapur_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+
+# Estuaries
+amur_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+duliujian_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+liaohe_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+mezen_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+pechora_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+ob_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+taz_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+yenisey_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+mond_estuary_modifier = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+
+# Harbours
+sukhum_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+poti_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+ascalon_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+tarabulus_al_sham_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+latakia_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+bandar_abbas_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+
+# Lakes
+
+# Navigable Rivers
+
+# Inland Trade centers

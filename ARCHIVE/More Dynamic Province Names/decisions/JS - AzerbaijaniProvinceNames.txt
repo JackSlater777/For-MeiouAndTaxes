@@ -1,0 +1,517 @@
+country_decisions = {
+	rename_provinces_azerbaijani_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = oghuz
+			religion_group = muslim
+			any_owned_province = {
+				OR = {
+                        		#east_georgia_area
+					province_id = 2576
+
+					area = east_armenia_area
+					area = shirvan_area
+					area = azerbaijan_area
+					area = south_kurdistan_area
+					area = iraq_e_ajam_area
+				}
+				culture = azerbadjani
+				religion_group = muslim
+				NOT = { has_province_flag = azerbaijani_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture = azerbadjani
+				religion_group = muslim
+				NOT = { has_province_flag = azerbaijani_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #east_georgia_area
+                        #422 423 3797 3808
+			if = {
+				limit = { 
+					owns = 2576
+					2576 = { is_core = ROOT }
+					2576 = { culture = azerbadjani }
+					2576 = { religion_group = muslim }
+					2576 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2576 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Xornabuci" #GEO - Herethi
+					rename_capital = "Xornabuci" #GEO - Kharnabuji
+				}
+			}
+
+                        #east_armenia_area
+			if = {
+				limit = { 
+					owns = 1316
+					1316 = { is_core = ROOT }
+					1316 = { culture = azerbadjani }
+					1316 = { religion_group = muslim }
+					1316 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1316 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Naxcivan" #ARM - Nakhichevan
+					rename_capital = "Naxcivan" #ARM - Nakhichevan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2577
+					2577 = { is_core = ROOT }
+					2577 = { culture = azerbadjani }
+					2577 = { religion_group = muslim }
+					2577 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2577 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Arsak" #ARM - Artsakh
+					rename_capital = "Xacin" #ARM - Khachen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3806
+					3806 = { is_core = ROOT }
+					3806 = { culture = azerbadjani }
+					3806 = { religion_group = muslim }
+					3806 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3806 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Sunik" #ARM - Syunik
+					rename_capital = "Qafan" #ARM - Kapan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3807
+					3807 = { is_core = ROOT }
+					3807 = { culture = azerbadjani }
+					3807 = { religion_group = muslim }
+					3807 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3807 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Gence" #ARM - Gandzak
+					rename_capital = "Gence" #ARM - Gandzak
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3809
+					3809 = { is_core = ROOT }
+					3809 = { culture = azerbadjani }
+					3809 = { religion_group = muslim }
+					3809 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3809 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Qarabag" #ARM - Gharabagh
+					rename_capital = "Qarabag" #ARM - Gharabagh
+				}
+			}
+
+                        #shirvan_area
+			if = {
+				limit = { 
+					owns = 424
+					424 = { is_core = ROOT }
+					424 = { culture = azerbadjani }
+					424 = { religion_group = muslim }
+					424 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				424 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Sabran" 
+					rename_capital = "Sabran"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 425
+					425 = { is_core = ROOT }
+					425 = { culture = azerbadjani }
+					425 = { religion_group = muslim }
+					425 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				425 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Derbend"
+					rename_capital = "Derbend"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1317
+					1317 = { is_core = ROOT }
+					1317 = { culture = azerbadjani }
+					1317 = { religion_group = muslim }
+					1317 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1317 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Samaxi"
+					rename_capital = "Samaxi"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2579
+					2579 = { is_core = ROOT }
+					2579 = { culture = azerbadjani }
+					2579 = { religion_group = muslim }
+					2579 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2579 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Hunzah"
+					rename_capital = "Hunzah"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2656
+					2656 = { is_core = ROOT }
+					2656 = { culture = azerbadjani }
+					2656 = { religion_group = muslim }
+					2656 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2656 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Qizilyar"
+					rename_capital = "Tarki"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3810
+					3810 = { is_core = ROOT }
+					3810 = { culture = azerbadjani }
+					3810 = { religion_group = muslim }
+					3810 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3810 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Sirvan"
+					rename_capital = "Sirvan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3811
+					3811 = { is_core = ROOT }
+					3811 = { culture = azerbadjani }
+					3811 = { religion_group = muslim }
+					3811 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3811 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Baki"
+					rename_capital = "Baki"
+				}
+			}
+
+                        #azerbaijan_area
+			if = {
+				limit = { 
+					owns = 416
+					416 = { is_core = ROOT }
+					416 = { culture = azerbadjani }
+					416 = { religion_group = muslim }
+					416 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				416 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Tebriz"
+					rename_capital = "Tebriz"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 463
+					463 = { is_core = ROOT }
+					463 = { culture = azerbadjani }
+					463 = { religion_group = muslim }
+					463 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				463 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Zencan"
+					rename_capital = "Zencan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1318
+					1318 = { is_core = ROOT }
+					1318 = { culture = azerbadjani }
+					1318 = { religion_group = muslim }
+					1318 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1318 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Erdebil"
+					rename_capital = "Erdebil"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1321
+					1321 = { is_core = ROOT }
+					1321 = { culture = azerbadjani }
+					1321 = { religion_group = muslim }
+					1321 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1321 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Maraga"
+					rename_capital = "Maraga"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1445
+					1445 = { is_core = ROOT }
+					1445 = { culture = azerbadjani }
+					1445 = { religion_group = muslim }
+					1445 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1445 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Xoy"
+					rename_capital = "Xoy"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3090
+					3090 = { is_core = ROOT }
+					3090 = { culture = azerbadjani }
+					3090 = { religion_group = muslim }
+					3090 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3090 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Lenkeran"
+					rename_capital = "Lenkeran"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3823
+					3823 = { is_core = ROOT }
+					3823 = { culture = azerbadjani }
+					3823 = { religion_group = muslim }
+					3823 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3823 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Astara" #Persian - Astara
+					rename_capital = "Astara" #Persian - Astara
+				}
+			}
+
+                        #south_kurdistan_area
+			if = {
+				limit = { 
+					owns = 412
+					412 = { is_core = ROOT }
+					412 = { culture = azerbadjani }
+					412 = { religion_group = muslim }
+					412 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				412 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Kirmansah" #Persian - Kermanshah
+					rename_capital = "Kirmansah" #Persian - Kermanshah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2219
+					2219 = { is_core = ROOT }
+					2219 = { culture = azerbadjani }
+					2219 = { religion_group = muslim }
+					2219 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2219 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Urmu" #Persian - Orumieh
+					rename_capital = "Urmu" #Persian - Orumieh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2559
+					2559 = { is_core = ROOT }
+					2559 = { culture = azerbadjani }
+					2559 = { religion_group = muslim }
+					2559 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2559 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Senendec" #Persian - Sanandaj
+					rename_capital = "Senendec" #Persian - Sanandaj
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2724
+					2724 = { is_core = ROOT }
+					2724 = { culture = azerbadjani }
+					2724 = { religion_group = muslim }
+					2724 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2724 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Ilam" #Persian - Ilam
+					rename_capital = "Ilam" #Persian - Ilam
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3825
+					3825 = { is_core = ROOT }
+					3825 = { culture = azerbadjani }
+					3825 = { religion_group = muslim }
+					3825 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3825 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Qesri Sirin" #Persian - Qasr-e Shirin
+					rename_capital = "Qesri Sirin" #Persian - Qasr-e Shirin
+				}
+			}
+
+                        #iraq_e_ajam_area
+			if = {
+				limit = { 
+					owns = 1313
+					1313 = { is_core = ROOT }
+					1313 = { culture = azerbadjani }
+					1313 = { religion_group = muslim }
+					1313 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1313 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Rey" #Persian - Rey
+					rename_capital = "Tehran" #Persian - Tehran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1314
+					1314 = { is_core = ROOT }
+					1314 = { culture = azerbadjani }
+					1314 = { religion_group = muslim }
+					1314 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1314 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Qezvin" #Persian - Qazvin
+					rename_capital = "Qezvin" #Persian - Qazvin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1315
+					1315 = { is_core = ROOT }
+					1315 = { culture = azerbadjani }
+					1315 = { religion_group = muslim }
+					1315 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				1315 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Sultaniye" #Persian - Soltanieh
+					rename_capital = "Sultaniye" #Persian - Soltanieh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2227
+					2227 = { is_core = ROOT }
+					2227 = { culture = azerbadjani }
+					2227 = { religion_group = muslim }
+					2227 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				2227 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Hemedan" #Persian - Hamedan
+					rename_capital = "Hemedan" #Persian - Hamedan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3078
+					3078 = { is_core = ROOT }
+					3078 = { culture = azerbadjani }
+					3078 = { religion_group = muslim }
+					3078 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3078 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Elburz" #Persian - Alborz
+					rename_capital = "Kerec" #Persian - Karaj
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3083
+					3083 = { is_core = ROOT }
+					3083 = { culture = azerbadjani }
+					3083 = { religion_group = muslim }
+					3083 = { NOT = { has_province_flag = azerbaijani_name } }
+				}
+				3083 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = azerbaijani_name
+					change_province_name = "Simnan" #Persian - Semnan
+					rename_capital = "Simnan" #Persian - Semnan
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

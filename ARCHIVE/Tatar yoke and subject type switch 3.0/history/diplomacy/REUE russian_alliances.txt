@@ -1,0 +1,107 @@
+dependency={
+subject_type="muscovite_tributary_state" 
+first=WHI second=MOS 
+start_date=1356.1.1 
+end_date=1474.1.1 }
+
+dependency={
+#subject_type="custom_vassal"
+subject_type="vassal" 
+first=MOS second=ROS 
+start_date=1356.1.1 
+end_date=1474.1.1 }
+
+dependency={
+#subject_type="custom_vassal" 
+subject_type="vassal"
+first=MOS second=GLC 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+#subject_type="custom_vassal"
+subject_type="vassal" 
+first=MOS
+second=STA 
+start_date=1356.1.1  
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state" 
+first=MOS second=RYA 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="close_tributary_state" 
+first=MOS second=YAR 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="close_tributary_state" 
+first=MOS second=MUR 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="close_tributary_state" 
+first=MOS second=NZH 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="close_tributary_state" 
+first=MOS second=TSS 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state" 
+first=MOS second=SMO 
+start_date=1356.1.1  
+end_date=1364.1.1 }
+
+dependency={
+subject_type="close_tributary_state" 
+first=MOS second=BOZ 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state" 
+first=MOS second=KRC
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state" 
+first=MOS second=VOR 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state" 
+first=MOS second=NVS 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state" 
+first=MOS second=TVE 
+start_date=1356.1.1 
+end_date=1364.1.1 }
+
+dependency={
+subject_type="tributary_state"
+first=WHI second=KIE
+start_date=1356.1.1 
+end_date=1361.12.30 }
+
+dependency={
+subject_type="tributary_state"
+first=NOV second=PRM
+start_date=1356.1.1 
+end_date=1361.12.30 }
+
+alliance={first=NOV second=PSK start_date=1356.1.1 end_date=1510.1.24 }

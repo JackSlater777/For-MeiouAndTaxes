@@ -1,0 +1,32 @@
+owner = SDB
+controller = SDB
+add_core = SDB
+
+capital = "Bastam"
+trade_goods = wool
+culture = persian
+religion = sunni
+
+hre = no
+
+base_tax = 3
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+town_hall = yes
+road_network = yes
+local_fortification_2 = yes
+
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 5.500 } # Also includes Batram
+	#set_variable = { which = pop_level value = 2 }
+	set_variable = { which = pop_level value = 2.5 }
+	#set_province_flag = salt
+	set_province_flag = lead
+	#set_province_flag = coal
+}

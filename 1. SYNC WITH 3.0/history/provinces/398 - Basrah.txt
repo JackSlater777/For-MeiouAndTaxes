@@ -1,0 +1,51 @@
+owner = JAI
+controller = JAI
+add_core = JAI
+
+capital = "Basrah"
+trade_goods = wool
+culture = iraqi
+religion = sunni
+
+hre = no
+
+base_tax = 4
+base_production = 1
+base_manpower = 0
+
+is_city = yes
+marketplace = yes
+temple = yes
+urban_infrastructure_1 = yes
+harbour_infrastructure_2 = yes
+military_harbour_1 = yes
+local_fortification_1 = yes
+canal_level_1 = yes
+
+discovered_by = muslim
+discovered_by = western
+discovered_by = eastern
+discovered_by = turkishtech
+discovered_by = steppestech
+discovered_by = indian
+
+450.1.1 = {
+	set_variable = { which = starting_urban_pop_1350 value = 15.000 }
+	set_variable = { which = pop_level value = 4 }
+	set_province_flag = tribals_control_province
+	set_variable = { which = tribals_ratio	value = 47 }
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_small_natural_harbour
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = euphrates_estuary_modifier
+		duration = -1
+	}
+}
+1101.1.1 = {
+	set_province_flag = mined_goods
+	set_province_flag = salt
+}
+1335.1.1 = {
+	add_core = HAZ
+}

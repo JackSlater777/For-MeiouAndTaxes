@@ -1,0 +1,27 @@
+country_event = {
+	id = js_colonies.1
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+	hidden = yes
+	
+	trigger = {
+		has_reform = colonial_government
+		ai = yes
+		OR = {
+			has_idea_group = exploration_ideas
+			has_idea_group = expansion_ideas
+			has_idea_group = global_empire_ideas
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		remove_idea_group = exploration_ideas
+		remove_idea_group = expansion_ideas
+		remove_idea_group = global_empire_ideas
+	}
+
+	option = { name = afarawaymod.2_o }
+}

@@ -1,0 +1,31 @@
+owner = YUA
+controller = YUA
+
+capital = "Zhuozhou"
+trade_goods = wheat
+culture = jilu
+#religion = confucianism
+religion = mahayana
+
+hre = no
+
+base_tax = 12
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+road_network = yes
+canal_level_1 = yes
+temple = yes
+
+discovered_by = chinese
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 5.5 }
+}
+1276.1.1 = {
+	owner = YUA
+	controller = YUA
+	add_core = YUA
+}

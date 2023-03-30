@@ -1,0 +1,5 @@
+- Adds unlimited amount of states by default (from v3.0)
+- Nerfed bonuses for AI
+- No knowledge sharing Effect (because it ruins the institution system/ahistorical)
+- Better Horde Unity (from v3.0)
+- Better Overextension (from v3.0)

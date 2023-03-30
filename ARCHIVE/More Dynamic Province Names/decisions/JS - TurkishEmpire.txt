@@ -1,0 +1,5096 @@
+country_decisions = {
+	expand_eyalet_system_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			tag = TUR
+			#OR = {
+			#	tag = OTT
+			#	tag = TUR
+			#}
+			#has_country_modifier = title_rank_6
+			#primary_culture = turkish
+			any_owned_province = {
+				OR = {
+					area = west_bulgaria_area
+					area = east_bulgaria_area
+					area = dobrogea_area
+					area = macedonia_area
+					area = south_serbia_area
+					area = north_serbia_area
+					area = bosnia_area
+					area = transylvania_area
+					area = alfold_area
+					area = kisalfold_area
+					area = transdanubia_area
+					area = croatia_area
+					area = albania_area
+					area = east_adriatic_coast_area
+					area = oltenia_area
+					area = muntenia_area
+					area = moldavia_area
+					area = basarabia_area
+					area = zaporizhia_area
+					area = crimea_area
+					area = azov_area
+					area = west_circassia_area
+					area = abkhazia_area
+					area = west_georgia_area
+					area = east_georgia_area
+					area = east_circassia_area
+					area = shirvan_area
+					area = epirus_area
+					area = thessalia_area
+					area = morea_area
+					area = aegean_area
+					area = thrace_area
+					area = manisa_area
+					area = hudavendigar_area
+					area = kastamonu_area
+					area = trebizond_area
+					area = rum_area
+					area = aydin_area
+					area = teke_area
+					area = kutahya_area
+					area = karaman_area
+					area = cilicia_area
+					area = dulkadir_area
+					area = aleppo_area
+					area = syria_area
+					area = palestine_area
+					area = erzurum_area
+					area = north_kurdistan_area
+					area = west_armenia_area
+					area = east_armenia_area
+					area = azerbaijan_area
+					area = mosul_area
+					area = iraq_arabi_area
+					area = lower_iraq_area
+					area = basra_area
+					area = hejaz_area
+					area = sinai_area
+					area = gharbia_area
+					area = central_egypt_area
+					area = upper_egypt_area
+					area = cyrenaica_area
+					area = libyan_desert_area
+					area = tripolitania_area
+					area = djerba_area
+					area = kairwan_area
+					area = tunis_area
+					area = kabylia_area
+					area = algiers_area
+					area = atlas_area
+				}
+				NOT = { has_province_flag = turkish_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				NOT = { has_province_flag = turkish_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #west_bulgaria_area
+			if = {
+				limit = { 
+					owns = 157
+					157 = { is_core = ROOT }
+					157 = { NOT = { has_province_flag = turkish_name } }
+				}
+				157 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nigbolu" #BUL - Lodogoria
+					rename_capital = "Tirnova" #BUL - Turnovo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1426
+					1426 = { is_core = ROOT }
+					1426 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1426 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sofya" #BUL - Serdica
+					rename_capital = "Sofya" #BUL - Sofia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1591
+					1591 = { is_core = ROOT }
+					1591 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1591 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Filibe" #BUL - Plovdiv
+					rename_capital = "Filibe" #BUL - Plovdiv
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2382
+					2382 = { is_core = ROOT }
+					2382 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2382 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Vidin" #BUL - Vidin
+					rename_capital = "Vidin" #BUL - Vidin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3779
+					3779 = { is_core = ROOT }
+					3779 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3779 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Menlik" #BUL - Melnik
+					rename_capital = "Menlik" #BUL - Melnik
+				}
+			}
+
+                        #east_bulgaria_area
+			if = {
+				limit = { 
+					owns = 150
+					150 = { is_core = ROOT }
+					150 = { NOT = { has_province_flag = turkish_name } }
+				}
+				150 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Silistre" #BUL - Drastar
+					rename_capital = "Silistre" #BUL - Drastar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1427
+					1427 = { is_core = ROOT }
+					1427 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1427 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ahyolu" #BUL - Anhialo
+					rename_capital = "Ahyolu" #BUL - Anhialo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1848
+					1848 = { is_core = ROOT }
+					1848 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1848 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Islimiye" #BUL - Sliven
+					rename_capital = "Islimiye" #BUL - Sliven
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3780
+					3780 = { is_core = ROOT }
+					3780 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3780 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yanbolu" #BUL - Yambol
+					rename_capital = "Yanbolu" #BUL - Yambol
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3781
+					3781 = { is_core = ROOT }
+					3781 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3781 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sumnu" #BUL - Shumen
+					rename_capital = "Sumnu" #BUL - Shumen
+				}
+			}
+
+                        #dobrogea_area
+			if = {
+				limit = { 
+					owns = 159
+					159 = { is_core = ROOT }
+					159 = { NOT = { has_province_flag = turkish_name } }
+				}
+				159 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Dobruca" #BUL - Dobruja
+					rename_capital = "Kuyu-koy" #BUL - Karvuna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2380
+					2380 = { is_core = ROOT }
+					2380 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2380 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tolcu" #BUL - Tulcha
+					rename_capital = "Tolcu" #BUL - Tulcha
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2381
+					2381 = { is_core = ROOT }
+					2381 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2381 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Varna" #BUL - Varna
+					rename_capital = "Varna" #BUL - Varna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3782
+					3782 = { is_core = ROOT }
+					3782 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3782 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kostence" #BUL - Kustenja
+					rename_capital = "Kostence" #BUL - Kustenja
+				}
+			}
+
+                        #macedonia_area
+			if = {
+				limit = { 
+					owns = 148
+					148 = { is_core = ROOT }
+					148 = { NOT = { has_province_flag = turkish_name } }
+				}
+				148 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Vardar" #BUL - Vardar
+					rename_capital = "Pirlepe" #BUL - Prilep
+				}
+			}
+			if = {
+				limit = { 
+					owns = 155
+					155 = { is_core = ROOT }
+					155 = { NOT = { has_province_flag = turkish_name } }
+				}
+				155 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Serez" #GRE - Serres
+					rename_capital = "Serez" #GRE - Serres
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1401
+					1401 = { is_core = ROOT }
+					1401 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1401 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ohri" #GRE - Ochrida #Slav - Ohrid
+					rename_capital = "Ohri" #GRE - Ochrida #Slav - Ohrid
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2124
+					2124 = { is_core = ROOT }
+					2124 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2124 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ustrumca" #BUL - Strumica
+					rename_capital = "Ustrumca" #BUL - Strumica
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2137
+					2137 = { is_core = ROOT }
+					2137 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2137 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Uskup" #BUL - Skopje
+					rename_capital = "Uskup" #BUL - Skopje
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2387
+					2387 = { is_core = ROOT }
+					2387 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2387 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Vodina" #GRE - Edessa
+					rename_capital = "Vodina" #GRE - Voden
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3871
+					3871 = { is_core = ROOT }
+					3871 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3871 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kesriye" #GRE - Orestis
+					rename_capital = "Kesriye" #GRE - Kastoria
+				}
+			}
+
+                        #south_serbia_area
+			if = {
+				limit = { 
+					owns = 140
+					140 = { is_core = ROOT }
+					140 = { NOT = { has_province_flag = turkish_name } }
+				}
+				140 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ipek" #SER - Kosovo
+					rename_capital = "Pristine" #SER - Pristina
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1396
+					1396 = { is_core = ROOT }
+					1396 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1396 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Karadag" #SER - Duklja
+					rename_capital = "Podgorice" #SER - Podgorica
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1397
+					1397 = { is_core = ROOT }
+					1397 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1397 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yeni Pazar" #SER - Raska
+					rename_capital = "Raska" #SER - Ras
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2237
+					2237 = { is_core = ROOT }
+					2237 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2237 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Buduva" #SER - Budva
+					rename_capital = "Cetine" #SER - Cetinje
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3775
+					3775 = { is_core = ROOT }
+					3775 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3775 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Alacahisar" #SER - Rasina
+					rename_capital = "Alacahisar" #SER - Krusevac
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3777
+					3777 = { is_core = ROOT }
+					3777 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3777 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Pirzerin" #SER - Opolje
+					rename_capital = "Pirzerin" #SER - Prizren
+				}
+			}
+
+                        #north_serbia_area
+			if = {
+				limit = { 
+					owns = 141
+					141 = { is_core = ROOT }
+					141 = { NOT = { has_province_flag = turkish_name } }
+				}
+				141 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Semendire" #SER - Sumadija
+					rename_capital = "Semendire" #SER - Smederevo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 156
+					156 = { is_core = ROOT }
+					156 = { NOT = { has_province_flag = turkish_name } }
+				}
+				156 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nis" #SER - Nisava
+					rename_capital = "Nis" #SER - Nis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2612
+					2612 = { is_core = ROOT }
+					2612 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2612 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Belgrat" #SER - Beograd
+					rename_capital = "Belgrat" #SER - Beograd
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3773
+					3773 = { is_core = ROOT }
+					3773 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3773 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Semi Pazar" #SER - Zlatibor
+					rename_capital = "Ozice" #SER - Uzice
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3774
+					3774 = { is_core = ROOT }
+					3774 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3774 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Pasarofca" #SER - Branicevo
+					rename_capital = "Pasarofca" #SER - Branicevo
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3776
+					3776 = { is_core = ROOT }
+					3776 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3776 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Timoca" #SER - Timocka Krajina
+					rename_capital = "Zajecar" #SER - Negotin
+				}
+			}
+
+			#bosnia_area
+			if = {
+				limit = { 
+					owns = 139
+					139 = { is_core = ROOT }
+					139 = { NOT = { has_province_flag = turkish_name } }
+				}
+				139 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bosna" #BOS - Bosna
+					rename_capital = "Bosnasaray" #BOS - Bobovac
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1268
+					1268 = { is_core = ROOT }
+					1268 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1268 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bana Luka" #BOS - Doniji Kraji
+					rename_capital = "Bana Luka" #BOS - Banja Luka
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1392
+					1392 = { is_core = ROOT }
+					1392 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1392 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tirebin" #BOS - Travunija
+					rename_capital = "Tirebin" #BOS - Trebinje
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1767
+					1767 = { is_core = ROOT }
+					1767 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1767 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kilis" #CRO - Rama
+					rename_capital = "Ihlevne" #CRO - Livno
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2389
+					2389 = { is_core = ROOT }
+					2389 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2389 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bihke" #BOS - Krajina
+					rename_capital = "Bihke" #BOS - Bihac
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2391
+					2391 = { is_core = ROOT }
+					2391 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2391 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Izvornik" #BOS - Usora
+					rename_capital = "Doboy" #BOS - Doboj
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2392
+					2392 = { is_core = ROOT }
+					2392 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2392 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Hersek" #BOS - Hum
+					rename_capital = "Mostar" #BOS - Mostar
+				}
+			}
+
+                        #transylvania_area
+			if = {
+				limit = { 
+					owns = 158
+					158 = { is_core = ROOT }
+					158 = { NOT = { has_province_flag = turkish_name } }
+				}
+				158 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Urdul" #HUN - Erdely
+					rename_capital = "Sibin" #HUN - Nagyszeben
+				}
+			}
+			if = {
+				limit = { 
+					owns = 162
+					162 = { is_core = ROOT }
+					162 = { NOT = { has_province_flag = turkish_name } }
+				}
+				162 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Maramaros" #HUN - Maramaros
+					rename_capital = "Hust" #HUN - Huszt
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1405
+					1405 = { is_core = ROOT }
+					1405 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1405 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kalos" #HUN - Kolozs
+					rename_capital = "Kalosvar" #HUN - Kolozsvar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2375
+					2375 = { is_core = ROOT }
+					2375 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2375 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sekelistan" #HUN - Szekelyfold
+					rename_capital = "Sekel Udvarheli" #HUN - Szekelyudvarhely 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3788
+					3788 = { is_core = ROOT }
+					3788 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3788 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Hunyadi" #HUN - Hunyad
+					rename_capital = "Deve" #HUN - Deva
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3790
+					3790 = { is_core = ROOT }
+					3790 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3790 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Besterce" #HUN - Beszterce-Naszod
+					rename_capital = "Besterce" #HUN - Beszterce
+				}
+			}
+
+                        #alfold_area
+			if = {
+				limit = { 
+					owns = 1271
+					1271 = { is_core = ROOT }
+					1271 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1271 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Varat" #HUN - Bihar
+					rename_capital = "Varat" #HUN - Nagyvarad
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1273
+					1273 = { is_core = ROOT }
+					1273 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1273 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Gole" #HUN - Gyula
+					rename_capital = "Gole" #HUN - Gyula
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1404
+					1404 = { is_core = ROOT }
+					1404 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1404 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Timisvar" #HUN - Banat
+					rename_capital = "Timisvar" #HUN - Temesvar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1859
+					1859 = { is_core = ROOT }
+					1859 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1859 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Beckerek" #HUN - Torontal
+					rename_capital = "Beckerek" #HUN - Nagybecskerek
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2275
+					2275 = { is_core = ROOT }
+					2275 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Satmar" #HUN - Szatmar
+					rename_capital = "Satmar" #HUN - Nagykaroly
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3789
+					3789 = { is_core = ROOT }
+					3789 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3789 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Arat" #HUN - Arad
+					rename_capital = "Arat" #HUN - Arad
+				}
+			}
+
+                        #kisalfold_area
+			if = {
+				limit = { 
+					owns = 1267
+					1267 = { is_core = ROOT }
+					1267 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1267 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Budin" #HUN - Pest
+					rename_capital = "Budin" #HUN - Pest
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1270
+					1270 = { is_core = ROOT }
+					1270 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1270 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sonbor" #HUN - Bacska 
+					rename_capital = "Sonbor" #HUN - Zombor
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1275
+					1275 = { is_core = ROOT }
+					1275 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1275 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Egri" #HUN - Heves
+					rename_capital = "Egri" #HUN - Eger
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3770
+					3770 = { is_core = ROOT }
+					3770 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3770 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Borsod" #HUN - Borsod
+					rename_capital = "Miskolfce" #HUN - Miskolc
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3771
+					3771 = { is_core = ROOT }
+					3771 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3771 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Debrecin" #HUN - Szabolcs
+					rename_capital = "Debrecin" #HUN - Debrecen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3772
+					3772 = { is_core = ROOT }
+					3772 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3772 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Segedin" #HUN - Csongrad
+					rename_capital = "Segedin" #HUN - Szeged
+				}
+			}
+
+                        #transdanubia_area
+			if = {
+				limit = { 
+					owns = 133
+					133 = { is_core = ROOT }
+					133 = { NOT = { has_province_flag = turkish_name } }
+				}
+				133 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kanije" #HUN - Somogy
+					rename_capital = "Sigetvar" #HUN - Kaposvar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 135
+					135 = { is_core = ROOT }
+					135 = { NOT = { has_province_flag = turkish_name } }
+				}
+				135 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sobran" #HUN - Szombathely
+					rename_capital = "Sobran" #HUN - Sopron
+				}
+			}
+			if = {
+				limit = { 
+					owns = 153
+					153 = { is_core = ROOT }
+					153 = { NOT = { has_province_flag = turkish_name } }
+				}
+				153 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Pecuy" #HUN - Pecs
+					rename_capital = "Pecuy" #HUN - Pecs
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2436
+					2436 = { is_core = ROOT }
+					2436 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2436 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Komran" #HUN - Komarom
+					rename_capital = "Komran" #HUN - Komarom
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2846
+					2846 = { is_core = ROOT }
+					2846 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2846 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kismaran" #HUN - Orvidek
+					rename_capital = "Kismaran" #HUN - Kismarton
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3769
+					3769 = { is_core = ROOT }
+					3769 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3769 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Istolni Belgrad" #HUN - Fejer
+					rename_capital = "Istolni Belgrad" #HUN - Szekesfehervar
+				}
+			}
+
+                        #croatia_area
+			if = {
+				limit = { 
+					owns = 131
+					131 = { is_core = ROOT }
+					131 = { NOT = { has_province_flag = turkish_name } }
+				}
+				131 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Zagrep" #CRO - Prigorje
+					rename_capital = "Zagrep" #CRO - Gradec
+				}
+			}
+			if = {
+				limit = { 
+					owns = 152
+					152 = { is_core = ROOT }
+					152 = { NOT = { has_province_flag = turkish_name } }
+				}
+				152 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Pakrac" #CRO - Zagorje
+					rename_capital = "Pakrac" #CRO - Varazdin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1403
+					1403 = { is_core = ROOT }
+					1403 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1403 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kirka" #CRO - Licko-Krbava
+					rename_capital = "Sanyaba" #CRO - Senj
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1450
+					1450 = { is_core = ROOT }
+					1450 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1450 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sirem" #HUN - Szerem
+					rename_capital = "Dimitrofce" #HUN - Zimony
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2390
+					2390 = { is_core = ROOT }
+					2390 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2390 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Islavon" #CRO - Slavonija
+					rename_capital = "Osek" #CRO - Osijek
+				}
+			}
+
+                        #albania_area
+			if = {
+				limit = { 
+					owns = 144
+					144 = { is_core = ROOT }
+					144 = { NOT = { has_province_flag = turkish_name } }
+				}
+				144 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ergiri" #ALB - Gjirokaster
+					rename_capital = "Ergiri" #ALB - Gjirokaster
+				}
+			}
+			if = {
+				limit = { 
+					owns = 805
+					805 = { is_core = ROOT }
+					805 = { NOT = { has_province_flag = turkish_name } }
+				}
+				805 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Avlonya" #ALB - Vlore
+					rename_capital = "Avlonya" #ALB - Vlore
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1424
+					1424 = { is_core = ROOT }
+					1424 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1424 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Les" #ALB - Lezhe
+					rename_capital = "Les" #ALB - Lezhe
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2373
+					2373 = { is_core = ROOT }
+					2373 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2373 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Dirac" #ALB - Durres
+					rename_capital = "Dirac" #ALB - Durres
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2374
+					2374 = { is_core = ROOT }
+					2374 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2374 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Akcahisar" #ALB - Kruje
+					rename_capital = "Akcahisar" #ALB - Kruje
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3778
+					3778 = { is_core = ROOT }
+					3778 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3778 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Arnavutbelgrat" #ALB - Muzakaj
+					rename_capital = "Berat" #ALB - Berat
+				}
+			}
+
+                        #east_adriatic_coast_area
+			if = {
+				limit = { 
+					owns = 136
+					136 = { is_core = ROOT }
+					136 = { NOT = { has_province_flag = turkish_name } }
+				}
+				136 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ispelet" #CRO - Split
+					rename_capital = "Ispelet" #CRO - Split
+				}
+			}
+			if = {
+				limit = { 
+					owns = 137
+					137 = { is_core = ROOT }
+					137 = { NOT = { has_province_flag = turkish_name } }
+				}
+				137 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Dobravenedik" #CRO - Dubrovnik
+					rename_capital = "Dobravenedik" #CRO - Dubrovnik
+				}
+			}
+			if = {
+				limit = { 
+					owns = 138
+					138 = { is_core = ROOT }
+					138 = { NOT = { has_province_flag = turkish_name } }
+				}
+				138 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kotur" #CRO - Kotor
+					rename_capital = "Kotur" #CRO - Kotor
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2388
+					2388 = { is_core = ROOT }
+					2388 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2388 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Dalmacya" #CRO - Dalmacija
+					rename_capital = "Sebnik" #CRO - Sibenik
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2571
+					2571 = { is_core = ROOT }
+					2571 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2571 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Zadire" #CRO - Zadar
+					rename_capital = "Zadire" #CRO - Zadar
+				}
+			}
+
+                        #oltenia_area
+			if = {
+				limit = { 
+					owns = 161
+					161 = { is_core = ROOT }
+					161 = { NOT = { has_province_flag = turkish_name } }
+				}
+				161 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yergogu" #ROM - Vlasia
+					rename_capital = "Yergogu" #ROM - Giurgiu 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1398
+					1398 = { is_core = ROOT }
+					1398 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Volcu" #ROM - Valcea
+					rename_capital = "Volcu Rimnik" #ROM - Ramnicu Valcea 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2376
+					2376 = { is_core = ROOT }
+					2376 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2376 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Severin" #ROM - Severin
+					rename_capital = "Severin" #ROM - Severin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2377
+					2377 = { is_core = ROOT }
+					2377 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2377 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Arcis" #ROM - Arges
+					rename_capital = "Arcis" #ROM - Arges 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3787
+					3787 = { is_core = ROOT }
+					3787 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3787 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Krayova" #ROM - Dolj
+					rename_capital = "Krayova" #ROM - Craiova 
+				}
+			}
+
+                        #muntenia_area
+			if = {
+				limit = { 
+					owns = 2378
+					2378 = { is_core = ROOT }
+					2378 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2378 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ibrail" #ROM - Braila
+					rename_capital = "Ibrail" #ROM - Braila
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3783
+					3783 = { is_core = ROOT }
+					3783 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3783 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kiliras" #ROM - Ialomita
+					rename_capital = "Kiliras" #ROM - Calarasi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3784
+					3784 = { is_core = ROOT }
+					3784 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3784 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Rimnik" #ROM - Slam Ramnic
+					rename_capital = "Rimnik" #ROM - Ramnicu Sarat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3785
+					3785 = { is_core = ROOT }
+					3785 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3785 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bukres" #ROM - Ilfov
+					rename_capital = "Bukres" #ROM - Bucuresti
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3786
+					3786 = { is_core = ROOT }
+					3786 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3786 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tirkovis" #ROM - Dambovita
+					rename_capital = "Tirkovis" #ROM - Tirgoviste
+				}
+			}
+
+                        #moldavia_area
+			if = {
+				limit = { 
+					owns = 1269
+					1269 = { is_core = ROOT }
+					1269 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1269 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yas" #ROM - Carligatura
+					rename_capital = "Yas" #ROM - Iasi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2236
+					2236 = { is_core = ROOT }
+					2236 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2236 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bukovina" #ROM - Bucovina
+					rename_capital = "Siret" #ROM - Siret
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2379
+					2379 = { is_core = ROOT }
+					2379 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2379 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Berlat" #ROM - Barlad
+					rename_capital = "Galac" #ROM - Galati
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3791
+					3791 = { is_core = ROOT }
+					3791 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3791 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bako" #ROM - Bacau
+					rename_capital = "Bako" #ROM - Bacau
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3793
+					3793 = { is_core = ROOT }
+					3793 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3793 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Hatin" #ROM - Hotin
+					rename_capital = "Hatin" #ROM - Hotin
+				}
+			}
+
+                        #basarabia_area
+			if = {
+				limit = { 
+					owns = 160
+					160 = { is_core = ROOT }
+					160 = { NOT = { has_province_flag = turkish_name } }
+				}
+				160 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kili" #ROM - Chilia
+					rename_capital = "Kili" #ROM - Chilia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1400
+					1400 = { is_core = ROOT }
+					1400 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1400 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bender" #ROM - Orhei
+					rename_capital = "Bender" #ROM - Orhei
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2626
+					2626 = { is_core = ROOT }
+					2626 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2626 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Balcik" #ROM - Soroca
+					rename_capital = "Balcik" #ROM - Soroca
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3794
+					3794 = { is_core = ROOT }
+					3794 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3794 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Akkerman" #ROM - Cetatea Alba
+					rename_capital = "Akkerman" #ROM - Cetatea Alba
+				}
+			}
+
+                        #zaporizhia_area
+			if = {
+				limit = { 
+					owns = 284
+					284 = { is_core = ROOT }
+					284 = { NOT = { has_province_flag = turkish_name } }
+				}
+				284 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yedisan"
+					rename_capital = "Ozukale"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 285
+					285 = { is_core = ROOT }
+					285 = { NOT = { has_province_flag = turkish_name } }
+				}
+				285 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kizilyar"
+					rename_capital = "Kizilyar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 300
+					300 = { is_core = ROOT }
+					300 = { NOT = { has_province_flag = turkish_name } }
+				}
+				300 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Buricay"
+					rename_capital = "Buricay"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1431
+					1431 = { is_core = ROOT }
+					1431 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1431 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kizi Kermen"
+					rename_capital = "Kizi Kermen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4018
+					4018 = { is_core = ROOT }
+					4018 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4018 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Baltavar"
+					rename_capital = "Baltavar"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4019
+					4019 = { is_core = ROOT }
+					4019 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4019 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sari Kermen"
+					rename_capital = "Sari Kermen"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4021
+					4021 = { is_core = ROOT }
+					4021 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4021 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cehrin"
+					rename_capital = "Cehrin"
+				}
+			}
+
+                        #crimea_area
+			if = {
+				limit = { 
+					owns = 282
+					282 = { is_core = ROOT }
+					282 = { NOT = { has_province_flag = turkish_name } }
+				}
+				282 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kirim"
+					rename_capital = "Bahcesaray"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1299
+					1299 = { is_core = ROOT }
+					1299 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1299 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Taman"
+					rename_capital = "Kale-yi Taman"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1344
+					1344 = { is_core = ROOT }
+					1344 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1344 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kefe"
+					rename_capital = "Kefe"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2274
+					2274 = { is_core = ROOT }
+					2274 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2274 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Akyar"
+					rename_capital = "Mangupkale"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2573
+					2573 = { is_core = ROOT }
+					2573 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2573 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kerc"
+					rename_capital = "Kerc"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3877
+					3877 = { is_core = ROOT }
+					3877 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3877 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Baliklava"
+					rename_capital = "Baliklava"
+				}
+			}
+
+                        #azov_area
+			if = {
+				limit = { 
+					owns = 286
+					286 = { is_core = ROOT }
+					286 = { NOT = { has_province_flag = turkish_name } }
+				}
+				286 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Temruk"
+					rename_capital = "Temruk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 287
+					287 = { is_core = ROOT }
+					287 = { NOT = { has_province_flag = turkish_name } }
+				}
+				287 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Temirnik"
+					rename_capital = "Temirnik"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 302
+					302 = { is_core = ROOT }
+					302 = { NOT = { has_province_flag = turkish_name } }
+				}
+				302 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tiganak"
+					rename_capital = "Tiganak"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1298
+					1298 = { is_core = ROOT }
+					1298 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1298 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Azak"
+					rename_capital = "Azakkale"
+				}
+			}
+
+                        #west_circassia_area
+			if = {
+				limit = { 
+					owns = 999
+					999 = { is_core = ROOT }
+					999 = { NOT = { has_province_flag = turkish_name } }
+				}
+				999 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cerkez Sehir"
+					rename_capital = "Cerkez Sehir"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1302
+					1302 = { is_core = ROOT }
+					1302 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1302 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cerkesya"
+					rename_capital = "Cerkesya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3795
+					3795 = { is_core = ROOT }
+					3795 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3795 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Anapa"
+					rename_capital = "Anapa"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3796
+					3796 = { is_core = ROOT }
+					3796 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3796 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sogucak"
+					rename_capital = "Sucukkale"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4114
+					4114 = { is_core = ROOT }
+					4114 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4114 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Asil"
+					rename_capital = "Setkale"
+				}
+			}
+
+                        #abkhazia_area
+			if = {
+				limit = { 
+					owns = 1300
+					1300 = { is_core = ROOT }
+					1300 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1300 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sohum"
+					rename_capital = "Sohumkale"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2549
+					2549 = { is_core = ROOT }
+					2549 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2549 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Gelincik"
+					rename_capital = "Gelincik"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3798
+					3798 = { is_core = ROOT }
+					3798 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3798 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Suvanya"
+					rename_capital = "Suvanya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3799
+					3799 = { is_core = ROOT }
+					3799 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3799 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mingirelya"
+					rename_capital = "Poti"
+				}
+			}
+
+                        #west_georgia_area
+			if = {
+				limit = { 
+					owns = 1301
+					1301 = { is_core = ROOT }
+					1301 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1301 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Acikbas" #Imeretia
+					rename_capital = "Acikbas" #Kinaisi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1449
+					1449 = { is_core = ROOT }
+					1449 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1449 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Artvin" #Klarjeti
+					rename_capital = "Artvin" #Khopa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3800
+					3800 = { is_core = ROOT }
+					3800 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3800 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Gurye" #Guria
+					rename_capital = "Batum" #Batumi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3801
+					3801 = { is_core = ROOT }
+					3801 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3801 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ardahan" #Samtskhe
+					rename_capital = "Ardahan" #Artaani
+				}
+			}
+
+                        #east_georgia_area
+			if = {
+				limit = { 
+					owns = 422
+					422 = { is_core = ROOT }
+					422 = { NOT = { has_province_flag = turkish_name } }
+				}
+				422 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kahit" #Kakheti
+					rename_capital = "Telav" #Telavi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 423
+					423 = { is_core = ROOT }
+					423 = { NOT = { has_province_flag = turkish_name } }
+				}
+				423 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Borcali" #Kartli
+					rename_capital = "Tiflis" #Tbilisi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2576
+					2576 = { is_core = ROOT }
+					2576 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2576 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bostandere" #Herethi
+					rename_capital = "Bostansehir" #Kharnabuji
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3797
+					3797 = { is_core = ROOT }
+					3797 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3797 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kassar" #Dvaleti
+					rename_capital = "Kassar" #Kasriskari
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3808
+					3808 = { is_core = ROOT }
+					3808 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3808 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Seki" #Sheki
+					rename_capital = "Seki" #Sheki
+				}
+			}
+
+                        #east_circassia_area
+			if = {
+				limit = { 
+					owns = 995
+					995 = { is_core = ROOT }
+					995 = { NOT = { has_province_flag = turkish_name } }
+				}
+				995 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kapikaya" #Ossetia
+					rename_capital = "Terekkale" #Dzaug
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1009
+					1009 = { is_core = ROOT }
+					1009 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1009 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sunce" #Chechnya
+					rename_capital = "Suncekale" #Sunzha
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1303
+					1303 = { is_core = ROOT }
+					1303 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1303 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Macar Suba" #Majar
+					rename_capital = "Macar Suba" #Majar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2578
+					2578 = { is_core = ROOT }
+					2578 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2578 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Terek" #Malaya Kabardia
+					rename_capital = "Terek" #Terek
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3639
+					3639 = { is_core = ROOT }
+					3639 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3639 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nalcik" #Bolshaya Kabardia
+					rename_capital = "Nalcik" #Malka
+				}
+			}
+
+                        #shirvan_area
+			if = {
+				limit = { 
+					owns = 424
+					424 = { is_core = ROOT }
+					424 = { NOT = { has_province_flag = turkish_name } }
+				}
+				424 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sabran" #AZB - Sabran
+					rename_capital = "Sabran" #AZB - Sabran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 425
+					425 = { is_core = ROOT }
+					425 = { NOT = { has_province_flag = turkish_name } }
+				}
+				425 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Derbend" #AZB - Derbend
+					rename_capital = "Derbend" #AZB - Derbend
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1317
+					1317 = { is_core = ROOT }
+					1317 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1317 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Somahi" #AZB - Samaxi
+					rename_capital = "Somahi" #AZB - Samaxi
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2579
+					2579 = { is_core = ROOT }
+					2579 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2579 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Avarya" #Avar - Avaria
+					rename_capital = "Kunza" #Avar - Khunzah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2656
+					2656 = { is_core = ROOT }
+					2656 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2656 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kizlar" #Dagestani - Kizlyar
+					rename_capital = "Tarak" #Dagestani - Tarki
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3810
+					3810 = { is_core = ROOT }
+					3810 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3810 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sirvan" #AZB - Sirvan
+					rename_capital = "Sirvan" #AZB - Sirvan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3811
+					3811 = { is_core = ROOT }
+					3811 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3811 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Baku" #AZB - Baki
+					rename_capital = "Baku" #AZB - Baki
+				}
+			}
+
+                        #epirus_area
+			if = {
+				limit = { 
+					owns = 142
+					142 = { is_core = ROOT }
+					142 = { NOT = { has_province_flag = turkish_name } }
+				}
+				142 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Korfu" #Kerkyra
+					rename_capital = "Korfu" #Kerkyra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 154
+					154 = { is_core = ROOT }
+					154 = { NOT = { has_province_flag = turkish_name } }
+				}
+				154 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yanya" #Ioannina
+					rename_capital = "Yanya" #Ioannina
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1399
+					1399 = { is_core = ROOT }
+					1399 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1399 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Imrahor" #Angelokastron
+					rename_capital = "Imrahor" #Angelokastron
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1436
+					1436 = { is_core = ROOT }
+					1436 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1436 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Iyon Adalari" #Ionioi Nesoi
+					rename_capital = "Kefaloniye" #Agios Yiorgios
+				}
+			}
+
+			#thessalia_area
+			if = {
+				limit = { 
+					owns = 146
+					146 = { is_core = ROOT }
+					146 = { NOT = { has_province_flag = turkish_name } }
+				}
+				146 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Attike" #GRE - Attika
+					rename_capital = "Atina" #GRE - Athens
+				}
+			}
+			if = {
+				limit = { 
+					owns = 147
+					147 = { is_core = ROOT }
+					147 = { NOT = { has_province_flag = turkish_name } }
+				}
+				147 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Halkidiki" #GRE - Chalcidiki
+					rename_capital = "Selanik" #GRE - Thessalonike
+				}
+			}
+			if = {
+				limit = { 
+					owns = 149
+					149 = { is_core = ROOT }
+					149 = { NOT = { has_province_flag = turkish_name } }
+				}
+				149 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Teselya" #GRE - Thessalia
+					rename_capital = "Yenisehir" #GRE - Larissa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1434
+					1434 = { is_core = ROOT }
+					1434 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1434 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Egriboz" #GRE - Euboia
+					rename_capital = "Halkis" #GRE - Chalkis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3385
+					3385 = { is_core = ROOT }
+					3385 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3385 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Golos" #GRE - Magnisia
+					rename_capital = "Golos" #GRE - Volos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3872
+					3872 = { is_core = ROOT }
+					3872 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3872 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Patracik" #GRE - Neopatras
+					rename_capital = "Patracik" #GRE - Neopatras
+				}
+			}
+
+			#morea_area
+			if = {
+				limit = { 
+					owns = 145
+					145 = { is_core = ROOT }
+					145 = { NOT = { has_province_flag = turkish_name } }
+				}
+				145 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mora" #GRE - Morea
+					rename_capital = "Mizistre" #GRE - Mystras
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1425
+					1425 = { is_core = ROOT }
+					1425 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1425 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ahaya" #GRE - Achaea
+					rename_capital = "Balyabadra" #GRE - Patras
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3383
+					3383 = { is_core = ROOT }
+					3383 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3383 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Menekse" #GRE - Monemvasia
+					rename_capital = "Menekse" #GRE - Monemvasia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3384
+					3384 = { is_core = ROOT }
+					3384 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3384 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Anaboli" #GRE - Nafplion
+					rename_capital = "Anaboli" #GRE - Nafplion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3873
+					3873 = { is_core = ROOT }
+					3873 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3873 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mudon" #GRE - Methoni
+					rename_capital = "Mudon" #GRE - Methoni
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3874
+					3874 = { is_core = ROOT }
+					3874 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3874 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Korint" #GRE - Korinthia
+					rename_capital = "Gordos" #GRE - Korinthos
+				}
+			}
+
+			#aegean_area
+			if = {
+				limit = { 
+					owns = 163
+					163 = { is_core = ROOT }
+					163 = { NOT = { has_province_flag = turkish_name } }
+				}
+				163 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Girit" #GRE - Kriti
+					rename_capital = "Resmo" #GRE - Rethymno
+				}
+			}
+			if = {
+				limit = { 
+					owns = 164
+					164 = { is_core = ROOT }
+					164 = { NOT = { has_province_flag = turkish_name } }
+				}
+				164 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kiklat Adalari" #GRE - Kyklades
+					rename_capital = "Naksa" #GRE - Naxos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 320
+					320 = { is_core = ROOT }
+					320 = { NOT = { has_province_flag = turkish_name } }
+				}
+				320 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Rodos" #GRE - Rodos
+					rename_capital = "Rodos" #GRE - Rodos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1435
+					1435 = { is_core = ROOT }
+					1435 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1435 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sakiz" #GRE - Khios
+					rename_capital = "Sakiz" #GRE - Khios
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2572
+					2572 = { is_core = ROOT }
+					2572 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2572 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Onikiada" #GRE - Dodekanisa
+					rename_capital = "Istankoy" #GRE - Kos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2749
+					2749 = { is_core = ROOT }
+					2749 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2749 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kandiye" #GRE - Irakleio
+					rename_capital = "Kandiye" #GRE - Irakleio
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3875
+					3875 = { is_core = ROOT }
+					3875 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3875 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Lezbolar" #GRE - Lesvos
+					rename_capital = "Midilli" #GRE - Mytilini
+				}
+			}
+
+                        #thrace_area
+			if = {
+				limit = { 
+					owns = 151 
+					151 = { is_core = ROOT }
+					151 = { NOT = { has_province_flag = turkish_name } }
+				}
+				151 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name 
+					change_province_name = "Trakya" #GRE - Thraki
+					rename_capital = "Luleburgaz" #GRE - Arcadiopolis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1402 
+					1402 = { is_core = ROOT }
+					1402 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1402 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name 
+					change_province_name = "Kostantiniyye" #GRE - Konstantinoupolis
+					rename_capital = "Kostantiniyye" #GRE - Konstantinoupolis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2238
+					2238 = { is_core = ROOT }
+					2238 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2238 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name 
+					change_province_name = "Gelibolu" #GRE - Kallipolis
+					rename_capital = "Gelibolu" #GRE - Kallipolis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2501 
+					2501 = { is_core = ROOT }
+					2501 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2501 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name 
+					change_province_name = "Dimetoka" #GRE - Didymoteicho
+					rename_capital = "Dimetoka" #GRE - Didymoteicho
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3876
+					3876 = { is_core = ROOT }
+					3876 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3876 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Edirne" #GRE - Hevros
+					rename_capital = "Edirne" #GRE - Adrianopolis
+				}
+			}
+
+                        #manisa_area
+			if = {
+				limit = { 
+					owns = 317
+					317 = { is_core = ROOT }
+					317 = { NOT = { has_province_flag = turkish_name } }
+				}
+				317 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bergama" #GRE - Pergamon
+					rename_capital = "Bergama" #GRE - Pergamon
+				}
+			}
+			if = {
+				limit = { 
+					owns = 318
+					318 = { is_core = ROOT }
+					318 = { NOT = { has_province_flag = turkish_name } }
+				}
+				318 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Manisa" #GRE - Magnesia
+					rename_capital = "Manisa" #GRE - Magnesia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3386
+					3386 = { is_core = ROOT }
+					3386 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3386 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Canakkale" #GRE - Dardanellia
+					rename_capital = "Canakkale" #GRE - Dardanellia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3387
+					3387 = { is_core = ROOT }
+					3387 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3387 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Biga" #GRE - Pegaea
+					rename_capital = "Biga" #GRE - Pegaea
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4066
+					4066 = { is_core = ROOT }
+					4066 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4066 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Akhisar" #GRE - Thyateira
+					rename_capital = "Akhisar" #GRE - Thyateira
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4067
+					4067 = { is_core = ROOT }
+					4067 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4067 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Balikesir" #GRE - Palaeokastron 
+					rename_capital = "Balikesir" #GRE - Palaeokastron
+				}
+			}
+
+                        #hudavendigar_area
+			if = {
+				limit = { 
+					owns = 323
+					323 = { is_core = ROOT }
+					323 = { NOT = { has_province_flag = turkish_name } }
+				}
+				323 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Enguru" #GRE - Ankyra
+					rename_capital = "Enguru" #GRE - Ankyra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1446
+					1446 = { is_core = ROOT }
+					1446 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1446 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Izmit" #GRE - Nikomedeia
+					rename_capital = "Izmit" #GRE - Nikomedeia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2552
+					2552 = { is_core = ROOT }
+					2552 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2552 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bursa" #GRE - Prussa
+					rename_capital = "Bursa" #GRE - Prussa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2553
+					2553 = { is_core = ROOT }
+					2553 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2553 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Eskisehir" #GRE - Dorylaion
+					rename_capital = "Eskisehir" #GRE - Dorylaion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3388
+					3388 = { is_core = ROOT }
+					3388 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3388 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Iznik" #GRE - Nikaia
+					rename_capital = "Iznik" #GRE - Nikaia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3878
+					3878 = { is_core = ROOT }
+					3878 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3878 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kirikkale" #GRE - Kiss?s
+					rename_capital = "Kirikkale" #GRE - Kiss?s
+				}
+			}
+
+                        #kastamonu_area
+			if = {
+				limit = { 
+					owns = 316
+					316 = { is_core = ROOT }
+					316 = { NOT = { has_province_flag = turkish_name } }
+				}
+				316 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bolu" #GRE - Hadrianopolis
+					rename_capital = "Bolu" #GRE - Hadrianopolis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 328
+					328 = { is_core = ROOT }
+					328 = { NOT = { has_province_flag = turkish_name } }
+				}
+				328 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sinop" #GRE - Sinope
+					rename_capital = "Sinop" #GRE - Sinope
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1437
+					1437 = { is_core = ROOT }
+					1437 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1437 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Amasra" #GRE - Amastris
+					rename_capital = "Amasra" #GRE - Amastris
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1447
+					1447 = { is_core = ROOT }
+					1447 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1447 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kastamonu" #GRE - Kastamone
+					rename_capital = "Kastamonu" #GRE - Kastamone
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2541
+					2541 = { is_core = ROOT }
+					2541 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2541 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cankiri" #GRE - Gangra
+					rename_capital = "Tosya" #GRE - Gangra
+				}
+			}
+
+                        #trebizond_area
+			if = {
+				limit = { 
+					owns = 330
+					330 = { is_core = ROOT }
+					330 = { NOT = { has_province_flag = turkish_name } }
+				}
+				330 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Trabzon" #GRE - Trapezounta
+					rename_capital = "Trabzon" #GRE - Trapezounta
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1326
+					1326 = { is_core = ROOT }
+					1326 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1326 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Giresun" #GRE - Pharnacia
+					rename_capital = "Giresun" #GRE - Pharnacia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2574
+					2574 = { is_core = ROOT }
+					2574 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2574 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Samsun" #GRE - Eis Amisos
+					rename_capital = "Samsun" #GRE - Amisos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3396
+					3396 = { is_core = ROOT }
+					3396 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3396 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Lazistan" #GRE - Rizaion
+					rename_capital = "Rize" #GRE - Rizaion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3881
+					3881 = { is_core = ROOT }
+					3881 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3881 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ordu" #GRE - Kotyora
+					rename_capital = "Ordu" #GRE - Kotyora
+				}
+			}
+
+                        #rum_area
+			if = {
+				limit = { 
+					owns = 1441
+					1441 = { is_core = ROOT }
+					1441 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1441 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Amasya" #Turkoman - Amasya #GRE - Amaseia
+					rename_capital = "Amasya" #Turkoman - Amasya #GRE - Amaseia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2664
+					2664 = { is_core = ROOT }
+					2664 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2664 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sivas" #GRE - Sebasteia
+					rename_capital = "Sivas" #GRE - Sebasteia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3882
+					3882 = { is_core = ROOT }
+					3882 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3882 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tokat" #GRE - T?ouion
+					rename_capital = "Tokat" #GRE - T?ouion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3883
+					3883 = { is_core = ROOT }
+					3883 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3883 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yozgat" #Turkoman - Bozok #GRE - Eudokia
+					rename_capital = "Yozgat" #Turkoman - Bozok #GRE - Eudokia
+				}
+			}
+
+                        #aydin_area
+			if = {
+				limit = { 
+					owns = 319
+					319 = { is_core = ROOT }
+					319 = { NOT = { has_province_flag = turkish_name } }
+				}
+				319 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sivrihisar" #GRE - Laodikeia
+					rename_capital = "Denizli" #GRE - Laodikeia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1325
+					1325 = { is_core = ROOT }
+					1325 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1325 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Izmir" #GRE - Ionia
+					rename_capital = "Izmir" #GRE - Smyrna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1438
+					1438 = { is_core = ROOT }
+					1438 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1438 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tire" #GRE - Tyrrha
+					rename_capital = "Tire" #GRE - Tyrrha
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3389
+					3389 = { is_core = ROOT }
+					3389 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3389 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Alasehir" #GRE - Philadelpheia
+					rename_capital = "Alasehir" #GRE - Philadelpheia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3390
+					3390 = { is_core = ROOT }
+					3390 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3390 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Aydin" #GRE - Tralleis
+					rename_capital = "Aydin" #GRE - Tralleis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4065
+					4065 = { is_core = ROOT }
+					4065 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4065 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Urla" #GRE - Bourla
+					rename_capital = "Urla" #GRE - Bourla
+				}
+			}
+
+                        #teke_area
+			if = {
+				limit = { 
+					owns = 325
+					325 = { is_core = ROOT }
+					325 = { NOT = { has_province_flag = turkish_name } }
+				}
+				325 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Antalya" #GRE - Pamphylia 
+					rename_capital = "Antalya" #GRE - Attaleia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1439
+					1439 = { is_core = ROOT }
+					1439 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1439 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mugla" #GRE - Mylasa
+					rename_capital = "Mugla" #GRE - Mylasa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3391
+					3391 = { is_core = ROOT }
+					3391 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3391 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Finike" #GRE - Phoenicus
+					rename_capital = "Finike" #GRE - Phoenicus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4060
+					4060 = { is_core = ROOT }
+					4060 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4060 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Alaiye" #GRE - Korakesion
+					rename_capital = "Alaiye" #GRE - Korakesion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4064 
+					4064 = { is_core = ROOT }
+					4064 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4064 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Karya" #GRE - Karia
+					rename_capital = "Marmaris" #GRE - Physkos
+				}
+			}
+
+                        #kutahya_area
+			if = {
+				limit = { 
+					owns = 322
+					322 = { is_core = ROOT }
+					322 = { NOT = { has_province_flag = turkish_name } }
+				}
+				322 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Usak" #GRE - Ous?keion
+					rename_capital = "Usak" #GRE - Ous?keion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 324
+					324 = { is_core = ROOT }
+					324 = { NOT = { has_province_flag = turkish_name } }
+				}
+				324 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Hudavendigar" #GRE - Kotyaion
+					rename_capital = "Kutahya" #GRE - Kotyaion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 326
+					326 = { is_core = ROOT }
+					326 = { NOT = { has_province_flag = turkish_name } }
+				}
+				326 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Burdur" #Turkoman - Burdur #GRE - Polyd?rion
+					rename_capital = "Burdur" #Turkoman - Burdur #GRE - Polyd?rion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4062
+					4062 = { is_core = ROOT }
+					4062 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4062 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Afronkarahisar" #GRE - Akroin?n
+					rename_capital = "Afronkarahisar" #GRE - Akroin?n
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4063
+					4063 = { is_core = ROOT }
+					4063 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4063 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Honaz" #Turkoman - Honaz #GRE - Chonai
+					rename_capital = "Honaz" #Turkoman - Honaz #GRE - Chonai
+				}
+			}
+
+                        #karaman_area
+			if = {
+				limit = { 
+					owns = 329
+					329 = { is_core = ROOT }
+					329 = { NOT = { has_province_flag = turkish_name } }
+				}
+				329 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Karaman" #GRE - Laranda
+					rename_capital = "Karaman" #GRE - Laranda
+				}
+			}
+			if = {
+				limit = { 
+					owns = 331
+					331 = { is_core = ROOT }
+					331 = { NOT = { has_province_flag = turkish_name } }
+				}
+				331 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Konya" #GRE - Ik?nion
+					rename_capital = "Konya" #GRE - Ik?nion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2540
+					2540 = { is_core = ROOT }
+					2540 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2540 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Aksaray" #Turkoman - Taksara #GRE - Archelais
+					rename_capital = "Aksaray" #Turkoman - Taksara #GRE - Archelais
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2542
+					2542 = { is_core = ROOT }
+					2542 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2542 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Aksehir" #GRE - Philomelion
+					rename_capital = "Aksehir" #GRE - Philomelion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3879
+					3879 = { is_core = ROOT }
+					3879 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3879 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nigde" #GRE - Kappadokia
+					rename_capital = "Nigde" #GRE - Magida
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4061
+					4061 = { is_core = ROOT }
+					4061 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4061 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Beysehir" #Turkoman - Viransehir #GRE - Mistheia
+					rename_capital = "Beysehir" #Turkoman - Viransehir #GRE - Mistheia
+				}
+			}
+
+                        #cilicia_area
+			if = {
+				limit = { 
+					owns = 321
+					321 = { is_core = ROOT }
+					321 = { NOT = { has_province_flag = turkish_name } }
+				}
+				321 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Lefkosa" #GRE - Lefkosia
+					rename_capital = "Lefkosa" #GRE - Lefkosia
+				}
+			}
+			if = {
+				limit = { 
+					owns = 327
+					327 = { is_core = ROOT }
+					327 = { NOT = { has_province_flag = turkish_name } }
+				}
+				327 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Toroslar" #GRE - Toros Bouva
+					rename_capital = "Mersin" #GRE - Myrsine
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1755
+					1755 = { is_core = ROOT }
+					1755 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1755 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Adana" #GRE - Kilikia
+					rename_capital = "Tarsus" #GRE - Tarsos
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2750
+					2750 = { is_core = ROOT }
+					2750 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2750 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Magusa" #GRE - Famagusta
+					rename_capital = "Magusa" #GRE - Famagusta
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3392
+					3392 = { is_core = ROOT }
+					3392 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3392 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Alasya" #GRE - Anemourion
+					rename_capital = "Alasya" #GRE - Anemourion
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4059
+					4059 = { is_core = ROOT }
+					4059 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4059 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Silifke" #GRE - Seleukeia
+					rename_capital = "Silifke" #GRE - Seleukeia
+				}
+			}
+
+                        #dulkadir_area
+			if = {
+				limit = { 
+					owns = 1333
+					1333 = { is_core = ROOT }
+					1333 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1333 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kayseri" #GRE - Charsian?n #Kurdish - Qeyseri
+					rename_capital = "Kayseri" #GRE - Kais?reia #Kurdish - Qeyseri
+				} 
+			}
+			if = {
+				limit = { 
+					owns = 1440
+					1440 = { is_core = ROOT }
+					1440 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1440 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Malatya" #GRE - Melitene #Kurdish - Meleti
+					rename_capital = "Malatya" #GRE - Melitene #Kurdish - Meleti
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1443
+					1443 = { is_core = ROOT }
+					1443 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1443 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Zulkadriye" #GRE - Lykandos #Kurdish - Meras
+					rename_capital = "Elbistan" #GRE - Lykandos #Kurdish - Albistan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3393
+					3393 = { is_core = ROOT }
+					3393 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Harput" #ARM - Kharpert #Kurdish - Xarpet
+					rename_capital = "Elazig" #ARM - Kharpert #Kurdish - Eleziz
+				}
+			}
+
+                        #aleppo_area
+			if = {
+				limit = { 
+					owns = 332
+					332 = { is_core = ROOT }
+					332 = { NOT = { has_province_flag = turkish_name } }
+				}
+				332 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Antakya" #Arabic - Antakiyyah #Syriac - Antiokia #Kurdish - Xetay
+					rename_capital = "Antakya" #Arabic - Antakiyyah #Syriac - Antiokia #Kurdish - Antakya
+				}
+			}
+			if = {
+				limit = { 
+					owns = 377
+					377 = { is_core = ROOT }
+					377 = { NOT = { has_province_flag = turkish_name } }
+				}
+				377 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Halep" #Arabic - Halab #Kurdish - Heleb
+					rename_capital = "Halep" #Arabic - Halab #Kurdish - Heleb
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1327
+					1327 = { is_core = ROOT }
+					1327 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1327 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Hama" #Arabic - Hamah 
+					rename_capital = "Hama" #Arabic - Hamah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2224
+					2224 = { is_core = ROOT }
+					2224 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2224 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Urfa" #Syriac - Orhay #Arabic - ar-Ruha #Aramaic - Adma #Kurdish - Riha
+					rename_capital = "Urfa" #Syriac - Orhay #Arabic - ar-Ruha #Aramaic - Adma #Kurdish - Riha
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2655
+					2655 = { is_core = ROOT }
+					2655 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2655 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Antep" #Turkoman - ? #Arabic - Aintab #Syriac - Ayin Dab #Kurdish - Entab
+					rename_capital = "Antep" #Turkoman - ? #Arabic - Aintab #Syriac - Ayin Dab #Kurdish - Entab
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3091
+					3091 = { is_core = ROOT }
+					3091 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3091 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Rakka" #Arabic - ar-Raqqah #Kurdish - Reqa
+					rename_capital = "Rakka" #Arabic - ar-Raqqah #Kurdish - Reqa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3886
+					3886 = { is_core = ROOT }
+					3886 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3886 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Lazkiye" #Arabic - al-Ladhiqiyah
+					rename_capital = "Lazkiye" #Arabic - al-Ladhiqiyah
+				}
+			}
+
+                        #syria_area
+			if = {
+				limit = { 
+					owns = 378
+					378 = { is_core = ROOT }
+					378 = { NOT = { has_province_flag = turkish_name } }
+				}
+				378 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Trablussam" #Arabic - Tarabulus al-Sham
+					rename_capital = "Trablussam" #Arabic - Tarabulus al-Sham
+				}
+			}
+			if = {
+				limit = { 
+					owns = 382
+					382 = { is_core = ROOT }
+					382 = { NOT = { has_province_flag = turkish_name } }
+				}
+				382 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Dimesk" #Arabic - Dimashq #Syriac - Darmsuq
+					rename_capital = "Dimesk" #Arabic - Dimashq #Syriac - Darmsuq
+				}
+			}
+			if = {
+				limit = { 
+					owns = 875
+					875 = { is_core = ROOT }
+					875 = { NOT = { has_province_flag = turkish_name } }
+				}
+				875 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bekaa Vadisi" #Arabic - Wadi al-Biqa
+					rename_capital = "Zahle" #Arabic - Zahle
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1328
+					1328 = { is_core = ROOT }
+					1328 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1328 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Humus" #Arabic - Hims #Syriac - Hmt Swba
+					rename_capital = "Humus" #Arabic - Hims #Syriac - Hmt Swba
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1334
+					1334 = { is_core = ROOT }
+					1334 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1334 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Beyrut" #Aramean - Birot #Arabic - Bayrut
+					rename_capital = "Beyrut" #Aramean - Birot #Arabic - Bayrut 
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4057
+					4057 = { is_core = ROOT }
+					4057 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4057 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Busra el-Sam" #Arabic - Busra al-Sham
+					rename_capital = "Busra" #Arabic - Busra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4058
+					4058 = { is_core = ROOT }
+					4058 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4058 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tedmur" #Arabic - Tadmur #Syriac - Tedmurta
+					rename_capital = "Tedmur" #Arabic - Tadmur #Syriac - Tedmurta
+				}
+			}
+
+                        #palestine_area
+			if = {
+				limit = { 
+					owns = 364
+					364 = { is_core = ROOT }
+					364 = { NOT = { has_province_flag = turkish_name } }
+				}
+				364 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nablus" #Arabic - Nabulus
+					rename_capital = "Nablus" #Arabic - Nabulus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 379
+					379 = { is_core = ROOT }
+					379 = { NOT = { has_province_flag = turkish_name } }
+				}
+				379 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kudus" #Arabic - al-Quds
+					rename_capital = "Kudus" #Arabic - al-Quds
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1331
+					1331 = { is_core = ROOT }
+					1331 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1331 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Necef Colu" #Arabic - an-Naqab
+					rename_capital = "Birussebi" #Arabic - Bi'r al-Saba
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2575
+					2575 = { is_core = ROOT }
+					2575 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2575 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kerak" #Arabic - al-Karak
+					rename_capital = "Kerak" #Arabic - al-Karak
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2634
+					2634 = { is_core = ROOT }
+					2634 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2634 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Gazze" #Arabic - Gazzah
+					rename_capital = "Gazze" #Arabic - Gazzah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2635
+					2635 = { is_core = ROOT }
+					2635 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2635 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Safed" #Arabic - al-Jalil
+					rename_capital = "Safed" #Arabic - Safad
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2636
+					2636 = { is_core = ROOT }
+					2636 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2636 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Havran" #Arabic - Hawran 
+					rename_capital = "Dera" #Arabic - Adhri'at
+				}
+			}
+
+                        #erzurum_area
+			if = {
+				limit = { 
+					owns = 1442
+					1442 = { is_core = ROOT }
+					1442 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1442 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Erzincan" #ARM - Yerznka #Kurdish - Ezirgan
+					rename_capital = "Erzincan" #ARM - Yerznka #Kurdish - Ezirgan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3395
+					3395 = { is_core = ROOT }
+					3395 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3395 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Erzurum" #ARM - Karin #Kurdish - Erzirom
+					rename_capital = "Erzurum" #ARM - Karin #Kurdish - Erzirom
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3802
+					3802 = { is_core = ROOT }
+					3802 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3802 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Oltu" #ARM - Tao #Kurdish - Olti
+					rename_capital = "Ardanuc" #ARM - Artanuj #Kurdish - Olti
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3803
+					3803 = { is_core = ROOT }
+					3803 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3803 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bayburt" #ARM - Baydbert #Kurdish - Bagrat
+					rename_capital = "Bayburt" #ARM - Baydbert #Kurdish - Bagrat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3884
+					3884 = { is_core = ROOT }
+					3884 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3884 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bingol" #ARM - Chapaghjur #Kurdish - Cewlig
+					rename_capital = "Bingol" #ARM - Chapaghjur #Kurdish - Cewlig
+				}
+			}
+
+                        #north_kurdistan_area
+			if = {
+				limit = { 
+					owns = 418
+					418 = { is_core = ROOT }
+					418 = { NOT = { has_province_flag = turkish_name } }
+				}
+				418 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Van" #Turkoman - ? #Kurdish - Wan
+					rename_capital = "Van" #Turkoman - ? #Kurdish - Wan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1444
+					1444 = { is_core = ROOT }
+					1444 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1444 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mus" #Turkoman - Mus #Kurdish - Mus
+					rename_capital = "Mus" #Turkoman - Mus #Kurdish - Mus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2551
+					2551 = { is_core = ROOT }
+					2551 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2551 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Diyarbakir" #Kurdish - Amed #Syriac - Amida
+					rename_capital = "Diyarbakir" #Kurdish - Amed #Syriac - Amida
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3093
+					3093 = { is_core = ROOT }
+					3093 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3093 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mardin" #Syriac/Arabic - Mardin #Kurdish - Merdin
+					rename_capital = "Mardin" #Syriac/Arabic - Mardin #Kurdish - Merdin
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3394
+					3394 = { is_core = ROOT }
+					3394 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3394 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Malazgirt" #ARM - Manazkert #Kurdish - Milazgir
+					rename_capital = "Malazgirt" #ARM - Manazkert #Kurdish - Milazgir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4028
+					4028 = { is_core = ROOT }
+					4028 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4028 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bitlis" #Turkoman - ? #Kurdish - Bidlis #Assyrian - Bet Dlis
+					rename_capital = "Bitlis" #Turkoman - ? #Kurdish - Bidlis #Assyrian - Bet Dlis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4029
+					4029 = { is_core = ROOT }
+					4029 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4029 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Duhok" #Kurdish - Dihok #Arabic - Dahuk #Syriac - Nuhadra
+					rename_capital = "Imadiye" #Kurdish - Amedi #Arabic - al-Amadiya #Syriac - Nuhadra
+				}
+			}
+
+                        #west_armenia_area
+			if = {
+				limit = { 
+					owns = 419
+					419 = { is_core = ROOT }
+					419 = { NOT = { has_province_flag = turkish_name } }
+				}
+				419 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Erivan" #ARM - Hayastan
+					rename_capital = "Erivan" #ARM - Yerevan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2581
+					2581 = { is_core = ROOT }
+					2581 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2581 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kars" #ARM - Ghars
+					rename_capital = "Kars" #ARM - Ghars
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3804
+					3804 = { is_core = ROOT }
+					3804 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3804 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Karakilise" #ARM - Somkheti
+					rename_capital = "Karakilise" #ARM - Lori
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3805
+					3805 = { is_core = ROOT }
+					3805 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3805 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Divin" #ARM - Dvin #Arabic - Dabil
+					rename_capital = "Divin" #ARM - Dvin #Arabic - Dabil
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4027
+					4027 = { is_core = ROOT }
+					4027 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4027 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cildir" #ARM - Javakheti
+					rename_capital = "Ahilkelek" #ARM - Akhalkalaki
+				}
+			}
+
+                        #east_armenia_area
+			if = {
+				limit = { 
+					owns = 1316
+					1316 = { is_core = ROOT }
+					1316 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1316 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nahcivan" #ARM - Nakhichevan
+					rename_capital = "Nahcivan" #ARM - Nakhichevan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2577
+					2577 = { is_core = ROOT }
+					2577 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2577 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Artsak" #ARM - Artsakh
+					rename_capital = "Artsak" #ARM - Khachen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3806
+					3806 = { is_core = ROOT }
+					3806 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3806 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sunik" #ARM - Syunik
+					rename_capital = "Kafan" #ARM - Kapan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3807
+					3807 = { is_core = ROOT }
+					3807 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3807 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Gence" #AZB - Gence
+					rename_capital = "Gence" #AZB - Gence
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3809
+					3809 = { is_core = ROOT }
+					3809 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3809 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Karabag" #ARM - Gharabagh #AZB - Qarabag
+					rename_capital = "Akdam" #ARM - Agdam #AZB - Agdam
+				}
+			}
+
+                        #azerbaijan_area
+			if = {
+				limit = { 
+					owns = 416
+					416 = { is_core = ROOT }
+					416 = { NOT = { has_province_flag = turkish_name } }
+				}
+				416 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kent-i Tebriz" #PER/AZB - Tabriz
+					rename_capital = "Tebriz" #PER/AZB - Tabriz
+				}
+			}
+			if = {
+				limit = { 
+					owns = 463
+					463 = { is_core = ROOT }
+					463 = { NOT = { has_province_flag = turkish_name } }
+				}
+				463 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Zencan" #PER/AZB - Zanjan
+					rename_capital = "Zencan" #PER/AZB - Zanjan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1318
+					1318 = { is_core = ROOT }
+					1318 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1318 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Erdebil" #PER/AZB - Ardabil
+					rename_capital = "Erdebil" #PER/AZB - Ardabil
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1321
+					1321 = { is_core = ROOT }
+					1321 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1321 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Meraga" #PER/AZB - Maragheh
+					rename_capital = "Meraga" #PER/AZB - Maragheh
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1445
+					1445 = { is_core = ROOT }
+					1445 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1445 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Hoy" #Turkoman - Vaspurakan #AZB - Xoy #PER - Khoy #Kurdish - Kelexwe
+					rename_capital = "Hoy" #Turkoman - Vaspurakan #AZB - Xoy #PER - Khoy #Kurdish - Kelexwe
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3090
+					3090 = { is_core = ROOT }
+					3090 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3090 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Lenkeran" #AZB - Lankaran
+					rename_capital = "Lenkeran" #AZB - Lankaran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3823
+					3823 = { is_core = ROOT }
+					3823 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3823 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Astara" #PER - Astara
+					rename_capital = "Rest" #Rasht #PER - Rast
+				}
+			}
+
+                        #mosul_area
+			if = {
+				limit = { 
+					owns = 411
+					411 = { is_core = ROOT }
+					411 = { NOT = { has_province_flag = turkish_name } }
+				}
+				411 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kerkuk" #Kurdish - Kerkuk #Arabic - Karkuk #Syriac - Beth Garmai
+					rename_capital = "Kerkuk" #Kurdish - Kerkuk #Arabic - Karkuk #Syriac - Beth Garmai
+				}
+			}
+			if = {
+				limit = {
+					owns = 1320
+					1320 = { is_core = ROOT }
+					1320 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1320 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Musul" #Assyrian - Mepsila #Arabic - al-Mawsil #Syriac - Mawsil 
+					rename_capital = "Musul" #Assyrian - Mepsila #Arabic - al-Mawsil #Syriac - Mawsil
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1329
+					1329 = { is_core = ROOT }
+					1329 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1329 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Samare" #Assyrian - Surimarrat #Arabic - Samarrah
+					rename_capital = "Samare" #Assyrian - Surimarrat #Arabic - Samarrah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2654
+					2654 = { is_core = ROOT }
+					2654 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2654 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Suleymaniye" #Kurdish - Silemani #Arabic - as-Sulaymaniyyah
+					rename_capital = "Suleymaniye" #Kurdish - Silemani #Arabic - as-Sulaymaniyyah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3087
+					3087 = { is_core = ROOT }
+					3087 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3087 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Diyale" #Arabic - Diyala
+					rename_capital = "Bakuba" #Arabic - Baqubah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3088
+					3088 = { is_core = ROOT }
+					3088 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3088 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Erbil" #Kurdish - Hewler #Arabic - Arbil; Syriac - Arbela
+					rename_capital = "Erbil" #Kurdish - Hewler #Arabic - Arbil; Syriac - Arbela
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3885
+					3885 = { is_core = ROOT }
+					3885 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3885 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kamisli" #Assyrian - Bet Zalin #Syriac - Qamishlo #Arabic - al-Qamishli
+					rename_capital = "Kamisli" #Assyrian - Bet Zalin #Syriac - Qamishlo #Arabic - al-Qamishli
+				}
+			}
+
+                        #iraq_arabi_area
+			if = {
+				limit = { 
+					owns = 410
+					410 = { is_core = ROOT }
+					410 = { NOT = { has_province_flag = turkish_name } }
+				}
+				410 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bagdat" #Arabic - Bagdad
+					rename_capital = "Bagdat" #Arabic - Bagdad
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1319
+					1319 = { is_core = ROOT }
+					1319 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1319 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Deyr-i-Zor" #Arabic - Dayr az-Zur #Syriac - Dayra Zeurta
+					rename_capital = "Deyr-i-Zor" #Arabic - Dayr az-Zur #Syriac - Dayra Zeurta
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1322
+					1322 = { is_core = ROOT }
+					1322 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1322 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kut" #Arabic - al-Kut
+					rename_capital = "Kut" #Arabic - al-Kut
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2230
+					2230 = { is_core = ROOT }
+					2230 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2230 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kerbela" #Arabic - Karbala
+					rename_capital = "Kerbela" #Arabic - Karbala
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3089
+					3089 = { is_core = ROOT }
+					3089 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3089 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Anbar" #Arabic - al-Anbar
+					rename_capital = "Sahlawiye" #Arabic - as-Saqlawiyah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3900
+					3900 = { is_core = ROOT }
+					3900 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3900 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Felluce" #Arabic - al-Fallujah
+					rename_capital = "Felluce" #Arabic - al-Fallujah
+				}
+			}
+
+                        #lower_iraq_area
+			if = {
+				limit = { 
+					owns = 415
+					415 = { is_core = ROOT }
+					415 = { NOT = { has_province_flag = turkish_name } }
+				}
+				415 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Semave" #Arabic - as-Samawah
+					rename_capital = "Semave" #Arabic - as-Samawah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1330
+					1330 = { is_core = ROOT }
+					1330 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1330 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Necef" #Arabic - Najaf
+					rename_capital = "Necef" #Arabic - Najaf
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3084
+					3084 = { is_core = ROOT }
+					3084 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3084 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Meysan" #Arabic - Maysan #Syriac - Mayshan
+					rename_capital = "Emare" #Arabic - Maysan #Syriac - Mayshan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3085
+					3085 = { is_core = ROOT }
+					3085 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3085 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Zi Kar" #Arabic - Dhi Qar
+					rename_capital = "Nasiriye" #Arabic - Dhi Qar
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3086
+					3086 = { is_core = ROOT }
+					3086 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3086 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kadisiye" #Arabic - al-Qadisiyyah
+					rename_capital = "Kadisiye" #Arabic - al-Qadisiyyah
+				}
+			}
+
+                        #basra_area
+			if = {
+				limit = { 
+					owns = 392
+					392 = { is_core = ROOT }
+					392 = { NOT = { has_province_flag = turkish_name } }
+				}
+				392 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ahvaz" #Arabic - Ahvaz #Syriac - Bet Huzaye
+					rename_capital = "Ahvaz" #Arabic - Ahvaz #Syriac - Bet Huzaye
+				}
+			}
+			if = {
+				limit = { 
+					owns = 393
+					393 = { is_core = ROOT }
+					393 = { NOT = { has_province_flag = turkish_name } }
+				}
+				393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kuveyt" #Arabic - al-Kuwait
+					rename_capital = "Kuveyt" #Arabic - al-Kuwait
+				}
+			}
+			if = {
+				limit = { 
+					owns = 398
+					398 = { is_core = ROOT }
+					398 = { NOT = { has_province_flag = turkish_name } }
+				}
+				398 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Basra" #Arabic - al-Basrah
+					rename_capital = "Basra" #Arabic - al-Basrah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3826
+					3826 = { is_core = ROOT }
+					3826 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3826 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Huzistan" #PER - Hoveyzeh #Arabic - Khuzistan
+					rename_capital = "Huzistan" #PER - Hoveyzeh #Arabic - Khuzistan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3902
+					3902 = { is_core = ROOT }
+					3902 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3902 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Zubair" #Arabic - al-Zubair
+					rename_capital = "Zubair" #Arabic - al-Zubair
+				}
+			}
+
+                        #hejaz_area
+			if = {
+				limit = { 
+					owns = 380
+					380 = { is_core = ROOT }
+					380 = { NOT = { has_province_flag = turkish_name } }
+				}
+				380 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Yenbu'" #Arabic - Yanbu'
+					rename_capital = "Yenbe' ul-Bahr" #Arabic - Yanbu' al-Bahr
+				}
+			}
+			if = {
+				limit = { 
+					owns = 384
+					384 = { is_core = ROOT }
+					384 = { NOT = { has_province_flag = turkish_name } }
+				}
+				384 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Medine" #Arabic - al-Madinah
+					rename_capital = "Medine" #Arabic - al-Madinah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 385
+					385 = { is_core = ROOT }
+					385 = { NOT = { has_province_flag = turkish_name } }
+				}
+				385 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mekke" #Arabic - Makkah
+					rename_capital = "Mekke" #Arabic - Makkah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1332
+					1332 = { is_core = ROOT }
+					1332 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1332 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Akabe" #Arabic - al-'Aqabah
+					rename_capital = "Akabe" #Arabic - al-'Aqabah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2665
+					2665 = { is_core = ROOT }
+					2665 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2665 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tebuk" #Arabic - Tabouk
+					rename_capital = "Tebuk" #Arabic - Tabouk
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3076
+					3076 = { is_core = ROOT }
+					3076 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3076 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Taif" #Arabic - at-Ta'if
+					rename_capital = "Taif" #Arabic - at-Ta'if
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3077
+					3077 = { is_core = ROOT }
+					3077 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3077 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cidde" #Arabic - Jeddah
+					rename_capital = "Cidde" #Arabic - Jeddah
+				}
+			}
+
+                        #sinai_area
+			if = {
+				limit = { 
+					owns = 359
+					359 = { is_core = ROOT }
+					359 = { NOT = { has_province_flag = turkish_name } }
+				}
+				359 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Suveys" #EGY - el-Sewes
+					rename_capital = "Suveys" #EGY - el-Sewes
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1208
+					1208 = { is_core = ROOT }
+					1208 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1208 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Aidab" #EGY - 'Aydhab
+					rename_capital = "Aidab" #EGY - 'Aydhab
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1211
+					1211 = { is_core = ROOT }
+					1211 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1211 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kuseyr" #EGY - el-Oser
+					rename_capital = "Kuseyr" #EGY - el-Oser
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3004
+					3004 = { is_core = ROOT }
+					3004 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3004 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ras Garib" #EGY - Ras Gareb
+					rename_capital = "Ras Garib" #EGY - Ras Gareb
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3887
+					3887 = { is_core = ROOT }
+					3887 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3887 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sina" #EGY - Sina
+					rename_capital = "Aris" #EGY - el-Aris
+				}
+			}
+
+                        #gharbia_area
+			if = {
+				limit = { 
+					owns = 358
+					358 = { is_core = ROOT }
+					358 = { NOT = { has_province_flag = turkish_name } }
+				}
+				358 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Iskenderiye" #EGY - el-Eskenderiya
+					rename_capital = "Iskenderiye" #EGY - el-Eskenderiya
+				}
+			}
+			if = {
+				limit = { 
+					owns = 362
+					362 = { is_core = ROOT }
+					362 = { NOT = { has_province_flag = turkish_name } }
+				}
+				362 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Rasit" #EGY - Rasid
+					rename_capital = "Rasit" #EGY - Rasid
+				}
+			}
+			if = {
+				limit = { 
+					owns = 363
+					363 = { is_core = ROOT }
+					363 = { NOT = { has_province_flag = turkish_name } }
+				}
+				363 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Dimyat" #EGY - Dumyat
+					rename_capital = "Dimyat" #EGY - Dumyat
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4092
+					4092 = { is_core = ROOT }
+					4092 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4092 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sarkiye" #EGY - el-Sharqiya
+					rename_capital = "Zacazic" #EGY - ez-Zaqaziq
+				}
+			}
+
+                        #central_egypt_area
+			if = {
+				limit = { 
+					owns = 361
+					361 = { is_core = ROOT }
+					361 = { NOT = { has_province_flag = turkish_name } }
+				}
+				361 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kahire" #EGY - el-Qahire
+					rename_capital = "Kahire" #EGY - el-Qahire
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1338
+					1338 = { is_core = ROOT }
+					1338 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1338 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Gize" #EGY - el-Gize
+					rename_capital = "Gize" #EGY - el-Gize
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2498
+					2498 = { is_core = ROOT }
+					2498 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2498 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Menufiye" #EGY - el-Monofeya
+					rename_capital = "Menufiye" #EGY - el-Monofeya
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2499
+					2499 = { is_core = ROOT }
+					2499 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2499 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Buheyre" #EGY - el-Behera
+					rename_capital = "Demenhur" #EGY - Damanhur
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2543
+					2543 = { is_core = ROOT }
+					2543 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2543 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Feyyum" #EGY - el-Fayyum
+					rename_capital = "Feyyum" #EGY - el-Fayyum
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4093
+					4093 = { is_core = ROOT }
+					4093 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4093 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Beni Suveyf" #EGY - Baniswef
+					rename_capital = "Beni Suveyf" #EGY - Baniswef
+				}
+			}
+
+                        #upper_egypt_area
+			if = {
+				limit = { 
+					owns = 360
+					360 = { is_core = ROOT }
+					360 = { NOT = { has_province_flag = turkish_name } }
+				}
+				360 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kus" #EGY - Qus
+					rename_capital = "Kus" #EGY - Qus
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1213
+					1213 = { is_core = ROOT }
+					1213 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1213 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Asyut" #EGY - Asyut
+					rename_capital = "Asyut" #EGY - Asyut
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1214
+					1214 = { is_core = ROOT }
+					1214 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1214 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Asvan" #EGY - Aswan
+					rename_capital = "Asvan" #EGY - Aswan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3003
+					3003 = { is_core = ROOT }
+					3003 = { NOT = { has_province_flag = turkish_name } }
+				}
+				3003 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Minye" #EGY - Minya
+					rename_capital = "Minye" #EGY - Minya
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4094
+					4094 = { is_core = ROOT }
+					4094 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4094 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sevhac" #EGY - Sawhaj
+					rename_capital = "Sevhac" #EGY - Sawhaj
+				}
+			}
+
+                        #cyrenaica_area
+			if = {
+				limit = { 
+					owns = 356
+					356 = { is_core = ROOT }
+					356 = { NOT = { has_province_flag = turkish_name } }
+				}
+				356 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sirenayka" #Arabic - Barqah #Berber - Awjila
+					rename_capital = "Marsa ibn Ghazi" #Arabic - Barneeq #Berber - Awjila
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1339
+					1339 = { is_core = ROOT }
+					1339 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1339 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Matruh" #EGY - Matruh #Berber - Kara
+					rename_capital = "Mersa Matruh" #EGY - Marsa Matruh #Berber - Kara
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1526
+					1526 = { is_core = ROOT }
+					1526 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1526 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tobruk" #Arabic - al-Butnan #Berber - Jaghbub
+					rename_capital = "Tobruk" #Arabic - Tubruq #Berber - Jaghbub
+				}
+			}
+
+                        #libyan_desert_area
+			if = {
+				limit = { 
+					owns = 1210
+					1210 = { is_core = ROOT }
+					1210 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1210 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Bahariye" #EGY - el-Bahariya
+					rename_capital = "Baviti" #EGY - el-Bawiti
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1212
+					1212 = { is_core = ROOT }
+					1212 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1212 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Siwa" #EGY - Wahat Siwah #Berber - Isiwan
+					rename_capital = "Siwa" #EGY - Wahat Siwah #Berber - Isiwan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2497
+					2497 = { is_core = ROOT }
+					2497 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2497 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Farafra Colu" #EGY - Qasr Farafra
+					rename_capital = "Farafra" #EGY - Farafra
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2661
+					2661 = { is_core = ROOT }
+					2661 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2661 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Harga" #EGY - el-Kharga
+					rename_capital = "Harga" #EGY - el-Kharga
+				}
+			}
+
+                        #tripolitania_area
+			if = {
+				limit = { 
+					owns = 354
+					354 = { is_core = ROOT }
+					354 = { NOT = { has_province_flag = turkish_name } }
+				}
+				354 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Trablusgarb" #Arabic - Tarabulus al-Gharb
+					rename_capital = "Trablusgarb" #Arabic - Tarabulus al-Gharb
+				}
+			}
+			if = {
+				limit = { 
+					owns = 355
+					355 = { is_core = ROOT }
+					355 = { NOT = { has_province_flag = turkish_name } }
+				}
+				355 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sert" #Arabic - Sirt #Berber - Sokna
+					rename_capital = "Sert" #Arabic - Sirt #Berber - Sokna
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2662
+					2662 = { is_core = ROOT }
+					2662 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2662 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Misrata" #Arabic - Misratah
+					rename_capital = "Misrata" #Arabic - Misratah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2859
+					2859 = { is_core = ROOT }
+					2859 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2859 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cebel-i Garbiyye" #Arabic - Zuwarah
+					rename_capital = "Giryan" #Arabic - Gharyan
+				}
+			}
+
+                        #djerba_area
+			if = {
+				limit = { 
+					owns = 2528
+					2528 = { is_core = ROOT }
+					2528 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2528 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cerbe" #Arabic - Jarbah 
+					rename_capital = "Cerbe" #Arabic - Jarbah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2663
+					2663 = { is_core = ROOT }
+					2663 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2663 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kabes" #Arabic - Gabis
+					rename_capital = "Kabes" #Arabic - Gabis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2999
+					2999 = { is_core = ROOT }
+					2999 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2999 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tuzer" #Arabic - Sott el-Jarid
+					rename_capital = "Tuzer" #Arabic - Tozir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4068
+					4068 = { is_core = ROOT }
+					4068 = { NOT = { has_province_flag = turkish_name } }
+				}
+				4068 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kafsa" #Arabic - Gafsa #Berber - Capsa
+					rename_capital = "Kafsa" #Arabic - Gafsa #Berber - Capsa
+				}
+			}
+
+                        #kairwan_area
+			if = {
+				limit = { 
+					owns = 353
+					353 = { is_core = ROOT }
+					353 = { NOT = { has_province_flag = turkish_name } }
+				}
+				353 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Susa" #Arabic - Susa
+					rename_capital = "Susa" #Arabic - Susa
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2315
+					2315 = { is_core = ROOT }
+					2315 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2315 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kayrevan" #Arabic - Qiyrwan
+					rename_capital = "Kayrevan" #Arabic - Qiyrwan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2867
+					2867 = { is_core = ROOT }
+					2867 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2867 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Isfakiz" #Arabic - Safaqis
+					rename_capital = "Isfakiz" #Arabic - Safaqis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2868
+					2868 = { is_core = ROOT }
+					2868 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2868 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mehdiye" #Arabic - al-Mahdiya
+					rename_capital = "Mehdiye" #Arabic - al-Mahdiya
+				}
+			}
+
+                        #tunis_area
+			if = {
+				limit = { 
+					owns = 341
+					341 = { is_core = ROOT }
+					341 = { NOT = { has_province_flag = turkish_name } }
+				}
+				341 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tunus" #Arabic - Tunis
+					rename_capital = "Tunus" #Arabic - Tunis
+				}
+			}
+			if = {
+				limit = { 
+					owns = 351
+					351 = { is_core = ROOT }
+					351 = { NOT = { has_province_flag = turkish_name } }
+				}
+				351 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Binzert" #Arabic - Benzart
+					rename_capital = "Binzert" #Arabic - Benzart
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2860
+					2860 = { is_core = ROOT }
+					2860 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2860 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ifrikiyye maa Bace" #Arabic - Baja
+					rename_capital = "Bace" #Arabic - Baja
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2862
+					2862 = { is_core = ROOT }
+					2862 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2862 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Nabil" #Arabic - Nabil
+					rename_capital = "Nabil" #Arabic - Nabil
+				}
+			}
+
+                        #kabylia_area
+			if = {
+				limit = { 
+					owns = 339
+					339 = { is_core = ROOT }
+					339 = { NOT = { has_province_flag = turkish_name } }
+				}
+				339 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Buira" #Berber - Adrar n Jerjer #Arabic - Jabal Jurjura
+					rename_capital = "Buira" #Berber - Tubirett #Arabic - Bouira
+				}
+			}
+			if = {
+				limit = { 
+					owns = 340
+					340 = { is_core = ROOT }
+					340 = { NOT = { has_province_flag = turkish_name } }
+				}
+				340 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Unnabe" #Arabic - Annabah #Berber - Bone
+					rename_capital = "Unnabe" #Arabic - Annabah #Berber - Bone
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1515
+					1515 = { is_core = ROOT }
+					1515 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1515 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kosantine" #Berber - Shawiya #Arabic - Qusantinah
+					rename_capital = "Kosantine" #Berber - Shawiya #Arabic - Qusantinah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2861
+					2861 = { is_core = ROOT }
+					2861 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2861 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Sekikda" #Arabic - Skikda #Berber - ?
+					rename_capital = "Sekikda" #Arabic - Skikda #Berber - ?
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2863
+					2863 = { is_core = ROOT }
+					2863 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2863 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Becaye" #Arabic - Bijayah #Berber - Bgayet
+					rename_capital = "Becaye" #Arabic - Bijayah #Berber - Bgayet
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2864
+					2864 = { is_core = ROOT }
+					2864 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2864 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Kabylie" #Berber - Tamurt n Iqbayliyen #Arabic - Kabylie
+					rename_capital = "Tiziuzu" #Berber - Tizi Wezzu #Arabic - Tizi Ouzou
+				}
+			}
+
+                        #algiers_area
+			if = {
+				limit = { 
+					owns = 337
+					337 = { is_core = ROOT }
+					337 = { NOT = { has_province_flag = turkish_name } }
+				}
+				337 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Vahran" #Arabic - Wahran #Berber - Wehran
+					rename_capital = "Vahran" #Arabic - Wahran #Berber - Wehran
+				}
+			}
+			if = {
+				limit = { 
+					owns = 338
+					338 = { is_core = ROOT }
+					338 = { NOT = { has_province_flag = turkish_name } }
+				}
+				338 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Self" #Berber - Clef #Arabic - as-Selif
+					rename_capital = "Self" #Berber - Clef #Arabic - as-Selif
+				}
+			}
+			if = {
+				limit = { 
+					owns = 350
+					350 = { is_core = ROOT }
+					350 = { NOT = { has_province_flag = turkish_name } }
+				}
+				350 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Cezayir" #Arabic - al-Jaza'er
+					rename_capital = "Cezayir" #Arabic - al-Jaza'er
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1522
+					1522 = { is_core = ROOT }
+					1522 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1522 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Tilimsan" #Berber - Thala Imsan #Arabic - Tlemsan
+					rename_capital = "Tilimsan" #Berber - Thala Imsan #Arabic - Tlemsan
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2865
+					2865 = { is_core = ROOT }
+					2865 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2865 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Mersel Kebir" #Arabic - Mers el-Kebir #Berber - Marsa Kebir
+					rename_capital = "Mersel Kebir" #Arabic - Mers el-Kebir #Berber - Marsa Kebir
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2866
+					2866 = { is_core = ROOT }
+					2866 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2866 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ayn Temusent" #Arabic - Ksar ibn Senar #Berber - Ait Iznassen
+					rename_capital = "Ayn Temusent" #Arabic - Ksar ibn Senar #Berber - Ait Iznassen
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2933
+					2933 = { is_core = ROOT }
+					2933 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2933 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Titteri" #Arabic - Titteri #Berber - Ait Ouzera
+					rename_capital = "Titteri" #Arabic - Titteri #Berber - Ait Ouzera
+				}
+			}
+
+                        #atlas_area
+			if = {
+				limit = { 
+					owns = 1516
+					1516 = { is_core = ROOT }
+					1516 = { NOT = { has_province_flag = turkish_name } }
+				}
+				1516 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Ain Sefra" #Berber - Wargla #Arabic - Ain Sefrah
+					rename_capital = "Ain Sefra" #Berber - Wargla #Arabic - Ain Sefrah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2932
+					2932 = { is_core = ROOT }
+					2932 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2932 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Niame" #Berber - Mzab #Arabic - N'amah
+					rename_capital = "Niame" #Berber - Mzab #Arabic - N'amah
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2934
+					2934 = { is_core = ROOT }
+					2934 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2934 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Aures" #Arabic - Awras #Berber - Awras
+					rename_capital = "Biskra" #Arabic - Biskra #Berber - Tibeskert
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2935
+					2935 = { is_core = ROOT }
+					2935 = { NOT = { has_province_flag = turkish_name } }
+				}
+				2935 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = turkish_name
+					change_province_name = "Celfa" #Arabic - al-Jilfah #Berber - Wad Righ
+					rename_capital = "Celfa" #Arabic - al-Jilfah #Berber - Wad Righ
+				}
+			}
+
+                        #fez_area
+			#343 336 2972 2941
+
+                        #elrif_area
+                        #335 1534 4069 4070 4071
+
+                        #tanja_area
+                        #2942 334 1533 2971
+
+                        #marrekesh_area
+                        #4075 347 4072 344 4074
+
+                        #anfa_area
+                        #2944 2940 2869 1532 4073 2962
+
+                        #tafilalt_area
+                        #346 349 1535 1548
+
+                        #sus_area
+                        #1340 1585 2896 2943
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

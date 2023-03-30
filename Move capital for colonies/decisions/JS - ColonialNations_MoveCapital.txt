@@ -1,0 +1,2008 @@
+country_decisions = {
+        ################################ Haiti
+	move_capital_to_santo_domingo = {
+		major = yes
+		potential = {
+			owns = 1538 # Higuey
+			NOT = { capital = 1538 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_santo_domingo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_santo_domingo
+			add_adm_power = -5
+			Effect_set_capital = { target=1538 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_port_au_prince = {
+		major = yes
+		potential = {
+			owns = 488  # Port-au-Prince
+			NOT = { owns = 1538 }
+			NOT = { capital = 488 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_port_au_prince }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_port_au_prince
+			add_adm_power = -5
+			Effect_set_capital = { target=488 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_san_juan = {
+		major = yes
+		potential = {
+			owns = 492  # San Juan
+			NOT = { owns = 1538 }
+			NOT = { owns = 488 }
+			NOT = { capital = 492 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_san_juan }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_san_juan
+			add_adm_power = -5
+			Effect_set_capital = { target=492 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Cuba
+	move_capital_to_habana = {
+		major = yes
+		potential = {
+			owns = 1540 # Habana
+			NOT = { capital = 1540 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_habana }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_habana
+			add_adm_power = -5
+			Effect_set_capital = { target=1540 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_guantanamo = {
+		major = yes
+		potential = {
+			owns = 486  # Guantanamo
+			NOT = { owns = 1540 }
+			NOT = { capital = 486 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_guantanamo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_guantanamo
+			add_adm_power = -5
+			Effect_set_capital = { target=486 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_kingston = {
+		major = yes
+		potential = {
+			owns = 487  # Kingston
+			NOT = { owns = 1540 }
+			NOT = { owns = 486 }
+			NOT = { capital = 487 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_kingston }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_kingston
+			add_adm_power = -5
+			Effect_set_capital = { target=487 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_nassau = {
+		major = yes
+		potential = {
+			owns = 482  # Nassau
+			NOT = { owns = 1540 }
+			NOT = { owns = 486 }
+			NOT = { owns = 487 }
+			NOT = { capital = 482 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_nassau }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_nassau
+			add_adm_power = -5
+			Effect_set_capital = { target=482 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Central America
+	move_capital_to_san_salvador = {
+		major = yes
+		potential = {
+			owns = 2208 # San Salvador
+			NOT = { capital = 2208 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_san_salvador }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_san_salvador
+			add_adm_power = -5
+			Effect_set_capital = { target=2208 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_yucatan = {
+		major = yes
+		potential = {
+			owns = 2415 # Yucatan
+			NOT = { owns = 2208 }
+			NOT = { capital = 2415 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_yucatan }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_yucatan
+			add_adm_power = -5
+			Effect_set_capital = { target=2415 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Mexico
+	move_capital_to_veracruz = {
+		major = yes
+		potential = {
+			owns = 4040 # Veracruz
+			NOT = { owns = 1471 }
+			NOT = { capital = 4040 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_veracruz }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_veracruz
+			add_adm_power = -5
+			Effect_set_capital = { target=4040 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_acapulco = {
+		major = yes
+		potential = {
+			owns = 849 # Acapulco
+			NOT = { owns = 1471 }
+			NOT = { owns = 4040 }
+			NOT = { capital = 849 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_acapulco }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_acapulco
+			add_adm_power = -5
+			Effect_set_capital = { target=849 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_coatzacoalcos = {
+		major = yes
+		potential = {
+			owns = 1709 # Coatzacoalcos
+			NOT = { owns = 1471 }
+			NOT = { owns = 4040 }
+			NOT = { owns = 849 }
+			NOT = { capital = 1709 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_coatzacoalcos }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_coatzacoalcos
+			add_adm_power = -5
+			Effect_set_capital = { target=1709 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ New Granada
+	move_capital_to_cartagena_de_indias = {
+		major = yes
+		potential = {
+			owns = 827  # Cartagena de Indias
+			NOT = { capital = 827 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_cartagena_de_indias }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_cartagena_de_indias
+			add_adm_power = -5
+			Effect_set_capital = { target=827 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_maracaibo = {
+		major = yes
+		potential = {
+			owns = 829  # Maracaibo
+			NOT = { owns = 827 }
+			NOT = { capital = 829 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_maracaibo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_maracaibo
+			add_adm_power = -5
+			Effect_set_capital = { target=829 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_porto_belo = {
+		major = yes
+		potential = {
+			owns = 835  # Porto Belo
+			NOT = { owns = 827 }
+			NOT = { owns = 829 }
+			NOT = { capital = 835 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_porto_belo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_porto_belo
+			add_adm_power = -5
+			Effect_set_capital = { target=835 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_guayaquil = {
+		major = yes
+		potential = {
+			owns = 797  # Guayaquil
+			NOT = { owns = 827 }
+			NOT = { owns = 829 }
+			NOT = { owns = 835 }
+			NOT = { capital = 797 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_guayaquil }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_guayaquil
+			add_adm_power = -5
+			Effect_set_capital = { target=797 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_bogota = {
+		major = yes
+		potential = {
+			owns = 3506 # Bogota
+			NOT = { owns = 827 }
+			NOT = { owns = 829 }
+			NOT = { owns = 835 }
+			NOT = { owns = 797 }
+			NOT = { capital = 3506 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_bogota }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_bogota
+			add_adm_power = -5
+			Effect_set_capital = { target=3506 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_quito = {
+		major = yes
+		potential = {
+			owns = 793  # Quito
+			NOT = { owns = 827 }
+			NOT = { owns = 829 }
+			NOT = { owns = 835 }
+			NOT = { owns = 797 }
+			NOT = { owns = 3506 }
+			NOT = { capital = 793 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_quito }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_quito
+			add_adm_power = -5
+			Effect_set_capital = { target=793 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Guyana
+	move_capital_to_georgetown = {
+		major = yes
+		potential = {
+			owns = 1490 # Georgetown
+			NOT = { capital = 1490 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_georgetown }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_georgetown
+			add_adm_power = -5
+			Effect_set_capital = { target=1490 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_amapa = {
+		major = yes
+		potential = {
+			owns = 3492 # Amapa
+			NOT = { owns = 1490 }
+			NOT = { capital = 3492 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_amapa }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_amapa
+			add_adm_power = -5
+			Effect_set_capital = { target=1490 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_ciudad_guayana = {
+		major = yes
+		potential = {
+			owns = 743  # Ciudad Guayana
+			NOT = { owns = 1490 }
+			NOT = { owns = 3492 }
+			NOT = { capital = 743 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_ciudad_guayana }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_ciudad_guayana
+			add_adm_power = -5
+			Effect_set_capital = { target=743 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Amazonas
+	move_capital_to_belem = {
+		major = yes
+		potential = {
+			owns = 748  # Belem
+			NOT = { capital = 748 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_belem }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_belem
+			add_adm_power = -5
+			Effect_set_capital = { target=748 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_macapa = {
+		major = yes
+		potential = {
+			owns = 742  # Macapa
+			NOT = { owns = 748 }
+			NOT = { capital = 742 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_macapa }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_macapa
+			add_adm_power = -5
+			Effect_set_capital = { target=742 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Brazil
+	move_capital_to_recife = {
+		major = yes
+		potential = {
+			owns = 1485 # Recife
+			NOT = { capital = 1485 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_recife }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_recife
+			add_adm_power = -5
+			Effect_set_capital = { target=1485 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	move_capital_to_salvador = {
+		major = yes
+		potential = {
+			owns = 3476 # Salvador
+			NOT = { owns = 1485 }
+			NOT = { capital = 3476 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_salvador }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_salvador
+			add_adm_power = -5
+			Effect_set_capital = { target=3476 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Parana
+	move_capital_to_rio_de_janeiro = {
+		major = yes
+		potential = {
+			owns = 761  # Rio de Janeiro
+			NOT = { capital = 761 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_rio_de_janeiro }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_rio_de_janeiro
+			add_adm_power = -5
+			Effect_set_capital = { target=761 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_porto_alegre = {
+		major = yes
+		potential = {
+			owns = 768  # Porto Alegre
+			NOT = { owns = 761 }
+			NOT = { capital = 768 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_porto_alegre }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_porto_alegre
+			add_adm_power = -5
+			Effect_set_capital = { target=768 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ La Plata
+	move_capital_to_montevideo = {
+		major = yes
+		potential = {
+			owns = 776  # Montevideo
+			NOT = { owns = 3454 }
+			NOT = { capital = 776 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_montevideo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_montevideo
+			add_adm_power = -5
+			Effect_set_capital = { target=776 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_bahia_blanca = {
+		major = yes
+		potential = {
+			owns = 779  # Bahia Blanca
+			NOT = { owns = 3454 }
+			NOT = { owns = 776 }
+			NOT = { capital = 779 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_bahia_blanca }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_bahia_blanca
+			add_adm_power = -5
+			Effect_set_capital = { target=779 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Chile
+	move_capital_to_valdivia = {
+		major = yes
+		potential = {
+			owns = 787  # Valdivia
+			NOT = { capital = 787 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_valdivia }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_valdivia 
+			add_adm_power = -5
+			Effect_set_capital = { target=787 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Lower Peru
+	move_capital_to_cusco = {
+		major = yes
+		potential = {
+			owns = 2068 # Cusco
+			NOT = { capital = 2068 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_cusco }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_cusco
+			add_adm_power = -5
+			Effect_set_capital = { target=2068 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_puno = {
+		major = yes
+		potential = {
+			owns = 3435 # Puno
+			NOT = { owns = 2068 }
+			NOT = { capital = 3435 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_puno }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_puno
+			add_adm_power = -5
+			Effect_set_capital = { target=3435 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Upper Peru
+	move_capital_to_trujillo = {
+		major = yes
+		potential = {
+			owns = 806  # Trujillo
+			NOT = { capital = 806 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_trujillo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_trujillo
+			add_adm_power = -5
+			Effect_set_capital = { target=806 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_lima = {
+		major = yes
+		potential = {
+			owns = 816  # Lima
+			NOT = { owns = 806 }
+			NOT = { capital = 816 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_lima }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_lima
+			add_adm_power = -5
+			Effect_set_capital = { target=816 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ South Africa
+	move_capital_to_cape_town = {
+		major = yes
+		potential = {
+			owns = 2881 # Cape Town
+			NOT = { capital = 2881 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_cape_town }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_cape_town
+			add_adm_power = -5
+			Effect_set_capital = { target=2881 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_port_elizabeth = {
+		major = yes
+		potential = {
+			owns = 1164 # Port Elizabeth
+			NOT = { owns = 2881 }
+			NOT = { capital = 1164 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_port_elizabeth }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_port_elizabeth
+			add_adm_power = -5
+			Effect_set_capital = { target=1164 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_richards_bay = {
+		major = yes
+		potential = {
+			owns = 5221 # Richards Bay
+			NOT = { owns = 2881 }
+			NOT = { owns = 1164 }
+			NOT = { capital = 5221 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_richards_bay }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_richards_bay
+			add_adm_power = -5
+			Effect_set_capital = { target=5221 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_maputo = {
+		major = yes
+		potential = {
+			owns = 1175 # Maputo
+			NOT = { owns = 2881 }
+			NOT = { owns = 1164 }
+			NOT = { owns = 5221 }
+			NOT = { capital = 1175 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_maputo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_maputo
+			add_adm_power = -5
+			Effect_set_capital = { target=1175 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Papua
+	move_capital_to_port_moresby = {
+		major = yes
+		potential = {
+			owns = 3344            # Port Moresby
+			NOT = { capital = 3344 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_port_moresby }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_port_moresby
+			add_adm_power = -5
+			Effect_set_capital = { target=3344 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Polynesia
+	move_capital_to_wellington = {
+		major = yes
+		potential = {
+			owns = 1108 # Wellington
+			NOT = { capital = 1108 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_wellington }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_wellington
+			add_adm_power = -5
+			Effect_set_capital = { target=1108 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_auckland = {
+		major = yes
+		potential = {
+			owns = 1106 # Auckland
+			NOT = { owns = 1108 }
+			NOT = { capital = 1106 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_auckland }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_auckland
+			add_adm_power = -5
+			Effect_set_capital = { target=1106 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Australia
+	move_capital_to_melbourne = {
+		major = yes
+		potential = {
+			owns = 1090 # Melbourne
+			NOT = { capital = 1090 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_melbourne }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_melbourne
+			add_adm_power = -5
+			Effect_set_capital = { target=1090 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_port_jackson = {
+		major = yes
+		potential = {
+			owns = 2128 # Port Jackson
+			NOT = { owns = 1090 }
+			NOT = { capital = 2128 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_port_jackson }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_port_jackson
+			add_adm_power = -5
+			Effect_set_capital = { target=2128 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_brisbane = {
+		major = yes
+		potential = {
+			owns = 1092 # Brisbane
+			NOT = { owns = 1090 }
+			NOT = { owns = 2128 }
+			NOT = { capital = 1092 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_brisbane }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_brisbane
+			add_adm_power = -5
+			Effect_set_capital = { target=1092 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_adelaide = {
+		major = yes
+		potential = {
+			owns = 1086 # Adelaide
+			NOT = { owns = 1090 }
+			NOT = { owns = 2128 }
+			NOT = { owns = 1092 }
+			NOT = { capital = 1086 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_adelaide }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_adelaide
+			add_adm_power = -5
+			Effect_set_capital = { target=1086 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_perth = {
+		major = yes
+		potential = {
+			owns = 1084 # Perth
+			NOT = { owns = 1090 }
+			NOT = { owns = 2128 }
+			NOT = { owns = 1092 }
+			NOT = { owns = 1086 }
+			NOT = { capital = 1084 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_perth }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_perth
+			add_adm_power = -5
+			Effect_set_capital = { target=1084 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Alaska
+	move_capital_to_vancouver = {
+		major = yes
+		potential = {
+			owns = 2186 # Vancouver
+			NOT = { capital = 2186 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_vancouver }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_vancouver
+			add_adm_power = -5
+			Effect_set_capital = { target=2186 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_seattle = {
+		major = yes
+		potential = {
+			owns = 2185 # Seattle
+			NOT = { owns = 2186 }
+			NOT = { capital = 2185 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_seattle }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_seattle
+			add_adm_power = -5
+			Effect_set_capital = { target=2185 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_astoria = {
+		major = yes
+		potential = {
+			owns = 3677 # Astoria
+			NOT = { owns = 2186 }
+			NOT = { owns = 2185 }
+			NOT = { capital = 3677 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_astoria }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_astoria
+			add_adm_power = -5
+			Effect_set_capital = { target=3677 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_anchorage = {
+		major = yes
+		potential = {
+			owns = 3670 # Anchorage
+			NOT = { owns = 2186 }
+			NOT = { owns = 2185 }
+			NOT = { owns = 3677 }
+			NOT = { capital = 3670 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_anchorage }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_anchorage
+			add_adm_power = -5
+			Effect_set_capital = { target=3670 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ California
+	move_capital_to_san_francisco = {
+		major = yes
+		potential = {
+			owns = 871  # San Francisco
+			NOT = { capital = 871 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_san_francisco }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_san_francisco 
+			add_adm_power = -5
+			Effect_set_capital = { target=871 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_los_angeles = {
+		major = yes
+		potential = {
+			owns = 868  # Los Angeles
+			NOT = { owns = 871 }
+			NOT = { capital = 868 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_los_angeles }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_los_angeles 
+			add_adm_power = -5
+			Effect_set_capital = { target=868 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Sonora
+	move_capital_to_sinaloa = {
+		major = yes
+		potential = {
+			owns = 1734  # Sinaloa
+			NOT = { capital = 1734 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_sinaloa }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_sinaloa 
+			add_adm_power = -5
+			Effect_set_capital = { target=1734 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+        ################################ Texas
+	move_capital_to_galveston = {
+		major = yes
+		potential = {
+			owns = 3552  # Galveston
+			NOT = { capital = 3552 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_galveston }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_galveston
+			add_adm_power = -5
+			Effect_set_capital = { target=3552 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_brownsville = {
+		major = yes
+		potential = {
+			owns = 858  # Brownsville
+			NOT = { owns = 3552 }
+			NOT = { capital = 858 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_brownsville }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_brownsville
+			add_adm_power = -5
+			Effect_set_capital = { target=858 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Louisiana
+	move_capital_to_tanasi = {
+		major = yes
+		potential = {
+			owns = 935  # Tanasi
+			NOT = { capital = 935 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_tanasi }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_tanasi
+			add_adm_power = -5
+			Effect_set_capital = { target=935 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_new_orleans = {
+		major = yes
+		potential = {
+			owns = 928  # New Orleans
+			NOT = { owns = 935 }
+			NOT = { capital = 928 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_new_orleans }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_new_orleans
+			add_adm_power = -5
+			Effect_set_capital = { target=928 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_mobile = {
+		major = yes
+		potential = {
+			owns = 2174 # Mobile
+			NOT = { owns = 935 }
+			NOT = { owns = 928 }
+			NOT = { capital = 2174 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_mobile }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_mobile
+			add_adm_power = -5
+			Effect_set_capital = { target=2174 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_st_louis = {
+		major = yes
+		potential = {
+			owns = 934 # St Louis
+			NOT = { owns = 935 }
+			NOT = { owns = 928 }
+			NOT = { owns = 2174 }
+			NOT = { capital = 934 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_st_louis }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_st_louis
+			add_adm_power = -5
+			Effect_set_capital = { target=934 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Southeastern America
+	move_capital_to_charleston = {
+		major = yes
+		potential = {
+			owns = 933  # Charleston
+			NOT = { capital = 933 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_charleston }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_charleston
+			add_adm_power = -5
+			Effect_set_capital = { target=933 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_tampa = {
+		major = yes
+		potential = {
+			owns = 3597 # Tampa
+  			NOT = { owns = 933 }
+ 			NOT = { owns = 2178 }
+ 			NOT = { owns = 952 }
+			NOT = { capital = 3597 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_tampa }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_tampa
+			add_adm_power = -5
+			Effect_set_capital = { target=3597 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Eastern America
+	move_capital_to_new_york = {
+		major = yes
+		potential = {
+			owns = 2197 # New York
+			NOT = { capital = 2197 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_new_york }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_new_york 
+			add_adm_power = -5
+			Effect_set_capital = { target=2197 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_baltimore = {
+		major = yes
+		potential = {
+			owns = 2178 # Baltimore
+			NOT = { owns = 2197 }
+			NOT = { capital = 2178 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_baltimore }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_baltimore
+			add_adm_power = -5
+			Effect_set_capital = { target=2178 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_hampton = {
+		major = yes
+		potential = {
+			owns = 952  # Hampton
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { capital = 952 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_hampton }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_hampton
+			add_adm_power = -5
+			Effect_set_capital = { target=952 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_bridgeport = {
+		major = yes
+		potential = {
+			owns = 966  # Bridgeport
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { capital = 966 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_bridgeport }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_bridgeport
+			add_adm_power = -5
+			Effect_set_capital = { target=966 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_plymouth = {
+		major = yes
+		potential = {
+			owns = 967  # Plymouth
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { capital = 967 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_plymouth }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_plymouth 
+			add_adm_power = -5
+			Effect_set_capital = { target=967 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_providence = {
+		major = yes
+		potential = {
+			owns = 997  # Providence
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { owns = 967 }
+			NOT = { capital = 997 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_providence }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_providence
+			add_adm_power = -5
+			Effect_set_capital = { target=997 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_philadelphia = {
+		major = yes
+		potential = {
+			owns = 1452 # Philadelphia
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { owns = 967 }
+			NOT = { owns = 997 }
+			NOT = { capital = 1452 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_philadelphia }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_philadelphia
+			add_adm_power = -5
+			Effect_set_capital = { target=997 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_portland = {
+		major = yes
+		potential = {
+			owns = 970  # Portland
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { owns = 967 }
+			NOT = { owns = 997 }
+			NOT = { owns = 1452 }
+			NOT = { capital = 970 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_portland }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_portland
+			add_adm_power = -5
+			Effect_set_capital = { target=970 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_albany = {
+		major = yes
+		potential = {
+			owns = 3627 # Albany
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { owns = 967 }
+			NOT = { owns = 997 }
+			NOT = { owns = 1452 }
+			NOT = { owns = 970 }
+			NOT = { capital = 3627 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_albany }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_albany
+			add_adm_power = -5
+			Effect_set_capital = { target=3627 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_pittsburgh = {
+		major = yes
+		potential = {
+			owns = 3619 # Pittsburgh
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { owns = 967 }
+			NOT = { owns = 997 }
+			NOT = { owns = 1452 }
+			NOT = { owns = 970 }
+			NOT = { owns = 3627 }
+			NOT = { capital = 3619 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_pittsburgh }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_pittsburgh
+			add_adm_power = -5
+			Effect_set_capital = { target=3619 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_buffalo = {
+		major = yes
+		potential = {
+			owns = 960  # Buffalo
+			NOT = { owns = 2197 }
+			NOT = { owns = 2178 }
+			NOT = { owns = 952 }
+			NOT = { owns = 967 }
+			NOT = { owns = 997 }
+			NOT = { owns = 1452 }
+			NOT = { owns = 970 }
+			NOT = { owns = 3627 }
+			NOT = { owns = 3619 }
+			NOT = { capital = 960 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_buffalo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_buffalo
+			add_adm_power = -5
+			Effect_set_capital = { target=960 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Great Lakes
+	move_capital_to_piankeshaw = {
+		major = yes
+		potential = {
+			owns = 3584  # Piankeshaw
+			NOT = { capital = 3584 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_piankeshaw }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_piankeshaw
+			add_adm_power = -5
+			Effect_set_capital = { target=3584 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_chicago = {
+		major = yes
+		potential = {
+			owns = 944  # Chicago
+			NOT = { owns = 3584 }
+			NOT = { capital = 944 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_chicago }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_chicago
+			add_adm_power = -5
+			Effect_set_capital = { target=944 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_detroit = {
+		major = yes
+		potential = {
+			owns = 945  # Detroit
+			NOT = { owns = 3584 }
+			NOT = { owns = 944 }
+			NOT = { capital = 945 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_detroit }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_detroit
+			add_adm_power = -5
+			Effect_set_capital = { target=945 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Great Plains
+	move_capital_to_ponca = {
+		major = yes
+		potential = {
+			owns = 3575  # Ponca
+			NOT = { capital = 3575 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_ponca }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_ponca
+			add_adm_power = -5
+			Effect_set_capital = { target=3575 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_kanzas = {
+		major = yes
+		potential = {
+			owns = 918  # Kanzas
+			NOT = { owns = 3575 }
+			NOT = { capital = 918 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_kanzas }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_kanzas
+			add_adm_power = -5
+			Effect_set_capital = { target=918 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Canada
+	move_capital_to_quebec = {
+		major = yes
+		potential = {
+			owns = 3637 # Quebec
+			NOT = { capital = 3637 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_quebec }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_quebec 
+			add_adm_power = -5
+			Effect_set_capital = { target=3637 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_halifax = {
+		major = yes
+		potential = {
+			owns = 984  # Halifax
+			NOT = { owns = 3637 }
+			NOT = { capital = 984 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_halifax }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_halifax
+			add_adm_power = -5
+			Effect_set_capital = { target=984 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_montreal = {
+		major = yes
+		potential = {
+			owns = 990  # Montreal
+			NOT = { owns = 3637 }
+			NOT = { owns = 984 }
+			NOT = { capital = 990 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_montreal }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_montreal
+			add_adm_power = -5
+			Effect_set_capital = { target=990 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_st_john = {
+		major = yes
+		potential = {
+			owns = 981  # St John
+			NOT = { owns = 3637 }
+			NOT = { owns = 984 }
+			NOT = { owns = 990 }
+			NOT = { capital = 981 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_st_john }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_st_john
+			add_adm_power = -5
+			Effect_set_capital = { target=981 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_toronto = {
+		major = yes
+		potential = {
+			owns = 3645  # Toronto
+			NOT = { owns = 3637 }
+			NOT = { owns = 984 }
+			NOT = { owns = 990 }
+			NOT = { owns = 981 }
+			NOT = { capital = 3645 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_toronto }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_toronto
+			add_adm_power = -5
+			Effect_set_capital = { target=3645 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_hamilton = {
+		major = yes
+		potential = {
+			owns = 3646  # Hamilton
+			NOT = { owns = 3637 }
+			NOT = { owns = 984 }
+			NOT = { owns = 990 }
+			NOT = { owns = 981 }
+			NOT = { owns = 3645 }
+			NOT = { capital = 3646 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_hamilton }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_hamilton
+			add_adm_power = -5
+			Effect_set_capital = { target=3646 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_chatham_kent = {
+		major = yes
+		potential = {
+			owns = 3647  # Chatham-Kent
+			NOT = { owns = 3637 }
+			NOT = { owns = 984 }
+			NOT = { owns = 990 }
+			NOT = { owns = 981 }
+			NOT = { owns = 3645 }
+			NOT = { owns = 3646 }
+			NOT = { capital = 3647 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_chatham_kent }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_chatham_kent
+			add_adm_power = -5
+			Effect_set_capital = { target=3647 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+        ################################ Hudson Bay
+	move_capital_to_fort_albany = {
+		major = yes
+		potential = {
+			owns = 1004  # Fort Albany
+			NOT = { capital = 1004 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_fort_albany }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_fort_albany
+			add_adm_power = -5
+			Effect_set_capital = { target=1004 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_port_nelson = {
+		major = yes
+		potential = {
+			owns = 2168  # Port Nelson
+			NOT = { owns = 1004 }
+			NOT = { capital = 2168 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_port_nelson }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_port_nelson
+			add_adm_power = -5
+			Effect_set_capital = { target=2168 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_sault_sainte_marie = {
+		major = yes
+		potential = {
+			owns = 3658 # Sault Sainte Marie
+			NOT = { owns = 1004 }
+			NOT = { owns = 2168 }
+			NOT = { capital = 3658 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_sault_sainte_marie }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_sault_sainte_marie
+			add_adm_power = -5
+			Effect_set_capital = { target=3658 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

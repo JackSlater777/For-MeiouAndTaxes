@@ -1,0 +1,44 @@
+owner = YUA
+controller = YUA
+
+capital = "Khanbalyk"
+trade_goods = wheat
+culture = jilu
+#religion = confucianism
+religion = mahayana
+
+hre = no
+
+base_tax = 8
+base_production = 40
+base_manpower = 5
+
+is_city = yes
+medium_university = yes
+road_network = yes
+#marketplace = yes
+merchant_guild = yes
+urban_infrastructure_4 = yes
+#bureaucracy_2 = yes
+bureaucracy_1 = yes
+canal_level_1 = yes
+#workshop = yes
+corporation_guild = yes
+art_corporation = yes
+temple = yes
+fort_14th = yes
+warehouse = yes
+
+discovered_by = chinese
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 6.5 }
+	add_permanent_province_modifier = {
+		name = urban_goods_steel
+		duration = -1
+	}
+}
+1271.12.18 = {
+	add_core = YUA
+}

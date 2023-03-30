@@ -1,0 +1,26 @@
+owner = BLU
+controller = BLU
+add_core = BLU
+
+capital = "Alty-Qudyq"
+trade_goods = wool
+#culture = tartar
+culture = khazak
+religion = sunni
+
+hre = no
+
+base_tax = 1
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = turkishtech
+discovered_by = steppestech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 1 }
+	set_province_flag = tribals_control_province
+}

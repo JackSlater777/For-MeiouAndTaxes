@@ -1,0 +1,38 @@
+owner = CHU
+controller = CHU
+add_core = CHU
+
+capital = "Qom"
+trade_goods = hemp
+culture = persian
+#religion = sunni
+religion = shiite
+
+hre = no
+
+base_tax = 3
+base_production = 4
+base_manpower = 1
+
+is_city = yes
+marketplace = yes
+urban_infrastructure_2 = yes
+fort_14th = yes
+workshop = yes
+temple = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+discovered_by = steppestech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3.5 }
+	#set_province_flag = salt
+	set_province_flag = gold
+	add_permanent_province_modifier = {
+		name = urban_goods_silk
+		duration = -1
+	}
+}

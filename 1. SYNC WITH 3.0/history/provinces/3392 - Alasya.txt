@@ -1,0 +1,34 @@
+owner = KAR
+controller = KAR
+add_permanent_claim = BYZ
+add_core = KAR
+
+capital = "Anamur"
+trade_goods = lumber
+#culture = greek
+culture = anatolian
+religion = sunni
+
+hre = no
+
+base_tax = 4
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+local_fortification_1 = yes
+road_network = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3.5 }
+	set_variable = { which = tribals_ratio	value = 18 }
+}
+1356.1.1 = {
+	add_claim = KAM
+	set_province_flag = turkish_name
+}

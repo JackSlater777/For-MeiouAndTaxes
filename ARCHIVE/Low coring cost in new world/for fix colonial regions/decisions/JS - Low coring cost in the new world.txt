@@ -1,0 +1,53 @@
+country_decisions = {
+
+	activate_modifiers_in_the_new_world = {
+		potential = {
+			NOT = { has_global_flag = activate_modifiers_in_the_new_world }
+		}
+
+		allow = {
+			owns = 1240
+		}
+
+		effect = {
+			set_global_flag = activate_modifiers_in_the_new_world
+
+                        #01_Central_America_Carribean
+			colonial_mexico = {
+				add_permanent_province_modifier = {
+					name = india_quarter_coring_cost
+					duration = -1
+				}
+			}
+			colonial_c_america = {
+				add_permanent_province_modifier = {
+					name = india_quarter_coring_cost
+					duration = -1
+				}
+			}
+
+                        #01_South_America
+			colonial_colombia = {
+				add_permanent_province_modifier = {
+					name = india_quarter_coring_cost
+					duration = -1
+				}
+			}
+			colonial_lower_peru = {
+				add_permanent_province_modifier = {
+					name = india_quarter_coring_cost
+					duration = -1
+				}
+			}
+			colonial_upper_peru = {
+				add_permanent_province_modifier = {
+					name = india_quarter_coring_cost
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

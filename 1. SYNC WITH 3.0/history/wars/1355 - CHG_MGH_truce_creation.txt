@@ -1,0 +1,16 @@
+name = "Moghulistan War of Chagataid Submission"
+war_goal = {
+	type = nomad_submission
+	casus_belli = cb_nomadic_submission
+	tag = CHG
+}
+1354.11.1 = {
+	add_attacker = MGH
+
+	add_defender = CHG
+}
+1354.12.1 = {
+	rem_attacker = MGH
+
+	rem_defender = CHG
+}

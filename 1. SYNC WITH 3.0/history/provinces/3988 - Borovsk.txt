@@ -1,0 +1,29 @@
+owner = MOS
+controller = MOS
+add_core = MOS
+
+capital = "Borovsk"
+trade_goods = lumber
+culture = russian
+religion = orthodox
+
+base_tax = 5
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	#set_variable = { which = pop_level value = 3 }
+	set_variable = { which = pop_level value = 3.5 }
+	set_province_flag = coal
+}
+1356.1.1 = {
+	add_core = MOS
+}

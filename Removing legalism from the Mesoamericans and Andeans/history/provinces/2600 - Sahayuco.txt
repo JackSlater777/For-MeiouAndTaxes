@@ -1,0 +1,29 @@
+owner = ZAP
+controller = ZAP
+add_core = ZAP
+
+capital = "Zaachila"
+trade_goods = maize
+culture = zapotec
+religion = nahuatl
+
+hre = no
+
+base_tax = 32
+base_production = 2
+base_manpower = 0
+
+is_city = yes
+workshop = yes
+marketplace = yes
+urban_infrastructure_1 = yes
+temple = yes
+
+discovered_by = mesoamerican
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 5 }
+	set_province_flag = tribals_control_province
+	set_province_flag = mined_goods
+	set_province_flag = copper
+}

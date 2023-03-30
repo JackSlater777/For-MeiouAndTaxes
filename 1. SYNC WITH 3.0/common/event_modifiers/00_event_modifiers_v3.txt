@@ -1,0 +1,33 @@
+horde_collapse = {
+	horde_unity = -1
+	legitimacy = -1
+	global_unrest = 30
+	defensiveness = -1
+	diplomatic_upkeep = -2
+}
+
+looter_fear = {
+	defensiveness = -0.50
+}
+looter_fear_minor = {
+	defensiveness = -0.25
+}
+shahrukhs_empire = {
+	reduced_liberty_desire = 50
+}
+shahfirozs_empire = {
+	reduced_liberty_desire = -25
+	yearly_corruption = 0.50
+	global_autonomy = 0.30
+	manpower_recovery_speed = -0.50
+	defensiveness = -0.30
+}
+defence_of_bengal = {
+	land_morale = 0.1
+	defensiveness = 0.50
+}
+firoz_death = {
+	stability_cost_modifier = 0.30
+	defensiveness = -0.30
+	global_unrest = 5
+}

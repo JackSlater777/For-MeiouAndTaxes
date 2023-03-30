@@ -1,0 +1,556 @@
+country_decisions = {
+	rename_provinces_kurdish_decision = {
+		potential = {
+			has_global_flag = prov_name_init
+			culture_group = persian_group
+			any_owned_province = {
+				OR = {
+					area = mosul_area
+					area = south_kurdistan_area
+					area = north_kurdistan_area
+					area = erzurum_area
+
+                        		#aleppo_area
+					province_id = 332
+					province_id = 377
+					province_id = 2224
+					province_id = 2655
+					province_id = 3091
+
+					area = dulkadir_area
+
+                        		#rum_area
+					province_id = 2664
+
+                        		#azerbaijan_area
+					province_id = 1445
+				}
+				culture = kurdish
+				NOT = { has_province_flag = kurdish_name }
+			}
+		}
+
+		allow = {
+			any_owned_province = {
+				culture = kurdish
+				NOT = { has_province_flag = kurdish_name }
+			}
+		}
+
+		effect = {
+			custom_tooltip = rename_provinces_tt
+
+                        #mosul_area
+			if = {
+				limit = { 
+					owns = 411
+					411 = { is_core = ROOT }
+					411 = { culture = kurdish }
+					411 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				411 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Kerkuk"
+					rename_capital = "Kerkuk"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1320
+					1320 = { is_core = ROOT }
+					1320 = { culture = kurdish }
+					1320 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1320 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Musil"
+					rename_capital = "Musil"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1329
+					1329 = { is_core = ROOT }
+					1329 = { culture = kurdish }
+					1329 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1329 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Mexmur"
+					rename_capital = "Mexmur"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2654
+					2654 = { is_core = ROOT }
+					2654 = { culture = kurdish }
+					2654 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2654 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Silemani"
+					rename_capital = "Silemani"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3087
+					3087 = { is_core = ROOT }
+					3087 = { culture = kurdish }
+					3087 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3087 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Xaneqin"
+					rename_capital = "Xaneqin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3088
+					3088 = { is_core = ROOT }
+					3088 = { culture = kurdish }
+					3088 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3088 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Soran"
+					rename_capital = "Hewler"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3885
+					3885 = { is_core = ROOT }
+					3885 = { culture = kurdish }
+					3885 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3885 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Bokhtan"
+					rename_capital = "Singal"
+				}
+			}
+
+                        #south_kurdistan_area
+			if = {
+				limit = { 
+					owns = 412
+					412 = { is_core = ROOT }
+					412 = { culture = kurdish }
+					412 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				412 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name
+					change_province_name = "Kirmashan"
+					rename_capital = "Kirmashan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2219
+					2219 = { is_core = ROOT }
+					2219 = { culture = kurdish }
+					2219 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2219 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Wermi"
+					rename_capital = "Wermi"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2559
+					2559 = { is_core = ROOT }
+					2559 = { culture = kurdish }
+					2559 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2559 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Ardalan"
+					rename_capital = "Sine"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2724
+					2724 = { is_core = ROOT }
+					2724 = { culture = kurdish }
+					2724 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2724 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Ilam"
+					rename_capital = "Ilam"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3825
+					3825 = { is_core = ROOT }
+					3825 = { culture = kurdish }
+					3825 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3825 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Qesiri Sirin"
+					rename_capital = "Qesiri Sirin"
+				}
+			}
+
+                        #north_kurdistan_area
+			if = {
+				limit = { 
+					owns = 418
+					418 = { is_core = ROOT }
+					418 = { culture = kurdish }
+					418 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				418 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Bayazid"
+					rename_capital = "Wan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1444
+					1444 = { is_core = ROOT }
+					1444 = { culture = kurdish }
+					1444 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1444 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Mus"
+					rename_capital = "Mus"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2551
+					2551 = { is_core = ROOT }
+					2551 = { culture = kurdish }
+					2551 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2551 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Amed"
+					rename_capital = "Amed"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3093
+					3093 = { is_core = ROOT }
+					3093 = { culture = kurdish }
+					3093 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3093 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Merdin"
+					rename_capital = "Merdin"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3394
+					3394 = { is_core = ROOT }
+					3394 = { culture = kurdish }
+					3394 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3394 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Agiri"
+					rename_capital = "Milazgir"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4028
+					4028 = { is_core = ROOT }
+					4028 = { culture = kurdish }
+					4028 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				4028 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Bidlis"
+					rename_capital = "Bidlis"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 4029
+					4029 = { is_core = ROOT }
+					4029 = { culture = kurdish }
+					4029 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				4029 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Hakkari"
+					rename_capital = "Dihok"
+				}
+			}
+
+                        #erzurum_area
+			if = {
+				limit = { 
+					owns = 1442
+					1442 = { is_core = ROOT }
+					1442 = { culture = kurdish }
+					1442 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1442 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Ezirgan"
+					rename_capital = "Ezirgan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3395
+					3395 = { is_core = ROOT }
+					3395 = { culture = kurdish }
+					3395 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3395 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Erzirom"
+					rename_capital = "Erzirom"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3802
+					3802 = { is_core = ROOT }
+					3802 = { culture = kurdish }
+					3802 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3802 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Olti"
+					rename_capital = "Olti"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3803
+					3803 = { is_core = ROOT }
+					3803 = { culture = kurdish }
+					3803 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3803 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Bagrat"
+					rename_capital = "Bagrat"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3884
+					3884 = { is_core = ROOT }
+					3884 = { culture = kurdish }
+					3884 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3884 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Cewlig"
+					rename_capital = "Cewlig"
+				}
+			}
+
+                        #aleppo_area
+                        #1327 3886
+			if = {
+				limit = { 
+					owns = 332
+					332 = { is_core = ROOT }
+					332 = { culture = kurdish }
+					332 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				332 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Xetay"
+					rename_capital = "Antakya"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 377
+					377 = { is_core = ROOT }
+					377 = { culture = kurdish }
+					377 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				377 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Heleb"
+					rename_capital = "Heleb"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2224
+					2224 = { is_core = ROOT }
+					2224 = { culture = kurdish }
+					2224 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2224 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Riha"
+					rename_capital = "Riha"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 2655
+					2655 = { is_core = ROOT }
+					2655 = { culture = kurdish }
+					2655 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2655 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Entab"
+					rename_capital = "Entab"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3091
+					3091 = { is_core = ROOT }
+					3091 = { culture = kurdish }
+					3091 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3091 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Reqa"
+					rename_capital = "Reqa"
+				}
+			}
+
+                        #dulkadir_area
+			if = {
+				limit = { 
+					owns = 1333
+					1333 = { is_core = ROOT }
+					1333 = { culture = kurdish }
+					1333 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1333 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Qeyseri"
+					rename_capital = "Qeyseri"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1440
+					1440 = { is_core = ROOT }
+					1440 = { culture = kurdish }
+					1440 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1440 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Meleti"
+					rename_capital = "Meleti"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 1443
+					1443 = { is_core = ROOT }
+					1443 = { culture = kurdish }
+					1443 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1443 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Semsur"
+					rename_capital = "Albistan"
+				}
+			}
+			if = {
+				limit = { 
+					owns = 3393
+					3393 = { is_core = ROOT }
+					3393 = { culture = kurdish }
+					3393 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				3393 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Xarpet"
+					rename_capital = "Eleziz"
+				}
+			}
+
+                        #rum_area
+                        #1441 3882 3883
+			if = {
+				limit = { 
+					owns = 2664
+					2664 = { is_core = ROOT }
+					2664 = { culture = kurdish }
+					2664 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				2664 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Sewaz"
+					rename_capital = "Sewaz"
+				}
+			}
+
+                        #azerbaijan_area
+                        #416 463 1318 1321 3090 3823
+			if = {
+				limit = { 
+					owns = 1445
+					1445 = { is_core = ROOT }
+					1445 = { culture = kurdish }
+					1445 = { NOT = { has_province_flag = kurdish_name } }
+				}
+				1445 = {
+					clear_province_name_flag_effect = yes
+					set_province_flag = kurdish_name 
+					change_province_name = "Mukriyan"
+					rename_capital = "Xoy"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
