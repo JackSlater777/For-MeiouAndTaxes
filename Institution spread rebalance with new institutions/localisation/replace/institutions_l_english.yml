@@ -239,7 +239,7 @@
  tooltip_I_meritocracy_descVIII:0 "The §YNoble's Criminal Court§! privilege from the Greater Nobles is revoked"
  tooltip_I_meritocracy_descIX:0 "Province owner has at least §YEducation 50 Level§!"
  tooltip_I_meritocracy_descX:0 "§YGreater Nobles Influence§! is less than §Y10§! percent"
- tooltip_I_meritocracy_descXI:0 "§YState Corruption is less than §Y20§!"
+ tooltip_I_meritocracy_descXI:0 "§YState Corruption§! is less than §Y20§!"
 
  BASIC_MERITOCRACY_INVENTION:0 "§MBasic requirements for Meritocracy invention§!:\n     Ruler has at least admin skill §Y3§!,\n     Capital Owner has §YRepresentation§! idea"
  MERITOCRACY_INVENTION_CAPITAL_WITH_LVL1_CAPITOL:0 "§MMeritocracy invention§!: §YCapitol§! is built in the capital"
