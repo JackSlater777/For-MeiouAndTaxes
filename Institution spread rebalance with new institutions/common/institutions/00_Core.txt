@@ -1819,7 +1819,10 @@ I_meritocracy = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = tooltip_I_meritocracy_descII
-			owner = { absolutism = 40 }
+			OR = {
+				has_province_flag = burghers_control_province
+				has_province_flag = lesser_nobles_control_province
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = tooltip_I_meritocracy_descIII
@@ -1882,7 +1885,13 @@ I_meritocracy = {
 		custom_trigger_tooltip = {
 			tooltip = tooltip_I_meritocracy_descX
 			owner = {
-				NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.2 } }
+				NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.1 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = tooltip_I_meritocracy_descXI
+			owner = {
+				NOT = { corruption = 20 }
 			}
 		}
 	}

@@ -68,11 +68,9 @@ Inst_Can_Legalism_Spread = {
 Inst_Can_Meritocracy_Inst_Country_Invent = {
 	AND = {
 		is_capital = yes
-		legalism = 100
 		owner = {
 			adm = 3
 			has_institution = legalism
-			absolutism = 40
 			NOT = {
 				has_country_flag = commoners_banned_from_officers_corps_1_flag
 				has_country_flag = commoners_banned_from_officers_corps_2_flag
@@ -97,7 +95,14 @@ Inst_Can_Meritocracy_Inst_Country_Invent = {
 				which = education_level
 				value = 50
 			}
-			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.2 } }
+			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.1 } }
+			democracy_ideas = 7  # Representation
+			NOT = { corruption = 20 }
+		}
+		legalism = 100
+		OR = {
+			has_province_flag = burghers_control_province
+			has_province_flag = lesser_nobles_control_province
 		}
 	}
 }
@@ -105,10 +110,8 @@ Inst_Can_Meritocracy_Inst_Country_Invent = {
 # This unlock a possibility to spread an institution
 Inst_Can_Meritocracy_Inst_Spread = {
 	AND = {
-		legalism = 100
 		owner = {
 			has_institution = legalism
-			absolutism = 40
 			NOT = {
 				has_country_flag = commoners_banned_from_officers_corps_1_flag
 				has_country_flag = commoners_banned_from_officers_corps_2_flag
@@ -133,7 +136,13 @@ Inst_Can_Meritocracy_Inst_Spread = {
 				which = education_level
 				value = 50
 			}
-			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.2 } }
+			NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.1 } }
+			NOT = { corruption = 20 }
+		}
+		legalism = 100
+		OR = {
+			has_province_flag = burghers_control_province
+			has_province_flag = lesser_nobles_control_province
 		}
 	}
 }

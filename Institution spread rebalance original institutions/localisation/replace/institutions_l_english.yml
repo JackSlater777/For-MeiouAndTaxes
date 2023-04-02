@@ -198,7 +198,7 @@
  TRIBES_AT_LEAST_90_PERCENT:0 "§YTribal Percentage§! is at least §Y90§! percent"
 
  tooltip_I_meritocracy_descI:0 "Province Owner embraced §YLegalism§!"
- tooltip_I_meritocracy_descII:0 "§YCentralisation§! is at least §Y40§!"
+ tooltip_I_meritocracy_descII:0 "The province is controlled by the §YBurghers§! or the §YLesser Nobles§!"
  tooltip_I_meritocracy_descIII:0 "§YLegalism§! institution is present in the province"
  tooltip_I_meritocracy_descIV:0 "The §YCommoners Banned from Officer Corps§! privilege from the Greater Nobles is revoked"
  tooltip_I_meritocracy_descV:0 "The §YDecorative Officer Posts§! privilege from the Greater Nobles is revoked"
@@ -206,9 +206,10 @@
  tooltip_I_meritocracy_descVII:0 "The §YGenerate a New High Courtier Titles§! privilege from the Greater Nobles is revoked"
  tooltip_I_meritocracy_descVIII:0 "The §YNoble's Criminal Court§! privilege from the Greater Nobles is revoked"
  tooltip_I_meritocracy_descIX:0 "Province owner has at least §YEducation 50 Level§!"
- tooltip_I_meritocracy_descX:0 "§YGreater Nobles Influence§! is less than §Y20§! percent"
+ tooltip_I_meritocracy_descX:0 "§YGreater Nobles Influence§! is less than §Y10§! percent"
+ tooltip_I_meritocracy_descXI:0 "§YState Corruption is less than §Y20§!"
 
- BASIC_MERITOCRACY_INVENTION:0 "§MBasic requirements for Meritocracy invention§!:\n     Ruler has at least admin skill §Y3§!"
+ BASIC_MERITOCRACY_INVENTION:0 "§MBasic requirements for Meritocracy invention§!:\n     Ruler has at least admin skill §Y3§!,\n     Capital Owner has §YRepresentation§! idea"
  MERITOCRACY_INVENTION_CAPITAL_WITH_LVL1_CAPITOL:0 "§MMeritocracy invention§!: §YCapitol§! is built in the capital"
  MERITOCRACY_INVENTION_CAPITAL_WITH_LVL2_CAPITOL:0 "§MMeritocracy invention§!: §YImproved Capitol§! is built in the capital"
  MERITOCRACY_INVENTION_RULER_HAS_4_ADMIN:0 "§MMeritocracy invention§!: Ruler has admin skill §Y4§!"
