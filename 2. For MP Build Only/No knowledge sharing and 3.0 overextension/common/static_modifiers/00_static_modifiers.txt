@@ -1119,10 +1119,13 @@ luck = {
 }
 
 over_extension = {
-	bureaucrats_influence = 0.1
-	mr_guilds_influence = 0.1
-	global_tax_income = -140
-	global_manpower = -60
+	#bureaucrats_influence = 0.1
+	#mr_guilds_influence = 0.1
+	#global_tax_modifier = -140 #restricted use
+	#global_manpower = -60 #restricted use
+	stability_cost_modifier = 0.50
+	global_autonomy = 0.1
+	yearly_corruption = 0.1
 }
 
 territory_very_easy_difficulty = { # Penalties for territories on very easy difficulty
