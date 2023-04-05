@@ -2624,12 +2624,12 @@ banking = {
 				}
 			}
 		}
-		custom_trigger_tooltip = {
-			tooltip = tooltip_banking_descV
-			owner = {
-				NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.4 } }
-			}
-		}
+		#custom_trigger_tooltip = {
+		#	tooltip = tooltip_banking_descV
+		#	owner = {
+		#		NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.4 } }
+		#	}
+		#}
 		custom_trigger_tooltip = {
 			tooltip = tooltip_banking_descVI
 			legalism = 100
@@ -2638,14 +2638,24 @@ banking = {
 			tooltip = tooltip_banking_descVII
 			province_trade_power = 10.0
 		}
+		#custom_trigger_tooltip = {
+		#	tooltip = tooltip_banking_descVIII
+		#	OR = {
+		#		has_province_flag = burghers_control_province
+		#		has_province_flag = lesser_nobles_control_province
+		#	}
+		#}
 		custom_trigger_tooltip = {
-			tooltip = tooltip_banking_descVIII
+			tooltip = tooltip_banking_descIX
 			OR = {
-				has_province_flag = burghers_control_province
-				has_province_flag = lesser_nobles_control_province
+				has_building = marketplace
+				has_building = merchant_guild
+				has_building = trade_depot
+				has_building = customs_house
 			}
 		}
 	}
+
 	start_chance = 20
 	on_start = institution_events.1
 	
@@ -2654,21 +2664,30 @@ banking = {
 			tooltip = tooltip_banking_descIII
 			owner = { has_institution = legalism }
 		}
-		custom_trigger_tooltip = {
-			tooltip = tooltip_banking_descV
-			owner = {
-				NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.4 } }
-			}
-		}
+		#custom_trigger_tooltip = {
+		#	tooltip = tooltip_banking_descV
+		#	owner = {
+		#		NOT = { check_variable = { which = estate_greater_nobles_weight_share value = 0.4 } }
+		#	}
+		#}
 		custom_trigger_tooltip = {
 			tooltip = tooltip_banking_descVI
 			legalism = 100
 		}
+		#custom_trigger_tooltip = {
+		#	tooltip = tooltip_banking_descVIII
+		#	OR = {
+		#		has_province_flag = burghers_control_province
+		#		has_province_flag = lesser_nobles_control_province
+		#	}
+		#}
 		custom_trigger_tooltip = {
-			tooltip = tooltip_banking_descVIII
+			tooltip = tooltip_banking_descIX
 			OR = {
-				has_province_flag = burghers_control_province
-				has_province_flag = lesser_nobles_control_province
+				has_building = marketplace
+				has_building = merchant_guild
+				has_building = trade_depot
+				has_building = customs_house
 			}
 		}
 	}
@@ -4242,6 +4261,10 @@ renaissance = {
 			tooltip = tooltip_renaissance_descVII
 			religion_group = christian
 		}
+		custom_trigger_tooltip = {
+			tooltip = tooltip_renaissance_descIX
+			base_production = 1
+		}
 	}
 	start_chance = 20
 	on_start = institution_events.2
@@ -4255,9 +4278,13 @@ renaissance = {
 			tooltip = tooltip_renaissance_descV
 			legalism = 100
 		}
+		#custom_trigger_tooltip = {
+		#	tooltip = tooltip_renaissance_descVIII
+		#	check_variable = { which = art_power value = 2 }
+		#}
 		custom_trigger_tooltip = {
-			tooltip = tooltip_renaissance_descVIII
-			check_variable = { which = art_power value = 2 }
+			tooltip = tooltip_renaissance_descIX
+			base_production = 1
 		}
 	}
 	

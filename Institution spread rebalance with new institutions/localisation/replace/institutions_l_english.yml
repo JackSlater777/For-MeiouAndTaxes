@@ -259,6 +259,7 @@
  tooltip_banking_descVI:0 "§YLegalism§! institution is present in the province"
  tooltip_banking_descVII:0 "Provincial §YTrade Power§! is at least §Y10§!"
  tooltip_banking_descVIII:0 "The province is controlled by the §YBurghers§! or the §YLesser Nobles§!"
+ tooltip_banking_descIX:0 "The province has a §YMarket Place§! or better"
 
  BASIC_BANKING_INVENTION:0 "§MBasic requirements for Banking invention§!:\n     Capital Trade Power is at least §Y5§!,\n     Capital Owner has §YReal Economy§! or §YFree Trade§! idea"
  BANKING_INVENTION_CAPITAL_TRADE_POWER_HIGHER_10:0 "§MBanking invention§!: Capital Trade Power is at least §Y10§!"
@@ -301,6 +302,7 @@
  tooltip_renaissance_descVI:0 "Provincial §YArt Power§! is at least §Y10§!"
  tooltip_renaissance_descVII:0 "Provincial population is §YChristian§!"
  tooltip_renaissance_descVIII:0 "Provincial §YArt Power§! is at least §Y2§!"
+ tooltip_renaissance_descIX:0 "Provincial §YUrban Development§! is at least §Y1§!"
 
  BASIC_RENAISSANCE_INVENTION:0 "§MBasic requirements for Renaissance invention§!:\n     Capital §YArt Power§! is at least §Y5§!,\n     Capital Owner has §YScientific encouragement§! idea"
  RENAISSANCE_INVENTION_CAPITAL_ART_POWER_HIGHER_7_5:0 "§MRenaissance invention§!: Capital §YArt Power§! is at least §Y7.5§!"
