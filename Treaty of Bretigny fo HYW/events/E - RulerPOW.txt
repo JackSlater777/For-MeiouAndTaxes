@@ -670,7 +670,21 @@ country_event = {
 				}
 			}
 			cede_province = GUY
-			add_core = ROOT
+			#add_core = ROOT
+		}
+		hidden_effect = {
+			175 = {  # Armagnac
+				add_core = GUY
+				cede_province = GUY
+			}
+			179 = {  # Bearn
+				add_core = GUY
+				cede_province = GUY
+			}
+			1323 = {  # Roergue
+				add_core = GUY
+				cede_province = GUY
+			}
 		}
 		every_owned_province = {
 			limit = {
