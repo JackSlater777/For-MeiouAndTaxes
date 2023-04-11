@@ -1,0 +1,53 @@
+namespace = POP_Bureaucracy_Relax
+
+
+## Relax the Bureaucratic System
+country_event = { ### Offer Privileges Greater Nobles
+	id = POP_Bureaucracy_Relax.001
+	title = "POP_Estates_Interactions.002.t"
+	desc = "POP_Estates_Interactions.002.d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+
+	### Expand Offices for Sale
+	option = { 
+		name = Privilege_BUOffice0Lower_title
+		trigger = {
+			has_country_flag = BUOffice_1_flag
+			Privilege_BUOffice0CanLower = yes
+		}
+		custom_tooltip = Privilege_BUOffice0Lower_description
+		Privilege_BUOffice0Lower = yes
+		add_stability_1 = yes
+		hidden_effect = {
+			clr_country_flag = BUOffice_1_flag
+			set_country_flag = BUOffice_0_flag
+			#remove_country_modifier = BUOffice_1
+			#add_country_modifier = { name = BUOffice_0 duration = -1 hidden = yes }
+			#every_owned_province = {
+			#	limit = {
+			#		has_province_flag = burghers_control_province
+			#	}
+			#	remove_province_modifier = BG_authority_to_govern_locally_1_modifier
+			#}
+		}
+		ai_chance = { factor = 0 }	
+	}
+	option = {
+		name = Privilege_BUOffice0Lower_title_g
+		trigger = {
+			has_country_flag = BUOffice_1_flag
+			Privilege_BUOffice0CanLower = no
+		}
+		custom_tooltip = Privilege_BUOffice0Lower_description
+		custom_tooltip = Privilege_req
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = PTM_EXIT
+		highlight = yes
+		
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,61 @@
+country_decisions = {
+	change_reform_to_bureaucracy_ai = {
+		major = yes
+		potential = {
+			ai = yes
+			OR = {
+				has_reform = divine_right
+				#has_reform = competitive_inheritance
+				#has_reform = elective_monarchy
+				has_reform = parliamentary_monarchy
+				#has_reform = celestial_empire
+			}
+			NOT = { has_reform = bureaucracy }
+			has_institution = I_meritocracy
+			#has_institution = casual_literacy
+			#full_idea_group = bureaucracy_ideas
+			NOT = { has_country_flag = switched_to_bureaucracy }
+		}
+		allow = {
+			NOT = { has_reform = bureaucracy }
+		}
+		effect = {
+			set_country_flag = switched_to_bureaucracy
+			add_government_reform = bureaucracy
+			add_corruption = 10
+			#if = {
+			#	limit = { has_reform = hereditary_elite }
+			#	add_government_reform = appointed_elite
+			#	add_corruption = 10
+			#}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#change_reform_to_appointed_elite_ai = {
+	#	major = yes
+	#	potential = {
+	#		OR = {
+	#			has_reform = hereditary_elite
+	#			has_reform = wealthy_elite
+	#		}
+	#		has_institution = I_meritocracy
+	#		has_institution = casual_literacy
+	#		full_idea_group = bureaucracy_ideas
+	#		NOT = { has_country_flag = switched_to_appointed_elite }
+	#	}
+	#	allow = {
+	#		NOT = { has_reform = appointed_elite }
+	#	}
+	#	effect = {
+	#		set_country_flag = switched_to_appointed_elite
+        #               add_government_reform = appointed_elite
+        #               add_corruption = 10
+	#	}
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+}

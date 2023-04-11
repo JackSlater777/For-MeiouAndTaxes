@@ -1,0 +1,109 @@
+average_devel_autonomy_0 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 0
+		NOT = { average_autonomy = 10 }
+	}
+	yearly_corruption = 0.05
+}
+
+average_devel_autonomy_10 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 10
+		NOT = { average_autonomy = 20 }
+	}
+	yearly_corruption = 0.1
+}
+
+average_devel_autonomy_20 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 20
+		NOT = { average_autonomy = 30 }
+	}
+	yearly_corruption = 0.15
+}
+
+average_devel_autonomy_30 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 30
+		NOT = { average_autonomy = 40 }
+	}
+	yearly_corruption = 0.2
+}
+
+average_devel_autonomy_40 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 40
+		NOT = { average_autonomy = 50 }
+	}
+	yearly_corruption = 0.25
+}
+
+average_devel_autonomy_50 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 50
+		NOT = { average_autonomy = 60 }
+	}
+	yearly_corruption = 0.3
+}
+
+average_devel_autonomy_60 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 60
+		NOT = { average_autonomy = 70 }
+	}
+	yearly_corruption = 0.35
+}
+
+average_devel_autonomy_70 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 70
+		NOT = { average_autonomy = 80 }
+	}
+	yearly_corruption = 0.4
+}
+
+average_devel_autonomy_80 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 80
+		NOT = { average_autonomy = 90 }
+	}
+	yearly_corruption = 0.45
+}
+
+average_devel_autonomy_90 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		average_autonomy = 90
+	}
+	yearly_corruption = 0.5
+}
+

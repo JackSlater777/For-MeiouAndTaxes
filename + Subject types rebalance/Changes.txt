@@ -1,0 +1,5 @@
+vassal: removed forcelimit_bonus
+
+# France - harder gameplay with its subjects
+appanage_subject: from 3.0
+autonomous_vassal: from 3.0

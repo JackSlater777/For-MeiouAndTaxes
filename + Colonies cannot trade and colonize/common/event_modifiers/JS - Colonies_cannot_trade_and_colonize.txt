@@ -1,0 +1,5 @@
+colonial_government_colonization_and_trade_restricted = {
+	merchants = -50
+	colonists = -50
+	
+}

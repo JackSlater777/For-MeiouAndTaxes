@@ -1,0 +1,6 @@
+Privilege_BUOffice0Lower = {
+	custom_tooltip = Rights_LB
+	add_adm_power = -50
+	add_mil_power = -25
+	custom_tooltip = Rights_LB
+}

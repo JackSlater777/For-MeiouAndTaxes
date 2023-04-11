@@ -1,0 +1,21 @@
+Privilege_BUOffice0CanLower = {
+	AND = {
+		NOT = { check_variable = { which = estate_bureaucracy_weight_share value = 0.5 } }
+		adm_power = 50
+		mil_power = 25
+    }
+}
+
+Privilege_BUOffice1CanLower = {
+	AND = {
+		NOT = { check_variable = { which = estate_bureaucracy_weight_share value = 0.5 } }
+		adm_power = 75
+		mil_power = 25
+    }
+}
+
+# set_variable = { which = estate_bureaucracy_weight_share which = estate_weight_bu }
+# set_variable = { which = estate_greater_nobles_weight_share which = estate_greater_nobles_weight_country }
+# set_variable = { which = estate_lesser_nobles_weight_share which = estate_lesser_nobles_weight_country }
+# set_variable = { which = estate_burghers_weight_share which = estate_burghers_weight_country }
+# set_variable = { which = estate_tribals_weight_share which = estate_tribals_weight_country }

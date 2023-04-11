@@ -1,0 +1,2688 @@
+namespace = Prov_UI
+
+
+# Review the Bureaucracy
+country_event = {
+	id = Prov_UI.400
+	title = Prov_UI.400.t
+	desc = Prov_UI.400.d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = BU_Office value = 0 }
+			set_variable = { which = BU_Farm value = 0 }
+			set_variable = { which = BU_Tenure value = 0 }
+			set_variable = { which = BU_Wages value = 0 }
+			set_variable = { which = BU_Hierarchy value = 0 }
+			set_variable = { which = BU_Hire value = 0 }
+			set_variable = { which = BU_Exams value = 0 }
+			set_variable = { which = BU_Oversight value = 0 }
+			set_variable = { which = BU_Enlist value = 0 }
+			set_variable = { which = BU_Structure value = 0 }
+			set_variable = { which = BU_Courts value = 0 }
+			# set_variable = { which = BU_Local value = 0 }  # Not implemented yet
+			set_variable = { which = BU_Politics value = 0 }
+			set_variable = { which = BU_Rotate value = 0 }
+			###
+			if = {
+				limit = { has_country_flag = BUOffice_1_flag }
+				change_variable = { which = BU_Office value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUOffice_2_flag }
+				change_variable = { which = BU_Office value = 2 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUFarm_1_flag }
+				change_variable = { which = BU_Farm value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUFarm_2_flag }
+				change_variable = { which = BU_Farm value = 2 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUTenure_1_flag }
+				change_variable = { which = BU_Tenure value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUTenure_2_flag }
+				change_variable = { which = BU_Tenure value = 2 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUWages_1_flag }
+				change_variable = { which = BU_Wages value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUWages_2_flag }
+				change_variable = { which = BU_Wages value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUWages_3_flag }
+				change_variable = { which = BU_Wages value = 3 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUHierarchy_1_flag }
+				change_variable = { which = BU_Hierarchy value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUHierarchy_2_flag }
+				change_variable = { which = BU_Hierarchy value = 2 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUHire_1_flag }
+				change_variable = { which = BU_Hire value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUHire_2_flag }
+				change_variable = { which = BU_Hire value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUHire_3_flag }
+				change_variable = { which = BU_Hire value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUHire_4_flag }
+				change_variable = { which = BU_Hire value = 4 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUExams_1_flag }
+				change_variable = { which = BU_Exams value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUExams_2_flag }
+				change_variable = { which = BU_Exams value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUExams_3_flag }
+				change_variable = { which = BU_Exams value = 3 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUOversight_1_flag }
+				change_variable = { which = BU_Oversight value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUOversight_2_flag }
+				change_variable = { which = BU_Oversight value = 2 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUEnlist_1_flag }
+				change_variable = { which = BU_Enlist value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUEnlist_2_flag }
+				change_variable = { which = BU_Enlist value = 2 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUStructure_1_flag }
+				change_variable = { which = BU_Structure value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUStructure_2_flag }
+				change_variable = { which = BU_Structure value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUStructure_3_flag }
+				change_variable = { which = BU_Structure value = 3 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BUCourts_1_flag }
+				change_variable = { which = BU_Courts value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUCourts_2_flag }
+				change_variable = { which = BU_Courts value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUCourts_3_flag }
+				change_variable = { which = BU_Courts value = 3 }
+			}
+			###
+# 			if = {
+# 				limit = { has_country_flag = BULocal_1_flag }
+# 				change_variable = { which = BU_Local value = 1 }
+# 			}
+# 			else_if = {
+# 				limit = { has_country_flag = BULocal_2_flag }
+# 				change_variable = { which = BU_Local value = 2 }
+# 			}
+# 			else_if = {
+# 				limit = { has_country_flag = BULocal_3_flag }
+# 				change_variable = { which = BU_Local value = 3 }
+# 			}
+			###
+			if = {
+				limit = { has_country_flag = BUPolitics_1_flag }
+				change_variable = { which = BU_Politics value = 1 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUPolitics_2_flag }
+				change_variable = { which = BU_Politics value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = BUPolitics_3_flag }
+				change_variable = { which = BU_Politics value = 3 }
+			}
+			###
+			if = {
+				limit = { has_country_flag = BURotate_1_flag }
+				change_variable = { which = BU_Rotate value = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = Privilege_BUOffice_n
+		custom_tooltip = Privilege_BUOffice
+		custom_tooltip = Privilege_BUOffice_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUOffice_0_flag
+			}
+			custom_tooltip = Privilege_BUOffice0_t
+			custom_tooltip = Privilege_BUOffice0_description
+			custom_tooltip = Privilege_BUOffice0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUOffice_1_flag
+			}
+			custom_tooltip = Privilege_BUOffice1_t
+			custom_tooltip = Privilege_BUOffice1_description
+			custom_tooltip = Privilege_BUOffice1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUOffice_2_flag
+			}
+			custom_tooltip = Privilege_BUOffice2_t
+			custom_tooltip = Privilege_BUOffice2_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.401 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUFarm_n
+		custom_tooltip = Privilege_BUFarm
+		custom_tooltip = Privilege_BUFarm_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUFarm_0_flag
+			}
+			custom_tooltip = Privilege_BUFarm0_t
+			custom_tooltip = Privilege_BUFarm0_description
+			custom_tooltip = Privilege_BUFarm0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUFarm_1_flag
+			}
+			custom_tooltip = Privilege_BUFarm1_t
+			custom_tooltip = Privilege_BUFarm1_description
+			custom_tooltip = Privilege_BUFarm1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUFarm_2_flag
+			}
+			custom_tooltip = Privilege_BUFarm2_t
+			custom_tooltip = Privilege_BUFarm2_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.402 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUTenure_n
+		custom_tooltip = Privilege_BUTenure
+		custom_tooltip = Privilege_BUTenure_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUTenure_0_flag
+			}
+			custom_tooltip = Privilege_BUTenure0_t
+			custom_tooltip = Privilege_BUTenure0_description
+			custom_tooltip = Privilege_BUTenure0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUTenure_1_flag
+			}
+			custom_tooltip = Privilege_BUTenure1_t
+			custom_tooltip = Privilege_BUTenure1_description
+			custom_tooltip = Privilege_BUTenure1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUTenure_2_flag
+			}
+			custom_tooltip = Privilege_BUTenure2_t
+			custom_tooltip = Privilege_BUTenure2_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.403 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages_n
+		custom_tooltip = Privilege_BUWages
+		custom_tooltip = Privilege_BUWages_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUWages_0_flag
+			}
+			custom_tooltip = Privilege_BUWages0_t
+			custom_tooltip = Privilege_BUWages0_description
+			custom_tooltip = Privilege_BUWages0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUWages_1_flag
+			}
+			custom_tooltip = Privilege_BUWages1_t
+			custom_tooltip = Privilege_BUWages1_description
+			custom_tooltip = Privilege_BUWages1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUWages_2_flag
+			}
+			custom_tooltip = Privilege_BUWages2_t
+			custom_tooltip = Privilege_BUWages2_description
+			custom_tooltip = Privilege_BUWages2_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUWages_3_flag
+			}
+			custom_tooltip = Privilege_BUWages3_t
+			custom_tooltip = Privilege_BUWages3_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.404 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHierarchy_n
+		custom_tooltip = Privilege_BUHierarchy
+		custom_tooltip = Privilege_BUHierarchy_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUHierarchy_0_flag
+			}
+			custom_tooltip = Privilege_BUHierarchy0_t
+			custom_tooltip = Privilege_BUHierarchy0_description
+			custom_tooltip = Privilege_BUHierarchy0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUHierarchy_1_flag
+			}
+			custom_tooltip = Privilege_BUHierarchy1_t
+			custom_tooltip = Privilege_BUHierarchy1_description
+			custom_tooltip = Privilege_BUHierarchy1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUHierarchy_2_flag
+			}
+			custom_tooltip = Privilege_BUHierarchy2_t
+			custom_tooltip = Privilege_BUHierarchy2_description
+			custom_tooltip = Privilege_BUHierarchy2_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.405 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire_n
+		custom_tooltip = Privilege_BUHire
+		custom_tooltip = Privilege_BUHire_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUHire_0_flag
+			}
+			custom_tooltip = Privilege_BUHire0_t
+			custom_tooltip = Privilege_BUHire0_description
+			custom_tooltip = Privilege_BUHire0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUHire_1_flag
+			}
+			custom_tooltip = Privilege_BUHire1_t
+			custom_tooltip = Privilege_BUHire1_description
+			custom_tooltip = Privilege_BUHire1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUHire_2_flag
+			}
+			custom_tooltip = Privilege_BUHire2_t
+			custom_tooltip = Privilege_BUHire2_description
+			custom_tooltip = Privilege_BUHire2_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUHire_3_flag
+			}
+			custom_tooltip = Privilege_BUHire3_t
+			custom_tooltip = Privilege_BUHire3_description
+			custom_tooltip = Privilege_BUHire3_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUHire_4_flag
+			}
+			custom_tooltip = Privilege_BUHire4_t
+			custom_tooltip = Privilege_BUHire4_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.406 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams_n
+		custom_tooltip = Privilege_BUExams
+		custom_tooltip = Privilege_BUExams_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUExams_0_flag
+			}
+			custom_tooltip = Privilege_BUExams0_t
+			custom_tooltip = Privilege_BUExams0_description
+			custom_tooltip = Privilege_BUExams0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUExams_1_flag
+			}
+			custom_tooltip = Privilege_BUExams1_t
+			custom_tooltip = Privilege_BUExams1_description
+			custom_tooltip = Privilege_BUExams1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUExams_2_flag
+			}
+			custom_tooltip = Privilege_BUExams2_t
+			custom_tooltip = Privilege_BUExams2_description
+			custom_tooltip = Privilege_BUExams2_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUExams_3_flag
+			}
+			custom_tooltip = Privilege_BUExams3_t
+			custom_tooltip = Privilege_BUExams3_description
+			custom_tooltip = Privilege_BUExams3_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.407 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOversight_n
+		custom_tooltip = Privilege_BUOversight
+		custom_tooltip = Privilege_BUOversight_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUOversight_0_flag
+			}
+			custom_tooltip = Privilege_BUOversight0_t
+			custom_tooltip = Privilege_BUOversight0_description
+			custom_tooltip = Privilege_BUOversight0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUOversight_1_flag
+			}
+			custom_tooltip = Privilege_BUOversight1_t
+			custom_tooltip = Privilege_BUOversight1_description
+			custom_tooltip = Privilege_BUOversight1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUOversight_2_flag
+			}
+			custom_tooltip = Privilege_BUOversight2_t
+			custom_tooltip = Privilege_BUOversight2_description
+			custom_tooltip = Privilege_BUOversight2_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.408 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUEnlist_n
+		custom_tooltip = Privilege_BUEnlist
+		custom_tooltip = Privilege_BUEnlist_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUEnlist_0_flag
+			}
+			custom_tooltip = Privilege_BUEnlist0_t
+			custom_tooltip = Privilege_BUEnlist0_description
+			custom_tooltip = Privilege_BUEnlist0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUEnlist_1_flag
+			}
+			custom_tooltip = Privilege_BUEnlist1_t
+			custom_tooltip = Privilege_BUEnlist1_description
+			custom_tooltip = Privilege_BUEnlist1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUEnlist_2_flag
+			}
+			custom_tooltip = Privilege_BUEnlist2_t
+			custom_tooltip = Privilege_BUEnlist2_description
+			custom_tooltip = Privilege_BUEnlist2_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.409 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure_n
+		custom_tooltip = Privilege_BUStructure
+		custom_tooltip = Privilege_BUStructure_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUStructure_0_flag
+			}
+			custom_tooltip = Privilege_BUStructure0_t
+			custom_tooltip = Privilege_BUStructure0_description
+			custom_tooltip = Privilege_BUStructure0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUStructure_1_flag
+			}
+			custom_tooltip = Privilege_BUStructure1_t
+			custom_tooltip = Privilege_BUStructure1_description
+			custom_tooltip = Privilege_BUStructure1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUStructure_2_flag
+			}
+			custom_tooltip = Privilege_BUStructure2_t
+			custom_tooltip = Privilege_BUStructure2_description
+			custom_tooltip = Privilege_no_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUStructure_3_flag
+			}
+			custom_tooltip = Privilege_BUStructure3_t
+			custom_tooltip = Privilege_BUStructure3_description
+			custom_tooltip = Privilege_BUStructure3_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.410 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts_n
+		custom_tooltip = Privilege_BUCourts
+		custom_tooltip = Privilege_BUCourts_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUCourts_0_flag
+			}
+			custom_tooltip = Privilege_BUCourts0_t
+			custom_tooltip = Privilege_BUCourts0_description
+			custom_tooltip = Privilege_BUCourts0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUCourts_1_flag
+			}
+			custom_tooltip = Privilege_BUCourts1_t
+			custom_tooltip = Privilege_BUCourts1_description
+			custom_tooltip = Privilege_BUCourts1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUCourts_2_flag
+			}
+			custom_tooltip = Privilege_BUCourts2_t
+			custom_tooltip = Privilege_BUCourts2_description
+			custom_tooltip = Privilege_no_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUCourts_3_flag
+			}
+			custom_tooltip = Privilege_BUCourts3_t
+			custom_tooltip = Privilege_BUCourts3_description
+			custom_tooltip = Privilege_BUCourts3_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.411 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+# 	option = {
+# 		name = Privilege_BULocal_n
+# 		custom_tooltip = Privilege_BULocal
+# 		custom_tooltip = Privilege_BULocal_d
+# 		custom_tooltip = Rights_LB
+# 		if = {
+# 			limit = {
+# 				has_country_flag = BULocal_0_flag
+# 			}
+# 			custom_tooltip = Privilege_BULocal0_t
+# 			custom_tooltip = Privilege_BULocal0_description
+# 			custom_tooltip = Privilege_BULocal0_effects
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = BULocal_1_flag
+# 			}
+# 			custom_tooltip = Privilege_BULocal1_t
+# 			custom_tooltip = Privilege_BULocal1_description
+# 			custom_tooltip = Privilege_BULocal1_effects
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = BULocal_2_flag
+# 			}
+# 			custom_tooltip = Privilege_BULocal2_t
+# 			custom_tooltip = Privilege_BULocal2_description
+# 			custom_tooltip = Privilege_BULocal2_effects
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = BULocal_3_flag
+# 			}
+# 			custom_tooltip = Privilege_BULocal3_t
+# 			custom_tooltip = Privilege_BULocal3_description
+# 			custom_tooltip = Privilege_BULocal3_effects
+# 		}
+# 		custom_tooltip = Rights_LB
+# 		country_event = { id = Prov_UI.412 }
+#
+# 		ai_chance = {
+# 			factor = 0
+# 		}
+# 	}
+
+	option = {
+		name = Privilege_BUPolitics_n
+		custom_tooltip = Privilege_BUPolitics
+		custom_tooltip = Privilege_BUPolitics_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BUPolitics_0_flag
+			}
+			custom_tooltip = Privilege_BUPolitics0_t
+			custom_tooltip = Privilege_BUPolitics0_description
+			custom_tooltip = Privilege_BUPolitics0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUPolitics_1_flag
+			}
+			custom_tooltip = Privilege_BUPolitics1_t
+			custom_tooltip = Privilege_BUPolitics1_description
+			custom_tooltip = Privilege_BUPolitics1_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUPolitics_2_flag
+			}
+			custom_tooltip = Privilege_BUPolitics2_t
+			custom_tooltip = Privilege_BUPolitics2_description
+			custom_tooltip = Privilege_BUPolitics2_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BUPolitics_3_flag
+			}
+			custom_tooltip = Privilege_BUPolitics3_t
+			custom_tooltip = Privilege_BUPolitics3_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.413 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BURotate_n
+		custom_tooltip = Privilege_BURotate
+		custom_tooltip = Privilege_BURotate_d
+		custom_tooltip = Rights_LB
+		if = {
+			limit = {
+				has_country_flag = BURotate_0_flag
+			}
+			custom_tooltip = Privilege_BURotate0_t
+			custom_tooltip = Privilege_BURotate0_description
+			custom_tooltip = Privilege_BURotate0_effects
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BURotate_1_flag
+			}
+			custom_tooltip = Privilege_BURotate1_t
+			custom_tooltip = Privilege_BURotate1_description
+			custom_tooltip = Privilege_no_effects
+		}
+		custom_tooltip = Rights_LB
+		country_event = { id = Prov_UI.414 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_EXIT
+		highlight = yes
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Sale of Office
+country_event = {
+	id = Prov_UI.401
+	title = Privilege_BUOffice_t
+	desc = Privilege_BUOffice_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUOffice0_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUOffice_0_flag }
+		}
+		
+		custom_tooltip = Privilege_BUOffice0_t
+		custom_tooltip = Privilege_BUOffice0_description
+		custom_tooltip = Privilege_BUOffice0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOffice0_g
+		
+		trigger = {
+			has_country_flag = BUOffice_0_flag
+		}
+		
+		custom_tooltip = Privilege_BUOffice0_t
+		custom_tooltip = Privilege_BUOffice0_description
+		custom_tooltip = Privilege_BUOffice0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOffice1_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUOffice_1_flag }
+		}
+		
+		custom_tooltip = Privilege_BUOffice1_t
+		custom_tooltip = Privilege_BUOffice1_description
+		custom_tooltip = Privilege_BUOffice1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOffice1_g
+		
+		trigger = {
+			has_country_flag = BUOffice_1_flag
+		}
+		
+		custom_tooltip = Privilege_BUOffice1_t
+		custom_tooltip = Privilege_BUOffice1_description
+		custom_tooltip = Privilege_BUOffice1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOffice2_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUOffice_2_flag }
+		}
+		
+		custom_tooltip = Privilege_BUOffice2_t
+		custom_tooltip = Privilege_BUOffice2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOffice2_g
+		
+		trigger = {
+			has_country_flag = BUOffice_2_flag
+		}
+		
+		custom_tooltip = Privilege_BUOffice2_t
+		custom_tooltip = Privilege_BUOffice2_description
+		custom_tooltip = Privilege_BUOffice2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Tax Farming
+country_event = {
+	id = Prov_UI.402
+	title = Privilege_BUFarm_t
+	desc = Privilege_BUFarm_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUFarm0_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUFarm_0_flag }
+		}
+		
+		custom_tooltip = Privilege_BUFarm0_t
+		custom_tooltip = Privilege_BUFarm0_description
+		custom_tooltip = Privilege_BUFarm0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUFarm0_g
+		
+		trigger = {
+			has_country_flag = BUFarm_0_flag
+		}
+		
+		custom_tooltip = Privilege_BUFarm0_t
+		custom_tooltip = Privilege_BUFarm0_description
+		custom_tooltip = Privilege_BUFarm0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUFarm1_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUFarm_1_flag }
+		}
+		
+		custom_tooltip = Privilege_BUFarm1_t
+		custom_tooltip = Privilege_BUFarm1_description
+		custom_tooltip = Privilege_BUFarm1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUFarm1_g
+		
+		trigger = {
+			has_country_flag = BUFarm_1_flag
+		}
+		
+		custom_tooltip = Privilege_BUFarm1_t
+		custom_tooltip = Privilege_BUFarm1_description
+		custom_tooltip = Privilege_BUFarm1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUFarm2_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUFarm_2_flag }
+		}
+		
+		custom_tooltip = Privilege_BUFarm2_t
+		custom_tooltip = Privilege_BUFarm2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUFarm2_g
+		
+		trigger = {
+			has_country_flag = BUFarm_2_flag
+		}
+		
+		custom_tooltip = Privilege_BUFarm2_t
+		custom_tooltip = Privilege_BUFarm2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Term of Office
+country_event = {
+	id = Prov_UI.403
+	title = Privilege_BUTenure_t
+	desc = Privilege_BUTenure_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUTenure0_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUTenure_0_flag }
+		}
+		
+		custom_tooltip = Privilege_BUTenure0_t
+		custom_tooltip = Privilege_BUTenure0_description
+		custom_tooltip = Privilege_BUTenure0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUTenure0_g
+		
+		trigger = {
+			has_country_flag = BUTenure_0_flag
+		}
+		
+		custom_tooltip = Privilege_BUTenure0_t
+		custom_tooltip = Privilege_BUTenure0_description
+		custom_tooltip = Privilege_BUTenure0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUTenure1_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUTenure_1_flag }
+		}
+		
+		custom_tooltip = Privilege_BUTenure1_t
+		custom_tooltip = Privilege_BUTenure1_description
+		custom_tooltip = Privilege_BUTenure1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUTenure1_g
+		
+		trigger = {
+			has_country_flag = BUTenure_1_flag
+		}
+		
+		custom_tooltip = Privilege_BUTenure1_t
+		custom_tooltip = Privilege_BUTenure1_description
+		custom_tooltip = Privilege_BUTenure1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUTenure2_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUTenure_2_flag }
+		}
+		
+		custom_tooltip = Privilege_BUTenure2_t
+		custom_tooltip = Privilege_BUTenure2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUTenure2_g
+		
+		trigger = {
+			has_country_flag = BUTenure_2_flag
+		}
+		
+		custom_tooltip = Privilege_BUTenure2_t
+		custom_tooltip = Privilege_BUTenure2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Official Wages
+country_event = {
+	id = Prov_UI.404
+	title = Privilege_BUWages_t
+	desc = Privilege_BUWages_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUWages0_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUWages_0_flag }
+		}
+		
+		custom_tooltip = Privilege_BUWages0_t
+		custom_tooltip = Privilege_BUWages0_description
+		custom_tooltip = Privilege_BUWages0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages0_g
+		
+		trigger = {
+			has_country_flag = BUWages_0_flag
+		}
+		
+		custom_tooltip = Privilege_BUWages0_t
+		custom_tooltip = Privilege_BUWages0_description
+		custom_tooltip = Privilege_BUWages0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages1_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUWages_1_flag }
+		}
+		
+		custom_tooltip = Privilege_BUWages1_t
+		custom_tooltip = Privilege_BUWages1_description
+		custom_tooltip = Privilege_BUWages1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages1_g
+		
+		trigger = {
+			has_country_flag = BUWages_1_flag
+		}
+		
+		custom_tooltip = Privilege_BUWages1_t
+		custom_tooltip = Privilege_BUWages1_description
+		custom_tooltip = Privilege_BUWages1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages2_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUWages_2_flag }
+		}
+		
+		custom_tooltip = Privilege_BUWages2_t
+		custom_tooltip = Privilege_BUWages2_description
+		custom_tooltip = Privilege_BUWages2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages2_g
+		
+		trigger = {
+			has_country_flag = BUWages_2_flag
+		}
+		
+		custom_tooltip = Privilege_BUWages2_t
+		custom_tooltip = Privilege_BUWages2_description
+		custom_tooltip = Privilege_BUWages2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+
+
+	option = {
+		name = Privilege_BUWages3_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUWages_3_flag }
+		}
+		
+		custom_tooltip = Privilege_BUWages3_t
+		custom_tooltip = Privilege_BUWages3_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUWages3_g
+		
+		trigger = {
+			has_country_flag = BUWages_3_flag
+		}
+		
+		custom_tooltip = Privilege_BUWages3_t
+		custom_tooltip = Privilege_BUWages3_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Bureaucratic Hierarchy
+country_event = {
+	id = Prov_UI.405
+	title = Privilege_BUHierarchy_t
+	desc = Privilege_BUHierarchy_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUHierarchy0_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHierarchy_0_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHierarchy0_t
+		custom_tooltip = Privilege_BUHierarchy0_description
+		custom_tooltip = Privilege_BUHierarchy0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHierarchy0_g
+		
+		trigger = {
+			has_country_flag = BUHierarchy_0_flag
+		}
+		
+		custom_tooltip = Privilege_BUHierarchy0_t
+		custom_tooltip = Privilege_BUHierarchy0_description
+		custom_tooltip = Privilege_BUHierarchy0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHierarchy1_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHierarchy_1_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHierarchy1_t
+		custom_tooltip = Privilege_BUHierarchy1_description
+		custom_tooltip = Privilege_BUHierarchy1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHierarchy1_g
+		
+		trigger = {
+			has_country_flag = BUHierarchy_1_flag
+		}
+		
+		custom_tooltip = Privilege_BUHierarchy1_t
+		custom_tooltip = Privilege_BUHierarchy1_description
+		custom_tooltip = Privilege_BUHierarchy1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHierarchy2_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHierarchy_2_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHierarchy2_t
+		custom_tooltip = Privilege_BUHierarchy2_description
+		custom_tooltip = Privilege_BUHierarchy2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHierarchy2_g
+		
+		trigger = {
+			has_country_flag = BUHierarchy_2_flag
+		}
+		
+		custom_tooltip = Privilege_BUHierarchy2_t
+		custom_tooltip = Privilege_BUHierarchy2_description
+		custom_tooltip = Privilege_BUHierarchy2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Means of Recruitment
+country_event = {
+	id = Prov_UI.406
+	title = Privilege_BUHire_t
+	desc = Privilege_BUHire_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUHire0_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHire_0_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHire0_t
+		custom_tooltip = Privilege_BUHire0_description
+		custom_tooltip = Privilege_BUHire0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire0_g
+		
+		trigger = {
+			has_country_flag = BUHire_0_flag
+		}
+		
+		custom_tooltip = Privilege_BUHire0_t
+		custom_tooltip = Privilege_BUHire0_description
+		custom_tooltip = Privilege_BUHire0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire1_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHire_1_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHire1_t
+		custom_tooltip = Privilege_BUHire1_description
+		custom_tooltip = Privilege_BUHire1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire1_g
+		
+		trigger = {
+			has_country_flag = BUHire_1_flag
+		}
+		
+		custom_tooltip = Privilege_BUHire1_t
+		custom_tooltip = Privilege_BUHire1_description
+		custom_tooltip = Privilege_BUHire1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire2_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHire_2_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHire2_t
+		custom_tooltip = Privilege_BUHire2_description
+		custom_tooltip = Privilege_BUHire2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire2_g
+		
+		trigger = {
+			has_country_flag = BUHire_2_flag
+		}
+		
+		custom_tooltip = Privilege_BUHire2_t
+		custom_tooltip = Privilege_BUHire2_description
+		custom_tooltip = Privilege_BUHire2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire3_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHire_3_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHire3_t
+		custom_tooltip = Privilege_BUHire3_description
+		custom_tooltip = Privilege_BUHire3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire3_g
+		
+		trigger = {
+			has_country_flag = BUHire_3_flag
+		}
+		
+		custom_tooltip = Privilege_BUHire3_t
+		custom_tooltip = Privilege_BUHire3_description
+		custom_tooltip = Privilege_BUHire3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire4_o
+		
+		trigger = {
+			NOT = { has_country_flag = BUHire_4_flag }
+		}
+		
+		custom_tooltip = Privilege_BUHire4_t
+		custom_tooltip = Privilege_BUHire4_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUHire4_g
+		
+		trigger = {
+			has_country_flag = BUHire_4_flag
+		}
+		
+		custom_tooltip = Privilege_BUHire4_t
+		custom_tooltip = Privilege_BUHire4_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Civil Examinations
+country_event = {
+	id = Prov_UI.407
+	title = Privilege_BUExams_t
+	desc = Privilege_BUExams_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUExams0_o
+
+		trigger = {
+			NOT = { has_country_flag = BUExams_0_flag }
+		}
+
+		custom_tooltip = Privilege_BUExams0_t
+		custom_tooltip = Privilege_BUExams0_description
+		custom_tooltip = Privilege_BUExams0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams0_g
+
+		trigger = {
+			has_country_flag = BUExams_0_flag
+		}
+
+		custom_tooltip = Privilege_BUExams0_t
+		custom_tooltip = Privilege_BUExams0_description
+		custom_tooltip = Privilege_BUExams0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams1_o
+
+		trigger = {
+			NOT = { has_country_flag = BUExams_1_flag }
+		}
+
+		custom_tooltip = Privilege_BUExams1_t
+		custom_tooltip = Privilege_BUExams1_description
+		custom_tooltip = Privilege_BUExams1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams1_g
+
+		trigger = {
+			has_country_flag = BUExams_1_flag
+		}
+
+		custom_tooltip = Privilege_BUExams1_t
+		custom_tooltip = Privilege_BUExams1_description
+		custom_tooltip = Privilege_BUExams1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams2_o
+
+		trigger = {
+			NOT = { has_country_flag = BUExams_2_flag }
+		}
+
+		custom_tooltip = Privilege_BUExams2_t
+		custom_tooltip = Privilege_BUExams2_description
+		custom_tooltip = Privilege_BUExams2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams2_g
+
+		trigger = {
+			has_country_flag = BUExams_2_flag
+		}
+
+		custom_tooltip = Privilege_BUExams2_t
+		custom_tooltip = Privilege_BUExams2_description
+		custom_tooltip = Privilege_BUExams2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams3_o
+
+		trigger = {
+			NOT = { has_country_flag = BUExams_3_flag }
+		}
+
+		custom_tooltip = Privilege_BUExams3_t
+		custom_tooltip = Privilege_BUExams3_description
+		custom_tooltip = Privilege_BUExams3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUExams3_g
+
+		trigger = {
+			has_country_flag = BUExams_3_flag
+		}
+
+		custom_tooltip = Privilege_BUExams3_t
+		custom_tooltip = Privilege_BUExams3_description
+		custom_tooltip = Privilege_BUExams3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Institutional Oversight
+country_event = {
+	id = Prov_UI.408
+	title = Privilege_BUOversight_t
+	desc = Privilege_BUOversight_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUOversight0_o
+
+		trigger = {
+			NOT = { has_country_flag = BUOversight_0_flag }
+		}
+
+		custom_tooltip = Privilege_BUOversight0_t
+		custom_tooltip = Privilege_BUOversight0_description
+		custom_tooltip = Privilege_BUOversight0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOversight0_g
+
+		trigger = {
+			has_country_flag = BUOversight_0_flag
+		}
+
+		custom_tooltip = Privilege_BUOversight0_t
+		custom_tooltip = Privilege_BUOversight0_description
+		custom_tooltip = Privilege_BUOversight0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOversight1_o
+
+		trigger = {
+			NOT = { has_country_flag = BUOversight_1_flag }
+		}
+
+		custom_tooltip = Privilege_BUOversight1_t
+		custom_tooltip = Privilege_BUOversight1_description
+		custom_tooltip = Privilege_BUOversight1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOversight1_g
+
+		trigger = {
+			has_country_flag = BUOversight_1_flag
+		}
+
+		custom_tooltip = Privilege_BUOversight1_t
+		custom_tooltip = Privilege_BUOversight1_description
+		custom_tooltip = Privilege_BUOversight1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOversight2_o
+
+		trigger = {
+			NOT = { has_country_flag = BUOversight_2_flag }
+		}
+
+		custom_tooltip = Privilege_BUOversight2_t
+		custom_tooltip = Privilege_BUOversight2_description
+		custom_tooltip = Privilege_BUOversight2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUOversight2_g
+
+		trigger = {
+			has_country_flag = BUOversight_2_flag
+		}
+
+		custom_tooltip = Privilege_BUOversight2_t
+		custom_tooltip = Privilege_BUOversight2_description
+		custom_tooltip = Privilege_BUOversight2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Entry Requirements
+country_event = {
+	id = Prov_UI.409
+	title = Privilege_BUEnlist_t
+	desc = Privilege_BUEnlist_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUEnlist0_o
+
+		trigger = {
+			NOT = { has_country_flag = BUEnlist_0_flag }
+		}
+
+		custom_tooltip = Privilege_BUEnlist0_t
+		custom_tooltip = Privilege_BUEnlist0_description
+		custom_tooltip = Privilege_BUEnlist0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUEnlist0_g
+
+		trigger = {
+			has_country_flag = BUEnlist_0_flag
+		}
+
+		custom_tooltip = Privilege_BUEnlist0_t
+		custom_tooltip = Privilege_BUEnlist0_description
+		custom_tooltip = Privilege_BUEnlist0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUEnlist1_o
+
+		trigger = {
+			NOT = { has_country_flag = BUEnlist_1_flag }
+		}
+
+		custom_tooltip = Privilege_BUEnlist1_t
+		custom_tooltip = Privilege_BUEnlist1_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUEnlist1_g
+
+		trigger = {
+			has_country_flag = BUEnlist_1_flag
+		}
+
+		custom_tooltip = Privilege_BUEnlist1_t
+		custom_tooltip = Privilege_BUEnlist1_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUEnlist2_o
+
+		trigger = {
+			NOT = { has_country_flag = BUEnlist_2_flag }
+		}
+
+		custom_tooltip = Privilege_BUEnlist2_t
+		custom_tooltip = Privilege_BUEnlist2_description
+		custom_tooltip = Privilege_BUEnlist2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUEnlist2_g
+
+		trigger = {
+			has_country_flag = BUEnlist_2_flag
+		}
+
+		custom_tooltip = Privilege_BUEnlist2_t
+		custom_tooltip = Privilege_BUEnlist2_description
+		custom_tooltip = Privilege_BUEnlist2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Provincial Administration
+country_event = {
+	id = Prov_UI.410
+	title = Privilege_BUStructure_t
+	desc = Privilege_BUStructure_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUStructure0_o
+
+		trigger = {
+			NOT = { has_country_flag = BUStructure_0_flag }
+		}
+
+		custom_tooltip = Privilege_BUStructure0_t
+		custom_tooltip = Privilege_BUStructure0_description
+		custom_tooltip = Privilege_BUStructure0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure0_g
+
+		trigger = {
+			has_country_flag = BUStructure_0_flag
+		}
+
+		custom_tooltip = Privilege_BUStructure0_t
+		custom_tooltip = Privilege_BUStructure0_description
+		custom_tooltip = Privilege_BUStructure0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure1_o
+
+		trigger = {
+			NOT = { has_country_flag = BUStructure_1_flag }
+		}
+
+		custom_tooltip = Privilege_BUStructure1_t
+		custom_tooltip = Privilege_BUStructure1_description
+		custom_tooltip = Privilege_BUStructure1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure1_g
+
+		trigger = {
+			has_country_flag = BUStructure_1_flag
+		}
+
+		custom_tooltip = Privilege_BUStructure1_t
+		custom_tooltip = Privilege_BUStructure1_description
+		custom_tooltip = Privilege_BUStructure1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure2_o
+
+		trigger = {
+			NOT = { has_country_flag = BUStructure_2_flag }
+		}
+
+		custom_tooltip = Privilege_BUStructure2_t
+		custom_tooltip = Privilege_BUStructure2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure2_g
+
+		trigger = {
+			has_country_flag = BUStructure_2_flag
+		}
+
+		custom_tooltip = Privilege_BUStructure2_t
+		custom_tooltip = Privilege_BUStructure2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure3_o
+
+		trigger = {
+			NOT = { has_country_flag = BUStructure_3_flag }
+		}
+
+		custom_tooltip = Privilege_BUStructure3_t
+		custom_tooltip = Privilege_BUStructure3_description
+		custom_tooltip = Privilege_BUStructure3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUStructure3_g
+
+		trigger = {
+			has_country_flag = BUStructure_3_flag
+		}
+
+		custom_tooltip = Privilege_BUStructure3_t
+		custom_tooltip = Privilege_BUStructure3_description
+		custom_tooltip = Privilege_BUStructure3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Sovereign Courts
+country_event = {
+	id = Prov_UI.411
+	title = Privilege_BUCourts_t
+	desc = Privilege_BUCourts_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUCourts0_o
+
+		trigger = {
+			NOT = { has_country_flag = BUCourts_0_flag }
+		}
+
+		custom_tooltip = Privilege_BUCourts0_t
+		custom_tooltip = Privilege_BUCourts0_description
+		custom_tooltip = Privilege_BUCourts0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts0_g
+
+		trigger = {
+			has_country_flag = BUCourts_0_flag
+		}
+
+		custom_tooltip = Privilege_BUCourts0_t
+		custom_tooltip = Privilege_BUCourts0_description
+		custom_tooltip = Privilege_BUCourts0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts1_o
+
+		trigger = {
+			NOT = { has_country_flag = BUCourts_1_flag }
+		}
+
+		custom_tooltip = Privilege_BUCourts1_t
+		custom_tooltip = Privilege_BUCourts1_description
+		custom_tooltip = Privilege_BUCourts1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts1_g
+
+		trigger = {
+			has_country_flag = BUCourts_1_flag
+		}
+
+		custom_tooltip = Privilege_BUCourts1_t
+		custom_tooltip = Privilege_BUCourts1_description
+		custom_tooltip = Privilege_BUCourts1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts2_o
+
+		trigger = {
+			NOT = { has_country_flag = BUCourts_2_flag }
+		}
+
+		custom_tooltip = Privilege_BUCourts2_t
+		custom_tooltip = Privilege_BUCourts2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts2_g
+
+		trigger = {
+			has_country_flag = BUCourts_2_flag
+		}
+
+		custom_tooltip = Privilege_BUCourts2_t
+		custom_tooltip = Privilege_BUCourts2_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts3_o
+
+		trigger = {
+			NOT = { has_country_flag = BUCourts_3_flag }
+		}
+
+		custom_tooltip = Privilege_BUCourts3_t
+		custom_tooltip = Privilege_BUCourts3_description
+		custom_tooltip = Privilege_BUCourts3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUCourts3_g
+
+		trigger = {
+			has_country_flag = BUCourts_3_flag
+		}
+
+		custom_tooltip = Privilege_BUCourts3_t
+		custom_tooltip = Privilege_BUCourts3_description
+		custom_tooltip = Privilege_BUCourts3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Local Government
+country_event = {
+	id = Prov_UI.412
+	title = Privilege_BULocal_t
+	desc = Privilege_BULocal_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BULocal0_o
+
+		trigger = {
+			NOT = { has_country_flag = BULocal_0_flag }
+		}
+
+		custom_tooltip = Privilege_BULocal0_t
+		custom_tooltip = Privilege_BULocal0_description
+		custom_tooltip = Privilege_BULocal0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal0_g
+
+		trigger = {
+			has_country_flag = BULocal_0_flag
+		}
+
+		custom_tooltip = Privilege_BULocal0_t
+		custom_tooltip = Privilege_BULocal0_description
+		custom_tooltip = Privilege_BULocal0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal1_o
+
+		trigger = {
+			NOT = { has_country_flag = BULocal_1_flag }
+		}
+
+		custom_tooltip = Privilege_BULocal1_t
+		custom_tooltip = Privilege_BULocal1_description
+		custom_tooltip = Privilege_BULocal1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal1_g
+
+		trigger = {
+			has_country_flag = BULocal_1_flag
+		}
+
+		custom_tooltip = Privilege_BULocal1_t
+		custom_tooltip = Privilege_BULocal1_description
+		custom_tooltip = Privilege_BULocal1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal2_o
+
+		trigger = {
+			NOT = { has_country_flag = BULocal_2_flag }
+		}
+
+		custom_tooltip = Privilege_BULocal2_t
+		custom_tooltip = Privilege_BULocal2_description
+		custom_tooltip = Privilege_BULocal2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal2_g
+
+		trigger = {
+			has_country_flag = BULocal_2_flag
+		}
+
+		custom_tooltip = Privilege_BULocal2_t
+		custom_tooltip = Privilege_BULocal2_description
+		custom_tooltip = Privilege_BULocal2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal3_o
+
+		trigger = {
+			NOT = { has_country_flag = BULocal_3_flag }
+		}
+
+		custom_tooltip = Privilege_BULocal3_t
+		custom_tooltip = Privilege_BULocal3_description
+		custom_tooltip = Privilege_BULocal3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BULocal3_g
+
+		trigger = {
+			has_country_flag = BULocal_3_flag
+		}
+
+		custom_tooltip = Privilege_BULocal3_t
+		custom_tooltip = Privilege_BULocal3_description
+		custom_tooltip = Privilege_BULocal3_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Bureaucratic Politicisation
+country_event = {
+	id = Prov_UI.413
+	title = Privilege_BUPolitics_t
+	desc = Privilege_BUPolitics_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BUPolitics0_o
+
+		trigger = {
+			NOT = { has_country_flag = BUPolitics_0_flag }
+		}
+
+		custom_tooltip = Privilege_BUPolitics0_t
+		custom_tooltip = Privilege_BUPolitics0_description
+		custom_tooltip = Privilege_BUPolitics0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics0_g
+
+		trigger = {
+			has_country_flag = BUPolitics_0_flag
+		}
+
+		custom_tooltip = Privilege_BUPolitics0_t
+		custom_tooltip = Privilege_BUPolitics0_description
+		custom_tooltip = Privilege_BUPolitics0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics1_o
+
+		trigger = {
+			NOT = { has_country_flag = BUPolitics_1_flag }
+		}
+
+		custom_tooltip = Privilege_BUPolitics1_t
+		custom_tooltip = Privilege_BUPolitics1_description
+		custom_tooltip = Privilege_BUPolitics1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics1_g
+
+		trigger = {
+			has_country_flag = BUPolitics_1_flag
+		}
+
+		custom_tooltip = Privilege_BUPolitics1_t
+		custom_tooltip = Privilege_BUPolitics1_description
+		custom_tooltip = Privilege_BUPolitics1_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics2_o
+
+		trigger = {
+			NOT = { has_country_flag = BUPolitics_2_flag }
+		}
+
+		custom_tooltip = Privilege_BUPolitics2_t
+		custom_tooltip = Privilege_BUPolitics2_description
+		custom_tooltip = Privilege_BUPolitics2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics2_g
+
+		trigger = {
+			has_country_flag = BUPolitics_2_flag
+		}
+
+		custom_tooltip = Privilege_BUPolitics2_t
+		custom_tooltip = Privilege_BUPolitics2_description
+		custom_tooltip = Privilege_BUPolitics2_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics3_o
+
+		trigger = {
+			NOT = { has_country_flag = BUPolitics_3_flag }
+		}
+
+		custom_tooltip = Privilege_BUPolitics3_t
+		custom_tooltip = Privilege_BUPolitics3_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BUPolitics3_g
+
+		trigger = {
+			has_country_flag = BUPolitics_3_flag
+		}
+
+		custom_tooltip = Privilege_BUPolitics3_t
+		custom_tooltip = Privilege_BUPolitics3_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Regional Tenure
+country_event = {
+	id = Prov_UI.414
+	title = Privilege_BURotate_t
+	desc = Privilege_BURotate_d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = Privilege_BURotate0_o
+
+		trigger = {
+			NOT = { has_country_flag = BURotate_0_flag }
+		}
+
+		custom_tooltip = Privilege_BURotate0_t
+		custom_tooltip = Privilege_BURotate0_description
+		custom_tooltip = Privilege_BURotate0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BURotate0_g
+
+		trigger = {
+			has_country_flag = BURotate_0_flag
+		}
+
+		custom_tooltip = Privilege_BURotate0_t
+		custom_tooltip = Privilege_BURotate0_description
+		custom_tooltip = Privilege_BURotate0_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BURotate1_o
+
+		trigger = {
+			NOT = { has_country_flag = BURotate_1_flag }
+		}
+
+		custom_tooltip = Privilege_BURotate1_t
+		custom_tooltip = Privilege_BURotate1_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Privilege_BURotate1_g
+
+		trigger = {
+			has_country_flag = BURotate_1_flag
+		}
+
+		custom_tooltip = Privilege_BURotate1_t
+		custom_tooltip = Privilege_BURotate1_description
+		custom_tooltip = Privilege_no_effects
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = PTM_BACK
+		highlight = yes
+		hidden_effect = {
+			country_event = { id = Prov_UI.400 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

@@ -1,0 +1,46 @@
+country_event = {
+	id = js_colonies.1
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+
+	hidden = yes
+
+	trigger = {
+		has_reform = colonial_government
+		NOT = { has_country_flag = colonial_government_colonization_and_trade_restricted }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+        	name = hidden_option.1_o
+		set_country_flag = colonial_government_colonization_and_trade_restricted
+		add_country_modifier = {
+			name = "colonial_government_colonization_and_trade_restricted"
+			duration = -1
+		}
+    }
+}
+
+country_event = {
+	id = js_colonies.2
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+
+	hidden = yes
+
+	trigger = {
+		NOT = { has_reform = colonial_government }
+		has_country_flag = colonial_government_colonization_and_trade_restricted
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+        	name = hidden_option.1_o
+		clr_country_flag = colonial_government_colonization_and_trade_restricted
+		remove_country_modifier = { name = "colonial_government_colonization_and_trade_restricted" }
+    }
+}

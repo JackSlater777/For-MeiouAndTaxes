@@ -1,0 +1,34 @@
+country_decisions = {
+	bureaucracy_setup = {
+		major = yes
+		potential = {
+			tag = HAW
+			NOT = { has_country_flag = bureaucracy_setup }
+		}
+		allow = {
+			is_year = 1357
+			is_month = 2 # March
+		}
+		effect = {
+			set_country_flag = bureaucracy_setup
+
+			set_country_flag = BUOffice_1_flag
+			set_country_flag = BUFarm_0_flag
+			set_country_flag = BUTenure_0_flag
+			set_country_flag = BUWages_0_flag
+			set_country_flag = BUHierarchy_0_flag
+			set_country_flag = BUHire_0_flag
+			set_country_flag = BUExams_0_flag
+			set_country_flag = BUOversight_0_flag
+			set_country_flag = BUEnlist_0_flag
+			set_country_flag = BUStructure_0_flag
+			set_country_flag = BUCourts_0_flag
+			#set_country_flag = BULocal_0_flag
+			set_country_flag = BUPolitics_0_flag
+			set_country_flag = BURotate_0_flag
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

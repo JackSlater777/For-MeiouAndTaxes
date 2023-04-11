@@ -1,0 +1,134 @@
+# country_event = {
+# 	id = js_ideas.1
+# 	title = no_localisation
+# 	desc = no_localisation
+# 	picture = event_test
+# 	hidden = yes
+#
+# 	trigger = {
+# 		has_idea_group = bureaucracy_ideas
+# 		NOT = { has_institution = I_meritocracy }
+# 	}
+#
+# 	mean_time_to_happen = { days = 1 }
+#
+# 	immediate = {
+# 		remove_idea_group = bureaucracy_ideas
+# 	}
+#
+# 	option = { name = afarawaymod.2_o }
+# }
+
+country_event = {
+	id = js_ideas.2
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+
+	hidden = yes
+
+	trigger = {
+		has_idea_group = exploration_ideas
+		NOT = { num_of_ports = 1 }
+		has_reform = colonial_government
+		NOT = { has_idea = sheltered_ports }
+		OR = {
+			AND = {
+				NOT = { adm_tech = 16 }
+				technology_group = western
+			}
+			AND = {
+				NOT = { adm_tech = 20 }
+				NOT = { technology_group = western }
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		remove_idea_group = exploration_ideas
+	}
+
+	option = { name = hidden_option.1_o }
+}
+
+country_event = {
+	id = js_ideas.3
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+
+	hidden = yes
+
+	trigger = {
+		has_idea_group = expansion_ideas
+		has_reform = colonial_government
+		AND = {
+			NOT = { has_idea = fortification_maintenance }
+			NOT = { has_idea = sheltered_ports }
+		}
+		OR = {
+			AND = {
+				NOT = { dip_tech = 20 }
+				technology_group = western
+			}
+			AND = {
+				NOT = { dip_tech = 24 }
+				NOT = { technology_group = western }
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		remove_idea_group = expansion_ideas
+	}
+
+	option = { name = hidden_option.1_o }
+}
+
+country_event = {
+	id = js_ideas.4
+	title = no_localisation
+	desc = no_localisation
+	picture = event_test
+
+	hidden = yes
+
+	trigger = {
+		has_idea_group = global_empire_ideas
+		NOT = { num_of_ports = 1 }
+		has_reform = colonial_government
+		NOT = { has_idea = land_of_opportunity }
+		NOT = { has_idea = sheltered_ports }
+		AND = {
+			NOT = { has_idea = fortification_maintenance }
+			NOT = { has_idea = free_trade }
+		}
+		OR = {
+			AND = {
+				NOT = { adm_tech = 20 }
+				technology_group = western
+			}
+			AND = {
+				ai = no
+				NOT = { adm_tech = 24 }
+				NOT = { technology_group = western }
+			}
+			AND = {
+				NOT = { adm_tech = 28 }
+				NOT = { technology_group = western }
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		remove_idea_group = global_empire_ideas
+	}
+
+	option = { name = hidden_option.1_o }
+}
