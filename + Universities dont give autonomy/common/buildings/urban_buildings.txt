@@ -1,0 +1,580 @@
+################################################
+# Urban buildings
+################################################
+
+## Religious
+# Temple
+# Heathen Temple
+# Great Temple
+
+## Education
+# Small University
+# Medium Modern University
+# Large University
+
+## Trade
+# Marketplace
+# Merchant Guild
+# Trade depot
+# Custom House
+
+## Financial
+# Bank
+# Stock Exchange
+
+## Warehouse
+# Warehouse
+# Warehouse district
+
+## (Urban) Production
+# Workshop
+# Corporation Guild
+# Manufactory
+# Factory
+# Steam Powered Factory
+
+## Art Buildings
+# Art Corporation
+# Fine Arts Academy
+# Opera
+
+#############
+# Religious #
+#############
+
+temple = {
+	cost = 50
+	time = 12
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = temple
+				can_keep_temple = yes
+			}
+			can_build_temple = yes
+		}
+	}
+	
+	modifier = {
+		local_missionary_strength = 0.01
+		local_unrest = -2
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = temple_heathen province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+temple_heathen = {
+	cost = 99999
+	time = 12
+	
+	trigger = {
+		has_building = temple_heathen
+		can_keep_temple_heathen = yes
+	}
+	
+	modifier = {
+		local_missionary_strength = -0.05
+		local_unrest = -2
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = temple province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+
+
+great_temple = {
+	cost = 99999
+	time = 24
+	
+	trigger = {
+		OR = {
+			has_building = great_temple
+			can_build_great_temple = yes
+		}
+	}
+	
+	modifier = {
+		prestige = 0.1
+		global_missionary_strength = 0.003
+		tolerance_own = 0.025
+		papal_influence = 0.1
+		local_unrest = -3
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = temple remove_building = temple_heathen province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+#############
+# Education #
+#############
+
+small_university = {
+	cost = 200
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = small_university
+				can_keep_small_university = yes
+			}
+			can_build_small_university = yes
+		}
+	}
+	
+	modifier = {
+		local_unrest = 1
+		#local_autonomy = 0.05
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+medium_university = {
+	cost = 250
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = medium_university
+				can_keep_medium_university = yes
+			}
+			can_build_medium_university = yes
+		}
+	}
+	
+	modifier = {
+		local_unrest = 2
+		#local_autonomy = 0.1
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = small_university province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+big_university = {
+	cost = 300
+	time = 24
+	
+	trigger = {
+		OR = {
+			has_building = big_university
+			can_build_big_university = yes
+		}
+	}
+	
+	modifier = {
+		local_unrest = 3
+		#local_autonomy = 0.2
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = medium_university province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+
+#########
+# Trade #
+#########
+
+marketplace = {
+	cost = 150
+	time = 12
+	
+	modifier = { trade_value = 0.1 }
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = marketplace
+				can_keep_marketplace = yes
+			}
+			can_build_marketplace = yes
+		}
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+merchant_guild = {
+	cost = 225
+	time = 12
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = merchant_guild
+				can_keep_merchant_guild = yes
+			}
+			can_build_merchant_guild = yes
+		}
+	}
+	
+	modifier = { trade_value = 0.25 }
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = marketplace province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+trade_depot = {
+	cost = 300
+	time = 12
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = trade_depot
+				can_keep_trade_depot = yes
+			}
+			can_build_trade_depot = yes
+		}
+	}
+	
+	modifier = { trade_value = 0.5 }
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = merchant_guild province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+customs_house = {
+	cost = 450
+	time = 12
+	
+	trigger = {
+		OR = {
+			has_building = customs_house
+			can_build_customs_house = yes
+		}
+	}
+	
+	modifier = { trade_value = 1 }
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = trade_depot province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+#############
+# Financial #
+#############
+
+bank = {
+	cost = 400
+	time = 12
+	
+	trigger = {
+		OR = {
+			has_building = bank
+			can_build_bank = yes
+		}
+	}
+	
+	modifier = {
+		trade_value = 1
+		tax_income = 1
+		local_production_efficiency = 0.1
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+stock_exchange = {
+	cost = 500
+	time = 12
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = stock_exchange
+				can_keep_stock_exchange = yes
+			}
+			can_build_stock_exchange = yes
+		}
+	}
+	
+	modifier = {
+		trade_value = 2
+		tax_income = 4
+		local_production_efficiency = 0.2
+	}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = bank province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+	
+	one_per_country = yes
+}
+
+#############
+# Warehouse #
+#############
+
+warehouse = {
+	cost = 150
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = warehouse
+				can_keep_warehouse = yes
+			}
+			can_build_warehouse = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+warehouse_district = {
+	cost = 250
+	time = 24
+	
+	trigger = {
+		OR = {
+			has_building = warehouse_district
+			can_build_warehouse_district = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = warehouse province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+##############
+# Production #
+##############
+
+workshop = {
+	cost = 200
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = workshop
+				can_keep_workshop = yes
+			}
+			can_build_workshop = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+corporation_guild = {
+	cost = 300
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = corporation_guild
+				can_keep_corporation_guild = yes
+			}
+			can_build_corporation_guild = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = workshop province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+urban_manufactory = {
+	cost = 400
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = urban_manufactory
+				can_keep_manufactory = yes
+			}
+			can_build_urban_manufactory = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = corporation_guild province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+factory = {
+	cost = 600
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = factory
+				can_keep_factory = yes
+			}
+			can_build_factory = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = urban_manufactory province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+steam_powered_factory = {
+	cost = 800
+	time = 24
+	
+	trigger = {
+		OR = {
+			has_building = steam_powered_factory
+			can_build_steam_powered_factory = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = workshop remove_building = corporation_guild remove_building = urban_manufactory remove_building = factory province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+##############
+# ART #
+##############
+
+art_corporation = {
+	cost = 200
+	time = 36
+	trigger = {
+		OR = {
+			AND = {
+				has_building = art_corporation
+				can_keep_art_corporation = yes
+			}
+			can_build_art_corporation = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+fine_arts_academy = {
+	cost = 300
+	time = 24
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_building = fine_arts_academy
+				can_keep_fine_arts_academy = yes
+			}
+			can_build_fine_arts_academy = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = art_corporation province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}
+
+opera = {
+	cost = 400
+	time = 24
+	
+	trigger = {
+		OR = {
+			has_building = opera
+			can_build_opera = yes
+		}
+	}
+	
+	modifier = {}
+	
+	ai_will_do = { factor = 0 }
+	
+	on_built = { hidden_effect = { remove_building = fine_arts_academy province_event = { id = MT_general_fixes.300 } } }
+	on_destroyed = { hidden_effect = { province_event = { id = MT_general_fixes.300 } } }
+	on_obsolete = {}
+}

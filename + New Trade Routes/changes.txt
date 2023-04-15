@@ -1,0 +1,12 @@
+kiev_node --> moscow_node (revert)
+kiev_node --> baltic_node
+crimea_node --> kiev_node (revert)
+crimea_node --> moscow_node
+crimea_node --> krakow_node
+mashad_node --> moscow_node
+
+
+
+guide to know coordinates:
+1) run game in nudge node
+2) rmc on the map

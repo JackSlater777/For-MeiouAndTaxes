@@ -757,54 +757,77 @@ tributary_state = {
 	}
 	modifier_overlord = { #Tributaries give Horde Unity
 		modifier = tributary_state_subject_0
+		#trigger = {
+		#	ROOT = {
+		#		NOT = { check_variable = {	which = "country_total_population" value = 50 } }
+		#	}
+		#}
 		trigger = {
-			ROOT = {
-				NOT = { check_variable = {	which = "country_total_population" value = 50 } }
-			}
+			total_development = 10
+			NOT = { total_development = 50 }
 		}
 	}
 	modifier_overlord = { #Tributaries give Horde Unity
 		modifier = tributary_state_subject_1
+		#trigger = {
+		#	ROOT = {
+		#		check_variable = {	which = "country_total_population" value = 50 }
+		#		NOT = { check_variable = {	which = "country_total_population" value = 100 } }
+		#	}
+		#}
 		trigger = {
-			ROOT = {
-				check_variable = {	which = "country_total_population" value = 50 }
-				NOT = { check_variable = {	which = "country_total_population" value = 100 } }
-			}
+			total_development = 50
+			NOT = { total_development = 100 }
 		}
 	}
 	modifier_overlord = { #Tributaries give Horde Unity
 		modifier = tributary_state_subject_2
+		#trigger = {
+		#	ROOT = {
+		#		check_variable = {	which = "country_total_population" value = 100 }
+		#		NOT = { check_variable = {	which = "country_total_population" value = 200 } }
+		#	}
+		#}
 		trigger = {
-			ROOT = {
-				check_variable = {	which = "country_total_population" value = 100 }
-				NOT = { check_variable = {	which = "country_total_population" value = 200 } }
-			}
+			total_development = 100
+			NOT = { total_development = 200 }
 		}
 	}
 	modifier_overlord = { #Tributaries give Horde Unity
 		modifier = tributary_state_subject_3
+		#trigger = {
+		#	ROOT = {
+		#		check_variable = {	which = "country_total_population" value = 200 }
+		#		NOT = { check_variable = {	which = "country_total_population" value = 400 } }
+		#	}
+		#}
 		trigger = {
-			ROOT = {
-				check_variable = {	which = "country_total_population" value = 200 }
-				NOT = { check_variable = {	which = "country_total_population" value = 400 } }
-			}
+			total_development = 200
+			NOT = { total_development = 400 }
 		}
 	}
 	modifier_overlord = { #Tributaries give Horde Unity
 		modifier = tributary_state_subject_4
+		#trigger = {
+		#	ROOT = {
+		#		check_variable = {	which = "country_total_population" value = 400 }
+		#		NOT = { check_variable = {	which = "country_total_population" value = 800 } }
+		#	}
+		#}
 		trigger = {
-			ROOT = {
-				check_variable = {	which = "country_total_population" value = 400 }
-				NOT = { check_variable = {	which = "country_total_population" value = 800 } }
-			}
+			total_development = 400
+			NOT = { total_development = 800 }
 		}
 	}
 	modifier_overlord = { #Tributaries give Horde Unity
 		modifier = tributary_state_subject_5
+		#trigger = {
+		#	ROOT = {
+		#		check_variable = {	which = "country_total_population" value = 800 }
+		#	}
+		#}
 		trigger = {
-			ROOT = {
-				check_variable = {	which = "country_total_population" value = 800 }
-			}
+			total_development = 800
 		}
 	}
 }

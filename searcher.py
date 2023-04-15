@@ -1,13 +1,20 @@
 import os
 
+mt_folder_mp = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP"
+mt_folder_2_60 = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0"
+mt_folder_3_0 = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes1"
 
 # folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0\common'
 folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP\common'
 # folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes1\common'
-folder_se = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0\common\scripted_effects'
-folder_st = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0\common\scripted_triggers'
-folder_em = r'H:\JS sub-mode\Фулл игра чистая 2.60.1 для 1.29.6\common\event_modifiers'
-folder_evt = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP\events'
+
+folder_se = fr'{mt_folder_2_60}\common\scripted_effects'
+folder_st = fr'{mt_folder_2_60}\common\scripted_triggers'
+folder_sm = fr'{mt_folder_2_60}\common\static_modifiers'
+folder_em = fr'{mt_folder_2_60}\common\event_modifiers'
+folder_oa = fr'{mt_folder_2_60}\common\on_actions'
+folder_evt = fr'{mt_folder_2_60}\events'
+
 folder_evts = r'C:\Users\Иван\Greater-Flavor-Mod\GFM\events'
 folder_dec = r'C:\Users\Иван\Greater-Flavor-Mod\GFM\decisions'
 
@@ -31,6 +38,11 @@ def search_in_folder(var, folder):
 
 
 if __name__ == '__main__':
-    searching_var = 'average_autonomy'
+    searching_var = 'jewel'
     # search(searching_var, folder)
+    search_in_folder(searching_var, folder_se)
+    search_in_folder(searching_var, folder_st)
+    search_in_folder(searching_var, folder_sm)
+    search_in_folder(searching_var, folder_em)
+    search_in_folder(searching_var, folder_oa)
     search_in_folder(searching_var, folder_evt)
