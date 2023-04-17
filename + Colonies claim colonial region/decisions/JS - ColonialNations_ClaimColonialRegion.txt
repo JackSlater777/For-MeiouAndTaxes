@@ -1,0 +1,248 @@
+country_decisions = {
+
+	claim_home_colonial_region = {
+		major = yes
+		potential = {
+			colonial_gov_trigger = yes
+			NOT = { has_country_flag = colonial_region_claimed }
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = colonial_region_claimed
+
+            #01_Central_America_Carribean
+            if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_mexico
+					}
+				}
+				colonial_mexico = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+            if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_c_america
+					}
+				}
+				colonial_c_america = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+            if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_hispanola
+					}
+				}
+				colonial_hispanola = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+            #01_North_America
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_canada
+					}
+				}
+				colonial_canada = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_eastern_america
+					}
+				}
+				colonial_eastern_america = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_mississippi
+					}
+				}
+				colonial_mississippi = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_california
+					}
+				}
+				colonial_california = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+            #01_South_America
+            if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_colombia
+					}
+				}
+				colonial_colombia = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_upper_peru
+					}
+				}
+				colonial_upper_peru = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_la_plata
+					}
+				}
+				colonial_la_plata = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_brazil
+					}
+				}
+				colonial_brazil = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			#02_Africa
+# 			if = {
+# 				limit = {
+# 					capital_scope = {
+# 						colonial_region = colonial_south_africa
+# 					}
+# 				}
+# 				colonial_south_africa = {
+# 					limit = {
+# 						NOT = { is_core = ROOT }
+# 					}
+# 					add_permanent_claim = ROOT
+# 				}
+# 			}
+
+            #02_Oceania_Pacific
+            if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_oceania
+					}
+				}
+				colonial_oceania = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_papua
+					}
+				}
+				colonial_papua = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_pacific
+					}
+				}
+				colonial_pacific = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			#02_Siberia
+# 			if = {
+# 				limit = {
+# 					capital_scope = {
+# 						colonial_region = colonial_siberia
+# 					}
+# 				}
+# 				colonial_siberia = {
+# 					limit = {
+# 						NOT = { is_core = ROOT }
+# 					}
+# 					add_permanent_claim = ROOT
+# 				}
+# 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

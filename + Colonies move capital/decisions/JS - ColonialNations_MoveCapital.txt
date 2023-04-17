@@ -1,0 +1,310 @@
+country_decisions = {
+    ################################ Carribean
+	move_capital_to_guantanamo = {
+		major = yes
+		potential = {
+			owns = 486  # Guantanamo
+			NOT = { capital = 486 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_guantanamo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_guantanamo
+			add_adm_power = -5
+			Effect_set_capital = { target=486 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Central America
+	move_capital_to_san_salvador = {
+		major = yes
+		potential = {
+			owns = 2208 # San Salvador
+			NOT = { capital = 2208 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_san_salvador }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_san_salvador
+			add_adm_power = -5
+			Effect_set_capital = { target=2208 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	move_capital_to_yucatan = {
+		major = yes
+		potential = {
+			owns = 2415 # Yucatan
+			NOT = { owns = 2208 }
+			NOT = { capital = 2415 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_yucatan }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_yucatan
+			add_adm_power = -5
+			Effect_set_capital = { target=2415 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ New Granada
+	move_capital_to_maracaibo = {
+		major = yes
+		potential = {
+			owns = 829  # Maracaibo
+			NOT = { capital = 829 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_maracaibo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_maracaibo
+			add_adm_power = -5
+			Effect_set_capital = { target=829 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Brazil
+	move_capital_to_rio_de_janeiro = {
+		major = yes
+		potential = {
+			owns = 761  # Rio de Janeiro
+			NOT = { capital = 761 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_rio_de_janeiro }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_rio_de_janeiro
+			add_adm_power = -5
+			Effect_set_capital = { target=761 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ La Plata
+	move_capital_to_montevideo = {
+		major = yes
+		potential = {
+			owns = 776  # Montevideo
+			NOT = { owns = 3454 }
+			NOT = { capital = 776 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_montevideo }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_montevideo
+			add_adm_power = -5
+			Effect_set_capital = { target=776 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Peru
+	move_capital_to_lima = {
+		major = yes
+		potential = {
+			owns = 816  # Lima
+			NOT = { capital = 816 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_lima }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_lima
+			add_adm_power = -5
+			Effect_set_capital = { target=816 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Papua
+	move_capital_to_port_moresby = {
+		major = yes
+		potential = {
+			owns = 3344            # Port Moresby
+			NOT = { capital = 3344 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_port_moresby }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_port_moresby
+			add_adm_power = -5
+			Effect_set_capital = { target=3344 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Polynesia
+	move_capital_to_wellington = {
+		major = yes
+		potential = {
+			owns = 1108 # Wellington
+			NOT = { capital = 1108 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_wellington }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_wellington
+			add_adm_power = -5
+			Effect_set_capital = { target=1108 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Australia
+	move_capital_to_melbourne = {
+		major = yes
+		potential = {
+			owns = 1090 # Melbourne
+			NOT = { capital = 1090 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_melbourne }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_melbourne
+			add_adm_power = -5
+			Effect_set_capital = { target=1090 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Alaska
+	move_capital_to_san_francisco = {
+		major = yes
+		potential = {
+			owns = 871  # San Francisco
+			NOT = { capital = 871 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_san_francisco }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_san_francisco 
+			add_adm_power = -5
+			Effect_set_capital = { target=871 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Louisiana
+		move_capital_to_kanzas = {
+		major = yes
+		potential = {
+			owns = 918  # Kanzas
+			NOT = { capital = 918 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_kanzas }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_kanzas
+			add_adm_power = -5
+			Effect_set_capital = { target=918 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ################################ Eastern America
+	move_capital_to_new_york = {
+		major = yes
+		potential = {
+			owns = 2197 # New York
+			NOT = { capital = 2197 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_new_york }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_new_york 
+			add_adm_power = -5
+			Effect_set_capital = { target=2197 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	################################ Canada
+	move_capital_to_quebec = {
+		major = yes
+		potential = {
+			owns = 3637 # Quebec
+			NOT = { capital = 3637 }
+			has_reform = colonial_government
+			NOT = { has_country_flag = move_capital_to_quebec }
+		}
+		allow = {
+			adm_power = 5
+		}
+		effect = {
+			set_country_flag = move_capital_to_quebec 
+			add_adm_power = -5
+			Effect_set_capital = { target=3637 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

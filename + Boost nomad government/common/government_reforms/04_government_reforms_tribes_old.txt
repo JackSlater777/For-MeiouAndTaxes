@@ -17,20 +17,14 @@ steppe_horde = {
 	start_territory_to_estates = 0.5
 
 	modifiers = {
-		#global_manpower_modifier = 0.2
-		#land_forcelimit_modifier = 0.2
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 		loot_amount = 0.50
 		global_institution_spread = -0.15
 		reinforce_cost_modifier = -0.25
-		#cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
 		years_of_nationalism = -5
-
-		# JackSlater
-		cav_to_inf_ratio = 0.4
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
-		#global_regiment_cost = -0.4
 	}
 
 }
@@ -51,10 +45,9 @@ tribal_federation = {
 	modifiers = {
 		years_of_nationalism = -5
 
-		# JackSlater
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
-		#global_regiment_cost = -0.4
+		# JackSlater fix
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 	}
 
 	conditional = {
@@ -73,10 +66,9 @@ tribal_despotism = {
 	modifiers = {
 		core_creation = -0.1
 
-		# JackSlater
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
-		#global_regiment_cost = -0.4
+		# JackSlater fix
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 	}
 	#legacy_equivalent = tribal_despotism_legacy
 }
@@ -89,10 +81,9 @@ tribal_kingdom = {
 	modifiers = {
 		province_warscore_cost = -0.1
 
-		# JackSlater
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
-		#global_regiment_cost = -0.4
+		# JackSlater fix
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 	}
 }
 
@@ -109,14 +100,13 @@ tribal_amalgamation = { #For non-represented areas
 	
 	lock_level_when_selected = yes
 	modifiers = {
-		global_autonomy = 1
-		technology_cost = 0.30
+		#global_autonomy = 1
+		#technology_cost = 0.30
 		global_institution_spread = -0.2
 
-		# JackSlater
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
-		#global_regiment_cost = -0.4
+		# JackSlater fix
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 	}
 }
 
@@ -133,14 +123,11 @@ nomad_reform = {
 	modifiers = {
 		#global_autonomy = 0.25
 		#technology_cost = 0.25
-		#global_institution_spread = -0.2
-		global_institution_spread = -0.1
+		global_institution_spread = -0.2
 
-		# JackSlater
-		cav_to_inf_ratio = 0.4
-		global_manpower_modifier = 0.5
-		land_forcelimit_modifier = 0.5
-		#global_regiment_cost = -0.4
+		# JackSlater fix
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 	}
 }
 
@@ -205,9 +192,9 @@ tribe_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
 	effect = {
-		set_country_flag = populists_in_government
-		lose_reforms = 4
-		change_government = monarchy
+		#set_country_flag = populists_in_government
+		#lose_reforms = 4
+		#change_government = monarchy
 	}
 	ai = {
 		factor = 0
@@ -218,9 +205,9 @@ tribe_becomes_republic_reform = {
 	icon = "parliament_highlighted"
 	allow_normal_conversion = yes
 	effect = {
-		set_country_flag = populists_in_government
-		lose_reforms = 4
-		change_government = republic
+		#set_country_flag = populists_in_government
+		#lose_reforms = 4
+		#change_government = republic
 	}
 	ai = {
 		factor = 0
@@ -231,9 +218,9 @@ tribe_becomes_theocracy_reform = {
 	icon = "pope_highlighted"
 	allow_normal_conversion = yes
 	effect = {
-		set_country_flag = populists_in_government
-		lose_reforms = 4
-		change_government = theocracy
+		#set_country_flag = populists_in_government
+		#lose_reforms = 4
+		#change_government = theocracy
 	}
 	ai = {
 		factor = 0
@@ -244,8 +231,8 @@ tribe_becomes_horde_reform = {
 	icon = "horde_riding_highlighted"
 	allow_normal_conversion = yes
 	effect = {
-		set_country_flag = populists_in_government
-		steppe_effect = yes
+		#set_country_flag = populists_in_government
+		#steppe_effect = yes
 	}
 	trigger = {
 		OR = {

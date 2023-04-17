@@ -57,31 +57,31 @@ advanced_tribal_claims = {
 
 
 horde_adm_0 = {
-	#horde_unity = -3
+	#horde_unity = -3  # JackSlater fix
 }
 
 horde_adm_1 = {
-	#horde_unity = -2
+	#horde_unity = -2  # JackSlater fix
 }
 
 horde_adm_2 = {
-	#horde_unity = -1
+	#horde_unity = -1  # JackSlater fix
 }
 
 horde_adm_3 = {
-	#horde_unity = -0.25
+	#horde_unity = -0.25  # JackSlater fix
 }
 
 horde_adm_4 = {
-	#horde_unity = 0.5
+	#horde_unity = 0.5  # JackSlater fix
 }
 
 horde_adm_5 = {
-	#horde_unity = 1
+	#horde_unity = 1  # JackSlater fix
 }
 
 horde_adm_6 = {
-	#horde_unity = 2
+	#horde_unity = 2  # JackSlater fix
 }
 
 horde_pop_1 = {
@@ -150,17 +150,18 @@ horde_pop_16 = { # 10000
 
 tribal_marriage_1 = { ### Level 1
 	diplomatic_upkeep = -1
+	horde_unity = 0.50  # JackSlater fix
 }
 
 tribal_marriage_2 = { ### Level 2
 	diplomatic_upkeep = -2
-	horde_unity = 0.30
+	horde_unity = 1.0
 }
 
 tribal_marriage_3 = { ### Level 3
 	diplomatic_upkeep = -3
 	#horde_unity = 0.30
-	horde_unity = 0.60
+	horde_unity = 1.50  # JackSlater fix
 }
 
 tribal_tribute_favor = {
@@ -233,6 +234,7 @@ burghers_low_loyalty = {
 }
 
 estate_tribal_territory = {
+	# JackSlater fix
 	#local_autonomy = 0.60
 	local_autonomy = 0.40
 	#supply_limit = -4.00
@@ -240,6 +242,8 @@ estate_tribal_territory = {
 }
 
 estate_tribal_minority = {
+	# JackSlater fix
+	#local_autonomy = 0.25
 	local_autonomy = 0.2
 	#supply_limit = -2.00
 	picture = estate_cossaks
@@ -1560,53 +1564,53 @@ BUR_mercenary_armies_1 = {
 }
 
 BUR_mercenary_armies_2 = {
-	merc_maintenance_modifier = -0.15
+	merc_maintenance_modifier = -0.2
 	mercenary_cost = -0.1
 }
 
 BUR_mercenary_armies_3 = {
 	merc_maintenance_modifier = -0.25
-	mercenary_cost = -0.1
+	mercenary_cost = -0.15
 }
 
 BUR_mercenary_armies_4 = {
 	merc_maintenance_modifier = -0.3
-	mercenary_cost = -0.1
+	mercenary_cost = -0.2
 }
 
 BUR_mercenary_armies_5 = {
-	merc_maintenance_modifier = -0.3
+	merc_maintenance_modifier = -0.35
 	mercenary_cost = -0.25
 	#possible_mercenaries = 0.25
 }
 
 BUR_mercenary_armies_6 = {
-	merc_maintenance_modifier = -0.35
-	mercenary_cost = -0.30
+	merc_maintenance_modifier = -0.4
+	mercenary_cost = -0.3
 	#possible_mercenaries = 0.25
 }
 
 BUR_mercenary_armies_7 = {
-	merc_maintenance_modifier = -0.4
+	merc_maintenance_modifier = -0.45
 	mercenary_cost = -0.35
 	#possible_mercenaries = 0.25
 }
 
 BUR_mercenary_armies_8 = {
-	merc_maintenance_modifier = -0.45
-	mercenary_cost = -0.40
+	merc_maintenance_modifier = -0.5
+	mercenary_cost = -0.4
 	#possible_mercenaries = 0.5
 }
 
 BUR_mercenary_armies_9 = {
-	merc_maintenance_modifier = -0.4
-	mercenary_cost = -0.50
+	merc_maintenance_modifier = -0.5
+	mercenary_cost = -0.45
 	#possible_mercenaries = 0.75
 }
 
 BUR_mercenary_armies_10 = {
 	merc_maintenance_modifier = -0.5
-	mercenary_cost = -0.60
+	mercenary_cost = -0.5
 	#possible_mercenaries = 1
 }
 

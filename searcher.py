@@ -3,6 +3,7 @@ import os
 mt_folder_mp = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP"
 mt_folder_2_60 = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0"
 mt_folder_3_0 = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes1"
+project_folder = r"C:\Users\Иван\PycharmProjects\For-MeiouAndTaxes"
 
 # folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0\common'
 folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP\common'
@@ -39,10 +40,11 @@ def search_in_folder(var, folder):
 
 if __name__ == '__main__':
     searching_var = 'jewel'
+
     # search(searching_var, folder)
-    search_in_folder(searching_var, folder_se)
-    search_in_folder(searching_var, folder_st)
-    search_in_folder(searching_var, folder_sm)
-    search_in_folder(searching_var, folder_em)
-    search_in_folder(searching_var, folder_oa)
-    search_in_folder(searching_var, folder_evt)
+    # search_in_folder(searching_var, folder_se)
+    # search_in_folder(searching_var, folder_st)
+    # search_in_folder(searching_var, folder_sm)
+    # search_in_folder(searching_var, folder_em)
+    # search_in_folder(searching_var, folder_oa)
+    # search_in_folder(searching_var, folder_evt)
