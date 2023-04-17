@@ -5,6 +5,7 @@ crimea_node --> moscow_node
 crimea_node --> krakow_node
 mashad_node --> moscow_node
 
+guangzhou_node --> xian_node
 
 
 guide to know coordinates:
