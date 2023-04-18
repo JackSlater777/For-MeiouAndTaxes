@@ -236,15 +236,14 @@ burghers_low_loyalty = {
 estate_tribal_territory = {
 	# JackSlater fix
 	#local_autonomy = 0.60
-	local_autonomy = 0.40
+	local_autonomy = 0.25
 	#supply_limit = -4.00
 	picture = estate_cossaks
 }
 
 estate_tribal_minority = {
 	# JackSlater fix
-	#local_autonomy = 0.25
-	local_autonomy = 0.2
+	local_autonomy = 0.25
 	#supply_limit = -2.00
 	picture = estate_cossaks
 }

@@ -1,0 +1,118 @@
+tribal_influence_0 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.01 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.1 } }
+	}
+	global_regiment_cost = -0.05
+	land_forcelimit_modifier = 0.1
+}
+
+tribal_influence_1 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.1 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.2 } }
+	}
+	global_regiment_cost = -0.1
+	land_forcelimit_modifier = 0.2
+}
+
+tribal_influence_2 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.2 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.3 } }
+	}
+	global_regiment_cost = -0.15
+	land_forcelimit_modifier = 0.3
+}
+
+tribal_influence_3 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.3 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.4 } }
+	}
+	global_regiment_cost = -0.2
+	land_forcelimit_modifier = 0.4
+}
+
+tribal_influence_4 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.4 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.5 } }
+	}
+	global_regiment_cost = -0.25
+	land_forcelimit_modifier = 0.5
+}
+
+tribal_influence_5 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.5 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.6 } }
+	}
+	global_regiment_cost = -0.3
+	land_forcelimit_modifier = 0.6
+}
+
+tribal_influence_6 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.6 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.7 } }
+	}
+	global_regiment_cost = -0.35
+	land_forcelimit_modifier = 0.7
+}
+
+tribal_influence_7 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.7 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.8 } }
+	}
+	global_regiment_cost = -0.4
+	land_forcelimit_modifier = 0.8
+}
+
+tribal_influence_8 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.8 }
+		NOT = { check_variable = { which = estate_tribals_weight_share	value = 0.9 } }
+	}
+	global_regiment_cost = -0.45
+	land_forcelimit_modifier = 0.9
+}
+
+tribal_influence_9 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		check_variable = { which = estate_tribals_weight_share	value = 0.9 }
+	}
+	global_regiment_cost = -0.5
+	land_forcelimit_modifier = 1.0
+}

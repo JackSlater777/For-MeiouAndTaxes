@@ -1,0 +1,23 @@
+country_decisions = {
+
+	switch_nomadic_rule_to_steppe_nomad = {
+		major = yes
+		potential = {
+			OR = {
+				has_reform = tribal_amalgamation
+				has_reform = nomad_reform
+			}
+			NOT = { has_country_flag = switch_nomadic_rule_to_steppe_nomad }
+		}
+		allow = {
+			NOT = { has_reform = steppe_horde }
+		}
+		effect = {
+			set_country_flag = switch_nomadic_rule_to_steppe_nomad
+                        add_government_reform = steppe_horde
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,4 +1,0 @@
-common/event_modifiers/POP_Estate_Modifiers.txt:
-
-- deleted penalties for horde unity from adm ruler skill
-- reduced autonomy form tribes

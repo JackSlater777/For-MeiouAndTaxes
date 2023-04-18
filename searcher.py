@@ -39,10 +39,10 @@ def search_in_folder(var, folder):
 
 
 if __name__ == '__main__':
-    searching_var = 'jewel'
+    searching_var = 'settlement_score_gravity'
 
     # search(searching_var, folder)
-    # search_in_folder(searching_var, folder_se)
+    search_in_folder(searching_var, folder_se)
     # search_in_folder(searching_var, folder_st)
     # search_in_folder(searching_var, folder_sm)
     # search_in_folder(searching_var, folder_em)
