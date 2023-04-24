@@ -1,0 +1,10 @@
+- (new) georgian culture group
+- moved georgian from turko_byzantine cg to georgian cg
+
+- (new) armenian culture group
+- moved medieval_armenian from turko_byzantine cg to armenian cg
+- moved medieval_cilician from turko_byzantine cg to armenian cg
+- moved medieval_armenian_colonial from turko_byzantine cg to armenian cg
+
+- moved turkish from turko_byzantine cg to oghuz cg
+- moved turkish_colonial from turko_byzantine cg to oghuz cg

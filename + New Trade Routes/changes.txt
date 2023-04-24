@@ -11,3 +11,13 @@ guangzhou_node --> xian_node
 guide to know coordinates:
 1) run game in nudge node
 2) rmc on the map
+
+todo:
+
+mashad_node --> caucasus
+indus --> hormuz
+krakow --> hansa
+spain (barcelona, sevilla)?
+egypt --> genoa
+egypt --> venice
+balkans --> venice

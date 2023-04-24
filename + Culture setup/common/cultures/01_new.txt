@@ -1,0 +1,209 @@
+georgian = {
+	graphical_culture = easterngfx
+	country = { #Equality
+		num_accepted_cultures = 1
+		years_of_nationalism = -10
+		max_absolutism = 5
+		diplomatic_annexation_cost = -0.1
+			
+		global_unrest = 1
+		discipline = -0.01
+	}
+	georgian = {
+		primary = GEO
+		dynasty_names = {
+			Bagrationi
+			Mukhrani
+			# CKII
+			Abazasdze Abuladze Agiashvili Amirejibi Anchabadze Andronikashvili
+			Chavchavadze Chkhetidze Cholokashvili
+			Dadiani Diasamidze
+			Gelovani Gurieli
+			Iashvili
+			Japaridze Jaqeli Javakhishvili Jorjadze
+			Kakhaberisdze Kherkheulidze Khimshiashvili Kobulashvili
+			Lortkipanidze
+			Machabeli Machutadze Mikeladze Mkhetsidze
+			Orbeliani
+			Palavandishvili Panaskerteli
+			Shervashidze Shildisani Sologashvili
+			Tavdgiridze
+			Vakhvakhishvili
+			Zevdginidze
+		}
+		male_names = {
+			Adarnase Aghsartan Aleksandre Andronik Anzori Archil Archili Ashot Atrnerseh
+			Bagour Bagrat Bakar Bakur Bebur Birtveli
+			Davit Demetre Demna Djavakhi Djurkha
+			Erekle
+			Gabriel Gabrieli Gagik Gagiki Giorgi Grigoli Guaram Gubaz Gulikho Gurgen
+			Iese Iesse Ioane Ishkhan Ishkhanik Iveri
+			Jarji
+			Kaihosro Kaikhosro Kakhi Kartlos Keykhosrau Koba Koki Konstantine Kvarkvare Kviria Kvirike
+			Leo Levan Luarsab Lukhum Lupo
+			Malkhas Malkhazi Mamia Merab Mikheil Mukhran Mushni
+			Narses Nerse Nicholas Nikoloz
+			Okhropir Orbeli
+			Padla
+			Revaz Rostom-Mirza
+			Samoeli Shahanshah Shanshe Shota Simon Smbat Stefanoz Stepanoz Sumbat
+			Takha Teimuraz Torgva Tornik Tornike Tsotne
+			Ushisha
+			Vache Vakhtang Vakhtank
+			Xareba
+			Zurab Zviadi
+		}
+		female_names = {
+			Ana Anna
+			Baia Bedisa Borena
+			Catherine Chiora Chito
+			Dali Dedika Duda Dzabuli
+			Elene Eliso Endzela
+			Gogutsa Gorandukht Gulchara Guliko Gulisa Gulvardi Guranduht Gvantsa
+			Helen
+			Ia
+			Judjuna
+			Kekela Ketevan
+			Lamara Lamzira Lela
+			Mariam Mariami Mathiko Mthvarisa Mzekhar
+			Natia Nino
+			Rusudan
+			Sanatha Shorena Shukhia Suliko
+			Tamar Tamari Taplo Thamar Tinatini Tsiala
+			Vardo
+		}
+	}
+}
+
+armenian = {
+	graphical_culture = easterngfx
+	country = { #Equality
+		num_accepted_cultures = 1
+		years_of_nationalism = -10
+		max_absolutism = 5
+		diplomatic_annexation_cost = -0.1
+			
+		global_unrest = 1
+		discipline = -0.01
+	}
+	medieval_armenian = {
+		primary = ARM
+		dynasty_names = {
+			Abamelik Amatuni Argutinsky-Dolgorukov
+			Bagratuni Bebutov
+			Hasan-Jalalyan
+			Khojaminasishvili
+			Melikov
+			Orbelid
+			Pahlavuni
+			Rubenid
+			Tumanishvili
+			#CK2
+			Bagdazarian
+			Melik-Avanyan
+		}
+		male_names = {
+			Abas Abbas Abirad Aboughamr Aboulgharib Aleksandr Alexander Arakel Ardeshir Ari Armen Arsen Arshak Arshavir Artashes Artashir Artavazd Ashot Athom Atrnerseh Avag Avedis
+			Badouagan Bagour Bagrat Bedros Berjouhi Boghos
+			Constantine
+			David Davit
+			Eshkhan
+			Gabriel Gagik George Gevorg Ghoukas Gosdantin Gregory Grigor Gurgen
+			Hagop Haig Hamazasp Hethum Hovhannes Hovsep
+			Isaac Ishkhan Ivane
+			Jirair John Joseph
+			Kapriel Karayan Kevork Khachik Khajag Khosrau Khosrov Krikor
+			Leo Levon Lupo
+			Malkhas Mamigon Manuel Marcus Margos Melek Michael Mihrdat Mikayel Mithridates Mkhitar Mleh Movses Musegh Mushegh Mushel Mzhezh
+			Nairi Narses Nerseh
+			Oshin
+			Paul Peter
+			Reuben Roupen
+			Sahag Sahak Sarkis Sergius Sevag Sevan Shahanshah Smbat
+			Tachar Taniel
+			Vagram Vahan
+			Zadig Zoravan
+		}
+		female_names = {
+			Aghavni Alice Alitz Almasd Anahid Anna Anoush Arda Arevig Arin
+			Baydzar Berjanoush Berjouhi
+			Dalita Datevig
+			Eliz Elizabeth Eloise
+			Gadar Gorandoukht Gorandukht
+			Hasmig Houri Hranoush Hripsimeh
+			Keghanoush Keran Khorishah Kohar
+			Latavri Leyli Lousin
+			Mara Margaret Margarid Maria Mariam Mariyam Meghranoush
+			Nane Nazani
+			Ovsanna
+			Pounig
+			Razmouhi Rita
+			Satenik Satinik Seta Shoushanig Siran Sirvart Srpouhi
+			Takouhi Tamar
+			Vartanoush Vartouhi Vosgi
+			Yeva
+			Zabel
+		}
+	}
+	medieval_cilician = {
+		primary = KAM
+		dynasty_names = {
+			Abamelik Amatuni Argutinsky-Dolgorukov
+			Bagratuni Bebutov
+			Hasan-Jalalyan
+			Khojaminasishvili
+			Melikov
+			Orbelid
+			Pahlavuni
+			Rubenid
+			Tumanishvili
+			#CK2
+			Bagdazarian
+			Melik-Avanyan
+		}
+		male_names = {
+			Abas Abbas Abirad Aboughamr Aboulgharib Aleksandr Alexander Arakel Ardeshir Ari Armen Arsen Arshak Arshavir Artashes Artashir Artavazd Ashot Athom Atrnerseh Avag Avedis
+			Badouagan Bagour Bagrat Bedros Berjouhi Boghos
+			Constantine
+			David Davit
+			Eshkhan
+			Gabriel Gagik George Gevorg Ghoukas Gosdantin Gregory Grigor Gurgen
+			Hagop Haig Hamazasp Hethum Hovhannes Hovsep
+			Isaac Ishkhan Ivane
+			Jirair John Joseph
+			Kapriel Karayan Kevork Khachik Khajag Khosrau Khosrov Krikor
+			Leo Levon Lupo
+			Malkhas Mamigon Manuel Marcus Margos Melek Michael Mihrdat Mikayel Mithridates Mkhitar Mleh Movses Musegh Mushegh Mushel Mzhezh
+			Nairi Narses Nerseh
+			Oshin
+			Paul Peter
+			Reuben Roupen
+			Sahag Sahak Sarkis Sergius Sevag Sevan Shahanshah Smbat
+			Tachar Taniel
+			Vagram Vahan
+			Zadig Zoravan
+		}
+		female_names = {
+			Aghavni Alice Alitz Almasd Anahid Anna Anoush Arda Arevig Arin
+			Baydzar Berjanoush Berjouhi
+			Dalita Datevig
+			Eliz Elizabeth Eloise
+			Gadar Gorandoukht Gorandukht
+			Hasmig Houri Hranoush Hripsimeh
+			Keghanoush Keran Khorishah Kohar
+			Latavri Leyli Lousin
+			Mara Margaret Margarid Maria Mariam Mariyam Meghranoush
+			Nane Nazani
+			Ovsanna
+			Pounig
+			Razmouhi Rita
+			Satenik Satinik Seta Shoushanig Siran Sirvart Srpouhi
+			Takouhi Tamar
+			Vartanoush Vartouhi Vosgi
+			Yeva
+			Zabel
+		}
+	}
+	medieval_armenian_colonial = {
+	}
+}

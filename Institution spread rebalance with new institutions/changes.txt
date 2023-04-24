@@ -1,0 +1,10 @@
+- added many conditions for spawning, inventing and spreading institutions; most of them were imported from v3.0;
+- added penalties due to instability, unrest, plague, famine, bankrupcy (imported from GSG Submod, special thanks to: ChrissTheBurnedOne) and devastation;
+- bonus for meritocracy is imported from v3.0
+- added gunpowder institution; all artillery units in the game (except fire arrows) require embracement of gunpowder;
+- added matchlock institution; it spawns after 1400 in centers of production; all firearms units require embracement of matchlock;
+- added colonialism institution; it spawns after 1500 in trade centers, if province owner has a colony;
+- bonuses from some institutions were switched to v.3.0 bonuses.
+
+ToDo:
+- syncronize ships with gunpowder institution.

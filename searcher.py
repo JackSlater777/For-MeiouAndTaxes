@@ -1,5 +1,6 @@
 import os
 
+
 mt_folder_mp = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP"
 mt_folder_2_60 = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes0"
 mt_folder_3_0 = r"C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes1"

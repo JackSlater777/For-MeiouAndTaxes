@@ -928,10 +928,14 @@ legalism = {
 #######################################
 
 I_meritocracy = {
-	penalty = 0.20
+	#penalty = 0.20
+	penalty = 0
 
 	bonus = {
+		#technology_cost = -0.1
 		advisor_cost = -0.15
+		yearly_corruption = -0.30
+		administrative_efficiency = 0.05
 	}
 	
 	history = {

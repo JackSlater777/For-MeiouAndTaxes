@@ -1,0 +1,3 @@
+- added many conditions for spawning, inventing and spreading institutions; most of them were imported from v3.0;
+- added penalties due to instability, unrest, plague, famine, bankrupcy (imported from GSG Submod, special thanks to: ChrissTheBurnedOne) and devastation;
+- bonus for meritocracy is imported from v3.0
