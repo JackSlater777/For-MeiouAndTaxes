@@ -162,7 +162,6 @@ appanage_subject = {
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
 	can_use_claims = yes
-	joins_overlords_wars = no
 
 	base_liberty_desire = -5
 	pays_overlord = 0.5
@@ -253,7 +252,6 @@ autonomous_vassal = {
 	overlord_can_be_subject = yes
 	overlord_enforce_peace_attacking = yes
 	overlord_protects_external = yes
-	joins_overlords_wars = no
 	can_transfer_in_peace = no
 	
 	pays_overlord = 0.5
