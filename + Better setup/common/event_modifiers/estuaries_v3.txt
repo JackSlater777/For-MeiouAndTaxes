@@ -1,0 +1,48 @@
+### Confluences
+modifier_confluence = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	picture = "confluence_river_icon"
+}
+
+### Silk Road Towns
+modifier_silk_road = {
+	province_trade_power_value = 0.5
+	province_trade_power_modifier = 0.15
+	#trade_value = 0.5
+	picture = "caravan_desert"
+}
+
+### Estuaries
+modifier_estuary = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.25
+	naval_forcelimit = 2.5
+	picture = "estuary_icon"
+}
+
+### Small Harbours
+modifier_small_natural_harbour = {
+	#province_trade_power_value = 1
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.75
+	local_ship_repair = 0.10
+	local_sailors_modifier = 0.15
+	picture = "natural_harbour_small"
+}
+
+### Great Harbours
+
+### Islands
+modifier_island = {
+	province_trade_power_modifier = 0.15
+	naval_forcelimit = 0.5
+	local_sailors_modifier = 0.10
+	picture = "ligurian_coast"
+}
+
+### Lakes
+
+### Navigable Rivers
+
+### Inland Trade centers

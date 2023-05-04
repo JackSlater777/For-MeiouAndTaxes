@@ -1,0 +1,51 @@
+common/static_modifiers/00_static_modifiers.txt
+
+knowledge_sharing = {
+	#institution_growth = 2.4
+	institution_growth = 0.0
+}
+
+over_extension = {
+	#global_tax_modifier = -140 #restricted use
+	#global_manpower = -60 #restricted use
+	stability_cost_modifier = 0.50
+	global_autonomy = 0.1
+	yearly_corruption = 0.1
+}
+
+in_state = {
+	#local_institution_spread = 0.10
+	#local_defensiveness = 0.30
+}
+
+in_capital_state = {
+	#local_institution_spread = 0.05
+}
+
+local_autonomy = {
+	#local_defensiveness = -0.30
+	local_defensiveness = -0.50
+}
+
+base_values = {
+	#max_states = 2
+	max_states = 999
+}
+
+war_exhaustion = {
+	recover_army_morale_speed = -0.006
+	#defensiveness = -0.03
+	defensiveness = -0.05
+	siege_ability = -0.05
+	blockade_efficiency = -0.017
+	#land_morale = -0.01
+	#naval_morale = -0.01
+	land_morale = -0.03
+	naval_morale = -0.03
+	movement_speed = -0.02
+	stability_cost_modifier = 0.02
+}
+
+blockaded = {
+	war_exhaustion = 0.001
+}

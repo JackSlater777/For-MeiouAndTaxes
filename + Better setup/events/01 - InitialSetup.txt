@@ -1,0 +1,561 @@
+country_event = {
+	id = setup_event.900
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_global_flag = meiou_and_taxes_mod_start
+		NOT = { has_global_flag = meiou_and_taxes_mod_start_second_flag }
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_global_flag = meiou_and_taxes_mod_start_second_flag
+	}
+	
+	option = {
+		name = "EVT_AI"
+
+		# hundred years war
+		FRA = { subtract_stability_1 = yes }  # Ruler is captured in battle
+		ANJ = { add_war_exhaustion = 5.0 }
+		ORL = { add_war_exhaustion = 5.0 }
+		BUR = { add_war_exhaustion = 5.0 }
+		AUV = { add_war_exhaustion = 5.0 }
+		BOU = { add_war_exhaustion = 5.0 }
+		AMG = { add_war_exhaustion = 5.0 }
+		CMJ = { add_war_exhaustion = 5.0 }
+		FOI = { add_war_exhaustion = 5.0 }
+		NRM = { add_war_exhaustion = 5.0 }
+
+		##############################################
+		# New estuaries
+		country_event = { id = setup_event.901 }
+
+		# New confluences
+		country_event = { id = setup_event.902 }
+
+		# New silk road towns
+		country_event = { id = setup_event.903 }
+
+		# New oasises
+		country_event = { id = setup_event.904 }
+
+		# New small natural harbours
+		country_event = { id = setup_event.905 }
+
+		# New great natural harbours
+		country_event = { id = setup_event.906 }
+
+		# New strategic islands
+		country_event = { id = setup_event.907 }
+
+		# Adding urban goods
+		country_event = { id = setup_event.910 }
+
+		##############################################
+		# WHI
+		CHU = { add_treasury = -500 }
+		WHI = {
+			white_peace = CHU
+			add_treasury = 500
+			create_subject = {
+				subject_type = personal_union
+				subject = CHU
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = KIE
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = NVS
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = KRC
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = VOR
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = RYA
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = MUR
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = NZH
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = MOS
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = TSS
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = SMO
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = TVE
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = YAR
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = BOZ
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = PRM
+			}
+		}
+
+		3791 = {  # Bacau
+			add_core = WHI
+			cede_province = WHI
+		}
+		2379 = {  # Barlad
+			add_core = WHI
+			add_core = MOL
+			cede_province = WHI
+			remove_core = WAL
+		}
+		3793 = {  # Hotin
+			add_core = WHI
+			add_core = MOL
+			cede_province = WHI
+			remove_core = GVO
+		}
+		2547 = {  # Udmurtia
+			change_trade_goods = lumber
+			add_core = WHI
+			cede_province = WHI
+		}
+
+		# KIE
+		276 = {  # Bratslav
+			add_permanent_claim = LIT
+			add_permanent_claim = GVO
+		}
+		299 = {  # Pereyaslav
+			add_permanent_claim = LIT
+			add_permanent_claim = BRK
+		}
+		280 = {  # Kiev
+			add_permanent_claim = LIT
+			add_permanent_claim = BRK
+		}
+		261 = {  # Zhitomir
+			add_permanent_claim = LIT
+			add_permanent_claim = GVO
+			add_permanent_claim = BRK
+		}
+		1289 = {  # Vyazma
+			add_permanent_claim = LIT
+			add_permanent_claim = BRK
+		}
+
+		# BLU
+		2443 = {  # Bersh
+			add_core = BLU
+			cede_province = BLU
+			remove_core = WHI
+		}
+		1308 = {  # Samara
+			add_core = BLU
+			cede_province = BLU
+			remove_core = WHI
+		}
+		2438 = {  # Bashkiria
+			add_core = BLU
+			cede_province = BLU
+			remove_core = WHI
+		}
+		4112 = {  # Sylva
+			change_trade_goods = lumber
+			add_core = BLU
+			cede_province = BLU
+		}
+		281 = {  # Severniy Ural
+			change_trade_goods = lumber
+			add_core = BLU
+			cede_province = BLU
+		}
+		4205 = {  # Tabari
+			change_trade_goods = lumber
+			add_core = BLU
+			cede_province = BLU
+		}
+		4204 = {  # Konda
+			change_trade_goods = lumber
+			add_core = BLU
+			cede_province = BLU
+		}
+		480 = {  # Kulunda
+			change_trade_goods = wool
+			add_core = BLU
+			cede_province = BLU
+		}
+		462 = {  # Buzachi
+			change_culture = tartar
+			change_trade_goods = wool
+			add_core = BLU
+			cede_province = BLU
+		}
+
+		BLU = { set_capital = 3296 }
+
+		# KHO
+		439 = {  # Mangyshlak
+			change_trade_goods = wool
+			add_core = KHO
+			cede_province = KHO
+		}
+		441 = {  # Karakiya
+			change_trade_goods = wool
+			add_core = KHO
+			cede_province = KHO
+		}
+		4232 = {  # Balkhan
+			change_trade_goods = wool
+			add_core = KHO
+			cede_province = KHO
+		}
+		3286 = {  # Bai-Uly
+			change_trade_goods = wool
+			add_core = KHO
+			cede_province = KHO
+		}
+		KHO = { set_capital = 441 }
+		WHI = {
+			create_subject = {
+				subject_type = tributary_state
+				subject = KHO
+			}
+		}
+
+		# KHI
+		455 = { add_core = KHI }
+		3279 = {  # Amu Darya
+			cede_province = KHI
+		}
+		440 = {  # Karakalpak
+			cede_province = KHI
+		}
+		KHI = { set_capital = 3279 }
+		WHI = {
+			create_subject = {
+				subject_type = tributary_state
+				subject = KHI
+			}
+		}
+
+		# ATB
+		386 = {  # Dihistan
+			change_trade_goods = wool
+			add_core = ATB
+			cede_province = ATB
+		}
+
+		# CHG
+		CHG = { set_capital = 457 }
+
+		# MGH
+		MGH = { set_capital = 461 }
+
+		# BAL
+		434 = {  # Makran
+			add_core = BAL
+			remove_core = MUZ
+			cede_province = BAL
+		}
+		437 = {  # Nik Shahr
+			change_trade_goods = wool
+			add_core = BAL
+			cede_province = BAL
+		}
+		448 = {  # Qalat
+			change_trade_goods = wool
+			add_core = BAL
+			cede_province = BAL
+		}
+		575 = {  # Gwadar
+			change_trade_goods = wool
+			add_core = BAL
+			add_core = ORM
+			cede_province = ORM
+		}
+		576 = {  # Lasbela
+			change_trade_goods = wool
+			add_core = BAL
+			cede_province = BAL
+		}
+		2715 = {  # Kharan
+			change_trade_goods = wool
+			add_core = BAL
+			remove_core = MIH
+			cede_province = BAL
+		}
+		3100 = {  # Awaran
+			change_trade_goods = wool
+			add_core = BAL
+			cede_province = BAL
+		}
+		BAL = { set_capital = 448 }
+
+		# MIH
+		MIH = { set_capital = 3094 }
+
+		# Fix bug
+		1688 = {  # Ascencion
+			add_permanent_province_modifier = {
+				name = subartic_islands_unrest
+				duration = -1
+			}
+		}
+
+		##############################################
+		# Editing buildings
+		country_event = { id = setup_event.920 }
+
+		# Editing population - Game crushes and I dont know why
+		#country_event = { id = setup_event.930 }
+		
+		# Editing resources
+		country_event = { id = setup_event.940 }
+	}
+}
+
+# New estuaries
+country_event = {
+	id = setup_event.901
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		278 = { add_modifier_estuary = yes } # Pechora
+		279 = { add_modifier_estuary = yes }  # Pinega
+		314 = { add_modifier_estuary = yes }  # Zavolochiye
+		707 = { add_modifier_estuary = yes }  # Gwannyeong
+		1074 = { add_modifier_estuary = yes }  # Taz
+		2152 = { add_modifier_estuary = yes }  # Taymyr
+		3249 = { add_modifier_estuary = yes }  # Kizi
+		3829 = { add_modifier_estuary = yes }  # Dayyer
+		4209 = { add_modifier_estuary = yes }  # Obdora
+		5376 = { add_modifier_estuary = yes }  # Tianjin
+	}
+}
+
+# New confluences
+country_event = {
+	id = setup_event.902
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		50 = { add_modifier_confluence = yes }  # Mittelmark
+		301 = { add_modifier_confluence = yes }  # Ryazan
+		731 = { add_modifier_confluence = yes }  # Girin
+		1079 = { add_modifier_confluence = yes }  # Tyumen
+		1343 = { add_modifier_confluence = yes }  # Cherdyn
+		2153 = { add_modifier_confluence = yes }  # Ket
+		2157 = { add_modifier_confluence = yes }  # Sakhsara
+		4195 = { add_modifier_confluence = yes }  # Kirenga
+	}
+}
+
+# New silk road towns
+country_event = {
+	id = setup_event.903
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		379 = { add_modifier_silk_road = yes }  # Al Quds
+		405 = { add_modifier_silk_road = yes }  # Golestan
+		425 = { add_modifier_silk_road = yes }  # Derbent
+		429 = { add_modifier_silk_road = yes }  # Fars
+		435 = { add_modifier_silk_road = yes }  # Kerman
+		442 = { add_modifier_silk_road = yes }  # Khiva
+		447 = { add_modifier_silk_road = yes }  # Herat
+		451 = { add_modifier_silk_road = yes }  # Kabulistan
+		509 = { add_modifier_silk_road = yes }  # Ladakh
+		577 = { add_modifier_silk_road = yes }  # Quetta
+		#1293 = {  # Xacitarxan
+		#	clr_province_flag = has_delta_estuary
+		#	remove_province_modifier = volga_estuary_modifier
+		#	add_modifier_silk_road = yes
+		#}
+		1310 = {  # Sarai-al-Jadid
+			clr_province_flag = has_confluence
+			remove_province_modifier = volgograd_confluence
+			add_modifier_silk_road = yes
+		}
+		1320 = { add_modifier_silk_road = yes }  # Mosul
+		1328 = { add_modifier_silk_road = yes }  # Hims
+		2112 = { add_modifier_silk_road = yes }  # Multan
+		2113 = { add_modifier_silk_road = yes }  # Lavkot
+		2114 = { add_modifier_silk_road = yes }  # Margalla
+		2115 = { add_modifier_silk_road = yes }  # Srinagar
+		2116 = { add_modifier_silk_road = yes }  # Baltistan
+		2227 = { add_modifier_silk_road = yes }  # Hamadan
+		2741 = { add_modifier_silk_road = yes }  # Hotan
+		3094 = { add_modifier_silk_road = yes }  # Zaranj
+		3287 = { add_modifier_silk_road = yes }  # Nogay
+		3293 = { add_modifier_silk_road = yes }  # Khujand
+		3296 = { add_modifier_silk_road = yes }  # Turkistan
+		3395 = { add_modifier_silk_road = yes }  # Erzurum
+		3831 = { add_modifier_silk_road = yes }  # Bam
+		3876 = { add_modifier_silk_road = yes }  # Hevros
+		3879 = { add_modifier_silk_road = yes }  # Nigde
+		4234 = { add_modifier_silk_road = yes }  # Nishapur
+	}
+}
+
+# New oasises
+country_event = {
+	id = setup_event.904
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		469 = { add_modifier_oasis = yes }  # Buraydah
+		470 = { add_modifier_oasis = yes }  # Al Ula
+		717 = { add_modifier_oasis = yes }  # Loulan
+		739 = { add_modifier_oasis = yes }  # Aksu
+		2118 = { add_modifier_oasis = yes }  # Karashar
+		2719 = { add_modifier_oasis = yes }  # Pugal
+		2652 = { add_modifier_oasis = yes }  # Riyadh
+		2740 = { add_modifier_oasis = yes }  # Kashgar
+		2741 = { add_modifier_oasis = yes }  # Hotan
+		2745 = { add_modifier_oasis = yes }  # Yarkand
+		2746 = { add_modifier_oasis = yes }  # Qarqan
+		2807 = { add_modifier_oasis = yes }  # Al Maajmah
+		2810 = { add_modifier_oasis = yes }  # Khaybar
+		3210 = { add_modifier_oasis = yes }  # Bayingol
+		3211 = { add_modifier_oasis = yes }  # Kucha
+		3286 = { add_modifier_oasis = yes }  # Bai-Uly
+		4058 = { add_modifier_oasis = yes }  # Tadmur
+		5310 = { add_modifier_oasis = yes }  # Jaalor
+		5311 = { add_modifier_oasis = yes }  # Baalotara
+	}
+}
+
+# New small natural harbours
+country_event = {
+	id = setup_event.905
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		3 = { add_modifier_small_natural_harbour = yes }  # Smaland
+		37 = { add_modifier_small_natural_harbour = yes }  # Sakala
+		364 = { add_modifier_small_natural_harbour = yes }  # Nabulus
+		378 = { add_modifier_small_natural_harbour = yes }  # Tarabulus al Sham
+		1300 = { add_modifier_small_natural_harbour = yes }  # Abkhazia
+		2235 = { add_modifier_small_natural_harbour = yes }  # Kuh-e-Ormuz
+		3799 = { add_modifier_small_natural_harbour = yes }  # Samegrelo
+		3886 = { add_modifier_small_natural_harbour = yes }  # Al Ladhiqiyah
+	}
+}
+
+# New great natural harbours
+country_event = {
+	id = setup_event.906
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		#5376 = {  # Tianjin
+		#	set_province_flag = has_natural_harbour
+		#	set_province_flag = has_great_natural_harbour
+		#	set_province_flag = good_natural_place
+		#	add_permanent_province_modifier = {
+		#		name = theodoro_large_natural_harbor
+		#		duration = -1
+		#	}
+		#}
+	}
+}
+
+# New strategic islands
+country_event = {
+	id = setup_event.907
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		9 = { add_modifier_island = yes }  # Aland
+		1250 = { add_modifier_island = yes }  # Hjatland
+		1251 = { add_modifier_island = yes }  # Feroyar
+		1257 = { add_modifier_island = yes }  # Oland
+		1354 = { add_modifier_island = yes }  # Saaremaa
+		1428 = { add_modifier_island = yes }  # Laland
+		2515 = { add_modifier_island = yes }  # Bornholm
+		3768 = { add_modifier_island = yes }  # Hiiumaa
+		3817 = { add_modifier_island = yes }  # Rugen
+	}
+}
+
+# Lakes
+
+# Navigable rivers
+
+# Inland trade centers

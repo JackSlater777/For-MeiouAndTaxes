@@ -237,6 +237,7 @@ estate_tribal_territory = {
 	# JackSlater fix
 	#local_autonomy = 0.60
 	local_autonomy = 0.25
+	min_local_autonomy = 50
 	#supply_limit = -4.00
 	picture = estate_cossaks
 }
@@ -272,98 +273,108 @@ estate_lesser_nobles_territory = {
 
 commoners_banned_from_officers_corps_1_20 = { ### 0-20 percent influence
 	army_tradition_decay = 0.010
-	mil_tech_cost_modifier = 0.02
+	general_cost = 0.10
 }
 
 commoners_banned_from_officers_corps_1_40 = { ### 20-40 percent influence
 	army_tradition_decay = 0.020
-	mil_tech_cost_modifier = 0.04
+	general_cost = 0.20
 }
 
 commoners_banned_from_officers_corps_1_60 = { ### 40-60 percent influence
 	army_tradition_decay = 0.030
-	mil_tech_cost_modifier = 0.06
+	general_cost = 0.30
 }
 
 commoners_banned_from_officers_corps_1_80 = { ### 60-80 percent influence
 	army_tradition_decay = 0.040
-	mil_tech_cost_modifier = 0.08
+	general_cost = 0.40
 }
 
 commoners_banned_from_officers_corps_1_100 = { ### 80-100 percent influence
 	army_tradition_decay = 0.050
-	mil_tech_cost_modifier = 0.10
+	general_cost = 0.50
 }
 
 commoners_banned_from_officers_corps_2_20 = { ### 0-20 percent influence
 	army_tradition_decay = 0.020
-	mil_tech_cost_modifier = 0.04
+	general_cost = 0.20
 }
 
 commoners_banned_from_officers_corps_2_40 = { ### 20-40 percent influence
 	army_tradition_decay = 0.040
-	mil_tech_cost_modifier = 0.08
+	general_cost = 0.40
 }
 
 commoners_banned_from_officers_corps_2_60 = { ### 40-60 percent influence
 	army_tradition_decay = 0.060
-	mil_tech_cost_modifier = 0.12
+	general_cost = 0.60
 }
 
 commoners_banned_from_officers_corps_2_80 = { ### 60-80 percent influence
 	army_tradition_decay = 0.080
-	mil_tech_cost_modifier = 0.16
+	general_cost = 0.80
 }
 
 commoners_banned_from_officers_corps_2_100 = { ### 80-100 percent influence
 	army_tradition_decay = 0.100
-	mil_tech_cost_modifier = 0.20
+	general_cost = 1.00
 }
 
 
 ceremonial_generalships_1_20 = { ### 0-20 percent influence
 	discipline = -0.01
+	prestige_from_land = 0.10
 }
 
 ceremonial_generalships_1_40 = { ### 20-40 percent influence
 	discipline = -0.02
+	prestige_from_land = 0.20
 }
 
 ceremonial_generalships_1_60 = { ### 40-60 percent influence
 	discipline = -0.03
+	prestige_from_land = 0.30
 }
 
 ceremonial_generalships_1_80 = { ### 60-80 percent influence
 	discipline = -0.04
+	prestige_from_land = 0.40
 }
 
 ceremonial_generalships_1_100 = { ### 80-100 percent influence
 	discipline = -0.05
+	prestige_from_land = 0.50
 }
 
 ceremonial_generalships_2_20 = { ### 0-20 percent influence
 	discipline = -0.01
 	cavalry_power = -0.02
+	prestige_from_land = 0.20
 }
 
 ceremonial_generalships_2_40 = { ### 20-40 percent influence
 	discipline = -0.02
 	cavalry_power = -0.04
+	prestige_from_land = 0.40
 }
 
 ceremonial_generalships_2_60 = { ### 40-60 percent influence
 	discipline = -0.03
 	cavalry_power = -0.06
+	prestige_from_land = 0.60
 }
 
 ceremonial_generalships_2_80 = { ### 60-80 percent influence
 	discipline = -0.04
 	cavalry_power = -0.08
+	prestige_from_land = 0.80
 }
 
 ceremonial_generalships_2_100 = { ### 80-100 percent influence
 	discipline = -0.05
 	cavalry_power = -0.10
+	prestige_from_land = 1.00
 }
 
 GN_relaxed_levy_obligations_1 = {
@@ -456,58 +467,91 @@ GN_exclude_commoners_cabinet_2_100 = { ### 80-100 percent influence
 
 GN_high_court_titles_1_20 = { ### 0-20 percent influence
 	prestige = -0.1
+	legitimacy = 0.1
+	republican_tradition = 0.05
+	devotion = 0.1
+	horde_unity = 0.1
 }
 
 GN_high_court_titles_1_40 = { ### 20-40 percent influence
 	prestige = -0.1
 	prestige_decay = 0.005
+	legitimacy = 0.2
+	republican_tradition = 0.1
+	devotion = 0.2
+	horde_unity = 0.2
 }
 
 GN_high_court_titles_1_60 = { ### 40-60 percent influence
 	prestige = -0.1
 	prestige_decay = 0.005
-	legitimacy = -0.1
+	legitimacy = 0.3
+	republican_tradition = 0.15
+	devotion = 0.3
+	horde_unity = 0.3
 }
 
 GN_high_court_titles_1_80 = { ### 60-80 percent influence
 	prestige = -0.2
 	prestige_decay = 0.005
-	legitimacy = -0.1
+	legitimacy = 0.4
+	republican_tradition = 0.2
+	devotion = 0.4
+	horde_unity = 0.4
 }
 
 GN_high_court_titles_1_100 = { ### 80-100 percent influence
 	prestige = -0.2
 	prestige_decay = 0.01
-	legitimacy = -0.1
+	legitimacy = 0.5
+	republican_tradition = 0.25
+	devotion = 0.5
+	horde_unity = 0.5
 }
 
 GN_high_court_titles_2_20 = { ### 0-20 percent influence
 	prestige = -0.1
 	prestige_decay = 0.005
+	legitimacy = 0.2
+	republican_tradition = 0.1
+	devotion = 0.2
+	horde_unity = 0.2
 }
 
 GN_high_court_titles_2_40 = { ### 20-40 percent influence
 	prestige = -0.2
 	prestige_decay = 0.005
-	legitimacy = -0.1
+	legitimacy = 0.4
+	republican_tradition = 0.2
+	devotion = 0.4
+	horde_unity = 0.4
 }
 
 GN_high_court_titles_2_60 = { ### 40-60 percent influence
 	prestige = -0.2
 	prestige_decay = 0.01
-	legitimacy = -0.2
+	legitimacy = 0.6
+	republican_tradition = 0.3
+	devotion = 0.6
+	horde_unity = 0.6
 }
 
 GN_high_court_titles_2_80 = { ### 60-80 percent influence
 	prestige = -0.3
 	prestige_decay = 0.015
-	legitimacy = -0.2
+	legitimacy = 0.8
+	republican_tradition = 0.4
+	devotion = 0.8
+	horde_unity = 0.8
 }
 
 GN_high_court_titles_2_100 = { ### 80-100 percent influence
 	prestige = -0.3
 	prestige_decay = 0.015
-	legitimacy = -0.3
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
 }
 
 LN_high_court_titles_1 = {
@@ -520,10 +564,12 @@ LN_high_court_titles_2 = {
 
 GN_high_nobles_court_1 = {
 	local_unrest = 2
+	local_autonomy = 0.05
 }
 
 GN_high_nobles_court_2 = {
 	local_unrest = 4
+	local_autonomy = 0.1
 }
 
 BG_tolerate_smuggling_1_20 = { ### 0-20 percent influence
@@ -567,63 +613,75 @@ BG_tolerate_smuggling_2_100 = { ### 80-100 percent influence
 }
 
 GN_authority_to_govern_locally_1_modifier = {
-	min_local_autonomy = 2.5
+	min_local_autonomy = 15
 	local_autonomy = 0.05
+	local_state_maintenance_modifier = -0.1
 }
 
 GN_authority_to_govern_locally_2_modifier = {
-	min_local_autonomy = 5
+	min_local_autonomy = 30
 	local_autonomy = 0.1
+	local_state_maintenance_modifier = -0.2
 }
 
 GN_authority_to_govern_locally_3_modifier = {
-	min_local_autonomy = 7.5
+	min_local_autonomy = 45
 	local_autonomy = 0.15
+	local_state_maintenance_modifier = -0.3
 }
 
 GN_authority_to_govern_locally_4_modifier = {
-	min_local_autonomy = 10
+	min_local_autonomy = 60
 	local_autonomy = 0.2
+	local_state_maintenance_modifier = -0.4
 }
 
 LN_authority_to_govern_locally_1_modifier = {
-	min_local_autonomy = 2.5
+	min_local_autonomy = 15
 	local_autonomy = 0.05
+	local_state_maintenance_modifier = -0.1
 }
 
 LN_authority_to_govern_locally_2_modifier = {
-	min_local_autonomy = 5
+	min_local_autonomy = 30
 	local_autonomy = 0.1
+	local_state_maintenance_modifier = -0.2
 }
 
 LN_authority_to_govern_locally_3_modifier = {
-	min_local_autonomy = 7.5
+	min_local_autonomy = 45
 	local_autonomy = 0.15
+	local_state_maintenance_modifier = -0.3
 }
 
 LN_authority_to_govern_locally_4_modifier = {
-	min_local_autonomy = 10
+	min_local_autonomy = 60
 	local_autonomy = 0.2
+	local_state_maintenance_modifier = -0.4
 }
 
 BG_authority_to_govern_locally_1_modifier = {
-	min_local_autonomy = 2.5
+	min_local_autonomy = 15
 	local_autonomy = 0.05
+	local_state_maintenance_modifier = -0.1
 }
 
 BG_authority_to_govern_locally_2_modifier = {
-	min_local_autonomy = 5
+	min_local_autonomy = 30
 	local_autonomy = 0.1
+	local_state_maintenance_modifier = -0.2
 }
 
 BG_authority_to_govern_locally_3_modifier = {
-	min_local_autonomy = 7.5
+	min_local_autonomy = 45
 	local_autonomy = 0.15
+	local_state_maintenance_modifier = -0.3
 }
 
 BG_authority_to_govern_locally_4_modifier = {
-	min_local_autonomy = 10
+	min_local_autonomy = 60
 	local_autonomy = 0.2
+	local_state_maintenance_modifier = -0.4
 }
 
 BG_resist_embargoes_1_20 = { ### 0-20 percent influence
@@ -764,39 +822,49 @@ BG_appoint_as_court_suppliers_2_100 = { ### 80-100 percent influence
 
 BG_monopoly_on_armaments_1_20 = { ### 0-20 percent influence
 	land_morale = -0.02
+	land_maintenance_modifier = -0.02
 }
 BG_monopoly_on_armaments_1_40 = { ### 20-40 percent influence
 	land_morale = -0.04
+	land_maintenance_modifier = -0.04
 }
 BG_monopoly_on_armaments_1_60 = { ### 40-60 percent influence
 	land_morale = -0.06
+	land_maintenance_modifier = -0.06
 }
 BG_monopoly_on_armaments_1_80 = { ### 60-80 percent influence
 	land_morale = -0.08
+	land_maintenance_modifier = -0.08
 }
 BG_monopoly_on_armaments_1_100 = { ### 80-100 percent influence
 	land_morale = -0.1
+	land_maintenance_modifier = -0.1
 }
 
 BG_monopoly_on_armaments_2_20 = { ### 0-20 percent influence
 	land_morale = -0.02
 	discipline = -0.01
+	land_maintenance_modifier = -0.04
 }
 BG_monopoly_on_armaments_2_40 = { ### 20-40 percent influence
 	land_morale = -0.04
 	discipline = -0.02
+	land_maintenance_modifier = -0.08
 }
 BG_monopoly_on_armaments_2_60 = { ### 40-60 percent influence
 	land_morale = -0.06
 	discipline = -0.03
+	land_maintenance_modifier = -0.12
 }
 BG_monopoly_on_armaments_2_80 = { ### 60-80 percent influence
 	land_morale = -0.08
 	discipline = -0.04
+	land_maintenance_modifier = -0.16
 }
 BG_monopoly_on_armaments_2_100 = { ### 80-100 percent influence
 	land_morale = -0.1
 	discipline = -0.05
+	land_maintenance_modifier = -0.2
 }
 
 ### Government Corruption ###

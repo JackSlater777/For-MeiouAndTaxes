@@ -1,0 +1,772 @@
+# Editing population
+country_event = {
+	id = setup_event.930
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		# Perm
+		1294 = {  # Sysola 153.136/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 15.3136 }
+ 			add_rural_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		1295 = {  # Kama 43.456/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.3456 }
+ 			add_rural_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		1343 = {  # Cherdyn 174.083/5.095
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 17.4083 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.5095 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		2547 = {  # Udmurtia 76.534/0 tr 4.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 7.6534 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 4.8 }
+			recalc_pop_values = yes
+		}
+		2548 = {  # Usolka 81.379/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 8.1379 }
+ 			add_rural_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+
+		# Moldavia
+		1269 = {  # Carligatura 90.289/7.785 tr 0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 9.0289 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.7785 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		2236 = {  # Bukovina 23.953/3.378 tr 0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.3953 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.3378 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		2379 = {  # Barlad 60.213/0 tr 0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 6.0213 }
+ 			add_rural_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		3791 = {  # Bacau 40.785/15.904 tr 0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.0785 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.5904 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		3793 = {  # Hotin 26.628/3.182 tr 0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.6628 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.3182 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+
+		# Basarabia
+		160 = {  # Basarabia 19.250/10.251 tr 25.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.9250 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.0251 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 25.0 }
+			recalc_pop_values = yes
+		}
+		1400 = {  # Orheiu 45.956/0 tr 39.1
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.5956 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 39.1 }
+			recalc_pop_values = yes
+		}
+		2626 = {  # Soroca 40.336/0 tr 39.1
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.0336 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 39.1 }
+			recalc_pop_values = yes
+		}
+		3794 = {  # Cetatea Alba 12.482/2.857 tr 31.6
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.2482 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.2857 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 31.6 }
+			recalc_pop_values = yes
+		}
+
+		# Zaporizhia
+		284 = {  # Dykra 53.891/0 tr 66.5
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 5.3891 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 66.5 }
+			recalc_pop_values = yes
+		}
+		285 = {  # Pryazovia 34.457/0 tr 87.7
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.4457 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 87.7 }
+			recalc_pop_values = yes
+		}
+		300 = {  # Zaporizhzhia 66.618/0 tr 48.76
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 6.6618 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 48.8 }
+			recalc_pop_values = yes
+		}
+		1431 = {  # Dniepr 23.062/0 tr 81.9
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.3062 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 81.9 }
+			recalc_pop_values = yes
+		}
+		4018 = {  # Poltava 40.442/0 tr 24.3
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.0442 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 24.3 }
+			recalc_pop_values = yes
+		}
+ 		4019 = {  # Cherson 14.924/19.497 tr 29.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.4924 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.9497 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 29.8 }
+			recalc_pop_values = yes
+ 		}
+		4021 = {  # Chyhyryn 39.774/19.543 tr 43.9
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.9774 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.9543 }
+			add_urban_population_DEVS = yes
+
+
+
+
+
+			set_variable = { which = tribals_ratio value = 43.9 }
+			recalc_pop_values = yes
+		}
+
+ 		# Crimea
+		282 = {  # Crimea 60.414/15.273 tr 34.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 6.0414 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.5273 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 34.8 }
+			recalc_pop_values = yes
+ 		}
+		1299 = {  # Matracha 18.992/4.009
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.8992 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.4009 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+ 		1344 = {  # Cafa 40.020/64.440
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.0020 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 6.4440 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+ 		}
+ 		2274 = {  # Theodoro 23.655/9.284
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.3655 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.9284 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+ 		}
+ 		2573 = {  # Cherkio 19.417/17.564
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.9417 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.7564 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		3877 = {  # Yamboli 10.000/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.0000 }
+ 			add_rural_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+
+		# Azov
+		286 = {  # Copa 327.047/0 tr 37.2
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 32.7047 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 37.2 }
+			recalc_pop_values = yes
+		}
+		287 = {  # Kuban 28.683/0 tr 86.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.8683 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 86.0 }
+			recalc_pop_values = yes
+		}
+		302 = {  # Siverskyi Donets 76.121/0 tr 50.4
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 7.6121 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 50.4 }
+			recalc_pop_values = yes
+		}
+		1298 = {  # Tana 19.048/8.053
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.9048 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.8053 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+
+		# West Don
+		305 = {  # Kursk 110.177/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 11.0177 }
+ 			add_rural_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		1287 = {  # Voronezh 33.523/2.593 tr 54.7
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.3523 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.2593 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 54.7 }
+			recalc_pop_values = yes
+		}
+		2545 = {  # Donets 31.858/0 tr 44.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.1858 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 44.0 }
+			recalc_pop_values = yes
+		}
+		4110 = {  # Kharkov 33.543/0 tr 34.1
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.3543 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 34.1 }
+			recalc_pop_values = yes
+		}
+
+		# West Circassia
+		999 = {  # Abazinia 53.242/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 5.3242 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 0 }
+			recalc_pop_values = yes
+		}
+		1302 = {  # Circassia 204.125/0 tr 4.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 20.4125 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 4.8 }
+			recalc_pop_values = yes
+		}
+		3795 = {  # Anapa 22.597/2.970
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.2597 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.2970 }
+			add_urban_population_DEVS = yes
+			recalc_pop_values = yes
+		}
+		3796 = {  # Shapsug 123.472/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 12.3472 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 0 }
+			recalc_pop_values = yes
+		}
+		4114 = {  # Shetkala 31.576/0 tr 79.1
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.1576 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 79.1 }
+			recalc_pop_values = yes
+		}
+
+		# East Circassia
+		995 = {  # Ossetia 68.866/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 6.8866 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 0 }
+			recalc_pop_values = yes
+		}
+		1009 = {  # Chechnya 44.255/0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.4255 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 0 }
+			recalc_pop_values = yes
+		}
+		1303 = {  # Alania 68.051/0 tr 24.2
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 6.8051 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 24.2 }
+			recalc_pop_values = yes
+		}
+		2578 = {  # Terch 50.405/4.231 tr 17.9
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 5.0405 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.4231 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 17.9 }
+			recalc_pop_values = yes
+		}
+		3639 = {  # Kabardia 44.966/0 tr 24.3
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.4966 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 24.3 }
+			recalc_pop_values = yes
+		}
+
+		# Astrakhan
+		303 = {  # Izum-Sakma 15.265/0 tr 99.5
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.5265 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 99.5 }
+			recalc_pop_values = yes
+		}
+		1293 = {  # Xacitarxan 35.085/10.439 tr 11.1
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.5085 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 1.0439 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 11.1 }
+			recalc_pop_values = yes
+		}
+		1304 = {  # Manych 30.130/2.590 tr 72.7
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.0130 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.2590 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 72.7 }
+			recalc_pop_values = yes
+		}
+		1309 = {  # Sarai-al-Maqrus 27.391/0 tr 99.5
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.7391 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 99.5 }
+			recalc_pop_values = yes
+		}
+		1310 = {  # Sarai-al-Jadid 80.266/79.057 tr 2.3
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 8.0266 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 7.9057 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 2.3 }
+			recalc_pop_values = yes
+		}
+
+		# East Don
+		1296 = {  # Uvek 41.299/0 tr 84.2
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.1299 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 84.2 }
+			recalc_pop_values = yes
+		}
+		1297 = {  # Sarkel 49.620/2.612 tr 55.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.9620 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.2612 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 55.8 }
+			recalc_pop_values = yes
+		}
+		4020 = {  # Desht-i Qipchaq 35.630/0 tr 69.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.5630 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 69.0 }
+			recalc_pop_values = yes
+		}
+		4111 = {  # Tambov 69.266/0 tr 59.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 6.9266 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 59.0 }
+			recalc_pop_values = yes
+		}
+
+		# Mordovia
+		1308 = {  # Samara 35.326/0 tr 88.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.5326 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 88.0 }
+			recalc_pop_values = yes
+		}
+		2437 = {  # Gornye Cheremisy 113.653/0 tr 29.2
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 11.3653 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 29.2 }
+			recalc_pop_values = yes
+		}
+		2439 = {  # Mordoviya 80.839/0 tr 19.4
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 8.0839 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 19.4 }
+			recalc_pop_values = yes
+		}
+		4016 = {  # Chuvash 51.364/0 tr 49.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 5.1364 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 49.0 }
+			recalc_pop_values = yes
+		}
+
+		# Kazan
+		1307 = {  # Qazan 105.509/21.085 tr 4.0
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 10.5509 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 2.1085 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 4.0 }
+			recalc_pop_values = yes
+		}
+		1311 = {  # Or 59.642/3.972 tr 18.1
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 5.9642 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.3972 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 18.1 }
+			recalc_pop_values = yes
+		}
+		2438 = {  # Bahkiria 76.226/0 tr 63.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 7.6226 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 63.8 }
+			recalc_pop_values = yes
+		}
+		4112 = {  # Sylva 27.275/0 tr 68.7
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.7275 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 68.7 }
+			recalc_pop_values = yes
+		}
+
+		# Nogay Steppe
+		1083 = {  # Atyrau 39.562/0 tr 89.3
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 3.9562 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 89.3 }
+			recalc_pop_values = yes
+		}
+		2443 = {  # Bersh 24.263/0 tr 99.5
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 2.4263 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 99.5 }
+			recalc_pop_values = yes
+		}
+		2444 = {  # Yaik 19.934/0 tr 99.5
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.9934 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 99.5 }
+			recalc_pop_values = yes
+		}
+		3287 = {  # Nogay 14.861/5.911 tr 13.8
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 1.4861 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.5911 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 13.8 }
+			recalc_pop_values = yes
+		}
+		4113 = {  # Bokey 47.698/0 tr 99.5
+			nullify_pop = yes
+ 			set_variable = { which = rural_base_pop_added value = 4.7698 }
+ 			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 99.5 }
+			recalc_pop_values = yes
+		}
+
+		# Shirvan
+		424 = {  # Shirvan
+
+		}
+		425 = {  # Derbent
+
+		}
+		1317 = {  # Shemakha
+
+		}
+		2579 = {  # Avaria
+
+		}
+		2656 = {  # Kizlyar
+
+		}
+		3810 = {  # Salyan
+
+		}
+		3811 = {  # Baku
+
+		}
+
+
+		# West Dniepr
+		# East Dniepr
+		# Vladimir-Suzdal
+		# Ryazan
+		# Briansk
+		# Smolensk
+		# Moscow
+		# Tver
+		# Yaroslav
+		# Galich
+		# Beloozero
+		# Pomorye
+		# Karelia
+		# Novgorod
+		# Pskov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		# Svealand
+		1 = {  # Uppland 5.2
+			set_variable = { which = urban_base_pop_added value = 0.07 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Gotaland
+
+		# Scania
+		6 = {  # Skane 6.4
+			set_variable = { which = urban_base_pop_added value = 0.04 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Sjaelland
+		12 = {  # Norraesyaland 6.2
+			set_variable = { which = urban_base_pop_added value = 0.022 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Holstein
+
+		# Weser
+
+		# Holland
+
+		# Flanders
+		90 = {  # West-Vloandern 118.9/93.5
+			set_variable = { which = rural_base_pop_removed value = 3.193 }
+			remove_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 2.3498 }
+			remove_urban_population_DEVS = yes
+		}
+		2363 = {  # Oost-Vlaendern 203.1/64.8
+			set_variable = { which = rural_base_pop_removed value = 5.9525 }
+			remove_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 1.3447 }
+			remove_urban_population_DEVS = yes
+		}
+
+		# Ile de France
+		183 = {  # Paris 284.9/182.5
+			set_variable = { which = rural_base_pop_removed value = 8.3297 }
+			remove_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 3.9996 }
+			remove_urban_population_DEVS = yes
+		}
+
+		# Estonia
+		# Livonia
+		# Curonia
+		# East Prussia
+
+		# Pomorye
+		314 = {  # Zavolochiye 7.1
+			set_variable = { which = urban_base_pop_added value = 0.586 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Yaroslavl
+		308 = {  # Yaroslavl 10.8
+			set_variable = { which = urban_base_pop_added value = 0.04 }
+			add_urban_population_DEVS = yes
+		}
+		1288 = {  # Rostov 5
+			set_variable = { which = urban_base_pop_added value = 0.467 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Vladimir-Suzdal
+		1292 = {  # Nizhny Novgorod 10.8
+			set_variable = { which = urban_base_pop_added value = 0.05 }
+			add_urban_population_DEVS = yes
+		}
+		307 = {  # Vladimir 20.4
+			set_variable = { which = urban_base_pop_added value = 0.03 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Ryazan
+		301 = {  # Ryazan 3.9
+			set_variable = { which = urban_base_pop_added value = 0.22 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Tver
+		294 = {  # Tver 20.5
+			set_variable = { which = urban_base_pop_added value = 0.01 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Briansk
+		298 = {  # Briansk 5.8
+			set_variable = { which = urban_base_pop_added value = 0.4511 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Iskier
+		1079 = {  # Tyumen 32.4/6.6 tr 23.8
+			set_variable = { which = rural_base_pop_added value = 2.088 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.649 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 24.0 }
+		}
+
+		# Western Armenia
+		419 = {  # Hayastan 116.8/12.1
+			set_variable = { which = rural_base_pop_added value = 6.178 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.085 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Eastern Georgia
+		423 = {  # Kartli  198.6/59.2
+			set_variable = { which = rural_base_pop_added value = 13.896 }
+			add_rural_population_DEVS = yes
+		}
+
+		# Abkhazia
+		3799 = {  # Samegrelo 99.5/8.1
+			nullify_pops = yes
+			set_variable = { which = rural_base_pop_added value = 9.95 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.81 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Khiva
+		442 = {  # Khiva 67.4/20 tr 7.4
+			set_variable = { which = rural_base_pop_added value = 4.008 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.926 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 7.4 }
+		}
+
+		# Transoxiana
+		436 = {  # Bukhara 37.1/48.2 tr 4.1
+			set_variable = { which = rural_base_pop_added value = 0.74 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 4.1 }
+		}
+		457 = {  # Samarqand 73.6/58 tr 2.6
+			set_variable = { which = rural_base_pop_added value = 4.895 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 0.284 }
+			remove_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 2.6 }
+		}
+
+		# Balkh
+		453 = {  # Badakhshan 31.0/6.3 tr 20
+			set_variable = { which = rural_base_pop_added value = 0.869 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.596 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 20.0 }
+		}
+		3843 = {  # Balkh 142.5/10.6 tr 20.5
+			set_variable = { which = rural_base_pop_added value = 4.000 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 20.5 }
+		}
+	}
+}

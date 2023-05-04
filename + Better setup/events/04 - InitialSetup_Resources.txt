@@ -1,0 +1,582 @@
+# Editing resources
+country_event = {
+	id = setup_event.940
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		# Perm
+		2548 = {  # Usolka - already has copper
+			#set_province_flag = mined_goods
+			#set_province_flag = coal
+			add_permanent_province_modifier = { name = fur_medium duration = -1 }
+		}
+		2547 = {  # Udmurtia
+			#add_permanent_province_modifier = { name = fur_low duration = -1 }
+		}
+
+		# Moldavia
+		1269 = {  # Carligatura
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		2236 = {  # Bukovina
+			set_province_flag = wine
+		}
+		2379 = {  # Barlad
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			set_province_flag = wine
+		}
+		3791 = {  # Bacau
+			set_province_flag = wine
+		}
+		3793 = {  # Hotin
+			set_province_flag = mined_goods
+			set_province_flag = coal
+			set_province_flag = wine
+		}
+
+		# Basarabia
+		160 = {  # Basarabia
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		1400 = {  # Orheiu
+			set_province_flag = mined_goods
+			clr_province_flag = salt
+			set_province_flag = coal
+			add_permanent_province_modifier = { name = salt_secondary duration = -1 }
+			set_province_flag = wine
+		}
+		2626 = {  # Soroca
+			set_province_flag = mined_goods
+			set_province_flag = coal
+			set_province_flag = wine
+		}
+		3794 = {  # Cetatea Alba
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			set_province_flag = wine
+		}
+
+		# Zaporizhia
+		285 = {  # Pryazovia
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		300 = {  # Zaporizhzhia
+			set_province_flag = mined_goods
+			set_province_flag = coal
+			#set_province_flag = iron
+		}
+		1431 = {  # Dniepr
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		4018 = {  # Poltava
+			set_province_flag = mined_goods
+			set_province_flag = coal
+			#set_province_flag = iron
+		}
+		4019 = {  # Cherson
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		4021 = {  # Chyhyryn
+			set_province_flag = mined_goods
+			set_province_flag = iron
+		}
+
+		# Crimea
+		282 = {  # Crimea
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		1344 = {  # Caffa
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		2274 = {  # Theodoro
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			add_permanent_province_modifier = { name = fur_low duration = -1 }
+		}
+		3877 = {  # Yamboli
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			add_permanent_province_modifier = { name = fur_low duration = -1 }
+		}
+
+		# Azov
+		302 = {  # Siverskyi Donets
+			add_permanent_province_modifier = { name = salt_secondary duration = -1 }
+		}
+		1298 = {  # Tana
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			set_province_flag = wine
+		}
+
+		# West Don
+		305 = {  # Kursk
+			set_province_flag = mined_goods
+			set_province_flag = iron
+		}
+		4110 = {  # Kharkov
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# West Circassia
+		999 = {  # Abazinia
+			add_permanent_province_modifier = { name = fur_low duration = -1 }
+		}
+		3796 = {  # Shapsug
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+
+		# East Circassia
+		995 = {  # Ossetia
+			set_province_flag = mined_goods
+			set_province_flag = iron
+			add_permanent_province_modifier = { name = fur_low duration = -1 }
+		}
+		1009 = {  # Chechnya
+			set_province_flag = mined_goods
+			set_province_flag = gold
+			add_permanent_province_modifier = { name = fur_low duration = -1 }
+		}
+
+		# Astrakhan
+
+		# East Don
+		1297 = {  # Sarkel
+			set_province_flag = mined_goods
+			set_province_flag = silver
+		}
+		4020 = {  # Desht-i Qipchaq
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Mordovia
+
+		# Kazan
+		1307 = {  # Qazan
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		1311 = {  # Or
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		2438 = {  # Bahkiria
+			set_province_flag = mined_goods
+			set_province_flag = copper
+		}
+
+		# Nogay Steppe
+		1083 = {  # Atyrau
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		4113 = {  # Bokey
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Shirvan
+		424 = {  # Shirvan
+
+		}
+		425 = {  # Derbent
+
+		}
+		1317 = {  # Shemakha
+
+		}
+		2579 = {  # Avaria
+
+		}
+		2656 = {  # Kizlyar
+			set_province_flag = mined_goods
+			set_province_flag = iron
+			set_province_flag = olive
+		}
+		3810 = {  # Salyan
+
+		}
+		3811 = {  # Baku
+
+		}
+
+		# West Dniepr
+		# East Dniepr
+		# Vladimir-Suzdal
+		# Ryazan
+		# Briansk
+		# Smolensk
+		# Moscow
+		# Tver
+		# Yaroslav
+		# Galich
+		# Beloozero
+		# Pomorye
+		# Karelia
+		# Novgorod
+		# Pskov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		# Norrland
+		11 = {  # Halsingland
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+
+		# Arys
+		454 = {  # Tashkent
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+		2232 = {  # Shymkent
+			set_province_flag = mined_goods
+			set_province_flag = iron
+		}
+		3293 = {  # Khujand
+			set_province_flag = mined_goods
+			set_province_flag = silver
+			#set_province_flag = salt
+		}
+
+		# Khyber
+		508 = {  # Charsadda
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+		2114 = {  # Margalla
+			set_province_flag = mined_goods
+			set_province_flag = salt
+		}
+
+		# Kashmir
+		2116 = {  # Baltistan
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+
+		# Isfahan
+		2225 = {  # Qom
+			set_province_flag = mined_goods
+			set_province_flag = gold
+			#set_province_flag = salt
+		}
+
+		# Tarim Basin
+		3211 = {  # Kucha
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+
+		# Altai-Sayan
+		3273 = {  # Orkhon
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+
+		# Kish
+		3289 = {  # Khatlon
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+		3291 = {  # Yashilkul
+			set_province_flag = mined_goods
+			set_province_flag = gems
+		}
+
+		# Erzurum
+		3802 = {  # Tao
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+
+		# Western Armenia
+		3804 = {  # Somkheti
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+		3805 = {  # Dvin
+			set_province_flag = mined_goods
+			set_province_flag = gold
+		}
+
+		# Kerman
+		435 = {  # Kerman
+			set_province_flag = mined_goods
+			set_province_flag = copper
+		}
+		3831 = {  # Bam
+			set_province_flag = mined_goods
+			set_province_flag = copper
+		}
+
+		# Girin
+		731 = {  # Girin
+			#set_province_flag = no_mines
+			set_province_flag = mined_goods
+			set_province_flag = copper
+		}
+
+		# Mosul
+		1320 = {  # Mosul - already has marble
+		#	set_province_flag = mined_goods
+		#	set_province_flag = copper
+			set_province_flag = dates
+		}
+
+		# Gotaland
+		25 = {  # Gottland
+			set_province_flag = mined_goods
+			set_province_flag = iron
+		}
+
+		# Kabulistan
+		451 = {  # Kabulistan
+			set_province_flag = mined_goods
+			set_province_flag = iron
+		}
+
+		# Kandahar
+		452 = {  # Kandahar
+			set_province_flag = mined_goods
+			set_province_flag = iron
+			#set_province_flag = salt
+		}
+
+		# Smolensk
+		293 = {  # Smolensk
+			set_province_flag = honey
+		}
+		1289 = {  # Vyazma
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		2583 = {  # Toropets
+			set_province_flag = mined_goods
+			set_province_flag = iron
+			#set_province_flag = coal
+		}
+		3993 = {  # Rzhev
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Tabarestan
+		426 = {  # Mazandaran
+			set_province_flag = mined_goods
+			set_province_flag = coal
+			set_province_flag = sugar
+		}
+
+		# Moscow
+		1217 = {  # Mozhaysk
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		2582 = {  # Kolomna
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Lithuania
+		1265 = {  # Zemaitija
+			set_province_flag = mined_goods
+			set_province_flag = coal
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+
+		# Upper Ob
+		2153 = {  # Ket
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Yakutia
+		2157 = {  # Sakhsara
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+		4195 = {  # Kirenga
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Merv
+		2220 = {  # Mashad
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Zungaria
+		3213 = {  # Turfan
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Balkh
+		3843 = {  # Balkh
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Yanyun
+		5376 = {  # Tianjin
+			set_province_flag = mined_goods
+			set_province_flag = coal
+		}
+
+		# Farsistan
+		429 = {  # Fars
+			set_province_flag = mined_goods
+			set_province_flag = salt
+		}
+
+		# Iraq-e-Ajam
+		1313 = {  # Rey
+			set_province_flag = mined_goods
+			set_province_flag = salt
+		}
+
+		# Nishapur
+		3840 = {  # Esfarayen
+			set_province_flag = mined_goods
+			set_province_flag = gems
+		}
+
+		# Svealand
+		1 = {  # Uppland
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+
+		# Estonia
+		36 = {  # Ravala
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+
+		# Curonia
+		38 = {  # Riga
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		39 = {  # Kurzeme
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			set_province_flag = honey
+		}
+		1432 = {  # Piltene
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+			set_province_flag = honey
+		}
+
+		# Pskov
+		274 = {  # Pskov
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+		3980 = {  # Ostrov
+			set_province_flag = honey
+		}
+
+		# Dobrogea
+		2380 = {  # Tulcea
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+
+		# Novgorod
+		292 = {  # Torzhok
+			set_province_flag = honey
+		}
+		3401 = {  # Izhora
+			add_permanent_province_modifier = { name = seasalt duration = -1 }
+		}
+
+		# Holstein
+		44 = {  # Hamborg
+			set_province_flag = beer
+		}
+		45 = {  # Lubeck
+			set_province_flag = beer
+		}
+		1252 = {  # Wagrien
+			set_province_flag = honey
+		}
+
+		# Guyenne
+		176 = {  # Guiana
+			set_province_flag = wine
+		}
+
+		# Abkhazia
+		1300 = {  # Abkhazia
+			set_province_flag = wine
+		}
+
+		# Western Georgia
+		3800 = {  # Guria
+			set_province_flag = wine
+		}
+
+		# Weser
+		1357 = {  # Bremen
+			set_province_flag = beer
+		}
+
+		# Holland
+		2370 = {  # Zuyd-Holland
+			set_province_flag = beer
+		}
+
+		# Basra
+		398 = {  # Basrah
+			set_province_flag = dates
+		}
+
+		# Iraq Arabi
+		410 = {  # Baghdad
+			set_province_flag = dates
+		}
+
+		# Multan
+		2112 = {  # Multan
+			set_province_flag = dates
+		}
+
+		# Lahore
+		2113 = {  # Lavkot
+			set_province_flag = sugar
+		}
+
+		# Hormuz
+		2235 = {  # Kuh-e-Ormuz
+			set_province_flag = sugar
+		}
+	}
+}

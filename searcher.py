@@ -40,12 +40,12 @@ def search_in_folder(var, folder):
 
 
 if __name__ == '__main__':
-    searching_var = 'road_network'
+    searching_var = 'add_rural_population_DEVS = {'
 
     # search(searching_var, folder)
     search_in_folder(searching_var, folder_se)
     search_in_folder(searching_var, folder_st)
     search_in_folder(searching_var, folder_sm)
     search_in_folder(searching_var, folder_em)
-    # search_in_folder(searching_var, folder_oa)
-    # search_in_folder(searching_var, folder_evt)
+    search_in_folder(searching_var, folder_oa)
+    search_in_folder(searching_var, folder_evt)

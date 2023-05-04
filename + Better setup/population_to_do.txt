@@ -1,0 +1,125 @@
+
+
+
+#Ravala 61/10.3
+#Riga 46/10.1
+#Sambia - 45.3/10.2
+#Danzig - 9.3/12.9
+
+#Stogholm 78.9/5.2
+#Syaland 57.2/18.9
+#Kopenhagen 70.7/6.2
+#Skane 113.7/6.4
+
+#Lubeck 9.3/20.7
+#Hamburg 27.4/13.4
+#Bremen 9.8/13.6
+
+#Roterdam 115/25
+#Amsterdam 72.5/13.2
+#Antverpen 44.3/9.4
+#Oost-Valndern 203.1/64.8
+#Brugge 118.9/93.5
+#Paris 284.9/182.5
+
+#Moskva 255.8/30.4
+#Novgorod 68.6/39.9
+#Nizhny Novgorod 161.7/10.8
+#Vladimir 76.2/20.4
+#Ryazan 327.8/3.9
+#Tver 102.3/20.5
+#Smolensk 82.4/20.6
+#Bryansk 241/5.8
+#Izhora 92.7/0
+#Yaroslavl 87.4/10.8
+#Rostov 111.4/5
+#Pskov 34/30.1
+#Zavolochiye 128.8/7.1
+#Cherdyn 169/5
+#Usolka 81.4/0
+#Sysola 148.8/0
+
+#Kiev 103.7/10.8
+#Cherson 14.1/19.3 tr 29.8
+#Crimea 58.8/15.1 tr 34.8
+#Caffa 36.8/63.5
+#Kerch 18.3/17.1
+#Theodoro 32.8/9
+#Azov 18.2/7.6
+#Kazan 102/20.6 tr 4
+#Astrakhan 33.8/10 tr 11.1
+#Sarai 75.8/78.3 tr 2.3
+#Nogay 14.4/5.4 tr 13.8
+
+#tymen 32.4/6.6 tr 23.8
+
+#Derbent 30/19.3
+#Baku 37.7/10.4
+#yerevan 116.8/12.1
+#tbilisi 198.6/59.2
+abkhazia 99.5/8.1
+guria 100.6/2.4
+
+#khiva 67.4/20 tr 7.4
+#bukhara 37.1/48.2 tr 4.1
+#samarkand 73.6/58 tr 2.6
+#badakhshan 31.0/6.3 tr 20
+#balkh 195/20.8 tr 20.5
+tashkand 21.2/19.0 tr 6.8
+khujand 44/13.8 tr 5.1
+kokand 115.2/10.7 tr 2.6
+andijan - silk road 37.1/10.1 tr 9.1
+almaty 66.5/10 tr 59.6
+turkistan 31.2/10 tr 21.9
+kashgar 43.3/39.2 tr 3.3
+yarkand 35.9/29.6
+khotan 12.1/9.9
+turfan 46.9/20.5 tr 6.7
+kumul 46.3/10.2 tr 7.9
+orkhon 59.0/10.1 tr 66.9
+girin 201.4/30.3
+
+mosul 96.7/30 tr 5.5
+baghdad 118.6/87.8
+basra 51.6/14.8 tr 22.5
+erzurum 68.8/10.4 tr 12.5
+van 40.3/20.1 tr 16.1
+
+tebriz 84.1/106 tr 1.4
+hamadan 83.8/29.2 tr 10.7
+qom 42.8/38.8
+rey 96.4/10.7
+golestan 98.5/6.9 tr 9.0
+ifsfahan 103.7/58.9
+yazd 30.9/28.8
+fars 113.3/59.2 tr 3.1
+qishm 12.5/18.1
+kuh-e-ormuz 45.2/6.7
+kerman 41.8/19.7
+bam 20.7/9.9
+nishapur 28.8/12.9 tr 6.7
+mashad 27.2/24.0 tr 5.3
+merv 33.2/19.7 tr 7.2
+herat 69.2/20.5 tr 3.7
+zaranj 35.5/5.1 tr 42.5
+kandahar 99.0/20.0 tr 20.1
+quetta 35.0/9.8 tr 53.1
+kabulistan 215.5/10.5 tr 8.2
+
+lavkot 351.3/49.8
+multan 220/40
+margalla 212.2/20.6 tr 10.5
+srinagar 176.4/20.6
+baltistan 44.1/10.1 tr 15.6
+ladakh 70.3/10.8 tr 8.3
+
+
+
+
+
+
+
+
+
+
+

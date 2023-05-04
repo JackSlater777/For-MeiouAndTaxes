@@ -6,6 +6,7 @@ country_decisions = {
 			OR = {
 				has_reform = tribal_amalgamation
 				has_reform = nomad_reform
+				has_reform = tribal_despotism
 			}
 			NOT = { has_country_flag = switch_nomadic_rule_to_steppe_nomad }
 		}

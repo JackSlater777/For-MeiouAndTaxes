@@ -1,0 +1,582 @@
+# v3.0          	v2.6
+# road_level_1          road_level_1
+# road_level_2          road_level_1
+# road_level_3          road_level_2
+# canal_level_1         canal_level_1
+# canal_level_2         canal_level_1
+# canal_level_3         canal_level_2
+
+
+# Editing buildings
+country_event = {
+	id = setup_event.920
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		# Perm
+		1294 = {  # Sysola
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = temple
+		}
+		1295 = {  # Kama
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = temple
+		}
+		1343 = {  # Cherdyn
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 2
+			add_building = road_network  # 1
+			add_building = marketplace
+			add_building = workshop
+			add_building = temple
+			#add_building = harbour_infrastructure_2
+		}
+		2547 = {  # Udmurtia
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = road_network  # 1
+			add_building = temple
+		}
+		2548 = {  # Usolka
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = temple
+		}
+
+		# Moldavia
+		1269 = {  # Carligatura
+			remove_building = local_fortification_1
+			remove_building = town_hall
+			add_building = urban_infrastructure_1
+			add_building = workshop
+		}
+		2236 = {  # Bukovina
+			remove_building = local_fortification_1
+			remove_building = urban_infrastructure_1
+			add_building = temple
+		}
+		2379 = {  # Barlad
+			add_building = local_fortification_1
+			add_building = road_network
+			add_building = temple
+		}
+		3791 = {  # Bacau
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = town_hall
+			add_building = marketplace
+			add_building = workshop
+			add_building = warehouse
+			#add_building = harbour_infrastructure_1  # 1
+		}
+		3793 = {  # Hotin
+			add_building = road_network
+			add_building = marketplace
+			add_building = workshop
+			add_building = temple
+		}
+
+		# Basarabia
+		160 = {  # Basarabia
+			#remove_building = local_fortification_1
+			remove_building = road_network
+			add_building = workshop
+			add_building = temple
+			remove_building = harbour_infrastructure_2
+			add_building = harbour_infrastructure_1
+		}
+		1400 = {  # Orheiu
+			change_religion = sunni
+
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		2626 = {  # Soroca
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		3794 = {  # Cetatea Alba
+			remove_building = local_fortification_1
+			remove_building = town_hall
+			add_building = marketplace
+			add_building = workshop
+			remove_building = harbour_infrastructure_2
+			add_building = harbour_infrastructure_1  # 1
+		}
+
+		# Zaporizhia
+		284 = {  # Dykra
+			remove_building = road_network
+			remove_building = town_hall
+			remove_building = harbour_infrastructure_2
+		}
+		300 = {  # Zaporizhzhia
+			add_building = temple
+		}
+		1431 = {  # Dniepr
+			remove_building = road_network
+		}
+		4019 = {  # Cherson
+			remove_building = road_network
+			remove_building = urban_infrastructure_1
+			add_building = town_hall
+			add_building = marketplace
+			add_building = warehouse
+			add_building = temple
+			remove_building = harbour_infrastructure_1
+		}
+		4021 = {  # Chyhyryn
+			add_building = town_hall
+			add_building = marketplace
+			add_building = workshop
+			add_building = warehouse
+			add_building = temple
+		}
+
+		# Crimea
+		282 = {  # Crimea
+			remove_building = urban_infrastructure_1
+			add_building = town_hall
+			add_building = marketplace
+			add_building = warehouse
+			add_building = temple
+			remove_building = harbour_infrastructure_1
+ 		}
+		1299 = {  # Matracha
+			remove_building = local_fortification_1
+			add_building = workshop
+			add_building = temple
+			remove_building = harbour_infrastructure_2
+			add_building = harbour_infrastructure_1  # 1
+		}
+ 		1344 = {  # Cafa
+			remove_building = urban_infrastructure_2
+			add_building = urban_infrastructure_1
+			remove_building = workshop
+			add_building = corporation_guild
+			#add_building = warehouse
+			add_building = warehouse_district
+			add_building = temple
+			remove_building = harbour_infrastructure_2
+			add_building = harbour_infrastructure_1  # 1
+ 		}
+ 		2274 = {  # Theodoro
+			remove_building = local_fortification_2
+			add_building = workshop
+			add_building = warehouse
+			add_building = temple
+			remove_building = harbour_infrastructure_2
+			add_building = harbour_infrastructure_1  # 1
+ 		}
+ 		2573 = {  # Cherkio
+			remove_building = local_fortification_1
+			remove_building = urban_infrastructure_1
+			add_building = workshop
+			add_building = warehouse
+			add_building = temple
+			set_province_flag = ITA_trading_post
+			add_building = trading_post
+		}
+		3877 = {  # Yamboli
+			remove_building = harbour_infrastructure_1
+			remove_building = marketplace
+			remove_building = warehouse
+			remove_building = local_fortification_1
+		}
+
+		# Azov
+		286 = {  # Copa
+			change_culture = circassian
+			change_religion = orthodox
+
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = road_network  # 1
+			add_building = temple
+		}
+		302 = {  # Siverskyi Donets
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		1298 = {  # Tana
+			remove_building = local_fortification_2
+			remove_building = road_network
+			remove_building = town_hall
+			add_building = workshop
+			add_building = temple
+			remove_building = harbour_infrastructure_2
+			add_building = harbour_infrastructure_1  # 1
+		}
+
+		# West Don
+		305 = {  # Kursk
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = road_network  # 1
+			add_building = temple
+		}
+		1287 = {  # Voronezh
+			add_building = marketplace
+			add_building = workshop
+		}
+		4110 = {  # Kharkov
+			add_building = local_fortification_1
+			add_building = temple
+		}
+
+		# West Circassia
+		999 = {  # Abazinia
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = temple
+		}
+		1302 = {  # Circassia
+			add_building = local_fortification_2
+			add_building = road_network  # 1
+			add_building = temple
+		}
+		3795 = {  # Anapa
+			remove_building = local_fortification_1
+			add_building = workshop
+			add_building = temple
+			set_province_flag = ITA_trading_post
+			add_building = trading_post
+		}
+		3796 = {  # Shapsug
+			add_building = local_fortification_1
+			add_building = road_network  # 1
+			add_building = canal_level_1  # 1
+			add_building = temple
+		}
+
+		# East Circassia
+		995 = {  # Ossetia
+			add_building = local_fortification_1
+			add_building = canal_level_1  # 1
+			add_building = temple
+		}
+		1009 = {  # Chechnya
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		1303 = {  # Alania
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		2578 = {  # Terch
+			add_core = KBR
+
+			add_building = local_fortification_1
+			add_building = town_hall
+			add_building = marketplace
+			add_building = workshop
+			add_building = temple
+		}
+		3639 = {  # Kabardia
+			add_core = KBR
+
+			add_building = temple
+		}
+
+		# Astrakhan
+		1293 = {  # Xacitarxan
+			remove_building = town_hall
+			remove_building = warehouse
+			add_building = workshop
+			add_building = temple
+		}
+		1304 = {  # Manych
+			add_building = marketplace
+			add_building = workshop
+		}
+		1310 = {  # Sarai-al-Jadid
+			add_building = local_fortification_2
+			remove_building = workshop
+			add_building = corporation_guild
+			remove_building = marketplace
+			add_building = merchant_guild
+			#add_building = warehouse
+			add_building = warehouse_district
+			#add_building = harbour_infrastructure_1  # 1
+		}
+
+		# East Don
+		1297 = {  # Sarkel
+			add_building = marketplace
+			add_building = workshop
+			add_building = temple
+		}
+		4111 = {  # Tambov
+			add_building = temple
+		}
+
+		# Mordovia
+		2437 = {  # Gornye Cheremisy
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		2439 = {  # Mordoviya
+			add_building = local_fortification_1
+			add_building = temple
+		}
+		4016 = {  # Chuvash
+			add_building = temple
+		}
+
+		# Kazan
+		1307 = {  # Qazan
+			add_building = warehouse
+			#add_building = harbour_infrastructure_1  # 1
+		}
+		1311 = {  # Or
+			add_building = local_fortification_1
+			add_building = marketplace
+			add_building = workshop
+			add_building = temple
+			#add_building = harbour_infrastructure_1  # 1
+		}
+
+		# Nogay Steppe
+		3287 = {  # Nogay
+			add_building = local_fortification_1
+			add_building = marketplace
+			add_building = workshop
+			#add_building = harbour_infrastructure_1  # 1
+		}
+
+		# Shirvan
+# 		424 = {  # Shirvan
+#
+# 		}
+# 		425 = {  # Derbent
+# 			add_building = fort_14th
+# 			add_building = local_fortification_1
+# 			add_building = urban_infrastructure_1
+# 			add_building = marketplace
+# 			add_building = workshop
+# 		}
+# 		1317 = {  # Shemakha
+#
+# 		}
+# 		2579 = {  # Avaria
+#
+# 		}
+# 		2656 = {  # Kizlyar
+#
+# 		}
+# 		3810 = {  # Salyan
+#
+# 		}
+# 		3811 = {  # Baku
+#
+# 		}
+
+
+		# West Dniepr
+		# East Dniepr
+		# Vladimir-Suzdal
+		# Ryazan
+		# Briansk
+		# Smolensk
+		# Moscow
+		# Tver
+		# Yaroslav
+		# Galich
+		# Beloozero
+		# Pomorye
+		# Karelia
+		# Novgorod
+		# Pskov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 		# Svealand
+# 		1 = {  # Uppland
+# 			add_building = town_hall
+# 		}
+#
+# 		# Gotaland
+# 		3 = {  # Smaland
+# 			add_building = town_hall
+# 		}
+# 		25 = {  # Gotland
+# 			add_building = town_hall
+# 		}
+#
+# 		# Scania
+# 		6 = {  # Skane
+# 			add_building = town_hall
+# 		}
+#
+# 		# Sjaelland
+# 		12 = {  # Norraesyaland
+# 			add_building = town_hall
+# 		}
+#
+# 		# Holstein
+# 		44 = {  # Hamborg
+# 			remove_building = marketplace
+# 			add_building = merchant_guild
+# 			add_building = workshop
+# 		}
+#
+# 		# Weser
+# 		1357 = {  # Bremen
+# 			remove_building = marketplace
+# 			add_building = merchant_guild
+# 			add_building = town_hall
+# 		}
+#
+# 		# Holland
+#
+# 		# Flanders
+#
+# 		# Ile de France
+# 		183 = {  # Paris
+# 			remove_building = bureaucracy_1
+# 		}
+#
+# 		# Estonia
+# 		36 = {  # Ravala
+# 			add_building = fort_14th
+# 			add_building = town_hall
+# 		}
+#
+# 		# Livonia
+#
+# 		# Curonia
+# 		38 = {  # Riga
+# 			add_building = fort_14th
+# 			add_building = town_hall
+# 			remove_building = marketplace
+# 			add_building = merchant_guild
+# 		}
+#
+# 		# East Prussia
+# 		41 = {  # Sambia
+# 			add_building = town_hall
+# 		}
+#
+# 		# West Prussia
+# 		1391 = {  # Ermland
+# 			add_building = town_hall
+# 			add_building = marketplace
+# 		}
+# 		2355 = {  # Danzig
+# 			remove_building = marketplace
+# 			add_building = merchant_guild
+# 		}
+#
+# 		# Pomorye
+# 		314 = {  # Zavolochiye
+# 			add_building = town_hall
+# 		}
+#
+# 		# Pskov
+# 		274 = {  # Pskov
+# 			remove_building = corporation_guild
+# 			add_building = workshop
+# 			add_building = warehouse
+# 			add_building = harbour_infrastructure_2
+# 		}
+#
+# 		# Briansk
+# 		298 = {  # Briansk
+# 			add_building = road_network
+# 			add_building = town_hall
+# 			add_building = temple
+# 		}
+#
+# 		# Ryazan
+# 		301 = {  # Ryazan
+# 			add_building = road_network
+# 			add_building = town_hall
+# 			add_building = marketplace
+# 			add_building = warehouse
+# 		}
+#
+# 		# Vladimir-Suzdal
+# 		1292 = {  # Nizhny Novgorod
+# 			add_building = workshop
+# 		}
+#
+# 		# Yaroslav
+# 		308 = {  # Yaroslavl
+# 			add_building = workshop
+# 		}
+# 		1288 = {  # Rostov
+# 			add_building = road_network
+# 			add_building = town_hall
+# 		}
+#
+# 		# Iskier
+# 		1079 = {  # Tyumen
+# 			add_building = local_fortification_1
+# 			add_building = town_hall
+# 			add_building = marketplace
+# 			add_building = warehouse
+# 		}
+#
+# 		# Eastern Georgia
+# 		423 = {  # Kartli
+# 			remove_building = marketplace
+# 			add_building = merchant_guild
+# 		}
+#
+# 		# Khiva
+# 		442 = {  # Khiva
+# 			remove_building = town_hall
+# 			add_building = urban_infrastructure_1
+# 			add_building = workshop
+# 		}
+#
+# 		# Transoxiana
+# 		436 = {  # Bukhara
+# 			remove_building = marketplace
+# 			add_building = merchant_guild
+# 		}
+# 		457 = {  # Samarqand
+# 			remove_building = urban_infrastructure_1
+# 			add_building = urban_infrastructure_2
+# 		}
+#
+# 		# Balkh
+# 		453 = {  # Badakhshan
+# 			add_building = town_hall
+# 			add_building = marketplace
+# 		}
+#
+# 		# Kabulistan
+# 		451 = {  # Kabulistan
+# 			add_building = fort_14th
+# 		}
+	}
+}

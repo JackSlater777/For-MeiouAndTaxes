@@ -1,0 +1,304 @@
+common/event_modifiers/POP_Estate_Modifiers.txt:
+
+- deleted penalties for horde unity from adm ruler skill
+- reduced autonomy ticking from tribes, added minimum autonomy
+
+
+
+common/government_reforms/04_government_reforms_tribes_old.txt
+
+- added bonuses to federation gov types
+- removed last reforms
+- removed autonomy debuffs
+
+
+
+common/scripted_effects/POP_estate_effects.txt
+
+- calc_settlement_score_gravity:
+	- deleted a penalty for gov reform
+	- changed settlement gravity for oasis terrain 25 -> 45
+	- changed settlement gravity for desert/tundra terrain 1 -> 20
+	- changed settlement gravity for mountain terrain 15 -> 40
+	- changed settlement gravity for hills/forest terrain 20 -> 45
+	- changed settlement gravity for woods terrain 30 -> 45
+	- changed settlement gravity for highland terrain 40 -> 45
+	- changed settlement gravity for grass terrain 50 -> 55
+	- tripled settlement gravity for urban gravity 
+
+
+
+decisions/JS - SwitchNomadicRuleToSteppeNomad.txt
+
+- added decision to switch nomadic rule reform to steppe nomad
+
+
+
+common/event_modifiers/POP_Estate_Modifiers.txt
+
+- commoners_banned_from_officers_corps_1_20:
+	mil_tech_cost_modifier = 0.02 --> 0
+	general_cost = 0.10
+
+- commoners_banned_from_officers_corps_1_40:
+	mil_tech_cost_modifier = 0.04 --> 0
+	general_cost = 0.20
+
+- commoners_banned_from_officers_corps_1_60:
+	mil_tech_cost_modifier = 0.06 --> 0
+	general_cost = 0.30
+
+- commoners_banned_from_officers_corps_1_80:
+	mil_tech_cost_modifier = 0.08 --> 0
+	general_cost = 0.40
+
+- commoners_banned_from_officers_corps_1_100:
+	mil_tech_cost_modifier = 0.1 --> 0
+	general_cost = 0.50	
+
+- commoners_banned_from_officers_corps_2_20:
+	mil_tech_cost_modifier = 0.04 --> 0
+	general_cost = 0.20
+
+- commoners_banned_from_officers_corps_2_40:
+	mil_tech_cost_modifier = 0.08 --> 0
+	general_cost = 0.40
+
+- commoners_banned_from_officers_corps_2_60:
+	mil_tech_cost_modifier = 0.12 --> 0
+	general_cost = 0.60
+
+- commoners_banned_from_officers_corps_2_80:
+	mil_tech_cost_modifier = 0.16 --> 0
+	general_cost = 0.80
+
+- commoners_banned_from_officers_corps_2_100:
+	mil_tech_cost_modifier = 0.2 --> 0
+	general_cost = 1.00
+
+
+
+- ceremonial_generalships_1_20:
+	prestige_from_land = 0.10
+
+- ceremonial_generalships_1_40:
+	prestige_from_land = 0.20
+
+- ceremonial_generalships_1_60:
+	prestige_from_land = 0.30
+
+- ceremonial_generalships_1_80:
+	prestige_from_land = 0.40
+
+- ceremonial_generalships_1_100:
+	prestige_from_land = 0.50
+
+- ceremonial_generalships_2_20:
+	prestige_from_land = 0.20
+
+- ceremonial_generalships_2_40:
+	prestige_from_land = 0.40
+
+- ceremonial_generalships_2_60:
+	prestige_from_land = 0.60
+
+- ceremonial_generalships_2_80:
+	prestige_from_land = 0.80
+
+- ceremonial_generalships_2_100:
+	prestige_from_land = 1.00
+
+	
+
+- GN_high_court_titles_1_20:
+	legitimacy = 0.1
+	republican_tradition = 0.05
+	devotion = 0.1
+	horde_unity = 0.1
+
+- GN_high_court_titles_1_40:
+	legitimacy = 0.2
+	republican_tradition = 0.1
+	devotion = 0.2
+	horde_unity = 0.2
+
+- GN_high_court_titles_1_60:
+	legitimacy = 0.3
+	republican_tradition = 0.15
+	devotion = 0.3
+	horde_unity = 0.3
+
+- GN_high_court_titles_1_80:
+	legitimacy = -0.1 --> 0.4
+	republican_tradition = 0.2
+	devotion = 0.4
+	horde_unity = 0.4
+
+- GN_high_court_titles_1_100:
+	legitimacy = -0.1 --> 0.5
+	republican_tradition = 0.25
+	devotion = 0.5
+	horde_unity = 0.5
+
+- GN_high_court_titles_2_20:
+	legitimacy = 0.2
+	republican_tradition = 0.1
+	devotion = 0.2
+	horde_unity = 0.2
+
+
+- GN_high_court_titles_2_40:
+	legitimacy = -0.1 --> 0.4
+	republican_tradition = 0.2
+	devotion = 0.4
+	horde_unity = 0.4
+
+- GN_high_court_titles_2_60:
+	legitimacy = -0.2 --> 0.6
+	republican_tradition = 0.3
+	devotion = 0.6
+	horde_unity = 0.6
+
+- GN_high_court_titles_2_80:
+	legitimacy = -0.2 --> 0.8
+	republican_tradition = 0.4
+	devotion = 0.8
+	horde_unity = 0.8
+
+- GN_high_court_titles_2_100:
+	legitimacy = -0.3 --> 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+
+
+
+- GN_high_nobles_court_1:
+	local_autonomy = 0.05
+
+- GN_high_nobles_court_2:
+	local_autonomy = 0.1
+
+
+
+- GN_authority_to_govern_locally_1_modifier: 
+	min_local_autonomy = 2.5 --> 15
+	local_state_maintenance_modifier = -0.1
+
+- GN_authority_to_govern_locally_2_modifier: 
+	min_local_autonomy = 5 --> 30
+	local_state_maintenance_modifier = -0.2
+
+- GN_authority_to_govern_locally_3_modifier: 
+	min_local_autonomy = 7.5 --> 45
+	local_state_maintenance_modifier = -0.3
+
+- GN_authority_to_govern_locally_4_modifier: 
+	min_local_autonomy = 10 --> 60
+	local_state_maintenance_modifier = -0.4
+
+
+
+- LN_authority_to_govern_locally_1_modifier: 
+	min_local_autonomy = 2.5 --> 15
+	local_state_maintenance_modifier = -0.1
+
+- LN_authority_to_govern_locally_2_modifier: 
+	min_local_autonomy = 5 --> 30
+	local_state_maintenance_modifier = -0.2
+
+- LN_authority_to_govern_locally_3_modifier: 
+	min_local_autonomy = 7.5 --> 45
+	local_state_maintenance_modifier = -0.3
+
+- LN_authority_to_govern_locally_4_modifier: 
+	min_local_autonomy = 10 --> 60
+	local_state_maintenance_modifier = -0.4
+
+
+
+- BG_authority_to_govern_locally_1_modifier: 
+	min_local_autonomy = 2.5 --> 15
+	local_state_maintenance_modifier = -0.1
+
+- BG_authority_to_govern_locally_2_modifier: 
+	min_local_autonomy = 5 --> 30
+	local_state_maintenance_modifier = -0.2
+
+- BG_authority_to_govern_locally_3_modifier: 
+	min_local_autonomy = 7.5 --> 45
+	local_state_maintenance_modifier = -0.3
+
+- BG_authority_to_govern_locally_4_modifier: 
+	min_local_autonomy = 10 --> 60
+	local_state_maintenance_modifier = -0.4
+
+
+
+- BG_monopoly_on_armaments_1_20:
+	land_maintenance_modifier = -0.02
+
+- BG_monopoly_on_armaments_1_40:
+	land_maintenance_modifier = -0.04
+
+- BG_monopoly_on_armaments_1_60:
+	land_maintenance_modifier = -0.06
+
+- BG_monopoly_on_armaments_1_80:
+	land_maintenance_modifier = -0.08
+
+- BG_monopoly_on_armaments_1_100:
+	land_maintenance_modifier = -0.1
+
+- BG_monopoly_on_armaments_2_20:
+	land_maintenance_modifier = -0.04
+
+- BG_monopoly_on_armaments_2_40:
+	land_maintenance_modifier = -0.08
+
+- BG_monopoly_on_armaments_2_60:
+	land_maintenance_modifier = -0.12
+
+- BG_monopoly_on_armaments_2_80:
+	land_maintenance_modifier = -0.16
+
+- BG_monopoly_on_armaments_2_100:
+	land_maintenance_modifier = -0.2
+
+
+
+common/scripted_effects/POP_z_income.txt
+
+- Influence_PrivilegeMod:
+
+	- GN_high_court_titles_1_20:
+		- EstateInfluence_GN value = 0.02 --> 0.03
+	- GN_high_court_titles_1_40:
+		- EstateInfluence_GN value = 0.04 --> 0.06
+	- GN_high_court_titles_1_60:
+		- EstateInfluence_GN value = 0.06 --> 0.09
+	- GN_high_court_titles_1_80:
+		- EstateInfluence_GN value = 0.08 --> 0.12
+	- GN_high_court_titles_1_100:
+		- EstateInfluence_GN value = 0.1 --> 0.15
+
+	- GN_high_court_titles_2_20:
+		- EstateInfluence_GN value = 0.04 --> 0.06
+	- GN_high_court_titles_2_40:
+		- EstateInfluence_GN value = 0.08 --> 0.12
+	- GN_high_court_titles_2_60:
+		- EstateInfluence_GN value = 0.12 --> 0.18
+	- GN_high_court_titles_2_80:
+		- EstateInfluence_GN value = 0.16 --> 0.24
+	- GN_high_court_titles_2_100:
+		- EstateInfluence_GN value = 0.2 --> 0.3
+
+	- LN_high_court_titles_1_flag:
+		- EstateInfluence_LN value = 0.06 --> 0.1
+	- LN_high_court_titles_2_flag:
+		- EstateInfluence_LN value = 0.12 --> 0.2
+
+	- BG_honorary_noble_titles_1_flag:
+		- EstateInfluence_BG value = 0.02 --> 0.05
+	- BG_honorary_noble_titles_2_flag:
+		- EstateInfluence_BG value = 0.04 --> 0.1
