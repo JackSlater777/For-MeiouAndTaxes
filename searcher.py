@@ -10,12 +10,19 @@ project_folder = r"C:\Users\Иван\PycharmProjects\For-MeiouAndTaxes"
 folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MT2.60MP\common'
 # folder = r'C:\Users\Иван\Documents\Paradox Interactive\Europa Universalis IV\mod\MEIOUandTaxes1\common'
 
-folder_se = fr'{mt_folder_2_60}\common\scripted_effects'
-folder_st = fr'{mt_folder_2_60}\common\scripted_triggers'
-folder_sm = fr'{mt_folder_2_60}\common\static_modifiers'
-folder_em = fr'{mt_folder_2_60}\common\event_modifiers'
-folder_oa = fr'{mt_folder_2_60}\common\on_actions'
-folder_evt = fr'{mt_folder_2_60}\events'
+# folder_se = fr'{mt_folder_2_60}\common\scripted_effects'
+# folder_st = fr'{mt_folder_2_60}\common\scripted_triggers'
+# folder_sm = fr'{mt_folder_2_60}\common\static_modifiers'
+# folder_em = fr'{mt_folder_2_60}\common\event_modifiers'
+# folder_oa = fr'{mt_folder_2_60}\common\on_actions'
+# folder_evt = fr'{mt_folder_2_60}\events'
+
+folder_se = fr'{mt_folder_3_0}\common\scripted_effects'
+folder_st = fr'{mt_folder_3_0}\common\scripted_triggers'
+folder_sm = fr'{mt_folder_3_0}\common\static_modifiers'
+folder_em = fr'{mt_folder_3_0}\common\event_modifiers'
+folder_oa = fr'{mt_folder_3_0}\common\on_actions'
+folder_evt = fr'{mt_folder_3_0}\events'
 
 folder_evts = r'C:\Users\Иван\Greater-Flavor-Mod\GFM\events'
 folder_dec = r'C:\Users\Иван\Greater-Flavor-Mod\GFM\decisions'
@@ -40,7 +47,8 @@ def search_in_folder(var, folder):
 
 
 if __name__ == '__main__':
-    searching_var = 'add_rural_population_DEVS = {'
+    #searching_var = 'urban_gravity_total'urban_gravity_calc = {
+    searching_var = 'Stat_Inp'
 
     # search(searching_var, folder)
     search_in_folder(searching_var, folder_se)

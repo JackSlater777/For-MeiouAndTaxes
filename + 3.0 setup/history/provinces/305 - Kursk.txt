@@ -1,0 +1,44 @@
+owner = BRK
+controller = BRK
+add_core = BRK
+
+capital = "Kursk"
+trade_goods = livestock
+culture = russian
+religion = orthodox
+
+base_tax = 14
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3.5 }
+}
+1356.1.1 = {
+	add_permanent_claim = LIT
+	add_core = KIE
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	set_variable = { which = pop_level value = 4 }
+	set_variable = { which = starting_rural_pop_1350 value = 110.177 }
+	set_variable = { which = starting_urban_pop_1350 value = 0.010 }
+
+	set_province_flag = mined_goods
+	set_province_flag = iron
+
+	add_building = local_fortification_1
+	add_building = canal_level_1  # 1
+	add_building = road_network  # 1
+	add_building = temple
+}

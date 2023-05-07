@@ -1,0 +1,73 @@
+owner = GEN
+controller = GEN
+add_core = GEN
+
+capital = "Caffa"
+trade_goods = fish
+culture = pontic
+religion = orthodox
+
+hre = no
+
+base_tax = 3
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+harbour_infrastructure_2 = yes
+merchant_guild = yes
+urban_infrastructure_2 = yes
+workshop = yes
+fort_14th = yes
+trading_post = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 5 }
+	set_variable = { which = starting_urban_pop_1350 value = 73.815 }
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_small_natural_harbour
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = caffa_natural_harbour
+		duration = -1
+	}
+	set_province_flag = ITA_trading_post
+}
+500.1.1 = {
+	add_permanent_province_modifier = {
+		name = urban_goods_silk
+		duration = -1
+	}
+}
+1356.1.1 = {
+	add_core = BYZ
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	#culture = greek
+
+	set_variable = { which = pop_level value = 6 }
+	set_variable = { which = starting_rural_pop_1350 value = 40.020 }
+	set_variable = { which = starting_urban_pop_1350 value = 64.440 }
+	#set_variable = { which = tribals_ratio value = 0.0 }
+
+	add_permanent_province_modifier = { name = seasalt duration = -1 }
+
+	remove_building = urban_infrastructure_2
+	add_building = urban_infrastructure_1
+	remove_building = workshop
+	add_building = corporation_guild
+	#add_building = warehouse
+	add_building = warehouse_district
+	add_building = temple
+	remove_building = harbour_infrastructure_2
+	add_building = harbour_infrastructure_1  # 1
+}

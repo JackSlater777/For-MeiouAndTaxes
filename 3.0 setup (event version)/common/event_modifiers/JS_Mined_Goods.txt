@@ -1,0 +1,18 @@
+seasalt = {
+	trade_value = 0.5
+	picture = goodsalt
+}
+
+# If province already has mining resource
+salt_secondary = {
+	trade_value = 0.5
+	picture = goodsalt
+}
+
+# Exotic goods??
+honey = {
+	trade_value = 0.5
+	picture = trade_good
+}
+
+

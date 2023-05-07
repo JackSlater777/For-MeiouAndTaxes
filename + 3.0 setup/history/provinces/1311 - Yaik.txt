@@ -1,0 +1,48 @@
+owner = WHI
+controller = WHI
+add_core = WHI
+
+capital = "Teptyari"
+trade_goods = wool
+culture = kazani
+religion = sunni
+
+hre = no
+
+base_tax = 4
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = eastern
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 2 }
+	set_province_flag = tribals_control_province
+}
+1356.1.1 = {
+	add_core = KAZ
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	#culture = chuvash
+
+	set_variable = { which = starting_rural_pop_1350 value = 59.642 }
+	set_variable = { which = starting_urban_pop_1350 value = 3.972 }
+	#set_variable = { which = tribals_ratio value = 18.1 }
+
+	set_province_flag = mined_goods
+	set_province_flag = coal
+
+	add_building = local_fortification_1
+	add_building = marketplace
+	add_building = workshop
+	add_building = temple
+	#add_building = harbour_infrastructure_1  # 1
+}

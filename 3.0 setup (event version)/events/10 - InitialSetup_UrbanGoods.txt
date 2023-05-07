@@ -1,0 +1,29 @@
+# Adding urban goods
+country_event = {
+	id = setup_event.910
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		# Perm
+		#1343 = {  # Cherdyn
+		#	add_permanent_province_modifier = {
+		#		name = urban_goods_cloth
+		#		duration = -1
+		#	}
+		#}
+
+		#5376 = {  # Tianjin
+		#	add_permanent_province_modifier = {
+		#		name = urban_goods_naval_supplies
+		#		duration = -1
+		#	}
+		#}
+	}
+}

@@ -1,0 +1,61 @@
+owner = GEN
+controller = GEN
+add_core = GEN
+add_permanent_claim = BYZ
+
+capital = "Tana"
+trade_goods = wine
+culture = pontic
+religion = orthodox
+
+hre = no
+
+base_tax = 3
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+harbour_infrastructure_2 = yes
+town_hall = yes
+marketplace = yes
+local_fortification_2 = yes
+road_network = yes
+trading_post = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 4 }
+	set_variable = { which = starting_urban_pop_1350 value = 8.821 }
+	set_province_flag = ITA_trading_post
+	set_province_flag = has_delta_estuary
+	add_permanent_province_modifier = {
+		name = don_estuary_modifier
+		duration = -1
+	}
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	#culture = greek
+
+	set_variable = { which = pop_level value = 5 }
+	set_variable = { which = starting_rural_pop_1350 value = 19.048 }
+	set_variable = { which = starting_urban_pop_1350 value = 8.053 }
+
+	add_permanent_province_modifier = { name = seasalt duration = -1 }
+	set_province_flag = wine
+
+	remove_building = local_fortification_2
+	remove_building = road_network
+	remove_building = town_hall
+	add_building = workshop
+	add_building = temple
+	remove_building = harbour_infrastructure_2
+	add_building = harbour_infrastructure_1  # 1
+}

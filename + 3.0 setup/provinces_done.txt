@@ -1,0 +1,48 @@
+####### Crimea #######   ++++
+# Crimea
+crimea_area = {
+	1299 1344 2274 2573 3877 
+}
+# Azov
+azov_area = {
+	286 287 302 1298
+}
+# West Don
+sloboda_ukraine_area = {
+	305 2545 1287 4110 
+}
+
+####### Kipchak Steppe #######   +++++
+# Astrakhan
+astrakhan_area = {
+	303 1293 1304 1309 1310 
+}
+# East Don
+lower_don_area = {
+	1296 1297 4020 4111 
+}
+# Nogay Steppe
+nogai_area = {
+	1083 3287 2443 2444 4113 
+}
+# Mordovia
+mordovia_area = {
+	1308 2437 2439 4016 
+}
+# Kazan
+kazan_area = {
+	1307 1311 2438 4112 
+}
+
+####### Caucasia #######   ++---
+# West Circassia
+west_circassia_area = {
+	3796 1302 4114 999 3795 
+}
+# East Circassia
+east_circassia_area = {
+	3639 1303 2578 1009 995 
+}
+# Abkhazia
+# Shirvan
+# Eastern Georgia

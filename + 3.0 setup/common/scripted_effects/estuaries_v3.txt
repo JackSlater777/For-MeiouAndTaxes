@@ -1,0 +1,67 @@
+add_modifier_confluence = {
+	set_province_flag = has_confluence
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = modifier_confluence
+		duration = -1
+	}	
+}
+
+add_modifier_silk_road = {
+	set_province_flag = silk_road_town
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = modifier_silk_road
+		duration = -1
+	}	
+}
+
+add_modifier_estuary = {
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = modifier_estuary
+		duration = -1
+	}	
+}
+
+add_modifier_oasis = {
+	add_permanent_province_modifier = {
+		name = oasis_route
+		duration = -1
+	}	
+}
+
+add_modifier_small_natural_harbour = {
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_small_natural_harbour
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = modifier_small_natural_harbour
+		duration = -1
+	}
+}
+
+add_modifier_great_natural_harbour = {
+	set_province_flag = has_natural_harbour
+	set_province_flag = has_great_natural_harbour
+	set_province_flag = great_natural_place
+	add_permanent_province_modifier = {
+		name = modifier_great_natural_harbour
+		duration = -1
+	}
+}
+
+add_modifier_island = {
+	add_permanent_province_modifier = {
+		name = modifier_island
+		duration = -1
+	}
+}
+
+add_modifier_navigable_river = {
+	set_province_flag = good_natural_place
+	add_permanent_province_modifier = {
+		name = modifier_navigable_river
+		duration = -1
+	}	
+}

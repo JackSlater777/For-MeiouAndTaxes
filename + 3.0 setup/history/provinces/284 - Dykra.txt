@@ -1,0 +1,51 @@
+owner = WHI
+controller = WHI
+add_core = WHI
+
+capital = "Khadjibey"
+trade_goods = fish
+culture = tartar
+religion = sunni
+
+hre = no
+
+base_tax = 6
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+harbour_infrastructure_2 = yes
+town_hall = yes
+road_network = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = steppestech
+discovered_by = turkishtech
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 3 }
+	set_province_flag = mined_goods
+	set_province_flag = salt
+	set_province_flag = tribals_control_province
+}
+1356.1.1 = {
+	add_core = CRI
+	add_claim = LIT
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	culture = crimean
+
+	set_variable = { which = pop_level value = 2.5 }
+	set_variable = { which = starting_rural_pop_1350 value = 53.891 }
+	set_variable = { which = starting_urban_pop_1350 value = 0.010 }
+	set_variable = { which = tribals_ratio value = 66.5 }
+
+	remove_building = road_network
+	remove_building = town_hall
+	remove_building = harbour_infrastructure_2
+}

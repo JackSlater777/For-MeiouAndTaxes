@@ -1,0 +1,252 @@
+# Editing population
+country_event = {
+	id = setup_event.930
+	title = "EVT_AI"
+	desc = "EVT_AI"
+	picture = MEIOU_AND_TAXES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT_AI"
+
+		# Perm
+		# Moldavia
+		# Basarabia
+		# Zaporizhia
+ 		# Crimea
+		# Azov
+		# West Don
+		# West Circassia
+		# East Circassia
+		# Astrakhan
+		# East Don
+		# Mordovia
+		# Kazan
+		# Nogay Steppe
+
+		# Shirvan
+		424 = {  # Shirvan
+
+		}
+		425 = {  # Derbent
+
+		}
+		1317 = {  # Shemakha
+
+		}
+		2579 = {  # Avaria
+
+		}
+		2656 = {  # Kizlyar
+
+		}
+		3810 = {  # Salyan
+
+		}
+		3811 = {  # Baku
+
+		}
+
+
+		# West Dniepr
+		# East Dniepr
+		# Vladimir-Suzdal
+		# Ryazan
+		# Briansk
+		# Smolensk
+		# Moscow
+		# Tver
+		# Yaroslav
+		# Galich
+		# Beloozero
+		# Pomorye
+		# Karelia
+		# Novgorod
+		# Pskov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		# Svealand
+		1 = {  # Uppland 5.2
+			set_variable = { which = urban_base_pop_added value = 0.07 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Gotaland
+
+		# Scania
+		6 = {  # Skane 6.4
+			set_variable = { which = urban_base_pop_added value = 0.04 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Sjaelland
+		12 = {  # Norraesyaland 6.2
+			set_variable = { which = urban_base_pop_added value = 0.022 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Holstein
+
+		# Weser
+
+		# Holland
+
+		# Flanders
+		90 = {  # West-Vloandern 118.9/93.5
+			set_variable = { which = rural_base_pop_removed value = 3.193 }
+			remove_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 2.3498 }
+			remove_urban_population_DEVS = yes
+		}
+		2363 = {  # Oost-Vlaendern 203.1/64.8
+			set_variable = { which = rural_base_pop_removed value = 5.9525 }
+			remove_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 1.3447 }
+			remove_urban_population_DEVS = yes
+		}
+
+		# Ile de France
+		183 = {  # Paris 284.9/182.5
+			set_variable = { which = rural_base_pop_removed value = 8.3297 }
+			remove_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 3.9996 }
+			remove_urban_population_DEVS = yes
+		}
+
+		# Estonia
+		# Livonia
+		# Curonia
+		# East Prussia
+
+		# Pomorye
+		314 = {  # Zavolochiye 7.1
+			set_variable = { which = urban_base_pop_added value = 0.586 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Yaroslavl
+		308 = {  # Yaroslavl 10.8
+			set_variable = { which = urban_base_pop_added value = 0.04 }
+			add_urban_population_DEVS = yes
+		}
+		1288 = {  # Rostov 5
+			set_variable = { which = urban_base_pop_added value = 0.467 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Vladimir-Suzdal
+		1292 = {  # Nizhny Novgorod 10.8
+			set_variable = { which = urban_base_pop_added value = 0.05 }
+			add_urban_population_DEVS = yes
+		}
+		307 = {  # Vladimir 20.4
+			set_variable = { which = urban_base_pop_added value = 0.03 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Ryazan
+		301 = {  # Ryazan 3.9
+			set_variable = { which = urban_base_pop_added value = 0.22 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Tver
+		294 = {  # Tver 20.5
+			set_variable = { which = urban_base_pop_added value = 0.01 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Briansk
+		298 = {  # Briansk 5.8
+			set_variable = { which = urban_base_pop_added value = 0.4511 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Iskier
+		1079 = {  # Tyumen 32.4/6.6 tr 23.8
+			set_variable = { which = rural_base_pop_added value = 2.088 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.649 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 24.0 }
+		}
+
+		# Western Armenia
+		419 = {  # Hayastan 116.8/12.1
+			set_variable = { which = rural_base_pop_added value = 6.178 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.085 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Eastern Georgia
+		423 = {  # Kartli  198.6/59.2
+			set_variable = { which = rural_base_pop_added value = 13.896 }
+			add_rural_population_DEVS = yes
+		}
+
+		# Abkhazia
+		3799 = {  # Samegrelo 99.5/8.1
+			nullify_pops = yes
+			set_variable = { which = rural_base_pop_added value = 9.95 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.81 }
+			add_urban_population_DEVS = yes
+		}
+
+		# Khiva
+		442 = {  # Khiva 67.4/20 tr 7.4
+			set_variable = { which = rural_base_pop_added value = 4.008 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.926 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 7.4 }
+		}
+
+		# Transoxiana
+		436 = {  # Bukhara 37.1/48.2 tr 4.1
+			set_variable = { which = rural_base_pop_added value = 0.74 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 4.1 }
+		}
+		457 = {  # Samarqand 73.6/58 tr 2.6
+			set_variable = { which = rural_base_pop_added value = 4.895 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_removed value = 0.284 }
+			remove_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 2.6 }
+		}
+
+		# Balkh
+		453 = {  # Badakhshan 31.0/6.3 tr 20
+			set_variable = { which = rural_base_pop_added value = 0.869 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = urban_base_pop_added value = 0.596 }
+			add_urban_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 20.0 }
+		}
+		3843 = {  # Balkh 142.5/10.6 tr 20.5
+			set_variable = { which = rural_base_pop_added value = 4.000 }
+			add_rural_population_DEVS = yes
+			set_variable = { which = tribals_ratio value = 20.5 }
+		}
+	}
+}

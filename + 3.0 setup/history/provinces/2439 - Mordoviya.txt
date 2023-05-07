@@ -1,0 +1,42 @@
+owner = WHI
+controller = WHI
+add_core = WHI
+
+capital = "Mukhsha"
+trade_goods = wool
+culture = mishar
+religion = sunni
+
+hre = no
+
+base_tax = 10
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = steppestech
+discovered_by = turkishtech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 2 }
+	set_province_flag = tribals_control_province
+}
+1356.1.1 = {
+	add_core = MRQ
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	set_variable = { which = pop_level value = 2.5 }
+	set_variable = { which = starting_rural_pop_1350 value = 80.839 }
+	set_variable = { which = starting_urban_pop_1350 value = 0.010 }
+	set_variable = { which = tribals_ratio value = 19.4 }
+
+	add_building = local_fortification_1
+	add_building = temple
+}

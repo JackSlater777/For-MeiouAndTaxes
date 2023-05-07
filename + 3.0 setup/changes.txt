@@ -1,0 +1,74 @@
+events/POP_Census.txt
+
+line 1239 - removed urban gravity dependancy from rural pop
+
+events/POP_Startup_events.txt
+
+line 1499 - edit
+
+
+
+events/POP_shifting_trade.txt
+
+#line 96 - lowered requirement to achieve trade center modifier
+
+
+
+common/scripted_effects/POP_scripted_effects.txt
+
+line 1476 - urban_gravity_base = 0 and urban_gravity_percentage = 1
+		removed urban gravity dependancy from rural pop
+
+#line 1476 - urban_gravity_base = 3 if there is no hall and some buildings
+
+line 1539 - town hall urban_gravity_base 5 --> 8
+
+line 1559 - marketplace urban_gravity_base 0 --> 1
+
+line 1612 - road urban_gravity_base --> 0, urban_gravity_percentage --> 0
+
+line 1619 - castle urban_gravity_base --> 0, urban_gravity_percentage --> 0
+
+line 1717 - mines urban_gravity_base --> 0
+
+line 1752 - minimum citizens is removed
+
+line 1841 - local_trade_power 0.2 --> 0.3 from each 10k urban pops
+line 1853-1854 - local_trade_power 0.2 --> 0.3 from each 10k urban pops
+line 1858 - marketplace local_trade_power 0.25 --> 0.55
+line 1867-1868 - local_trade_power 0.2 --> 0.3 from each 10k urban pops
+line 1858 - merchant guild local_trade_power 0.35 --> 0.7
+line 1881-1882 - local_trade_power 0.2 --> 0.3 from each 10k urban pops
+line 1886 - trade depot local_trade_power 0.6 --> 0.85
+line 1895-1896 - local_trade_power 0.2 --> 0.3 from each 10k urban pops
+line 1899 - custom house local_trade_power 0.75 --> 1.0
+line 1981 - road local_trade_power --> 0
+
+
+
+common/scripted_effects/POP_z_income.txt
+
+line 1017 and 1024 - nullified trade power from rurals
+
+line 1027 - trade power can be 0
+
+
+
+common/scripted_effects/POP_z_Dev.txt
+
+line 144 - nullified trade power from rurals
+
+
+
+common/static_modifiers/00_static_modifiers.txt
+
+changed:
+city
+knowledge_sharing
+over_extension
+in_state
+in_capital_state
+local_autonomy
+base_values
+war_exhaustion
+blockaded

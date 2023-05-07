@@ -1,0 +1,41 @@
+owner = BLU
+controller = BLU
+add_core = BLU
+
+capital = "Saraychik"
+trade_goods = livestock
+culture = tartar
+religion = sunni
+
+hre = no
+
+base_tax = 1
+base_production = 0
+base_manpower = 0
+
+is_city = yes
+
+discovered_by = turkishtech
+discovered_by = steppestech
+discovered_by = muslim
+
+450.1.1 = {
+	set_variable = { which = pop_level value = 1.5 }
+	set_province_flag = mined_goods
+	set_province_flag = salt
+	set_province_flag = tribals_control_province
+}
+
+1000.1.1 = {
+	discovered_by = YUA
+
+	set_variable = { which = pop_level value = 2.5 }
+	set_variable = { which = starting_rural_pop_1350 value = 14.861 }
+	set_variable = { which = starting_urban_pop_1350 value = 5.911 }
+	#set_variable = { which = tribals_ratio value = 13.8 }
+
+	add_building = local_fortification_1
+	add_building = marketplace
+	add_building = workshop
+	#add_building = harbour_infrastructure_1  # 1
+}
